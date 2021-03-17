@@ -1,3 +1,3 @@
-# ShopLive-SwiftPackage
+# ShopLive
 
-A description of this package.
+
