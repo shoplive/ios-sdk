@@ -252,6 +252,7 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class WKWebViewConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)startPictureInPicture;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
 + (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
 + (void)setAuthToken:(NSString * _Nullable)newValue;
@@ -283,7 +284,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
-- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(SWIFT_NOESCAPE void (^ _Nonnull)(void))completion;
+- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
 @end
 
 enum Gender : NSInteger;
@@ -565,6 +566,7 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class WKWebViewConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)startPictureInPicture;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
 + (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
 + (void)setAuthToken:(NSString * _Nullable)newValue;
@@ -596,7 +598,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
-- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(SWIFT_NOESCAPE void (^ _Nonnull)(void))completion;
+- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
 @end
 
 enum Gender : NSInteger;

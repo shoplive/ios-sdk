@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B1AC6162601E86D0016B209 /* ShopLiveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1AC6152601E86D0016B209 /* ShopLiveSDK.xcframework */; };
-		1B1AC6172601E86D0016B209 /* ShopLiveSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1AC6152601E86D0016B209 /* ShopLiveSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B3CD6A026006E6D00B94997 /* ShopLiveDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CD69F26006E6D00B94997 /* ShopLiveDemoApp.swift */; };
 		1B3CD6A226006E6D00B94997 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CD6A126006E6D00B94997 /* ContentView.swift */; };
 		1B3CD6A426006E6F00B94997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B3CD6A326006E6F00B94997 /* Assets.xcassets */; };
@@ -20,6 +18,8 @@
 		1B3CD7112600934700B94997 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CD7102600934700B94997 /* Configuration.swift */; };
 		1B3CD7162600939100B94997 /* DemoUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CD7152600939100B94997 /* DemoUserDefaults.swift */; };
 		1B3CD7432601C96C00B94997 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CD7422601C96C00B94997 /* WebView.swift */; };
+		1BAEDD63260328CA005C5DD4 /* ShopLiveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAEDD62260328CA005C5DD4 /* ShopLiveSDK.xcframework */; };
+		1BAEDD64260328CA005C5DD4 /* ShopLiveSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAEDD62260328CA005C5DD4 /* ShopLiveSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1B1AC6182601E86D0016B209 /* Embed Frameworks */ = {
+		1BAEDD65260328CA005C5DD4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1B1AC6172601E86D0016B209 /* ShopLiveSDK.xcframework in Embed Frameworks */,
+				1BAEDD64260328CA005C5DD4 /* ShopLiveSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +73,7 @@
 		1B3CD7152600939100B94997 /* DemoUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUserDefaults.swift; sourceTree = "<group>"; };
 		1B3CD72426019E8000B94997 /* ShopLiveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShopLiveSDK.xcframework; path = "../ShopLiveSDK-library/ShopLiveSDK.xcframework"; sourceTree = "<group>"; };
 		1B3CD7422601C96C00B94997 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		1BAEDD62260328CA005C5DD4 /* ShopLiveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShopLiveSDK.xcframework; path = ../../ShopLiveSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B1AC6162601E86D0016B209 /* ShopLiveSDK.xcframework in Frameworks */,
+				1BAEDD63260328CA005C5DD4 /* ShopLiveSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +169,7 @@
 		1B3CD72326019E8000B94997 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1BAEDD62260328CA005C5DD4 /* ShopLiveSDK.xcframework */,
 				1B1AC6152601E86D0016B209 /* ShopLiveSDK.xcframework */,
 				1B3CD72426019E8000B94997 /* ShopLiveSDK.xcframework */,
 			);
@@ -184,7 +186,7 @@
 				1B3CD69826006E6D00B94997 /* Sources */,
 				1B3CD69926006E6D00B94997 /* Frameworks */,
 				1B3CD69A26006E6D00B94997 /* Resources */,
-				1B1AC6182601E86D0016B209 /* Embed Frameworks */,
+				1BAEDD65260328CA005C5DD4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -32,9 +32,11 @@ struct ContentView: View {
                     hideKeyboard()
                     ShopLive.configure(with: model.accessKey)
                     if useToken {
+                        ShopLive.user = nil
                         ShopLive.authToken = model.authToken
                     }
                     else {
+                        ShopLive.authToken = nil
                         ShopLive.user = ShopLiveUser(id: model.userId, name: model.userName, gender: model.gender, age: Int(model.age) ?? -1)
                     }
                     ShopLive.play(with: model.campaignKey)
@@ -55,30 +57,35 @@ struct ContentView: View {
         Group {
             Toggle("토큰 사용", isOn: $useToken)
             VStack(alignment: .leading, spacing: 5) {
-                Text("Access Key").font(.caption)
-                TextField("Access Key", text: $model.accessKey)
+                Text("Access Key").font(.caption).padding(.bottom, 5)
+                TextField("Access Key", text: $model.accessKey).font(.body)
+                Rectangle().frame(height: 1)
             }
             if useToken {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Auth Token").font(.caption)
-                    TextField("Auth Token", text: $model.authToken)
+                    Text("Auth Token").font(.caption).padding(.bottom, 5)
+                    TextField("Auth Token", text: $model.authToken).font(.body)
+                    Rectangle().frame(height: 1)
                 }
             }
             else {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("User Id").font(.caption)
-                    TextField("User Id", text: $model.userId)
+                    Text("User Id").font(.caption).padding(.bottom, 5)
+                    TextField("User Id", text: $model.userId).font(.body)
+                    Rectangle().frame(height: 1)
                 }
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("User Name").font(.caption)
-                    TextField("User Name", text: $model.userName)
+                    Text("User Name").font(.caption).padding(.bottom, 5)
+                    TextField("User Name", text: $model.userName).font(.body)
+                    Rectangle().frame(height: 1)
                 }
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("User Age").font(.caption)
-                    TextField("User Age", text: $model.age)
+                    Text("User Age").font(.caption).padding(.bottom, 5)
+                    TextField("User Age", text: $model.age).font(.body)
+                    Rectangle().frame(height: 1)
                 }
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("User Gender").font(.caption)
+                    Text("User Gender").font(.caption).padding(.bottom, 5)
                     Menu {
                         ForEach(ShopLiveUser.Gender.allCases, id: \.self) { gender in
                             Button(gender.description) {
@@ -86,13 +93,16 @@ struct ContentView: View {
                             }
                         }
                     } label: {
-                        Text(model.gender.description).font(.body).padding(.horizontal, 10).padding(.vertical, 5).background(Color.accentColor).foregroundColor(Color("BottomButtonTitleColor")).cornerRadius(8)
+                        Text(model.gender.description).font(.body)
+//                            .padding(.horizontal, 10).padding(.vertical, 5).background(Color.accentColor).foregroundColor(Color("BottomButtonTitleColor")).cornerRadius(8)
                     }
+                    Rectangle().frame(height: 1)
                 }
             }
             VStack(alignment: .leading, spacing: 5) {
-                Text("Campaign Key").font(.caption)
-                TextField("Campaign Key", text: $model.campaignKey)
+                Text("Campaign Key").font(.caption).padding(.bottom, 5)
+                TextField("Campaign Key", text: $model.campaignKey).font(.body)
+                Rectangle().frame(height: 1)
             }
         }
     }

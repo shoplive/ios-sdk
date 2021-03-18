@@ -13,7 +13,7 @@ import os.log
 import os
 @objc public protocol ShopLiveSDKDelegate : AnyObject {
   @objc func handleNavigation(with url: Foundation.URL)
-  @objc func handleDownloadCoupon(with couponId: Swift.String, completion: () -> Swift.Void)
+  @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
@@ -43,6 +43,7 @@ extension ShopLive {
   }
 }
 extension ShopLive {
+  @objc final public class func startPictureInPicture()
   @objc final public class var authToken: Swift.String? {
     @objc get
     @objc set
@@ -54,7 +55,7 @@ extension ShopLive {
   @objc final public class func configure(with accessKey: Swift.String)
   @objc final public class func play(with campaignKey: Swift.String?)
   @objc final public class func reloadLive()
-  @objc final public class func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition = .default, scale: CoreGraphics.CGFloat = 2/5)
+  @objc final public class func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreGraphics.CGFloat)
   @objc final public class func stopPictureInPicture()
   @objc final public class var style: ShopLiveSDK.ShopLive.PresentationStyle {
     @objc get
