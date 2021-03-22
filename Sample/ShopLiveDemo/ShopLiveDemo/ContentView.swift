@@ -14,6 +14,10 @@ struct ContentView: View {
     @State var useToken: Bool = true
     @State var isActiveWebView: Bool = false
     
+    init() {
+        UIScrollView.appearance().keyboardDismissMode = .interactive
+    }
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 20) {
@@ -54,7 +58,7 @@ struct ContentView: View {
     }
     
     var inputView: some View {
-        Group {
+        ScrollView(content: {
             Toggle("토큰 사용", isOn: $useToken)
             VStack(alignment: .leading, spacing: 5) {
                 Text("Access Key").font(.caption).padding(.bottom, 5)
@@ -104,7 +108,7 @@ struct ContentView: View {
                 TextField("Campaign Key", text: $model.campaignKey).font(.body)
                 Rectangle().frame(height: 1)
             }
-        }
+        })
     }
     
     func hideKeyboard() {
