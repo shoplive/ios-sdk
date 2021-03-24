@@ -283,6 +283,7 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
 - (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
+- (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 @end
 
 enum Gender : NSInteger;

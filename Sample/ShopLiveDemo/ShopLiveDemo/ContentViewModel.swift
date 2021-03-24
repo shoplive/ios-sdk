@@ -64,6 +64,10 @@ class ContentViewModel: ObservableObject {
 }
 
 extension ContentViewModel: ShopLiveSDKDelegate {
+    func handleCommand(_ command: String, with payload: Any?) {
+        
+    }
+    
     func handleDownloadCoupon(with couponId: String, completion: () -> Void) {
         debugPrint("handleDownloadCoupon - couponId: couponId")
         completion()

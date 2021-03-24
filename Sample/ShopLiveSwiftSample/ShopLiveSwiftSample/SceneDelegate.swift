@@ -53,6 +53,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 extension SceneDelegate: ShopLiveSDKDelegate {
+    func handleCommand(_ command: String, with payload: Any?) {
+        
+    }
+    
     func handleNavigation(with url: URL) {
         ShopLive.startPictureInPicture()
         let safari = SFSafariViewController(url: url)

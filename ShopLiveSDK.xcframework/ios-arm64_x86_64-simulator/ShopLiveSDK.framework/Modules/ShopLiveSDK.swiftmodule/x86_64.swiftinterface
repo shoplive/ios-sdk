@@ -14,6 +14,7 @@ import os
 @objc public protocol ShopLiveSDKDelegate : AnyObject {
   @objc func handleNavigation(with url: Foundation.URL)
   @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
+  @objc func handleCommand(_ command: Swift.String, with payload: Any?)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
