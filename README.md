@@ -42,3 +42,4 @@ import ShopLiveSDK
 ShopLive.configure(with: {ACCESS_KEY})
 ShopLive.play(with: {CAMPAIGN_KEY})
 ```
+
