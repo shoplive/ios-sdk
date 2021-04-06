@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "ShopLiveSDK"
-    s.version      = "0.6.0"
+    s.version      = "0.6.2"
     s.summary      = "ShopLive"
     s.homepage     = "http://shoplive.cloud"
     s.license = { :type => 'Copyright', :text => <<-LICENSE
