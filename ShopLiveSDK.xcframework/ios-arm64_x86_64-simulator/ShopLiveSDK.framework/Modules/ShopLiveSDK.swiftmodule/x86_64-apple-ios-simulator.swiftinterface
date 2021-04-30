@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target x86_64-apple-ios13.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 import AVFoundation
 import AVKit
@@ -11,7 +11,7 @@ import UIKit
 import WebKit
 import os.log
 import os
-@objc public protocol ShopLiveSDKDelegate : AnyObject {
+@objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
   @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
@@ -26,8 +26,8 @@ extension ShopLive {
     case bottomLeft
     case bottomRight
     case `default`
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
@@ -36,8 +36,8 @@ extension ShopLive {
     case unknown
     case fullScreen
     case pip
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
@@ -87,10 +87,10 @@ extension ShopLive : AVKit.AVPictureInPictureControllerDelegate {
 }
 @objc public class ShopLiveUser : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 extension ShopLiveUser {
   @objc public enum Gender : Swift.Int, Swift.Codable, Swift.CaseIterable {
@@ -101,13 +101,13 @@ extension ShopLiveUser {
     public var description: Swift.String {
       get
     }
-    public typealias RawValue = Swift.Int
     public init?(rawValue: Swift.Int)
-    public var rawValue: Swift.Int {
+    public typealias AllCases = [ShopLiveSDK.ShopLiveUser.Gender]
+    public typealias RawValue = Swift.Int
+    public static var allCases: [ShopLiveSDK.ShopLiveUser.Gender] {
       get
     }
-    public typealias AllCases = [ShopLiveSDK.ShopLiveUser.Gender]
-    public static var allCases: [ShopLiveSDK.ShopLiveUser.Gender] {
+    public var rawValue: Swift.Int {
       get
     }
   }
