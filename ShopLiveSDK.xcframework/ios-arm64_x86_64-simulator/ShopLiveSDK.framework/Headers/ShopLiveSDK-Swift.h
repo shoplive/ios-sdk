@@ -240,17 +240,37 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
   PhaseREAL = 2,
 };
 
-@class ShopLiveUser;
+@class AVPictureInPictureController;
 @class NSNumber;
-@class WKWebViewConfiguration;
-@protocol ShopLiveSDKDelegate;
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK)) <AVPictureInPictureControllerDelegate>
+- (void)pictureInPictureController:(AVPictureInPictureController * _Nonnull)pictureInPictureController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
+- (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
+- (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
+- (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
+- (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
+@end
+
+
 @class NSString;
-@class UIViewController;
+@class ShopLiveUser;
+@protocol ShopLiveSDKDelegate;
+@class WKWebViewConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)startPictureInPicture;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
++ (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
++ (void)setAuthToken:(NSString * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveUser * _Nullable user;)
 + (ShopLiveUser * _Nullable)user SWIFT_WARN_UNUSED_RESULT;
 + (void)setUser:(ShopLiveUser * _Nullable)newValue;
++ (void)configureWith:(NSString * _Nonnull)accessKey phase:(enum Phase)phase;
++ (void)configureWith:(NSString * _Nonnull)accessKey;
++ (void)playWith:(NSString * _Nullable)campaignKey;
++ (void)reloadLive;
++ (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
++ (void)stopPictureInPicture;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PresentationStyle style;)
 + (enum PresentationStyle)style SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
@@ -259,69 +279,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) CGFloat pipScale;)
 + (CGFloat)pipScale SWIFT_WARN_UNUSED_RESULT;
 + (void)setPipScale:(CGFloat)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration * _Nullable webViewConfiguration;)
-+ (WKWebViewConfiguration * _Nullable)webViewConfiguration SWIFT_WARN_UNUSED_RESULT;
-+ (void)setWebViewConfiguration:(WKWebViewConfiguration * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ShopLiveSDKDelegate> _Nullable delegate;)
 + (id <ShopLiveSDKDelegate> _Nullable)delegate SWIFT_WARN_UNUSED_RESULT;
 + (void)setDelegate:(id <ShopLiveSDKDelegate> _Nullable)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
-+ (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAuthToken:(NSString * _Nullable)newValue;
-+ (void)configureWith:(NSString * _Nonnull)accessKey;
-+ (void)configureWith:(NSString * _Nonnull)accessKey phase:(enum Phase)phase;
-+ (void)playWith:(NSString * _Nullable)campaignKey :(UIViewController * _Nullable)parent;
-+ (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
-+ (void)startPictureInPicture;
-+ (void)stopPictureInPicture;
-+ (void)reloadLive;
-@end
-
-
-SWIFT_CLASS("_TtC11ShopLiveSDK15ShopLiveCombine") SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class AVPictureInPictureController;
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine (SWIFT_EXTENSION(ShopLiveSDK)) <AVPictureInPictureControllerDelegate>
-- (void)pictureInPictureController:(AVPictureInPictureController * _Nonnull)pictureInPictureController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
-- (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-@end
-
-
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine (SWIFT_EXTENSION(ShopLiveSDK))
-@property (nonatomic, strong) id <ShopLiveSDKDelegate> _Nullable delegate;
-@end
-
-
-SWIFT_CLASS("_TtC11ShopLiveSDK15ShopLiveRxSwift")
-@interface ShopLiveRxSwift : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-@interface ShopLiveRxSwift (SWIFT_EXTENSION(ShopLiveSDK)) <AVPictureInPictureControllerDelegate>
-- (void)pictureInPictureController:(AVPictureInPictureController * _Nonnull)pictureInPictureController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
-- (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-@end
-
-
-
-@interface ShopLiveRxSwift (SWIFT_EXTENSION(ShopLiveSDK))
-@property (nonatomic, strong) id <ShopLiveSDKDelegate> _Nullable delegate;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration * _Nullable webViewConfiguration;)
++ (WKWebViewConfiguration * _Nullable)webViewConfiguration SWIFT_WARN_UNUSED_RESULT;
++ (void)setWebViewConfiguration:(WKWebViewConfiguration * _Nullable)newValue;
 @end
 
 @class NSURL;
@@ -600,17 +563,37 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
   PhaseREAL = 2,
 };
 
-@class ShopLiveUser;
+@class AVPictureInPictureController;
 @class NSNumber;
-@class WKWebViewConfiguration;
-@protocol ShopLiveSDKDelegate;
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK)) <AVPictureInPictureControllerDelegate>
+- (void)pictureInPictureController:(AVPictureInPictureController * _Nonnull)pictureInPictureController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
+- (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
+- (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
+- (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
+- (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
+@end
+
+
 @class NSString;
-@class UIViewController;
+@class ShopLiveUser;
+@protocol ShopLiveSDKDelegate;
+@class WKWebViewConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)startPictureInPicture;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
++ (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
++ (void)setAuthToken:(NSString * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveUser * _Nullable user;)
 + (ShopLiveUser * _Nullable)user SWIFT_WARN_UNUSED_RESULT;
 + (void)setUser:(ShopLiveUser * _Nullable)newValue;
++ (void)configureWith:(NSString * _Nonnull)accessKey phase:(enum Phase)phase;
++ (void)configureWith:(NSString * _Nonnull)accessKey;
++ (void)playWith:(NSString * _Nullable)campaignKey;
++ (void)reloadLive;
++ (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
++ (void)stopPictureInPicture;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PresentationStyle style;)
 + (enum PresentationStyle)style SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
@@ -619,69 +602,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) CGFloat pipScale;)
 + (CGFloat)pipScale SWIFT_WARN_UNUSED_RESULT;
 + (void)setPipScale:(CGFloat)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration * _Nullable webViewConfiguration;)
-+ (WKWebViewConfiguration * _Nullable)webViewConfiguration SWIFT_WARN_UNUSED_RESULT;
-+ (void)setWebViewConfiguration:(WKWebViewConfiguration * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ShopLiveSDKDelegate> _Nullable delegate;)
 + (id <ShopLiveSDKDelegate> _Nullable)delegate SWIFT_WARN_UNUSED_RESULT;
 + (void)setDelegate:(id <ShopLiveSDKDelegate> _Nullable)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
-+ (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAuthToken:(NSString * _Nullable)newValue;
-+ (void)configureWith:(NSString * _Nonnull)accessKey;
-+ (void)configureWith:(NSString * _Nonnull)accessKey phase:(enum Phase)phase;
-+ (void)playWith:(NSString * _Nullable)campaignKey :(UIViewController * _Nullable)parent;
-+ (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
-+ (void)startPictureInPicture;
-+ (void)stopPictureInPicture;
-+ (void)reloadLive;
-@end
-
-
-SWIFT_CLASS("_TtC11ShopLiveSDK15ShopLiveCombine") SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class AVPictureInPictureController;
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine (SWIFT_EXTENSION(ShopLiveSDK)) <AVPictureInPictureControllerDelegate>
-- (void)pictureInPictureController:(AVPictureInPictureController * _Nonnull)pictureInPictureController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
-- (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-@end
-
-
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine (SWIFT_EXTENSION(ShopLiveSDK))
-@property (nonatomic, strong) id <ShopLiveSDKDelegate> _Nullable delegate;
-@end
-
-
-SWIFT_CLASS("_TtC11ShopLiveSDK15ShopLiveRxSwift")
-@interface ShopLiveRxSwift : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-@interface ShopLiveRxSwift (SWIFT_EXTENSION(ShopLiveSDK)) <AVPictureInPictureControllerDelegate>
-- (void)pictureInPictureController:(AVPictureInPictureController * _Nonnull)pictureInPictureController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
-- (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-@end
-
-
-
-@interface ShopLiveRxSwift (SWIFT_EXTENSION(ShopLiveSDK))
-@property (nonatomic, strong) id <ShopLiveSDKDelegate> _Nullable delegate;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration * _Nullable webViewConfiguration;)
++ (WKWebViewConfiguration * _Nullable)webViewConfiguration SWIFT_WARN_UNUSED_RESULT;
++ (void)setWebViewConfiguration:(WKWebViewConfiguration * _Nullable)newValue;
 @end
 
 @class NSURL;
