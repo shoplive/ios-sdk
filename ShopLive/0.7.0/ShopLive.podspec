@@ -17,6 +17,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/shoplive/ios-sdk.git", :tag => "#{spec.version}" }
   spec.vendored_frameworks = "ShopLiveSDK.xcframework"
   spec.swift_version = "5"
-  spec.dependency 'RxSwift'
+  spec.dependency 'RxCocoa'
 
 end
