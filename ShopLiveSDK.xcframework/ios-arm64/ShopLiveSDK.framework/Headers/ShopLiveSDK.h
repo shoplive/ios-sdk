@@ -2,7 +2,7 @@
 //  ShopLiveSDK.h
 //  ShopLiveSDK
 //
-//  Created by ShopLive on 2021/02/04.
+//  Created by purpleworks on 2021/02/04.
 //
 
 #import <Foundation/Foundation.h>
