@@ -1,0 +1,29 @@
+PODS:
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - ShopLive (0.8.0):
+    - RxCocoa
+
+DEPENDENCIES:
+  - ShopLive
+
+SPEC REPOS:
+  trunk:
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - ShopLive
+
+SPEC CHECKSUMS:
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  ShopLive: 82e4f4bad0308689ad5faf24ea62a53617a82cf0
+
+PODFILE CHECKSUM: 760467a540e78e0273a969785b74c5b14ca5282b
+
+COCOAPODS: 1.10.1
