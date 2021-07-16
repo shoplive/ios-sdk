@@ -12,6 +12,7 @@ Pod::Spec.new do |spec|
               }
 
   spec.author             = { "Shoplive" => "shoplive-eng@shoplive.cloud" }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.platform     = :ios
   spec.ios.deployment_target = '13.0'
   spec.swift_version = "5"
