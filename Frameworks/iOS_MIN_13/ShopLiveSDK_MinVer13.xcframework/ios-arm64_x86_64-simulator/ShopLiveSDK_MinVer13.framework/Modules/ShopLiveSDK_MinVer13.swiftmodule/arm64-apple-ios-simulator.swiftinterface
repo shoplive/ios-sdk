@@ -64,6 +64,7 @@ extension ShopLive {
   }
 }
 extension ShopLive {
+  @objc public static func onTerminated()
   @objc public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool)
   @objc public static func isKeepPlayVideoOnHeadPhoneUnplugged() -> Swift.Bool
   @objc public static func setAutoResumeVideoOnCallEnded(_ autoResume: Swift.Bool)

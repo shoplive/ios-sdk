@@ -246,6 +246,7 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
 @class UIViewController;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK_MinVer11))
++ (void)onTerminated;
 + (void)setKeepPlayVideoOnHeadphoneUnplugged:(BOOL)keepPlay;
 + (BOOL)isKeepPlayVideoOnHeadPhoneUnplugged SWIFT_WARN_UNUSED_RESULT;
 + (void)setAutoResumeVideoOnCallEnded:(BOOL)autoResume;
