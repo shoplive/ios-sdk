@@ -1,0 +1,212 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
+import AVFoundation
+import AVKit
+import CallKit
+import Combine
+import CoreMedia
+import ExternalAccessory
+import Foundation
+import MediaPlayer
+@_exported import ShopLiveSDK
+import Swift
+import UIKit
+import WebKit
+import os.log
+import os
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13.0, *)
+@objc final public class ShopLiveCombine : ObjectiveC.NSObject {
+  @objc deinit
+}
+@available(iOS 13.0, *)
+extension ShopLiveCombine {
+  @objc final public var delegate: ShopLiveSDK.ShopLiveSDKDelegate? {
+    @objc get
+    @objc set
+  }
+}
+@available(iOS 13.0, *)
+extension ShopLiveCombine : AVKit.AVPictureInPictureControllerDelegate {
+  @objc final public func pictureInPictureController(_ pictureInPictureController: AVKit.AVPictureInPictureController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc final public func pictureInPictureControllerWillStartPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
+  @objc final public func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
+  @objc final public func pictureInPictureControllerWillStopPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
+  @objc final public func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
+}
+extension UIViewController {
+  @objc dynamic public func dismissKeyboard()
+}
+@objc public protocol ShopLiveSDKDelegate {
+  @objc func handleNavigation(with url: Foundation.URL)
+  @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
+  @objc func handleCommand(_ command: Swift.String, with payload: Any?)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
+  @objc deinit
+}
+extension ShopLive {
+  @objc public enum PipPosition : Swift.Int {
+    case topLeft
+    case topRight
+    case bottomLeft
+    case bottomRight
+    case `default`
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum PresentationStyle : Swift.Int {
+    case unknown
+    case fullScreen
+    case pip
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum Phase : Swift.Int {
+    case DEV
+    case STAGE
+    case REAL
+    public var name: Swift.String {
+      get
+    }
+    public init?(name: Swift.String)
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ShopLive {
+  @objc public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool)
+  @objc public static func isKeepPlayVideoOnHeadPhoneUnplugged() -> Swift.Bool
+  @objc public static func setAutoResumeVideoOnCallEnded(_ autoResume: Swift.Bool)
+  @objc public static func isAutoResumeVideoOnCallEnded() -> Swift.Bool
+  @objc public static var user: ShopLiveSDK.ShopLiveUser? {
+    @objc get
+    @objc set
+  }
+  @objc public static var style: ShopLiveSDK.ShopLive.PresentationStyle {
+    @objc get
+  }
+  @objc public static var pipPosition: ShopLiveSDK.ShopLive.PipPosition {
+    @objc get
+    @objc set
+  }
+  @objc public static var pipScale: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc public static var webViewConfiguration: WebKit.WKWebViewConfiguration? {
+    @objc get
+    @objc set
+  }
+  @objc public static var delegate: ShopLiveSDK.ShopLiveSDKDelegate? {
+    @objc get
+    @objc set
+  }
+  @objc public static var authToken: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public static func configure(with accessKey: Swift.String)
+  @objc public static func configure(with accessKey: Swift.String, phase: ShopLiveSDK.ShopLive.Phase)
+  @objc public static func play(with campaignKey: Swift.String?, _ parent: UIKit.UIViewController? = nil)
+  @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreGraphics.CGFloat)
+  @objc public static func startPictureInPicture()
+  @objc public static func stopPictureInPicture()
+  @objc public static func reloadLive()
+}
+@objc @_inheritsConvenienceInitializers open class SLNextGrowingTextView : UIKit.UIScrollView {
+  @_hasMissingDesignatedInitializers open class Delegates {
+    open var willChangeHeight: (CoreGraphics.CGFloat) -> Swift.Void
+    open var didChangeHeight: (CoreGraphics.CGFloat) -> Swift.Void
+    @objc deinit
+  }
+  open var delegates: ShopLiveSDK.SLNextGrowingTextView.Delegates
+  open var textView: UIKit.UITextView {
+    get
+  }
+  open var minNumberOfLines: Swift.Int {
+    get
+    set
+  }
+  open var maxNumberOfLines: Swift.Int {
+    get
+    set
+  }
+  @available(*, deprecated, message: "Use isAutomaticScrollToBottomEnabled")
+  open var disableAutomaticScrollToBottom: Swift.Bool {
+    get
+  }
+  open var isAutomaticScrollToBottomEnabled: Swift.Bool
+  open var isFlashScrollIndicatorsEnabled: Swift.Bool
+  open var placeholderAttributedText: Foundation.NSAttributedString? {
+    get
+    set
+  }
+  @objc override dynamic open var inputView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open var isFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @discardableResult
+  @objc override dynamic open func becomeFirstResponder() -> Swift.Bool
+  @discardableResult
+  @objc override dynamic open func resignFirstResponder() -> Swift.Bool
+  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func layoutSubviews()
+  @objc override dynamic open func reloadInputViews()
+  @objc deinit
+}
+@objc public class ShopLiveUser : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension ShopLiveUser {
+  @objc public enum Gender : Swift.Int, Swift.Codable, Swift.CaseIterable {
+    case female = 1
+    case male = 2
+    case neutral = 3
+    case unknown = 0
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias AllCases = [ShopLiveSDK.ShopLiveUser.Gender]
+    public typealias RawValue = Swift.Int
+    public static var allCases: [ShopLiveSDK.ShopLiveUser.Gender] {
+      get
+    }
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.Equatable {}
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.Hashable {}
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Equatable {}
+extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Hashable {}
+extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLive.Phase : Swift.Equatable {}
+extension ShopLiveSDK.ShopLive.Phase : Swift.Hashable {}
+extension ShopLiveSDK.ShopLive.Phase : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLiveUser.Gender : Swift.Equatable {}
+extension ShopLiveSDK.ShopLiveUser.Gender : Swift.Hashable {}
+extension ShopLiveSDK.ShopLiveUser.Gender : Swift.RawRepresentable {}
