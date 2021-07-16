@@ -188,8 +188,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import AVKit;
-@import CoreGraphics;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -208,23 +206,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="ShopLiveSDK_MinVer13",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
-
-@class UIView;
-@class NSNumber;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC20ShopLiveSDK_MinVer1321SLNextGrowingTextView")
-@interface SLNextGrowingTextView : UIScrollView
-@property (nonatomic, strong) UIView * _Nullable inputView;
-@property (nonatomic, readonly) BOOL isFirstResponder;
-- (BOOL)becomeFirstResponder;
-- (BOOL)resignFirstResponder;
-@property (nonatomic, readonly) CGSize intrinsicContentSize;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)layoutSubviews;
-- (void)reloadInputViews;
-@end
 
 
 SWIFT_CLASS("_TtC20ShopLiveSDK_MinVer138ShopLive")
@@ -257,6 +238,7 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
   PhaseREAL = 2,
 };
 
+@class NSNumber;
 @class ShopLiveUser;
 @class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
@@ -295,31 +277,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)startPictureInPicture;
 + (void)stopPictureInPicture;
 + (void)reloadLive;
-@end
-
-
-SWIFT_CLASS("_TtC20ShopLiveSDK_MinVer1315ShopLiveCombine") SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class AVPictureInPictureController;
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine (SWIFT_EXTENSION(ShopLiveSDK_MinVer13)) <AVPictureInPictureControllerDelegate>
-- (void)pictureInPictureController:(AVPictureInPictureController * _Nonnull)pictureInPictureController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
-- (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-- (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController * _Nonnull)pictureInPictureController;
-@end
-
-
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface ShopLiveCombine (SWIFT_EXTENSION(ShopLiveSDK_MinVer13))
-@property (nonatomic, strong) id <ShopLiveSDKDelegate> _Nullable delegate;
 @end
 
 @class NSURL;

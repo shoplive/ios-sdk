@@ -16,25 +16,6 @@ import UIKit
 import WebKit
 import os.log
 import os
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13.0, *)
-@objc final public class ShopLiveCombine : ObjectiveC.NSObject {
-  @objc deinit
-}
-@available(iOS 13.0, *)
-extension ShopLiveCombine {
-  @objc final public var delegate: ShopLiveSDK_MinVer11.ShopLiveSDKDelegate? {
-    @objc get
-    @objc set
-  }
-}
-@available(iOS 13.0, *)
-extension ShopLiveCombine : AVKit.AVPictureInPictureControllerDelegate {
-  @objc final public func pictureInPictureController(_ pictureInPictureController: AVKit.AVPictureInPictureController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Swift.Bool) -> Swift.Void)
-  @objc final public func pictureInPictureControllerWillStartPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
-  @objc final public func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
-  @objc final public func pictureInPictureControllerWillStopPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
-  @objc final public func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
-}
 extension UIViewController {
   @objc dynamic public func dismissKeyboard()
 }
@@ -67,22 +48,6 @@ extension Reactive where Base : AVFoundation.AVPlayerItem {
   @objc func handleNavigation(with url: Foundation.URL)
   @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLiveRxSwift : ObjectiveC.NSObject {
-  @objc deinit
-}
-extension ShopLiveRxSwift {
-  @objc final public var delegate: ShopLiveSDK_MinVer11.ShopLiveSDKDelegate? {
-    @objc get
-    @objc set
-  }
-}
-extension ShopLiveRxSwift : AVKit.AVPictureInPictureControllerDelegate {
-  @objc final public func pictureInPictureController(_ pictureInPictureController: AVKit.AVPictureInPictureController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Swift.Bool) -> Swift.Void)
-  @objc final public func pictureInPictureControllerWillStartPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
-  @objc final public func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
-  @objc final public func pictureInPictureControllerWillStopPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
-  @objc final public func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVKit.AVPictureInPictureController)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
@@ -164,54 +129,6 @@ extension ShopLive {
   @objc public static func startPictureInPicture()
   @objc public static func stopPictureInPicture()
   @objc public static func reloadLive()
-}
-@objc @_inheritsConvenienceInitializers open class SLNextGrowingTextView : UIKit.UIScrollView {
-  @_hasMissingDesignatedInitializers open class Delegates {
-    open var willChangeHeight: (CoreGraphics.CGFloat) -> Swift.Void
-    open var didChangeHeight: (CoreGraphics.CGFloat) -> Swift.Void
-    @objc deinit
-  }
-  open var delegates: ShopLiveSDK_MinVer11.SLNextGrowingTextView.Delegates
-  open var textView: UIKit.UITextView {
-    get
-  }
-  open var minNumberOfLines: Swift.Int {
-    get
-    set
-  }
-  open var maxNumberOfLines: Swift.Int {
-    get
-    set
-  }
-  @available(*, deprecated, message: "Use isAutomaticScrollToBottomEnabled")
-  open var disableAutomaticScrollToBottom: Swift.Bool {
-    get
-  }
-  open var isAutomaticScrollToBottomEnabled: Swift.Bool
-  open var isFlashScrollIndicatorsEnabled: Swift.Bool
-  open var placeholderAttributedText: Foundation.NSAttributedString? {
-    get
-    set
-  }
-  @objc override dynamic open var inputView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc override dynamic open var isFirstResponder: Swift.Bool {
-    @objc get
-  }
-  @discardableResult
-  @objc override dynamic open func becomeFirstResponder() -> Swift.Bool
-  @discardableResult
-  @objc override dynamic open func resignFirstResponder() -> Swift.Bool
-  @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
-    @objc get
-  }
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open func layoutSubviews()
-  @objc override dynamic open func reloadInputViews()
-  @objc deinit
 }
 @objc public class ShopLiveUser : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK_MinVer11.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
