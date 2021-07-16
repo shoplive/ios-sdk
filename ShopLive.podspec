@@ -4,6 +4,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "ShopLive SDK for iOS"
 
   spec.homepage     = "http://shoplive.cloud"
+  spec.source   = { :git => 'https://github.com/shoplive/ios-sdk.git', :tag => spec.version }
   spec.license = { :type => 'Copyright', :text => <<-LICENSE
                  Copyright 2021
                  Permission is granted to...
