@@ -13,18 +13,19 @@ Pod::Spec.new do |spec|
 
   spec.author             = { "Shoplive" => "shoplive-eng@shoplive.cloud" }
   spec.platform     = :ios
+  spec.ios.deployment_target = '13.0'
+  spec.swift_version = "5"
+  spec.ios.frameworks = 'CallKit', 'SafariServices'
 
-  spec.subspec 'iOS13' do |ss|
+  spec.subspec 'Support_iOS_MIN_13' do |ss|
     ss.ios.deployment_target = '13.0'
-    ss.vendored_frameworks = "Frameworks/iOS13/ShopLiveSDK.xcframework"
+    ss.vendored_frameworks = 'Frameworks/iOS_MIN_13/ShopLiveSDK_MinVer13.xcframework'
   end
   
-  spec.subspec 'iOS11_12' do |ss|
+  spec.subspec 'Support_iOS_MIN_11' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.vendored_frameworks = "Frameworks/iOS11_12/ShopLiveSDK.xcframework"
+    ss.vendored_frameworks = 'Frameworks/iOS_MIN_11/ShopLiveSDK_MinVer11.xcframework'
     ss.dependency 'RxCocoa'
   end
-
-  spec.swift_version = "5"
 
 end
