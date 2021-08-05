@@ -241,14 +241,17 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
   PhaseREAL = 2,
 };
 
+@class UIFont;
+@class NSString;
 @class NSNumber;
 @class ShopLiveUser;
 @class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
-@class NSString;
 @class UIViewController;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setChatViewFontWithInputBoxFont:(UIFont * _Nonnull)inputBoxFont sendButtonFont:(UIFont * _Nonnull)sendButtonFont;
++ (void)setShareScheme:(NSString * _Nonnull)scheme custom:(void (^ _Nullable)(void))custom;
 + (void)onTerminated;
 + (void)setKeepPlayVideoOnHeadphoneUnplugged:(BOOL)keepPlay;
 + (BOOL)isKeepPlayVideoOnHeadPhoneUnplugged SWIFT_WARN_UNUSED_RESULT;
@@ -567,14 +570,17 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
   PhaseREAL = 2,
 };
 
+@class UIFont;
+@class NSString;
 @class NSNumber;
 @class ShopLiveUser;
 @class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
-@class NSString;
 @class UIViewController;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setChatViewFontWithInputBoxFont:(UIFont * _Nonnull)inputBoxFont sendButtonFont:(UIFont * _Nonnull)sendButtonFont;
++ (void)setShareScheme:(NSString * _Nonnull)scheme custom:(void (^ _Nullable)(void))custom;
 + (void)onTerminated;
 + (void)setKeepPlayVideoOnHeadphoneUnplugged:(BOOL)keepPlay;
 + (BOOL)isKeepPlayVideoOnHeadPhoneUnplugged SWIFT_WARN_UNUSED_RESULT;
