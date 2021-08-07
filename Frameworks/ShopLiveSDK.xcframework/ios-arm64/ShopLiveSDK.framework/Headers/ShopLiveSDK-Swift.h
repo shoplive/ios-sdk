@@ -209,6 +209,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
