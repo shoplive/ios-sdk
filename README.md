@@ -20,6 +20,14 @@ pod 'ShopLiveSDK'
 
 <br>
 
+`Swift Package Manager`를 사용해 ShopLiveSDK를 설치 할 수 있습니다. 아래와 같은 순서로 추가해 주세요.
+
+- File > Swift Packages > Add Package Dependency
+- Add https://github.com/shoplive/ios-sdk.git
+- Select "Up to Next Major" with "1.0.2"
+
+<br>
+
 ## Quick Guide
 
 <br>
