@@ -251,6 +251,7 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
 @class UIViewController;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)close;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nonnull)inputBoxFont sendButtonFont:(UIFont * _Nonnull)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme custom:(void (^ _Nullable)(void))custom;
 + (void)onTerminated;
@@ -581,6 +582,7 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
 @class UIViewController;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)close;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nonnull)inputBoxFont sendButtonFont:(UIFont * _Nonnull)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme custom:(void (^ _Nullable)(void))custom;
 + (void)onTerminated;

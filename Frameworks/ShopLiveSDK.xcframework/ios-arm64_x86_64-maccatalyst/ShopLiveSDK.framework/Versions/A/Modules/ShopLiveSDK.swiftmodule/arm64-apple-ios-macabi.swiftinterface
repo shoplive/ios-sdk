@@ -65,6 +65,7 @@ extension ShopLive {
   }
 }
 extension ShopLive {
+  @objc public static func close()
   @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont, sendButtonFont: UIKit.UIFont)
   @objc public static func setShareScheme(_ scheme: Swift.String? = nil, custom: (() -> Swift.Void)?)
   @objc public static func onTerminated()
