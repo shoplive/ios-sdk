@@ -13,9 +13,9 @@
 사용하고 있는 `Podfile`에 아래 내용을 추가해 주세요.
 
 ```ruby
-platform :ios, '13.0'
+platform :ios, '11.0'
 use_frameworks!
-pod 'ShopLiveSDK'
+pod 'ShopLive'
 ```
 
 <br>
