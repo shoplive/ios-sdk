@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -293,6 +294,9 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
 - (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
 - (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion;
+- (void)handleChangeCampaignStatusWithStatus:(NSString * _Nonnull)status;
+- (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
+- (void)handleCampaignInfoWithCampaignInfo:(NSDictionary<NSString *, id> * _Nonnull)campaignInfo;
 - (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 @end
 

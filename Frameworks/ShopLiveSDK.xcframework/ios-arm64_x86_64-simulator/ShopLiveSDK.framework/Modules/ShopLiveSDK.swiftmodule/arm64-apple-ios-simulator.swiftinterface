@@ -21,6 +21,9 @@ extension UIViewController {
   @objc func handleNavigation(with url: Foundation.URL)
   @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
   @objc func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping () -> Swift.Void)
+  @objc func handleChangeCampaignStatus(status: Swift.String)
+  @objc func handleError(code: Swift.String, message: Swift.String)
+  @objc func handleCampaignInfo(campaignInfo: [Swift.String : Any])
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
