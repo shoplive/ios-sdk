@@ -322,6 +322,7 @@ typedef SWIFT_ENUM(NSInteger, Gender, open) {
 
 
 
+
 @interface UIViewController (SWIFT_EXTENSION(ShopLiveSDK))
 - (void)dismissKeyboard;
 @end
