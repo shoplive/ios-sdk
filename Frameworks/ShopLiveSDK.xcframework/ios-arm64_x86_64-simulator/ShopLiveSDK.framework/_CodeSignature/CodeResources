@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Qmm38bvxh4OoWGtIzKXNILycdPo=
+		6896hIifcqklWA5JJ/wb5v78be0=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PVUk5w/+I97CSSXQmCv2/nArIrs=
+		1aJHwhphuSP3hoEzNmJwNAUbapk=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		PVUk5w/+I97CSSXQmCv2/nArIrs=
+		1aJHwhphuSP3hoEzNmJwNAUbapk=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		k2FConY1FHbVcIhC8HtwZbs3Bu0=
+		de7ep/XK2uUBtu63e/vADRB7ZkQ=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		k2FConY1FHbVcIhC8HtwZbs3Bu0=
+		de7ep/XK2uUBtu63e/vADRB7ZkQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5dTG47PE0NSoXQvLvRwZU+4VyIYXa7peOW/AS9I/jgg=
+			OO0mclqYjbdhAedy9OqoUTAZBZtI1Jkp+joeb/dxu74=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64.swiftdoc</key>
@@ -142,7 +142,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5dTG47PE0NSoXQvLvRwZU+4VyIYXa7peOW/AS9I/jgg=
+			OO0mclqYjbdhAedy9OqoUTAZBZtI1Jkp+joeb/dxu74=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TbJeNTs0CdIflDjXjyRuxyFdOdNLoKEpQ0Ax4nJ1L8Q=
+			vDDnlYlK3gHnIxjz6iF36sWilVBb05FkSEzpOn5Sxiw=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64.swiftdoc</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TbJeNTs0CdIflDjXjyRuxyFdOdNLoKEpQ0Ax4nJ1L8Q=
+			vDDnlYlK3gHnIxjz6iF36sWilVBb05FkSEzpOn5Sxiw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
