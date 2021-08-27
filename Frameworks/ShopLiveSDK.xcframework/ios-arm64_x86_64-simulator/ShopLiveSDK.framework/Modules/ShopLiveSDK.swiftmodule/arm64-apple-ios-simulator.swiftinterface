@@ -26,6 +26,11 @@ extension UIViewController {
   @objc func handleCampaignInfo(campaignInfo: [Swift.String : Any])
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
 }
+@_inheritsConvenienceInitializers @objc public class ShopLiveViewContgroller : UIKit.UIViewController {
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
 }
@@ -68,6 +73,9 @@ extension ShopLive {
   }
 }
 extension ShopLive {
+  @objc public static var viewController: ShopLiveSDK.ShopLiveViewContgroller? {
+    @objc get
+  }
   @objc public static func close()
   @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont, sendButtonFont: UIKit.UIFont)
   @objc public static func setShareScheme(_ scheme: Swift.String? = nil, custom: (() -> Swift.Void)?)

@@ -241,6 +241,7 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
   PhaseREAL = 2,
 };
 
+@class ShopLiveViewContgroller;
 @class UIFont;
 @class NSString;
 @class NSNumber;
@@ -250,6 +251,8 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
 @class UIViewController;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopLiveViewContgroller * _Nullable viewController;)
++ (ShopLiveViewContgroller * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)close;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nonnull)inputBoxFont sendButtonFont:(UIFont * _Nonnull)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme custom:(void (^ _Nullable)(void))custom;
@@ -319,6 +322,15 @@ typedef SWIFT_ENUM(NSInteger, Gender, open) {
   GenderNeutral = 3,
   GenderUnknown = 0,
 };
+
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK23ShopLiveViewContgroller")
+@interface ShopLiveViewContgroller : UIViewController
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
