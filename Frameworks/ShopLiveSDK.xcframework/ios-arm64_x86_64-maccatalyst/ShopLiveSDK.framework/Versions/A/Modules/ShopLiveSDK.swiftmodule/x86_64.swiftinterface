@@ -26,7 +26,7 @@ extension UIViewController {
   @objc func handleCampaignInfo(campaignInfo: [Swift.String : Any])
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
 }
-@_inheritsConvenienceInitializers @objc public class ShopLiveViewContgroller : UIKit.UIViewController {
+@_inheritsConvenienceInitializers @objc public class ShopLiveViewController : UIKit.UIViewController {
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -73,7 +73,7 @@ extension ShopLive {
   }
 }
 extension ShopLive {
-  @objc public static var viewController: ShopLiveSDK.ShopLiveViewContgroller? {
+  @objc public static var viewController: ShopLiveSDK.ShopLiveViewController? {
     @objc get
   }
   @objc public static func close()
