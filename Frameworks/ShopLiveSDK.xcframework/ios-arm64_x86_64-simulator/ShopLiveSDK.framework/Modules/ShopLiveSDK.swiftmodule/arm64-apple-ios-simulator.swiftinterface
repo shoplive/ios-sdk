@@ -3,7 +3,6 @@
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 import AVFoundation
 import AVKit
-import CallKit
 import CoreMedia
 import ExternalAccessory
 import Foundation
@@ -80,10 +79,10 @@ extension ShopLive {
   @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont, sendButtonFont: UIKit.UIFont)
   @objc public static func setShareScheme(_ scheme: Swift.String? = nil, custom: (() -> Swift.Void)?)
   @objc public static func onTerminated()
-  @objc public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool)
-  @objc public static func isKeepPlayVideoOnHeadPhoneUnplugged() -> Swift.Bool
-  @objc public static func setAutoResumeVideoOnCallEnded(_ autoResume: Swift.Bool)
-  @objc public static func isAutoResumeVideoOnCallEnded() -> Swift.Bool
+  public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool)
+  public static func isKeepPlayVideoOnHeadPhoneUnplugged() -> Swift.Bool
+  public static func setAutoResumeVideoOnCallEnded(_ autoResume: Swift.Bool)
+  public static func isAutoResumeVideoOnCallEnded() -> Swift.Bool
   @objc public static var user: ShopLiveSDK.ShopLiveUser? {
     @objc get
     @objc set
