@@ -1,4 +1,4 @@
-ㅈPod::Spec.new do |spec|
+Pod::Spec.new do |spec|
   spec.name         = "ShopLive"
   spec.version      = "1.0.12"
   spec.summary      = "ShopLive SDK for iOS"
