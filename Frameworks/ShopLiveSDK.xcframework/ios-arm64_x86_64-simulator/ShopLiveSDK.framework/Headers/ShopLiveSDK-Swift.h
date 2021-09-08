@@ -261,6 +261,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopLiveView
 + (void)onTerminated;
 + (void)setKeepPlayVideoOnHeadphoneUnplugged:(BOOL)keepPlay;
 + (BOOL)isKeepPlayVideoOnHeadPhoneUnplugged SWIFT_WARN_UNUSED_RESULT;
++ (void)setAutoResumeVideoOnCallEnded:(BOOL)autoResume;
++ (BOOL)isAutoResumeVideoOnCallEnded SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveUser * _Nullable user;)
 + (ShopLiveUser * _Nullable)user SWIFT_WARN_UNUSED_RESULT;
 + (void)setUser:(ShopLiveUser * _Nullable)newValue;
@@ -608,6 +610,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopLiveView
 + (void)onTerminated;
 + (void)setKeepPlayVideoOnHeadphoneUnplugged:(BOOL)keepPlay;
 + (BOOL)isKeepPlayVideoOnHeadPhoneUnplugged SWIFT_WARN_UNUSED_RESULT;
++ (void)setAutoResumeVideoOnCallEnded:(BOOL)autoResume;
++ (BOOL)isAutoResumeVideoOnCallEnded SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveUser * _Nullable user;)
 + (ShopLiveUser * _Nullable)user SWIFT_WARN_UNUSED_RESULT;
 + (void)setUser:(ShopLiveUser * _Nullable)newValue;
