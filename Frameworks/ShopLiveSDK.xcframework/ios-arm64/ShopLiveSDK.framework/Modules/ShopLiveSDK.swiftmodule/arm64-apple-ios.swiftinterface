@@ -73,6 +73,7 @@ extension ShopLive {
   }
 }
 extension ShopLive {
+  @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
   @objc public static var viewController: ShopLiveSDK.ShopLiveViewController? {
     @objc get
   }

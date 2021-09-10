@@ -243,16 +243,17 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
   PhaseREAL = 2,
 };
 
+@class NSNumber;
 @class ShopLiveViewController;
 @class UIFont;
 @class NSString;
-@class NSNumber;
 @class ShopLiveUser;
 @class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
 @class UIViewController;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopLiveViewController * _Nullable viewController;)
 + (ShopLiveViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)close;
@@ -334,6 +335,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -592,16 +594,17 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
   PhaseREAL = 2,
 };
 
+@class NSNumber;
 @class ShopLiveViewController;
 @class UIFont;
 @class NSString;
-@class NSNumber;
 @class ShopLiveUser;
 @class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
 @class UIViewController;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopLiveViewController * _Nullable viewController;)
 + (ShopLiveViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)close;
@@ -683,6 +686,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
