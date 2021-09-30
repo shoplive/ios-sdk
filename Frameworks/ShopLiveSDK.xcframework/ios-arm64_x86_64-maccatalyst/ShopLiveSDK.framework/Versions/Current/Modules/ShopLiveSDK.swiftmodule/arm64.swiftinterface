@@ -123,6 +123,8 @@ extension ShopLive {
 }
 @objc public class ShopLiveUser : ObjectiveC.NSObject {
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
+  public func add(_ params: [Swift.String : Any?])
+  public func getParams() -> [Swift.String : Swift.String]
   @objc override dynamic public init()
   @objc deinit
 }
