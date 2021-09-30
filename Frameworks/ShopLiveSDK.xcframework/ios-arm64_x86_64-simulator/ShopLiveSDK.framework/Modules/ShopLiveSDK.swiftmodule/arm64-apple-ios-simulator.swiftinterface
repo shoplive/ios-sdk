@@ -121,12 +121,10 @@ extension ShopLive {
   @objc public static func stopPictureInPicture()
   @objc public static func reloadLive()
 }
-@objc public class ShopLiveUser : ObjectiveC.NSObject, Swift.Codable {
+@objc public class ShopLiveUser : ObjectiveC.NSObject {
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
   @objc override dynamic public init()
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
 }
 extension ShopLiveUser {
   @objc public enum Gender : Swift.Int, Swift.Codable, Swift.CaseIterable {

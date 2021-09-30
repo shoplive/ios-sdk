@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ShopLive"
-  spec.version      = "1.0.17"
+  spec.version      = "1.0.18"
   spec.summary      = "ShopLive SDK for iOS"
 
   spec.homepage     = "http://shoplive.cloud"
@@ -15,7 +15,6 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios
   spec.ios.deployment_target = '11.0'
   spec.swift_version = "5"
-  spec.ios.frameworks = 'CallKit', 'SafariServices'
   spec.vendored_frameworks = 'Frameworks/ShopLiveSDK.xcframework'
 
 end

@@ -338,6 +338,8 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 
 
 
+
+
 @interface UIViewController (SWIFT_EXTENSION(ShopLiveSDK))
 - (void)dismissKeyboard;
 @end

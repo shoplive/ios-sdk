@@ -340,6 +340,8 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 
 
 
+
+
 @interface UIViewController (SWIFT_EXTENSION(ShopLiveSDK))
 - (void)dismissKeyboard;
 @end
@@ -686,6 +688,8 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 
