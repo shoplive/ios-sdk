@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 import AVFoundation
 import AVKit
@@ -14,7 +14,7 @@ import UIKit
 import WebKit
 import os.log
 import os
-extension UIViewController {
+extension UIKit.UIViewController {
   @objc dynamic public func dismissKeyboard()
 }
 @objc public protocol ShopLiveSDKDelegate {
@@ -34,7 +34,7 @@ extension UIViewController {
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
 }
-extension ShopLive {
+extension ShopLiveSDK.ShopLive {
   @objc public enum PipPosition : Swift.Int {
     case topLeft
     case topRight
@@ -72,7 +72,7 @@ extension ShopLive {
     }
   }
 }
-extension ShopLive {
+extension ShopLiveSDK.ShopLive {
   @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
   @objc public static var viewController: ShopLiveSDK.ShopLiveViewController? {
     @objc get
@@ -125,10 +125,9 @@ extension ShopLive {
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
   public func add(_ params: [Swift.String : Any?])
   public func getParams() -> [Swift.String : Swift.String]
-  @objc override dynamic public init()
   @objc deinit
 }
-extension ShopLiveUser {
+extension ShopLiveSDK.ShopLiveUser {
   @objc public enum Gender : Swift.Int, Swift.Codable, Swift.CaseIterable {
     case female = 1
     case male = 2
