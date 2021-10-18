@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5"
   spec.ios.frameworks = 'VideoToolbox'
   spec.subspec 'Xcode12' do |ss|
-    ss.vendored_frameworks = 'Frameworks/Xcode12/ShopLiveSDK.xcframework'
+    ss.vendored_frameworks = 'Frameworks/ShopLiveSDKXcode12.xcframework'
   end
   spec.vendored_frameworks = 'Frameworks/ShopLiveSDK.xcframework'
 
