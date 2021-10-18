@@ -16,6 +16,9 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '11.0'
   spec.swift_version = "5"
   spec.ios.frameworks = 'VideoToolbox'
+  spec.subspec 'Xcode12' do |ss|
+    ss.vendored_frameworks = 'Frameworks/Xcode12/ShopLiveSDK.xcframework'
+  end
   spec.vendored_frameworks = 'Frameworks/ShopLiveSDK.xcframework'
 
 end
