@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 import AVFoundation
 import AVKit
@@ -13,10 +13,11 @@ import Swift
 import UIKit
 import VideoToolbox
 import WebKit
+import _Concurrency
 import os.log
 import os
-extension UIViewController {
-  @objc dynamic public func dismissKeyboard()
+extension UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func dismissKeyboard()
 }
 @objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
@@ -27,15 +28,15 @@ extension UIViewController {
   @objc func handleCampaignInfo(campaignInfo: [Swift.String : Any])
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
 }
-@_inheritsConvenienceInitializers @objc public class ShopLiveViewController : UIKit.UIViewController {
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class ShopLiveViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
 }
-extension ShopLive {
+extension ShopLiveSDK.ShopLive {
   @objc public enum PipPosition : Swift.Int {
     case topLeft
     case topRight
@@ -73,7 +74,7 @@ extension ShopLive {
     }
   }
 }
-extension ShopLive {
+extension ShopLiveSDK.ShopLive {
   @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
   @objc public static var viewController: ShopLiveSDK.ShopLiveViewController? {
     @objc get
@@ -126,10 +127,9 @@ extension ShopLive {
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
   public func add(_ params: [Swift.String : Any?])
   public func getParams() -> [Swift.String : Swift.String]
-  @objc override dynamic public init()
   @objc deinit
 }
-extension ShopLiveUser {
+extension ShopLiveSDK.ShopLiveUser {
   @objc public enum Gender : Swift.Int, Swift.Codable, Swift.CaseIterable {
     case female = 1
     case male = 2
