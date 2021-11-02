@@ -19,9 +19,12 @@ import os
 extension UIKit.UIViewController {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func dismissKeyboard()
 }
+@_hasMissingDesignatedInitializers @objc public class CouponFailure : ObjectiveC.NSObject {
+  @objc deinit
+}
 @objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
-  @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
+  @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping (Swift.Bool, ShopLiveSDK.CouponFailure?) -> Swift.Void)
   @objc func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping () -> Swift.Void)
   @objc func handleChangeCampaignStatus(status: Swift.String)
   @objc func handleError(code: Swift.String, message: Swift.String)
