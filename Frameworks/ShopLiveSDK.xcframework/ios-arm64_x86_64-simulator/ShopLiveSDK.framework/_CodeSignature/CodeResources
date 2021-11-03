@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ShopLiveSDK-Swift.h</key>
 		<data>
-		aNZQ14Wa5vgUSLpyZykopc09Uyg=
+		ZaKSjn722wTcMsHrURYLcVNuuZU=
 		</data>
 		<key>Headers/ShopLiveSDK.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YWqNxBoeRB5+JXgtvT5fASUdAzA=
+		bD1OLF7qErHe4q0XNVljTkR2bzg=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		vyEfLIAzoejb7iClzFlj051x/Rg=
+		3Mgt73xpkxzeP1yTozNVZkvopqE=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		OuwE/BO2hF4AxpWxOKeYa6GuH28=
+		2Xj5EMwS3kKbwqKZzakGYRDnnNE=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		vyEfLIAzoejb7iClzFlj051x/Rg=
+		3Mgt73xpkxzeP1yTozNVZkvopqE=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		OuwE/BO2hF4AxpWxOKeYa6GuH28=
+		2Xj5EMwS3kKbwqKZzakGYRDnnNE=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		sEX9f/aQLWW+R8caZN06aafvCX8=
+		IxVNELgn7yA00DIG/yWMJ0umvWc=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YmYlJ+snZUvSYlT5St22Lrj/7kM=
+		0pBxYREkwz7+UqnMXHm+n3VASes=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		sEX9f/aQLWW+R8caZN06aafvCX8=
+		IxVNELgn7yA00DIG/yWMJ0umvWc=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		YmYlJ+snZUvSYlT5St22Lrj/7kM=
+		0pBxYREkwz7+UqnMXHm+n3VASes=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -93,7 +93,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pyfcUlhvg2i73EGOYqJrQtBaYNia+d4x+NQk3bGqSrg=
+			ne3Zf1j7CXAhGGMpb6p3SMUUr/Dc/gNc4Tjti1R6K74=
 			</data>
 		</dict>
 		<key>Headers/ShopLiveSDK.h</key>
@@ -114,14 +114,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KoYaY6N/pIwM/8Pz+hAIyLXr5fJh9aRUGqukaOFX/2I=
+			ZDnpIA1xyNADMuqTBpg6Q0RDcYcqNW0Fk0AHZcDzBSY=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hbD4DJR10PAaHjI7GMQ5K+YOPvP2e1DhsOHct6LBvAk=
+			fTn1ilMxJeGBIbeyeh/2j8G/DB4aVTYHoX0ESc4B7YM=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64.swiftdoc</key>
@@ -135,14 +135,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KoYaY6N/pIwM/8Pz+hAIyLXr5fJh9aRUGqukaOFX/2I=
+			ZDnpIA1xyNADMuqTBpg6Q0RDcYcqNW0Fk0AHZcDzBSY=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hbD4DJR10PAaHjI7GMQ5K+YOPvP2e1DhsOHct6LBvAk=
+			fTn1ilMxJeGBIbeyeh/2j8G/DB4aVTYHoX0ESc4B7YM=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -156,14 +156,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tm4PNu1ZtBoMDi2ql6BF8+wDUXlBQ0qe4nNWdnWYmHU=
+			ACbj0gNW4cLxHYcYX0KC7yzo9YgETNw3EuoP0RVwdFA=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pPHG/nhE+Kxe2bGN3CbALs+sWj877BrGSmpn4FCxWew=
+			SmVV84ZYo062js+xDweBtoFgL9IH7d3Yx7bKJgmbcso=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64.swiftdoc</key>
@@ -177,14 +177,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tm4PNu1ZtBoMDi2ql6BF8+wDUXlBQ0qe4nNWdnWYmHU=
+			ACbj0gNW4cLxHYcYX0KC7yzo9YgETNw3EuoP0RVwdFA=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pPHG/nhE+Kxe2bGN3CbALs+sWj877BrGSmpn4FCxWew=
+			SmVV84ZYo062js+xDweBtoFgL9IH7d3Yx7bKJgmbcso=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

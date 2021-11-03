@@ -212,13 +212,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-SWIFT_CLASS("_TtC11ShopLiveSDK13CouponFailure")
-@interface CouponFailure : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
@@ -307,7 +300,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
-- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(BOOL, CouponFailure * _Nullable))completion;
+- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
 - (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion;
 - (void)handleChangeCampaignStatusWithStatus:(NSString * _Nonnull)status;
 - (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
@@ -573,13 +566,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-SWIFT_CLASS("_TtC11ShopLiveSDK13CouponFailure")
-@interface CouponFailure : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
@@ -668,7 +654,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
-- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(BOOL, CouponFailure * _Nullable))completion;
+- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
 - (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion;
 - (void)handleChangeCampaignStatusWithStatus:(NSString * _Nonnull)status;
 - (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
