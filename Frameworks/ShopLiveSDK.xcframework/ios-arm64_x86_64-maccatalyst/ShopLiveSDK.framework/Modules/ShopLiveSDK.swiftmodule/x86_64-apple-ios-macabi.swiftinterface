@@ -18,14 +18,58 @@ import os
 extension UIKit.UIViewController {
   @objc dynamic public func dismissKeyboard()
 }
+@objc public enum ResultStatus : Swift.Int, Swift.CaseIterable {
+  case SHOW
+  case HIDE
+  case KEEP
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ShopLiveSDK.ResultStatus]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [ShopLiveSDK.ResultStatus] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ResultAlertType : Swift.Int, Swift.CaseIterable {
+  case ALERT
+  case TOAST
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ShopLiveSDK.ResultAlertType]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [ShopLiveSDK.ResultAlertType] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class CouponResult : ObjectiveC.NSObject {
+  public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
+  @objc deinit
+}
+@objc public class CustomActionResult : ObjectiveC.NSObject {
+  public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
+  @objc deinit
+}
 @objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
-  @objc func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
-  @objc func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping () -> Swift.Void)
+  @objc func handleDownloadCouponResult(with couponId: Swift.String, completion: @escaping (ShopLiveSDK.CouponResult) -> Swift.Void)
+  @objc optional func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
+  @objc func handleCustomActionResult(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping (ShopLiveSDK.CustomActionResult) -> Swift.Void)
+  @objc optional func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping () -> Swift.Void)
   @objc func handleChangeCampaignStatus(status: Swift.String)
   @objc func handleError(code: Swift.String, message: Swift.String)
   @objc func handleCampaignInfo(campaignInfo: [Swift.String : Any])
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
+  @objc func onSetUserName(_ payload: [Swift.String : Any])
 }
 @_inheritsConvenienceInitializers @objc public class ShopLiveViewController : UIKit.UIViewController {
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -59,7 +103,6 @@ extension ShopLiveSDK.ShopLive {
     }
   }
   @objc public enum Phase : Swift.Int {
-    case DEV
     case STAGE
     case REAL
     public var name: Swift.String {
@@ -148,6 +191,12 @@ extension ShopLiveSDK.ShopLiveUser {
     }
   }
 }
+extension ShopLiveSDK.ResultStatus : Swift.Equatable {}
+extension ShopLiveSDK.ResultStatus : Swift.Hashable {}
+extension ShopLiveSDK.ResultStatus : Swift.RawRepresentable {}
+extension ShopLiveSDK.ResultAlertType : Swift.Equatable {}
+extension ShopLiveSDK.ResultAlertType : Swift.Hashable {}
+extension ShopLiveSDK.ResultAlertType : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}

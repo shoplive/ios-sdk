@@ -212,6 +212,34 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+SWIFT_CLASS("_TtC11ShopLiveSDK12CouponResult")
+@interface CouponResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK18CustomActionResult")
+@interface CustomActionResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+
+typedef SWIFT_ENUM(NSInteger, ResultAlertType, open) {
+  ResultAlertTypeALERT = 0,
+  ResultAlertTypeTOAST = 1,
+};
+
+typedef SWIFT_ENUM(NSInteger, ResultStatus, open) {
+  ResultStatusSHOW = 0,
+  ResultStatusHIDE = 1,
+  ResultStatusKEEP = 2,
+};
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
@@ -239,9 +267,8 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 };
 
 typedef SWIFT_ENUM(NSInteger, Phase, open) {
-  PhaseDEV = 0,
-  PhaseSTAGE = 1,
-  PhaseREAL = 2,
+  PhaseSTAGE = 0,
+  PhaseREAL = 1,
 };
 
 @class NSNumber;
@@ -300,12 +327,19 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
+- (void)handleDownloadCouponResultWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(CouponResult * _Nonnull))completion;
+@optional
 - (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
+@required
+- (void)handleCustomActionResultWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(CustomActionResult * _Nonnull))completion;
+@optional
 - (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion;
+@required
 - (void)handleChangeCampaignStatusWithStatus:(NSString * _Nonnull)status;
 - (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
 - (void)handleCampaignInfoWithCampaignInfo:(NSDictionary<NSString *, id> * _Nonnull)campaignInfo;
 - (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
+- (void)onSetUserName:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
 
 enum Gender : NSInteger;
@@ -566,6 +600,34 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+SWIFT_CLASS("_TtC11ShopLiveSDK12CouponResult")
+@interface CouponResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK18CustomActionResult")
+@interface CustomActionResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+
+typedef SWIFT_ENUM(NSInteger, ResultAlertType, open) {
+  ResultAlertTypeALERT = 0,
+  ResultAlertTypeTOAST = 1,
+};
+
+typedef SWIFT_ENUM(NSInteger, ResultStatus, open) {
+  ResultStatusSHOW = 0,
+  ResultStatusHIDE = 1,
+  ResultStatusKEEP = 2,
+};
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
@@ -593,9 +655,8 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 };
 
 typedef SWIFT_ENUM(NSInteger, Phase, open) {
-  PhaseDEV = 0,
-  PhaseSTAGE = 1,
-  PhaseREAL = 2,
+  PhaseSTAGE = 0,
+  PhaseREAL = 1,
 };
 
 @class NSNumber;
@@ -654,12 +715,19 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
+- (void)handleDownloadCouponResultWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(CouponResult * _Nonnull))completion;
+@optional
 - (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
+@required
+- (void)handleCustomActionResultWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(CustomActionResult * _Nonnull))completion;
+@optional
 - (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion;
+@required
 - (void)handleChangeCampaignStatusWithStatus:(NSString * _Nonnull)status;
 - (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
 - (void)handleCampaignInfoWithCampaignInfo:(NSDictionary<NSString *, id> * _Nonnull)campaignInfo;
 - (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
+- (void)onSetUserName:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
 
 enum Gender : NSInteger;
