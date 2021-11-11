@@ -279,6 +279,7 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
 @class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
 @class UIViewController;
+@class UIImage;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
@@ -319,6 +320,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
 + (void)startPictureInPicture;
 + (void)stopPictureInPicture;
++ (void)setLoadingAnimationWithImages:(NSArray<UIImage *> * _Nonnull)images;
 + (void)reloadLive;
 @end
 
@@ -327,13 +329,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
+@optional
 - (void)handleDownloadCouponResultWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(CouponResult * _Nonnull))completion;
-@optional
-- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
-@required
+- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion SWIFT_DEPRECATED_MSG("use handleDownloadCouponResult instead");
 - (void)handleCustomActionResultWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(CustomActionResult * _Nonnull))completion;
-@optional
-- (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion;
+- (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion SWIFT_DEPRECATED_MSG("use handleCustomActionResult instead");
 @required
 - (void)handleChangeCampaignStatusWithStatus:(NSString * _Nonnull)status;
 - (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
@@ -370,6 +370,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -667,6 +668,7 @@ typedef SWIFT_ENUM(NSInteger, Phase, open) {
 @class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
 @class UIViewController;
+@class UIImage;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
@@ -707,6 +709,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
 + (void)startPictureInPicture;
 + (void)stopPictureInPicture;
++ (void)setLoadingAnimationWithImages:(NSArray<UIImage *> * _Nonnull)images;
 + (void)reloadLive;
 @end
 
@@ -715,13 +718,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
 - (void)handleNavigationWith:(NSURL * _Nonnull)url;
+@optional
 - (void)handleDownloadCouponResultWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(CouponResult * _Nonnull))completion;
-@optional
-- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion;
-@required
+- (void)handleDownloadCouponWith:(NSString * _Nonnull)couponId completion:(void (^ _Nonnull)(void))completion SWIFT_DEPRECATED_MSG("use handleDownloadCouponResult instead");
 - (void)handleCustomActionResultWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(CustomActionResult * _Nonnull))completion;
-@optional
-- (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion;
+- (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion SWIFT_DEPRECATED_MSG("use handleCustomActionResult instead");
 @required
 - (void)handleChangeCampaignStatusWithStatus:(NSString * _Nonnull)status;
 - (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
@@ -758,6 +759,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

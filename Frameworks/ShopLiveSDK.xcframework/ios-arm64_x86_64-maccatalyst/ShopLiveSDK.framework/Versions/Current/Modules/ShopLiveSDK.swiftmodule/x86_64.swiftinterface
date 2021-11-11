@@ -61,9 +61,11 @@ extension UIKit.UIViewController {
 }
 @objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
-  @objc func handleDownloadCouponResult(with couponId: Swift.String, completion: @escaping (ShopLiveSDK.CouponResult) -> Swift.Void)
+  @objc optional func handleDownloadCouponResult(with couponId: Swift.String, completion: @escaping (ShopLiveSDK.CouponResult) -> Swift.Void)
+  @available(*, deprecated, message: "use handleDownloadCouponResult instead")
   @objc optional func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
-  @objc func handleCustomActionResult(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping (ShopLiveSDK.CustomActionResult) -> Swift.Void)
+  @objc optional func handleCustomActionResult(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping (ShopLiveSDK.CustomActionResult) -> Swift.Void)
+  @available(*, deprecated, message: "use handleCustomActionResult instead")
   @objc optional func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping () -> Swift.Void)
   @objc func handleChangeCampaignStatus(status: Swift.String)
   @objc func handleError(code: Swift.String, message: Swift.String)
@@ -163,6 +165,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreGraphics.CGFloat)
   @objc public static func startPictureInPicture()
   @objc public static func stopPictureInPicture()
+  @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
   @objc public static func reloadLive()
 }
 @objc public class ShopLiveUser : ObjectiveC.NSObject {
