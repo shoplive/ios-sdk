@@ -340,6 +340,7 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleCampaignInfoWithCampaignInfo:(NSDictionary<NSString *, id> * _Nonnull)campaignInfo;
 - (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 - (void)onSetUserName:(NSDictionary<NSString *, id> * _Nonnull)payload;
+- (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 @end
 
 enum Gender : NSInteger;
@@ -729,6 +730,7 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleCampaignInfoWithCampaignInfo:(NSDictionary<NSString *, id> * _Nonnull)campaignInfo;
 - (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 - (void)onSetUserName:(NSDictionary<NSString *, id> * _Nonnull)payload;
+- (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 @end
 
 enum Gender : NSInteger;

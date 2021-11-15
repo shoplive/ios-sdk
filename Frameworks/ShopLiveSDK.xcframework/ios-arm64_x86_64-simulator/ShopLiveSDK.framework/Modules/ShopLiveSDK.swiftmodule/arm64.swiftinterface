@@ -73,6 +73,7 @@ extension UIKit.UIViewController {
   @objc func handleCampaignInfo(campaignInfo: [Swift.String : Any])
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
   @objc func onSetUserName(_ payload: [Swift.String : Any])
+  @objc func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class ShopLiveViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
