@@ -105,19 +105,6 @@ extension ShopLiveSDK.ShopLive {
       get
     }
   }
-  @objc public enum Phase : Swift.Int {
-    case STAGE
-    case REAL
-    public var name: Swift.String {
-      get
-    }
-    public init?(name: Swift.String)
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
 }
 extension ShopLiveSDK.ShopLive {
   @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
@@ -163,7 +150,6 @@ extension ShopLiveSDK.ShopLive {
     @objc set
   }
   @objc public static func configure(with accessKey: Swift.String)
-  @objc public static func configure(with accessKey: Swift.String, phase: ShopLiveSDK.ShopLive.Phase)
   @objc public static func preview(with campaignKey: Swift.String?, completion: @escaping () -> Swift.Void)
   @objc public static func play(with campaignKey: Swift.String?, _ parent: UIKit.UIViewController? = nil)
   @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreGraphics.CGFloat)
@@ -211,9 +197,6 @@ extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.RawRepresentable {}
-extension ShopLiveSDK.ShopLive.Phase : Swift.Equatable {}
-extension ShopLiveSDK.ShopLive.Phase : Swift.Hashable {}
-extension ShopLiveSDK.ShopLive.Phase : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLiveUser.Gender : Swift.Equatable {}
 extension ShopLiveSDK.ShopLiveUser.Gender : Swift.Hashable {}
 extension ShopLiveSDK.ShopLiveUser.Gender : Swift.RawRepresentable {}

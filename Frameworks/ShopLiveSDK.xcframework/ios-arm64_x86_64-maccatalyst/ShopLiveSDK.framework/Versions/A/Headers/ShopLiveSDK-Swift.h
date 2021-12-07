@@ -266,11 +266,6 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
-typedef SWIFT_ENUM(NSInteger, Phase, open) {
-  PhaseSTAGE = 0,
-  PhaseREAL = 1,
-};
-
 @class NSNumber;
 @class ShopLiveViewController;
 @class UIFont;
@@ -316,7 +311,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
 + (void)setAuthToken:(NSString * _Nullable)newValue;
 + (void)configureWith:(NSString * _Nonnull)accessKey;
-+ (void)configureWith:(NSString * _Nonnull)accessKey phase:(enum Phase)phase;
 + (void)previewWith:(NSString * _Nullable)campaignKey completion:(void (^ _Nonnull)(void))completion;
 + (void)playWith:(NSString * _Nullable)campaignKey :(UIViewController * _Nullable)parent;
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
@@ -657,11 +651,6 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
-typedef SWIFT_ENUM(NSInteger, Phase, open) {
-  PhaseSTAGE = 0,
-  PhaseREAL = 1,
-};
-
 @class NSNumber;
 @class ShopLiveViewController;
 @class UIFont;
@@ -707,7 +696,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
 + (void)setAuthToken:(NSString * _Nullable)newValue;
 + (void)configureWith:(NSString * _Nonnull)accessKey;
-+ (void)configureWith:(NSString * _Nonnull)accessKey phase:(enum Phase)phase;
 + (void)previewWith:(NSString * _Nullable)campaignKey completion:(void (^ _Nonnull)(void))completion;
 + (void)playWith:(NSString * _Nullable)campaignKey :(UIViewController * _Nullable)parent;
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
