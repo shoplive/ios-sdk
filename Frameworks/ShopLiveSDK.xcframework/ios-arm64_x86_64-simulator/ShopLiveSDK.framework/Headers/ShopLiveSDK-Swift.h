@@ -347,9 +347,8 @@ enum Gender : NSInteger;
 
 SWIFT_CLASS("_TtC11ShopLiveSDK12ShopLiveUser")
 @interface ShopLiveUser : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name gender:(enum Gender)gender age:(NSInteger)age OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -737,9 +736,8 @@ enum Gender : NSInteger;
 
 SWIFT_CLASS("_TtC11ShopLiveSDK12ShopLiveUser")
 @interface ShopLiveUser : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name gender:(enum Gender)gender age:(NSInteger)age OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 

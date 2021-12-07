@@ -170,7 +170,8 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
   @objc public static func reloadLive()
 }
-@objc public class ShopLiveUser : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc public class ShopLiveUser : ObjectiveC.NSObject {
+  @objc override dynamic public init()
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
   public func add(_ params: [Swift.String : Any?])
   public func getParams() -> [Swift.String : Swift.String]
