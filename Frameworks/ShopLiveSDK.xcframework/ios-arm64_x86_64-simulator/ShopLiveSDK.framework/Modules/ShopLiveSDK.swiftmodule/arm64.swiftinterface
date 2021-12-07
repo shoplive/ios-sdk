@@ -133,6 +133,9 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func isKeepPlayVideoOnHeadPhoneUnplugged() -> Swift.Bool
   @objc public static func setAutoResumeVideoOnCallEnded(_ autoResume: Swift.Bool)
   @objc public static func isAutoResumeVideoOnCallEnded() -> Swift.Bool
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
   @objc public static var user: ShopLiveSDK.ShopLiveUser? {
     @objc get
     @objc set
