@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 import AVFoundation
 import AVKit
@@ -108,6 +108,7 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func isSuccessCampaignJoin() -> Swift.Bool
   @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
   @objc public static var viewController: ShopLiveSDK.ShopLiveViewController? {
     @objc get

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 import AVFoundation
 import AVKit
@@ -13,10 +13,11 @@ import Swift
 import UIKit
 import VideoToolbox
 import WebKit
+import _Concurrency
 import os.log
 import os
 extension UIKit.UIViewController {
-  @objc dynamic public func dismissKeyboard()
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func dismissKeyboard()
 }
 @objc public enum ResultStatus : Swift.Int, Swift.CaseIterable {
   case SHOW
@@ -74,9 +75,9 @@ extension UIKit.UIViewController {
   @objc func onSetUserName(_ payload: [Swift.String : Any])
   @objc func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
 }
-@_inheritsConvenienceInitializers @objc public class ShopLiveViewController : UIKit.UIViewController {
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class ShopLiveViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
@@ -107,6 +108,7 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func isSuccessCampaignJoin() -> Swift.Bool
   @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
   @objc public static var viewController: ShopLiveSDK.ShopLiveViewController? {
     @objc get
