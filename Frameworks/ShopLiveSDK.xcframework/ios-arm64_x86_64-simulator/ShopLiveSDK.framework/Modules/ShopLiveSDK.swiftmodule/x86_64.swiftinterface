@@ -164,6 +164,7 @@ extension ShopLiveSDK.ShopLive {
   @objc override dynamic public init()
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
   public func add(_ params: [Swift.String : Any?])
+  public func remove(key: Swift.String)
   public func getParams() -> [Swift.String : Swift.String]
   @objc deinit
 }
@@ -187,15 +188,15 @@ extension ShopLiveSDK.ShopLiveUser {
     }
   }
 }
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.Equatable {}
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.Hashable {}
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
 extension ShopLiveSDK.ResultStatus : Swift.Equatable {}
 extension ShopLiveSDK.ResultStatus : Swift.Hashable {}
 extension ShopLiveSDK.ResultStatus : Swift.RawRepresentable {}
 extension ShopLiveSDK.ResultAlertType : Swift.Equatable {}
 extension ShopLiveSDK.ResultAlertType : Swift.Hashable {}
 extension ShopLiveSDK.ResultAlertType : Swift.RawRepresentable {}
-extension ShopLiveSDK.ShopLive.PipPosition : Swift.Equatable {}
-extension ShopLiveSDK.ShopLive.PipPosition : Swift.Hashable {}
-extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.RawRepresentable {}
