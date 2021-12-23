@@ -90,6 +90,9 @@ extension ShopLiveSDK.ShopLive {
     case bottomLeft
     case bottomRight
     case `default`
+    public var name: Swift.String {
+      get
+    }
     public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
@@ -166,6 +169,10 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func reloadLive()
 }
 @_inheritsConvenienceInitializers @objc public class ShopLiveUser : ObjectiveC.NSObject {
+  public var name: Swift.String?
+  public var gender: ShopLiveSDK.ShopLiveUser.Gender?
+  public var id: Swift.String?
+  public var age: Swift.Int?
   @objc override dynamic public init()
   @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
   public func add(_ params: [Swift.String : Any?])
@@ -193,15 +200,15 @@ extension ShopLiveSDK.ShopLiveUser {
     }
   }
 }
-extension ShopLiveSDK.ShopLive.PipPosition : Swift.Equatable {}
-extension ShopLiveSDK.ShopLive.PipPosition : Swift.Hashable {}
-extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
 extension ShopLiveSDK.ResultStatus : Swift.Equatable {}
 extension ShopLiveSDK.ResultStatus : Swift.Hashable {}
 extension ShopLiveSDK.ResultStatus : Swift.RawRepresentable {}
 extension ShopLiveSDK.ResultAlertType : Swift.Equatable {}
 extension ShopLiveSDK.ResultAlertType : Swift.Hashable {}
 extension ShopLiveSDK.ResultAlertType : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.Equatable {}
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.Hashable {}
+extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.RawRepresentable {}
