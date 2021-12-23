@@ -269,6 +269,7 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class UIFont;
 @class NSString;
 @class ShopLiveUser;
+@class UIColor;
 @class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
 @class UIViewController;
@@ -300,6 +301,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) CGFloat pipScale;)
 + (CGFloat)pipScale SWIFT_WARN_UNUSED_RESULT;
 + (void)setPipScale:(CGFloat)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull indicatorColor;)
++ (UIColor * _Nonnull)indicatorColor SWIFT_WARN_UNUSED_RESULT;
++ (void)setIndicatorColor:(UIColor * _Nonnull)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration * _Nullable webViewConfiguration;)
 + (WKWebViewConfiguration * _Nullable)webViewConfiguration SWIFT_WARN_UNUSED_RESULT;
 + (void)setWebViewConfiguration:(WKWebViewConfiguration * _Nullable)newValue;

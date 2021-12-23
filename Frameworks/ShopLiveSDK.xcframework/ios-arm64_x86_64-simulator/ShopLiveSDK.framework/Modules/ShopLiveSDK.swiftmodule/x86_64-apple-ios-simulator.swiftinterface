@@ -139,6 +139,10 @@ extension ShopLiveSDK.ShopLive {
     @objc get
     @objc set
   }
+  @objc public static var indicatorColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
   @objc public static var webViewConfiguration: WebKit.WKWebViewConfiguration? {
     @objc get
     @objc set
