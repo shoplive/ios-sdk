@@ -116,6 +116,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func close()
   @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont, sendButtonFont: UIKit.UIFont)
   @objc public static func setShareScheme(_ scheme: Swift.String? = nil, custom: (() -> Swift.Void)?)
+  @objc public static func hookNavigation(navigation: @escaping ((Foundation.URL) -> Swift.Void))
   @objc public static func onTerminated()
   @objc public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool)
   @objc public static func isKeepPlayVideoOnHeadPhoneUnplugged() -> Swift.Bool

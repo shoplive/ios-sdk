@@ -268,6 +268,7 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class ShopLiveViewController;
 @class UIFont;
 @class NSString;
+@class NSURL;
 @class ShopLiveUser;
 @class UIColor;
 @class WKWebViewConfiguration;
@@ -283,6 +284,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopLiveView
 + (void)close;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nonnull)inputBoxFont sendButtonFont:(UIFont * _Nonnull)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme custom:(void (^ _Nullable)(void))custom;
++ (void)hookNavigationWithNavigation:(void (^ _Nonnull)(NSURL * _Nonnull))navigation;
 + (void)onTerminated;
 + (void)setKeepPlayVideoOnHeadphoneUnplugged:(BOOL)keepPlay;
 + (BOOL)isKeepPlayVideoOnHeadPhoneUnplugged SWIFT_WARN_UNUSED_RESULT;
@@ -323,7 +325,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)reloadLive;
 @end
 
-@class NSURL;
 
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 @protocol ShopLiveSDKDelegate
