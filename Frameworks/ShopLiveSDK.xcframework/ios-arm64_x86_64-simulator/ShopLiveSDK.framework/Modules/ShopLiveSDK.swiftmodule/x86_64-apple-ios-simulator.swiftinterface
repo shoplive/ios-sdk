@@ -17,7 +17,7 @@ import _Concurrency
 import os.log
 import os
 extension UIKit.UIViewController {
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func dismissKeyboard()
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func shopliveHideKeyboard()
 }
 @objc public enum ResultStatus : Swift.Int, Swift.CaseIterable {
   case SHOW

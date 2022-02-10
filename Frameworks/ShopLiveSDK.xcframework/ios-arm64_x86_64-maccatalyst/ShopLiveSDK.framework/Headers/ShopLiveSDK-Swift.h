@@ -382,7 +382,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 
 
 @interface UIViewController (SWIFT_EXTENSION(ShopLiveSDK))
-- (void)dismissKeyboard;
+- (void)shopliveHideKeyboard;
 @end
 
 #if __has_attribute(external_source_symbol)
@@ -774,7 +774,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 
 
 @interface UIViewController (SWIFT_EXTENSION(ShopLiveSDK))
-- (void)dismissKeyboard;
+- (void)shopliveHideKeyboard;
 @end
 
 #if __has_attribute(external_source_symbol)
