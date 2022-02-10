@@ -264,10 +264,10 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
+@class NSString;
 @class NSNumber;
 @class ShopLiveViewController;
 @class UIFont;
-@class NSString;
 @class NSURL;
 @class ShopLiveUser;
 @class UIColor;
@@ -277,6 +277,7 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class UIImage;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setEndpoint:(NSString * _Nullable)url;
 + (BOOL)isSuccessCampaignJoin SWIFT_WARN_UNUSED_RESULT;
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopLiveViewController * _Nullable viewController;)

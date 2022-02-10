@@ -111,6 +111,7 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func setEndpoint(_ url: Swift.String?)
   @objc public static func isSuccessCampaignJoin() -> Swift.Bool
   @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
   @objc public static var viewController: ShopLiveSDK.ShopLiveViewController? {
