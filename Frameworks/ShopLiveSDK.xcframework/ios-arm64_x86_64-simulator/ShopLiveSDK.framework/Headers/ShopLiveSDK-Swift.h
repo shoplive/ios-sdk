@@ -210,6 +210,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+typedef SWIFT_ENUM(NSInteger, ActionType, open) {
+  ActionTypePIP = 0,
+  ActionTypeKEEP = 1,
+  ActionTypeCLOSE = 2,
+};
+
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK12CouponResult")
@@ -279,6 +285,8 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class UIImage;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setNextActionOnHandleNavigationWithActionType:(enum ActionType)actionType;
++ (enum ActionType)getNextActionTypeOnHandleNavigation SWIFT_WARN_UNUSED_RESULT;
 + (void)setEndpoint:(NSString * _Nullable)url;
 + (BOOL)isSuccessCampaignJoin SWIFT_WARN_UNUSED_RESULT;
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
@@ -373,6 +381,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -602,6 +611,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+typedef SWIFT_ENUM(NSInteger, ActionType, open) {
+  ActionTypePIP = 0,
+  ActionTypeKEEP = 1,
+  ActionTypeCLOSE = 2,
+};
+
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK12CouponResult")
@@ -671,6 +686,8 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class UIImage;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setNextActionOnHandleNavigationWithActionType:(enum ActionType)actionType;
++ (enum ActionType)getNextActionTypeOnHandleNavigation SWIFT_WARN_UNUSED_RESULT;
 + (void)setEndpoint:(NSString * _Nullable)url;
 + (BOOL)isSuccessCampaignJoin SWIFT_WARN_UNUSED_RESULT;
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
@@ -765,6 +782,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLiveViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

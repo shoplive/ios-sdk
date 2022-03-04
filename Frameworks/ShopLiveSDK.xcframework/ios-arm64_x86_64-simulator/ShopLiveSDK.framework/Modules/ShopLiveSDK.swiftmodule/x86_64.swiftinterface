@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
+import AVFAudio
 import AVFoundation
 import AVKit
 import CoreGraphics
@@ -60,6 +61,19 @@ extension UIKit.UIViewController {
   public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
   @objc deinit
 }
+@objc public enum ActionType : Swift.Int {
+  case PIP
+  case KEEP
+  case CLOSE
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
   @objc optional func handleDownloadCouponResult(with couponId: Swift.String, completion: @escaping (ShopLiveSDK.CouponResult) -> Swift.Void)
@@ -111,6 +125,8 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func setNextActionOnHandleNavigation(actionType: ShopLiveSDK.ActionType)
+  @objc public static func getNextActionTypeOnHandleNavigation() -> ShopLiveSDK.ActionType
   @objc public static func setEndpoint(_ url: Swift.String?)
   @objc public static func isSuccessCampaignJoin() -> Swift.Bool
   @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
@@ -207,6 +223,9 @@ extension ShopLiveSDK.ResultStatus : Swift.RawRepresentable {}
 extension ShopLiveSDK.ResultAlertType : Swift.Equatable {}
 extension ShopLiveSDK.ResultAlertType : Swift.Hashable {}
 extension ShopLiveSDK.ResultAlertType : Swift.RawRepresentable {}
+extension ShopLiveSDK.ActionType : Swift.Equatable {}
+extension ShopLiveSDK.ActionType : Swift.Hashable {}
+extension ShopLiveSDK.ActionType : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
