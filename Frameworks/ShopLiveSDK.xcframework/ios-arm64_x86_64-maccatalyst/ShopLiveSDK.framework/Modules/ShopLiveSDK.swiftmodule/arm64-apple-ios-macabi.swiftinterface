@@ -1,10 +1,9 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 import AVFAudio
 import AVFoundation
 import AVKit
-import CoreGraphics
 import CoreMedia
 import ExternalAccessory
 import Foundation
@@ -61,6 +60,47 @@ extension UIKit.UIViewController {
   public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
   @objc deinit
 }
+@objc public enum ShopLiveResultStatus : Swift.Int, Swift.CaseIterable {
+  case SHOW
+  case HIDE
+  case KEEP
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ShopLiveSDK.ShopLiveResultStatus]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [ShopLiveSDK.ShopLiveResultStatus] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLiveResultAlertType : Swift.Int, Swift.CaseIterable {
+  case ALERT
+  case TOAST
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ShopLiveSDK.ShopLiveResultAlertType]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [ShopLiveSDK.ShopLiveResultAlertType] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class ShopLiveCouponResult : ObjectiveC.NSObject {
+  public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
+  @objc deinit
+}
+@objc public class ShopLiveCustomActionResult : ObjectiveC.NSObject {
+  public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
+  @objc deinit
+}
 @objc public enum ActionType : Swift.Int {
   case PIP
   case KEEP
@@ -76,11 +116,15 @@ extension UIKit.UIViewController {
 }
 @objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
+  @available(*, deprecated, message: "use handleDownloadCoupon(with couponId: String, result: @escaping (ShopLiveCouponResult) -> Void) instead")
   @objc optional func handleDownloadCouponResult(with couponId: Swift.String, completion: @escaping (ShopLiveSDK.CouponResult) -> Swift.Void)
-  @available(*, deprecated, message: "use handleDownloadCouponResult instead")
+  @objc optional func handleDownloadCoupon(with couponId: Swift.String, result: @escaping (ShopLiveSDK.ShopLiveCouponResult) -> Swift.Void)
+  @available(*, deprecated, message: "use handleDownloadCoupon(with couponId: String, result: @escaping (ShopLiveCouponResult) -> Void) instead")
   @objc optional func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
+  @available(*, deprecated, message: "use handleCustomAction(with id: String, type: String, payload: Any?, result: @escaping (ShopLiveCustomActionResult) -> Void) instead")
   @objc optional func handleCustomActionResult(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping (ShopLiveSDK.CustomActionResult) -> Swift.Void)
-  @available(*, deprecated, message: "use handleCustomActionResult instead")
+  @objc optional func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, result: @escaping (ShopLiveSDK.ShopLiveCustomActionResult) -> Swift.Void)
+  @available(*, deprecated, message: "use handleCustomAction(with id: String, type: String, payload: Any?, result: @escaping (ShopLiveCustomActionResult) -> Void) instead")
   @objc optional func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping () -> Swift.Void)
   @objc func handleChangeCampaignStatus(status: Swift.String)
   @objc func handleError(code: Swift.String, message: Swift.String)
@@ -89,11 +133,7 @@ extension UIKit.UIViewController {
   @objc func onSetUserName(_ payload: [Swift.String : Any])
   @objc func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
 }
-@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class ShopLiveViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
+public typealias ShopLiveViewController = UIKit.UIViewController
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
 }
@@ -125,6 +165,12 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func setAppVersion(_ appVersion: Swift.String)
+  @objc public static func setUsingLocalStorage(_ use: Swift.Bool)
+  @objc public static func setPictureInPictureFloatingOffset(offset: UIKit.UIEdgeInsets)
+  @objc public static func setPictureInPicturePadding(padding: UIKit.UIEdgeInsets)
+  @objc public static func sendCommandMessage(command: Swift.String, payload: [Swift.String : Any]?)
+  @objc public static func setMuteWhenPlayStart(_ mute: Swift.Bool)
   @objc public static func setNextActionOnHandleNavigation(actionType: ShopLiveSDK.ActionType)
   @objc public static func getNextActionTypeOnHandleNavigation() -> ShopLiveSDK.ActionType
   @objc public static func setEndpoint(_ url: Swift.String?)
@@ -134,7 +180,7 @@ extension ShopLiveSDK.ShopLive {
     @objc get
   }
   @objc public static func close()
-  @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont, sendButtonFont: UIKit.UIFont)
+  @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont?, sendButtonFont: UIKit.UIFont?)
   @objc public static func setShareScheme(_ scheme: Swift.String? = nil, custom: (() -> Swift.Void)?)
   @objc public static func hookNavigation(navigation: @escaping ((Foundation.URL) -> Swift.Void))
   @objc public static func onTerminated()
@@ -223,6 +269,12 @@ extension ShopLiveSDK.ResultStatus : Swift.RawRepresentable {}
 extension ShopLiveSDK.ResultAlertType : Swift.Equatable {}
 extension ShopLiveSDK.ResultAlertType : Swift.Hashable {}
 extension ShopLiveSDK.ResultAlertType : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLiveResultStatus : Swift.Equatable {}
+extension ShopLiveSDK.ShopLiveResultStatus : Swift.Hashable {}
+extension ShopLiveSDK.ShopLiveResultStatus : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLiveResultAlertType : Swift.Equatable {}
+extension ShopLiveSDK.ShopLiveResultAlertType : Swift.Hashable {}
+extension ShopLiveSDK.ShopLiveResultAlertType : Swift.RawRepresentable {}
 extension ShopLiveSDK.ActionType : Swift.Equatable {}
 extension ShopLiveSDK.ActionType : Swift.Hashable {}
 extension ShopLiveSDK.ActionType : Swift.RawRepresentable {}
