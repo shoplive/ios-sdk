@@ -224,7 +224,7 @@ extension ShopLiveSDK.ShopLive {
   }
   @objc public static func configure(with accessKey: Swift.String)
   @objc public static func preview(with campaignKey: Swift.String?, completion: @escaping () -> Swift.Void)
-  @objc public static func play(with campaignKey: Swift.String?, _ parent: UIKit.UIViewController? = nil)
+  @objc public static func play(with campaignKey: Swift.String?)
   @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreGraphics.CGFloat)
   @objc public static func startPictureInPicture()
   @objc public static func stopPictureInPicture()

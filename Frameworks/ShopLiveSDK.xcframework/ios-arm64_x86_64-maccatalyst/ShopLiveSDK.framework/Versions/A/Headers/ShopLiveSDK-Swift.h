@@ -340,7 +340,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)setAuthToken:(NSString * _Nullable)newValue;
 + (void)configureWith:(NSString * _Nonnull)accessKey;
 + (void)previewWith:(NSString * _Nullable)campaignKey completion:(void (^ _Nonnull)(void))completion;
-+ (void)playWith:(NSString * _Nullable)campaignKey :(UIViewController * _Nullable)parent;
++ (void)playWith:(NSString * _Nullable)campaignKey;
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
 + (void)startPictureInPicture;
 + (void)stopPictureInPicture;
@@ -774,7 +774,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)setAuthToken:(NSString * _Nullable)newValue;
 + (void)configureWith:(NSString * _Nonnull)accessKey;
 + (void)previewWith:(NSString * _Nullable)campaignKey completion:(void (^ _Nonnull)(void))completion;
-+ (void)playWith:(NSString * _Nullable)campaignKey :(UIViewController * _Nullable)parent;
++ (void)playWith:(NSString * _Nullable)campaignKey;
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
 + (void)startPictureInPicture;
 + (void)stopPictureInPicture;
