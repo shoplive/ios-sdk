@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
-// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFAudio
 import AVFoundation
 import AVKit
@@ -14,6 +15,7 @@ import UIKit
 import VideoToolbox
 import WebKit
 import _Concurrency
+import _StringProcessing
 import os.log
 import os
 extension UIKit.UIViewController {
@@ -101,6 +103,29 @@ extension UIKit.UIViewController {
   public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
   @objc deinit
 }
+@objc public class ShopLiveLog : ObjectiveC.NSObject {
+  @objc public enum Feature : Swift.Int, Swift.CaseIterable {
+    case CLICK, SHOW, ACTION
+    public var name: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias AllCases = [ShopLiveSDK.ShopLiveLog.Feature]
+    public typealias RawValue = Swift.Int
+    public static var allCases: [ShopLiveSDK.ShopLiveLog.Feature] {
+      get
+    }
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public var name: Swift.String
+  public var campaign: Swift.String
+  public var feature: ShopLiveSDK.ShopLiveLog.Feature
+  public var parameter: [Swift.String : Swift.String]
+  public init(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
+  @objc deinit
+}
 @objc public enum ActionType : Swift.Int {
   case PIP
   case KEEP
@@ -132,10 +157,40 @@ extension UIKit.UIViewController {
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
   @objc func onSetUserName(_ payload: [Swift.String : Any])
   @objc func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
+  @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
+  @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
 }
 public typealias ShopLiveViewController = UIKit.UIViewController
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
+}
+extension ShopLiveSDK.ShopLive {
+  @objc public enum PlayerMode : Swift.Int {
+    case play
+    case preview
+    case none
+    public var name: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum VideoOrientation : Swift.Int {
+    case portrait
+    case landscape
+    case unknown
+    public var name: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
 }
 extension ShopLiveSDK.ShopLive {
   @objc public enum PipPosition : Swift.Int {
@@ -165,6 +220,8 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func setKeepWindowStyleOnReturnFromOsPip(_ keep: Swift.Bool = false)
+  @objc public static func isKeepWindowStyleOnReturnFromOsPip() -> Swift.Bool
   @objc public static func setAppVersion(_ appVersion: Swift.String)
   @objc public static func setUsingLocalStorage(_ use: Swift.Bool)
   @objc public static func setPictureInPictureFloatingOffset(offset: UIKit.UIEdgeInsets)
@@ -184,11 +241,26 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func setShareScheme(_ scheme: Swift.String? = nil, custom: (() -> Swift.Void)?)
   @objc public static func hookNavigation(navigation: @escaping ((Foundation.URL) -> Swift.Void))
   @objc public static func onTerminated()
-  @objc public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool)
+  @objc public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool, isMute: Swift.Bool = false)
   @objc public static func isKeepPlayVideoOnHeadPhoneUnplugged() -> Swift.Bool
   @objc public static func setAutoResumeVideoOnCallEnded(_ autoResume: Swift.Bool)
   @objc public static func isAutoResumeVideoOnCallEnded() -> Swift.Bool
   @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc public static var playerMode: ShopLiveSDK.ShopLive.PlayerMode {
+    @objc get
+  }
+  @objc public static var playerWindow: UIKit.UIWindow? {
+    @objc get
+  }
+  @objc public static var fixedPipWidth: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
+  @objc public static func mute()
+  @objc public static func unmute()
+  @objc public static var orientationMode: ShopLiveSDK.ShopLive.VideoOrientation {
     @objc get
   }
   @objc public static var user: ShopLiveSDK.ShopLiveUser? {
@@ -202,7 +274,7 @@ extension ShopLiveSDK.ShopLive {
     @objc get
     @objc set
   }
-  @objc public static var pipScale: CoreGraphics.CGFloat {
+  @objc public static var pipScale: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
@@ -225,7 +297,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func configure(with accessKey: Swift.String)
   @objc public static func preview(with campaignKey: Swift.String?, completion: @escaping () -> Swift.Void)
   @objc public static func play(with campaignKey: Swift.String?, keepWindowStateOnPlayExecuted: Swift.Bool = false)
-  @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreGraphics.CGFloat)
+  @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreFoundation.CGFloat)
   @objc public static func startPictureInPicture()
   @objc public static func stopPictureInPicture()
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
@@ -275,9 +347,18 @@ extension ShopLiveSDK.ShopLiveResultStatus : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLiveResultAlertType : Swift.Equatable {}
 extension ShopLiveSDK.ShopLiveResultAlertType : Swift.Hashable {}
 extension ShopLiveSDK.ShopLiveResultAlertType : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLiveLog.Feature : Swift.Equatable {}
+extension ShopLiveSDK.ShopLiveLog.Feature : Swift.Hashable {}
+extension ShopLiveSDK.ShopLiveLog.Feature : Swift.RawRepresentable {}
 extension ShopLiveSDK.ActionType : Swift.Equatable {}
 extension ShopLiveSDK.ActionType : Swift.Hashable {}
 extension ShopLiveSDK.ActionType : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLive.PlayerMode : Swift.Equatable {}
+extension ShopLiveSDK.ShopLive.PlayerMode : Swift.Hashable {}
+extension ShopLiveSDK.ShopLive.PlayerMode : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLive.VideoOrientation : Swift.Equatable {}
+extension ShopLiveSDK.ShopLive.VideoOrientation : Swift.Hashable {}
+extension ShopLiveSDK.ShopLive.VideoOrientation : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}

@@ -6,6 +6,6 @@ framework module ShopLiveSDK {
 }
 
 module ShopLiveSDK.Swift {
-    header "ShopLiveSDK-Swift.h"
-    requires objc
+  header "ShopLiveSDK-Swift.h"
+  requires objc
 }
