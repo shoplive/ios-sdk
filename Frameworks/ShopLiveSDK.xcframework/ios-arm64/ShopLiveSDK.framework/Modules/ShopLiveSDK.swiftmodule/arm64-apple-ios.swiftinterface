@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFAudio
 import AVFoundation
 import AVKit
@@ -14,10 +15,17 @@ import UIKit
 import VideoToolbox
 import WebKit
 import _Concurrency
+import _StringProcessing
 import os.log
 import os
 extension UIKit.UIViewController {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func shopliveHideKeyboard()
+}
+extension ObjectiveC.NSObject {
+  public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String)
+}
+extension Foundation.NotificationCenter {
+  public func safeRemoveObserver(_ observer: Any, name aName: Foundation.NSNotification.Name?, object anObject: Any?)
 }
 @objc public enum ResultStatus : Swift.Int, Swift.CaseIterable {
   case SHOW
@@ -155,7 +163,7 @@ extension UIKit.UIViewController {
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
   @objc func onSetUserName(_ payload: [Swift.String : Any])
   @objc func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
-  @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreGraphics.CGPoint)
+  @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
 }
 public typealias ShopLiveViewController = UIKit.UIViewController
@@ -218,6 +226,7 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func awakePlayer()
   @objc public static func setKeepWindowStyleOnReturnFromOsPip(_ keep: Swift.Bool = false)
   @objc public static func isKeepWindowStyleOnReturnFromOsPip() -> Swift.Bool
   @objc public static func setAppVersion(_ appVersion: Swift.String)
@@ -272,7 +281,7 @@ extension ShopLiveSDK.ShopLive {
     @objc get
     @objc set
   }
-  @objc public static var pipScale: CoreGraphics.CGFloat {
+  @objc public static var pipScale: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
@@ -295,7 +304,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func configure(with accessKey: Swift.String)
   @objc public static func preview(with campaignKey: Swift.String?, completion: @escaping () -> Swift.Void)
   @objc public static func play(with campaignKey: Swift.String?, keepWindowStateOnPlayExecuted: Swift.Bool = false)
-  @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreGraphics.CGFloat)
+  @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreFoundation.CGFloat)
   @objc public static func startPictureInPicture()
   @objc public static func stopPictureInPicture()
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
