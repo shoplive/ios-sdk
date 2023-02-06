@@ -2910,9 +2910,12 @@
             "usr": "s:11ShopLiveSDK0aB3LogC9parameterSDyS2SGvp",
             "mangledName": "$s11ShopLiveSDK0aB3LogC9parameterSDyS2SGvp",
             "moduleName": "ShopLiveSDK",
+            "deprecated": true,
             "declAttributes": [
+              "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "hasStorage": true,
             "accessors": [
@@ -3002,6 +3005,135 @@
                 "usr": "s:11ShopLiveSDK0aB3LogC9parameterSDyS2SGvM",
                 "mangledName": "$s11ShopLiveSDK0aB3LogC9parameterSDyS2SGvM",
                 "moduleName": "ShopLiveSDK",
+                "deprecated": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "payload",
+            "printedName": "payload",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11ShopLiveSDK0aB3LogC7payloadSDySSypGvp",
+            "mangledName": "$s11ShopLiveSDK0aB3LogC7payloadSDySSypGvp",
+            "moduleName": "ShopLiveSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ShopLiveSDK0aB3LogC7payloadSDySSypGvg",
+                "mangledName": "$s11ShopLiveSDK0aB3LogC7payloadSDySSypGvg",
+                "moduleName": "ShopLiveSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ShopLiveSDK0aB3LogC7payloadSDySSypGvs",
+                "mangledName": "$s11ShopLiveSDK0aB3LogC7payloadSDySSypGvs",
+                "moduleName": "ShopLiveSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11ShopLiveSDK0aB3LogC7payloadSDySSypGvM",
+                "mangledName": "$s11ShopLiveSDK0aB3LogC7payloadSDySSypGvM",
+                "moduleName": "ShopLiveSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
               }
@@ -3060,6 +3192,64 @@
             "declKind": "Constructor",
             "usr": "s:11ShopLiveSDK0aB3LogC4name7feature8campaign9parameterACSS_AC7FeatureOSSSDyS2SGtcfc",
             "mangledName": "$s11ShopLiveSDK0aB3LogC4name7feature8campaign9parameterACSS_AC7FeatureOSSSDyS2SGtcfc",
+            "moduleName": "ShopLiveSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:feature:campaign:payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ShopLiveLog",
+                "printedName": "ShopLiveSDK.ShopLiveLog",
+                "usr": "c:@M@ShopLiveSDK@objc(cs)ShopLiveLog"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Feature",
+                "printedName": "ShopLiveSDK.ShopLiveLog.Feature",
+                "usr": "s:11ShopLiveSDK0aB3LogC7FeatureO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11ShopLiveSDK0aB3LogC4name7feature8campaign7payloadACSS_AC7FeatureOSSSDySSypGtcfc",
+            "mangledName": "$s11ShopLiveSDK0aB3LogC4name7feature8campaign7payloadACSS_AC7FeatureOSSSDySSypGtcfc",
             "moduleName": "ShopLiveSDK",
             "declAttributes": [
               "AccessControl"
@@ -4179,8 +4369,73 @@
             "moduleName": "ShopLiveSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : ShopLiveSDK.ShopLiveSDKDelegate>",
             "sugared_genericSig": "<Self where Self : ShopLiveSDK.ShopLiveSDKDelegate>",
+            "deprecated": true,
             "protocolReq": true,
             "objc_name": "logWithName:feature:campaign:parameter:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "Available"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "log",
+            "printedName": "log(name:feature:campaign:payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Feature",
+                "printedName": "ShopLiveSDK.ShopLiveLog.Feature",
+                "usr": "s:11ShopLiveSDK0aB3LogC7FeatureO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ShopLiveSDK@objc(pl)ShopLiveSDKDelegate(im)logWithName:feature:campaign:payload:",
+            "mangledName": "$s11ShopLiveSDK0aB11SDKDelegateP3log4name7feature8campaign7payloadySS_AA0aB3LogC7FeatureOSSSDySSypGtF",
+            "moduleName": "ShopLiveSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ShopLiveSDK.ShopLiveSDKDelegate>",
+            "sugared_genericSig": "<Self where Self : ShopLiveSDK.ShopLiveSDKDelegate>",
+            "protocolReq": true,
+            "objc_name": "logWithName:feature:campaign:payload:",
             "declAttributes": [
               "Optional",
               "ObjC"
@@ -9800,7 +10055,7 @@
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 26162,
+      "offset": 26473,
       "length": 11,
       "value": "\"ShopLiveSDK.LeakAvoider\""
     },
@@ -10003,21 +10258,21 @@
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 57465,
+      "offset": 57811,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 57521,
+      "offset": 57867,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 76760,
+      "offset": 77106,
       "length": 1,
       "value": "5"
     },
@@ -10191,6 +10446,20 @@
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveSDKInterface.swift",
+      "kind": "Dictionary",
+      "offset": 4010,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveSDKInterface.swift",
+      "kind": "Dictionary",
+      "offset": 4054,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveSDKInterface.swift",
       "kind": "StringLiteral",
       "offset": 3267,
       "length": 11,
@@ -10199,28 +10468,28 @@
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveSDKInterface.swift",
       "kind": "IntegerLiteral",
-      "offset": 4224,
+      "offset": 4576,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveSDKInterface.swift",
       "kind": "IntegerLiteral",
-      "offset": 4238,
+      "offset": 4590,
       "length": 5,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveSDKInterface.swift",
       "kind": "IntegerLiteral",
-      "offset": 4224,
+      "offset": 4576,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveSDKInterface.swift",
       "kind": "IntegerLiteral",
-      "offset": 4238,
+      "offset": 4590,
       "length": 5,
       "value": "2"
     },
@@ -11405,7 +11674,7 @@
       "kind": "StringLiteral",
       "offset": 223,
       "length": 7,
-      "value": "\"1.3.1\""
+      "value": "\"1.3.2\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",

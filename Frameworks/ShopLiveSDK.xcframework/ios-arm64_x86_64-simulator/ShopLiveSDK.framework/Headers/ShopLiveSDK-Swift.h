@@ -479,7 +479,8 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 @optional
 - (void)playerPanGestureWithState:(enum UIGestureRecognizerState)state position:(CGPoint)position;
-- (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter;
+- (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter SWIFT_DEPRECATED_MSG("use log(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
+- (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
 
 enum Gender : NSInteger;
@@ -1004,7 +1005,8 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 @optional
 - (void)playerPanGestureWithState:(enum UIGestureRecognizerState)state position:(CGPoint)position;
-- (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter;
+- (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter SWIFT_DEPRECATED_MSG("use log(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
+- (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
 
 enum Gender : NSInteger;

@@ -128,8 +128,11 @@ extension Foundation.NotificationCenter {
   public var name: Swift.String
   public var campaign: Swift.String
   public var feature: ShopLiveSDK.ShopLiveLog.Feature
+  @available(*, deprecated, message: "use payload: [String : Any] instead")
   public var parameter: [Swift.String : Swift.String]
+  public var payload: [Swift.String : Any]
   public init(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
+  public init(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
   @objc deinit
 }
 @objc public enum ActionType : Swift.Int {
@@ -164,7 +167,9 @@ extension Foundation.NotificationCenter {
   @objc func onSetUserName(_ payload: [Swift.String : Any])
   @objc func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
   @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
+  @available(*, deprecated, message: "use log(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead")
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
+  @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
 }
 public typealias ShopLiveViewController = UIKit.UIViewController
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
