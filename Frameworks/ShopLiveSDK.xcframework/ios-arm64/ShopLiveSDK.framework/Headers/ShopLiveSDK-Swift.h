@@ -348,6 +348,8 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
 @class UIImage;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setMixWithOthersWithIsMixAudio:(BOOL)isMixAudio;
++ (void)useCloseButton:(BOOL)use;
 + (void)awakePlayer;
 + (void)setKeepWindowStyleOnReturnFromOsPip:(BOOL)keep;
 + (BOOL)isKeepWindowStyleOnReturnFromOsPip SWIFT_WARN_UNUSED_RESULT;
@@ -410,8 +412,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
 + (void)setAuthToken:(NSString * _Nullable)newValue;
 + (void)configureWith:(NSString * _Nonnull)accessKey;
-+ (void)previewWith:(NSString * _Nullable)campaignKey completion:(void (^ _Nonnull)(void))completion;
-+ (void)playWith:(NSString * _Nullable)campaignKey keepWindowStateOnPlayExecuted:(BOOL)keepWindowStateOnPlayExecuted;
++ (void)previewWith:(NSString * _Nullable)campaignKey referrer:(NSString * _Nullable)referrer completion:(void (^ _Nonnull)(void))completion;
++ (void)playWith:(NSString * _Nullable)campaignKey keepWindowStateOnPlayExecuted:(BOOL)keepWindowStateOnPlayExecuted referrer:(NSString * _Nullable)referrer;
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
 + (void)startPictureInPicture;
 + (void)stopPictureInPicture;
@@ -472,6 +474,9 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleCustomActionWith:(NSString * _Nonnull)id type:(NSString * _Nonnull)type payload:(id _Nullable)payload completion:(void (^ _Nonnull)(void))completion SWIFT_DEPRECATED_MSG("use handleCustomAction(with id: String, type: String, payload: Any?, result: @escaping (ShopLiveCustomActionResult) -> Void) instead");
 @required
 - (void)handleChangeCampaignStatusWithStatus:(NSString * _Nonnull)status;
+@optional
+- (void)handleChangedPlayerStatusWithStatus:(NSString * _Nonnull)status;
+@required
 - (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
 - (void)handleCampaignInfoWithCampaignInfo:(NSDictionary<NSString *, id> * _Nonnull)campaignInfo;
 - (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;

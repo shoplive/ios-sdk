@@ -4068,6 +4068,38 @@
           },
           {
             "kind": "Function",
+            "name": "handleChangedPlayerStatus",
+            "printedName": "handleChangedPlayerStatus(status:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ShopLiveSDK@objc(pl)ShopLiveSDKDelegate(im)handleChangedPlayerStatusWithStatus:",
+            "mangledName": "$s11ShopLiveSDK0aB11SDKDelegateP25handleChangedPlayerStatus6statusySS_tF",
+            "moduleName": "ShopLiveSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ShopLiveSDK.ShopLiveSDKDelegate>",
+            "sugared_genericSig": "<Self where Self : ShopLiveSDK.ShopLiveSDKDelegate>",
+            "protocolReq": true,
+            "objc_name": "handleChangedPlayerStatusWithStatus:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "handleError",
             "printedName": "handleError(code:message:)",
             "children": [
@@ -4633,6 +4665,23 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ShopLiveSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ShopLiveSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
         "declKind": "Import",
         "moduleName": "ShopLiveSDK"
       },
@@ -5893,6 +5942,68 @@
                 "mangledName": "$sSY"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "setMixWithOthers",
+            "printedName": "setMixWithOthers(isMixAudio:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ShopLiveSDK@objc(cs)ShopLive(cm)setMixWithOthersWithIsMixAudio:",
+            "mangledName": "$s11ShopLiveSDK0aB0C16setMixWithOthers02isE5AudioySb_tFZ",
+            "moduleName": "ShopLiveSDK",
+            "static": true,
+            "objc_name": "setMixWithOthersWithIsMixAudio:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "useCloseButton",
+            "printedName": "useCloseButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ShopLiveSDK@objc(cs)ShopLive(cm)useCloseButton:",
+            "mangledName": "$s11ShopLiveSDK0aB0C14useCloseButtonyySbFZ",
+            "moduleName": "ShopLiveSDK",
+            "static": true,
+            "objc_name": "useCloseButton:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -8064,7 +8175,7 @@
           {
             "kind": "Function",
             "name": "preview",
-            "printedName": "preview(with:completion:)",
+            "printedName": "preview(with:referrer:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8086,6 +8197,21 @@
                 "usr": "s:Sq"
               },
               {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
                 "printedName": "() -> ()",
@@ -8104,11 +8230,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@CM@ShopLiveSDK@objc(cs)ShopLive(cm)previewWith:completion:",
-            "mangledName": "$s11ShopLiveSDK0aB0C7preview4with10completionySSSg_yyctFZ",
+            "usr": "c:@CM@ShopLiveSDK@objc(cs)ShopLive(cm)previewWith:referrer:completion:",
+            "mangledName": "$s11ShopLiveSDK0aB0C7preview4with8referrer10completionySSSg_AHyyctFZ",
             "moduleName": "ShopLiveSDK",
             "static": true,
-            "objc_name": "previewWith:completion:",
+            "objc_name": "previewWith:referrer:completion:",
             "declAttributes": [
               "Final",
               "ObjC",
@@ -8120,7 +8246,7 @@
           {
             "kind": "Function",
             "name": "play",
-            "printedName": "play(with:keepWindowStateOnPlayExecuted:)",
+            "printedName": "play(with:keepWindowStateOnPlayExecuted:referrer:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8147,14 +8273,29 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@CM@ShopLiveSDK@objc(cs)ShopLive(cm)playWith:keepWindowStateOnPlayExecuted:",
-            "mangledName": "$s11ShopLiveSDK0aB0C4play4with29keepWindowStateOnPlayExecutedySSSg_SbtFZ",
+            "usr": "c:@CM@ShopLiveSDK@objc(cs)ShopLive(cm)playWith:keepWindowStateOnPlayExecuted:referrer:",
+            "mangledName": "$s11ShopLiveSDK0aB0C4play4with29keepWindowStateOnPlayExecuted8referrerySSSg_SbAHtFZ",
             "moduleName": "ShopLiveSDK",
             "static": true,
-            "objc_name": "playWith:keepWindowStateOnPlayExecuted:",
+            "objc_name": "playWith:keepWindowStateOnPlayExecuted:referrer:",
             "declAttributes": [
               "Final",
               "ObjC",
@@ -9936,70 +10077,70 @@
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 5091,
+      "offset": 5024,
       "length": 13,
       "value": "\"Localizable\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 5142,
+      "offset": 5075,
       "length": 20,
       "value": "\"cloud.shoplive.sdk\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 5198,
+      "offset": 5131,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 6277,
+      "offset": 6210,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 6282,
+      "offset": 6215,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "Array",
-      "offset": 6348,
+      "offset": 6281,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 9034,
+      "offset": 8967,
       "length": 2,
       "value": "8"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 9358,
+      "offset": 9291,
       "length": 2,
       "value": "8"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 17205,
+      "offset": 17138,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Extensions\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 17343,
+      "offset": 17276,
       "length": 2,
       "value": "20"
     },
@@ -10125,154 +10266,336 @@
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1347,
+      "offset": 1286,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1354,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1536,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1546,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1555,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1565,
+      "length": 3,
+      "value": "0.4"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1602,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1612,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1621,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1631,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "Array",
+      "offset": 1680,
+      "length": 6,
+      "value": "[0, 1]"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1726,
+      "length": 4,
+      "value": "0.25"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1735,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1777,
+      "length": 4,
+      "value": "0.75"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1786,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1872,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1878,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1884,
+      "length": 2,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1891,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1898,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1905,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2066,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1397,
+      "offset": 2150,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2320,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2421,
+      "length": 13,
+      "value": "\"closebutton\""
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2838,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2888,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1403,
+      "offset": 2894,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1413,
+      "offset": 2904,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1425,
+      "offset": 2916,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1526,
+      "offset": 3017,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1919,
+      "offset": 3410,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9335,
+      "offset": 11346,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33016,
+      "offset": 15223,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 37577,
       "length": 2,
       "value": "21"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 37540,
+      "offset": 42101,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 37606,
+      "offset": 42167,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 37820,
+      "offset": 42381,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 37900,
+      "offset": 42461,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 37990,
+      "offset": 42551,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 47144,
+      "offset": 51718,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 52599,
+      "offset": 57239,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 52626,
+      "offset": 57266,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 52653,
+      "offset": 57293,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 53918,
+      "offset": 58558,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 57811,
+      "offset": 62451,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 57867,
+      "offset": 62507,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 77106,
+      "offset": 82003,
       "length": 1,
       "value": "5"
     },
@@ -11674,7 +11997,7 @@
       "kind": "StringLiteral",
       "offset": 223,
       "length": 7,
-      "value": "\"1.3.2\""
+      "value": "\"1.3.3\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
@@ -11707,7 +12030,7 @@
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/Throttle.swift",
       "kind": "BooleanLiteral",
-      "offset": 345,
+      "offset": 343,
       "length": 4,
       "value": "true"
     },
@@ -12231,64 +12554,71 @@
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
+      "kind": "Dictionary",
+      "offset": 4759,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 10616,
+      "offset": 10839,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 15809,
+      "offset": 16331,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 15811,
+      "offset": 16333,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 18453,
+      "offset": 18975,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 18455,
+      "offset": 18977,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 18479,
+      "offset": 19001,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 26462,
+      "offset": 27334,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 30319,
+      "offset": 31477,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 67356,
+      "offset": 69501,
       "length": 5,
       "value": "false"
     },
@@ -12393,121 +12723,142 @@
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1308,
+      "offset": 1205,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1358,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1420,
+      "offset": 1470,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1430,
+      "offset": 1480,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1442,
+      "offset": 1492,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1453,
+      "offset": 1503,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1521,
+      "offset": 1571,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1530,
+      "offset": 1580,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1541,
+      "offset": 1591,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1551,
+      "offset": 1601,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "Array",
-      "offset": 1854,
+      "offset": 1904,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2171,
+      "offset": 2221,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2241,
+      "offset": 2291,
       "length": 18,
       "value": "\"chat.placeholder\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2327,
+      "offset": 2377,
       "length": 17,
       "value": "\"chat.send.title\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 2408,
+      "offset": 2458,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2469,
+      "offset": 2519,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2535,
+      "offset": 2585,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2593,
+      "offset": 2643,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2688,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/Common\/AudioSessionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 423,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/View\/ShopLiveWebView.swift",
@@ -12519,210 +12870,210 @@
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "StringLiteral",
-      "offset": 1963,
+      "offset": 2056,
       "length": 7,
       "value": "\"READY\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "StringLiteral",
-      "offset": 1988,
+      "offset": 2081,
       "length": 7,
       "value": "\"ONAIR\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "StringLiteral",
-      "offset": 2013,
+      "offset": 2106,
       "length": 7,
       "value": "\"CLOSE\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "StringLiteral",
-      "offset": 1963,
+      "offset": 2056,
       "length": 7,
       "value": "\"READY\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "StringLiteral",
-      "offset": 1988,
+      "offset": 2081,
       "length": 7,
       "value": "\"ONAIR\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "StringLiteral",
-      "offset": 2013,
+      "offset": 2106,
       "length": 7,
       "value": "\"CLOSE\""
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 2470,
+      "offset": 2563,
       "length": 7,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 2491,
+      "offset": 2584,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 2470,
+      "offset": 2563,
       "length": 7,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 2491,
+      "offset": 2584,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 2849,
+      "offset": 2942,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 2872,
+      "offset": 2965,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 2849,
+      "offset": 2942,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 2872,
+      "offset": 2965,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3264,
+      "offset": 3357,
       "length": 8,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3286,
+      "offset": 3379,
       "length": 10,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3310,
+      "offset": 3403,
       "length": 11,
       "value": "3"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3335,
+      "offset": 3428,
       "length": 9,
       "value": "4"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3264,
+      "offset": 3357,
       "length": 8,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3286,
+      "offset": 3379,
       "length": 10,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3310,
+      "offset": 3403,
       "length": 11,
       "value": "3"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3335,
+      "offset": 3428,
       "length": 9,
       "value": "4"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3842,
+      "offset": 3935,
       "length": 10,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3866,
+      "offset": 3959,
       "length": 3,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3842,
+      "offset": 3935,
       "length": 10,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 3866,
+      "offset": 3959,
       "length": 3,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 5128,
+      "offset": 5473,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 7093,
+      "offset": 7465,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 8094,
+      "offset": 8466,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vincent\/repo\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 11472,
+      "offset": 11889,
       "length": 5,
       "value": "false"
     },

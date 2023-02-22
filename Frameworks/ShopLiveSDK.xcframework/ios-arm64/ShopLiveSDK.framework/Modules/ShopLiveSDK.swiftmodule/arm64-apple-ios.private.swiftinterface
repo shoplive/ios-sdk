@@ -161,6 +161,7 @@ extension Foundation.NotificationCenter {
   @available(*, deprecated, message: "use handleCustomAction(with id: String, type: String, payload: Any?, result: @escaping (ShopLiveCustomActionResult) -> Void) instead")
   @objc optional func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping () -> Swift.Void)
   @objc func handleChangeCampaignStatus(status: Swift.String)
+  @objc optional func handleChangedPlayerStatus(status: Swift.String)
   @objc func handleError(code: Swift.String, message: Swift.String)
   @objc func handleCampaignInfo(campaignInfo: [Swift.String : Any])
   @objc func handleCommand(_ command: Swift.String, with payload: Any?)
@@ -231,6 +232,8 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func setMixWithOthers(isMixAudio: Swift.Bool)
+  @objc public static func useCloseButton(_ use: Swift.Bool)
   @objc public static func awakePlayer()
   @objc public static func setKeepWindowStyleOnReturnFromOsPip(_ keep: Swift.Bool = false)
   @objc public static func isKeepWindowStyleOnReturnFromOsPip() -> Swift.Bool
@@ -307,8 +310,8 @@ extension ShopLiveSDK.ShopLive {
     @objc set
   }
   @objc public static func configure(with accessKey: Swift.String)
-  @objc public static func preview(with campaignKey: Swift.String?, completion: @escaping () -> Swift.Void)
-  @objc public static func play(with campaignKey: Swift.String?, keepWindowStateOnPlayExecuted: Swift.Bool = false)
+  @objc public static func preview(with campaignKey: Swift.String?, referrer: Swift.String? = nil, completion: @escaping () -> Swift.Void)
+  @objc public static func play(with campaignKey: Swift.String?, keepWindowStateOnPlayExecuted: Swift.Bool = false, referrer: Swift.String? = nil)
   @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreFoundation.CGFloat)
   @objc public static func startPictureInPicture()
   @objc public static func stopPictureInPicture()
