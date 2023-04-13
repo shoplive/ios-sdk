@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFAudio
@@ -20,6 +20,9 @@ import os.log
 import os
 extension UIKit.UIViewController {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func shopliveHideKeyboard()
+}
+extension AVFAudio.AVAudioSession {
+  public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String, observeInfo: Swift.UnsafeMutableRawPointer?, completion: @escaping (Swift.Bool) -> Swift.Void)
 }
 extension ObjectiveC.NSObject {
   public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String)
@@ -232,6 +235,9 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func removeParameter(key: Swift.String)
+  @objc public static func addParameter(key: Swift.String, value: Swift.String)
+  @objc public static func setAdId(adId: Swift.String?)
   @objc public static func setMixWithOthers(isMixAudio: Swift.Bool)
   @objc public static func useCloseButton(_ use: Swift.Bool)
   @objc public static func awakePlayer()
@@ -301,7 +307,7 @@ extension ShopLiveSDK.ShopLive {
     @objc get
     @objc set
   }
-  @objc public static var delegate: ShopLiveSDK.ShopLiveSDKDelegate? {
+  @objc public static var delegate: (any ShopLiveSDK.ShopLiveSDKDelegate)? {
     @objc get
     @objc set
   }
