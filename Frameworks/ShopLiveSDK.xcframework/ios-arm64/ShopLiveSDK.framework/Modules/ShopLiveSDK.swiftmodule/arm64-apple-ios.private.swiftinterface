@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFAudio
@@ -9,6 +9,7 @@ import CoreMedia
 import ExternalAccessory
 import Foundation
 import MediaPlayer
+import Network
 @_exported import ShopLiveSDK
 import Swift
 import UIKit
@@ -235,6 +236,7 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func setEnabledPipSwipeOut(_ enabled: Swift.Bool)
   @objc public static func removeParameter(key: Swift.String)
   @objc public static func addParameter(key: Swift.String, value: Swift.String)
   @objc public static func setAdId(adId: Swift.String?)
@@ -307,7 +309,7 @@ extension ShopLiveSDK.ShopLive {
     @objc get
     @objc set
   }
-  @objc public static var delegate: (any ShopLiveSDK.ShopLiveSDKDelegate)? {
+  @objc public static var delegate: ShopLiveSDK.ShopLiveSDKDelegate? {
     @objc get
     @objc set
   }
@@ -323,6 +325,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func stopPictureInPicture()
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
   @objc public static func reloadLive()
+  @objc public static func setEnabledPictureInPictureMode(isEnabled: Swift.Bool)
 }
 @_inheritsConvenienceInitializers @objc public class ShopLiveUser : ObjectiveC.NSObject {
   public var name: Swift.String?
