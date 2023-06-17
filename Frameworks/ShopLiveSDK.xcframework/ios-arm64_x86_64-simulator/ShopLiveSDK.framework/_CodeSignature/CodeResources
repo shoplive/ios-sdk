@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		7qwWGYZp01wFNThQtb4CQhNJyY0=
+		GM+TWR3wQcVCp87FM+RpvBB4ccE=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ehPTzH4MC2yllUL1uqihGohGeV0=
+		iIKdbCDBpF97T2r+o/ccV8sfhOk=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		7qwWGYZp01wFNThQtb4CQhNJyY0=
+		GM+TWR3wQcVCp87FM+RpvBB4ccE=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1/T84FYiXZnNhoCBGgImHzG1fT4=
+		wb3KwQ3oT6TqDso0sZwzJEZj5WY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -110,7 +110,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZaCpUYoTs+2Z7FbepiEIyrJayTlQGxrvQYBPiE5BIyM=
+			4E34JaOqmi4lX1aU8tTtj+80ZC7DuHQ2GPyurcsnOP8=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -138,14 +138,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bbx66HHKLLoXRDgK0Y6ZGSh5AdZXnf880tejMXHNdiE=
+			U5bEqJirwipm91OSudbdQ2BfT5EAGuyC9FheTEkEtfI=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZaCpUYoTs+2Z7FbepiEIyrJayTlQGxrvQYBPiE5BIyM=
+			4E34JaOqmi4lX1aU8tTtj+80ZC7DuHQ2GPyurcsnOP8=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -173,7 +173,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R2PrSaazngZpXplPa8SbSrtif4lf4reQ7n+3nUT9ZUs=
+			u5bHk80+jhjUXlmAzUkuLY3GAjrh1QJQljuLSrMQMIs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
