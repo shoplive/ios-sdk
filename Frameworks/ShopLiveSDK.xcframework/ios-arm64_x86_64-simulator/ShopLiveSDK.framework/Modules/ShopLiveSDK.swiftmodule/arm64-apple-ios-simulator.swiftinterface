@@ -9,6 +9,7 @@ import CoreMedia
 import ExternalAccessory
 import Foundation
 import MediaPlayer
+import Network
 @_exported import ShopLiveSDK
 import Swift
 import UIKit
@@ -235,6 +236,7 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @objc public static func setEnabledPipSwipeOut(_ enabled: Swift.Bool)
   @objc public static func removeParameter(key: Swift.String)
   @objc public static func addParameter(key: Swift.String, value: Swift.String)
   @objc public static func setAdId(adId: Swift.String?)
@@ -323,6 +325,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func stopPictureInPicture()
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
   @objc public static func reloadLive()
+  @objc public static func setEnabledPictureInPictureMode(isEnabled: Swift.Bool)
 }
 @_inheritsConvenienceInitializers @objc public class ShopLiveUser : ObjectiveC.NSObject {
   public var name: Swift.String?

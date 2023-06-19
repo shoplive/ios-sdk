@@ -379,6 +379,7 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
 @class UIImage;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
++ (void)setEnabledPipSwipeOut:(BOOL)enabled;
 + (void)removeParameterWithKey:(NSString * _Nonnull)key;
 + (void)addParameterWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 + (void)setAdIdWithAdId:(NSString * _Nullable)adId;
@@ -453,6 +454,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)stopPictureInPicture;
 + (void)setLoadingAnimationWithImages:(NSArray<UIImage *> * _Nonnull)images;
 + (void)reloadLive;
++ (void)setEnabledPictureInPictureModeWithIsEnabled:(BOOL)isEnabled;
 @end
 
 
