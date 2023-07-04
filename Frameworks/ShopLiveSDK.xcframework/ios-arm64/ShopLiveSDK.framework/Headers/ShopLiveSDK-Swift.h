@@ -260,10 +260,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVKit;
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
+@import WebKit;
 #endif
 
 #endif
@@ -325,12 +327,281 @@ typedef SWIFT_ENUM(NSInteger, ResultStatus, open) {
   ResultStatusKEEP = 2,
 };
 
+@class UIViewController;
+@class NSString;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK24SLAVPlayerViewController")
+@interface SLAVPlayerViewController : AVPlayerViewController
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+- (void)showViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK23SLActivityIndicatorView")
+@interface SLActivityIndicatorView : UIActivityIndicatorView
+- (nonnull instancetype)initWithActivityIndicatorStyle:(UIActivityIndicatorViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIActivity;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK24SLActivityViewController")
+@interface SLActivityViewController : UIActivityViewController
+- (nonnull instancetype)initWithActivityItems:(NSArray * _Nonnull)activityItems applicationActivities:(NSArray<UIActivity *> * _Nullable)applicationActivities OBJC_DESIGNATED_INITIALIZER;
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+- (void)showViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK17SLAlertController")
+@interface SLAlertController : UIAlertController
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+- (void)showViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK8SLButton")
+@interface SLButton : UIButton
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionViewLayout;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK16SLCollectionView")
+@interface SLCollectionView : UICollectionView
+- (nonnull instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK12SLDatePicker")
+@interface SLDatePicker : UIDatePicker
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIImage;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK11SLImageView")
+@interface SLImageView : UIImageView
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK7SLLabel")
+@interface SLLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK22SLNavigationController")
+@interface SLNavigationController : UINavigationController
+- (void)pushViewController:(UIViewController * _Nonnull)viewController animated:(BOOL)animated;
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+- (void)showViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=5.0);
+- (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK13SLPageControl")
+@interface SLPageControl : UIPageControl
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK20SLPageViewController")
+@interface SLPageViewController : UIPageViewController
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+- (void)showViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithTransitionStyle:(UIPageViewControllerTransitionStyle)style navigationOrientation:(UIPageViewControllerNavigationOrientation)navigationOrientation options:(NSDictionary<UIPageViewControllerOptionsKey, id> * _Nullable)options OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK12SLPickerView")
+@interface SLPickerView : UIPickerView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class AVPictureInPictureControllerContentSource;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK28SLPictureInPictureController")
+@interface SLPictureInPictureController : AVPictureInPictureController
+- (nonnull instancetype)initWithContentSource:(AVPictureInPictureControllerContentSource * _Nonnull)contentSource OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=15.0);
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK14SLProgressView")
+@interface SLProgressView : UIProgressView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK12SLScrollView")
+@interface SLScrollView : UIScrollView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK11SLSearchBar")
+@interface SLSearchBar : UISearchBar
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK18SLSegmentedControl")
+@interface SLSegmentedControl : UISegmentedControl
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithItems:(NSArray * _Nullable)items OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK8SLSlider")
+@interface SLSlider : UISlider
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK21SLSplitViewController")
+@interface SLSplitViewController : UISplitViewController
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+- (void)showViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStyle:(UISplitViewControllerStyle)style OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=14.0);
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK11SLStackView")
+@interface SLStackView : UIStackView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK8SLSwitch")
+@interface SLSwitch : UISwitch
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK18SLTabBarController")
+@interface SLTabBarController : UITabBarController
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+- (void)showViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK11SLTableView")
+@interface SLTableView : UITableView
+- (nonnull instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK11SLTextField")
+@interface SLTextField : UITextField
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSTextContainer;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK10SLTextView")
+@interface SLTextView : UITextView
+- (nonnull instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer * _Nullable)textContainer OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK6SLView")
+@interface SLView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK16SLViewController")
+@interface SLViewController : UIViewController
+- (void)viewDidLoad;
+- (void)presentViewController:(UIViewController * _Nonnull)viewControllerToPresent animated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+- (void)showViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class WKWebViewConfiguration;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK11SLWKWebView")
+@interface SLWKWebView : WKWebView
+- (nonnull instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration * _Nonnull)configuration OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+@class UIWindowScene;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK8SLWindow")
+@interface SLWindow : UIWindow
+- (nonnull instancetype)initWithWindowScene:(UIWindowScene * _Nonnull)windowScene OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=13.0);
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
+};
 
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
@@ -350,33 +621,12 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
-};
-
-@class NSString;
-@class UIViewController;
 @class UIFont;
 @class NSURL;
-@class UIWindow;
 @class NSNumber;
 @class ShopLiveUser;
 @class UIColor;
-@class WKWebViewConfiguration;
 @protocol ShopLiveSDKDelegate;
-@class UIImage;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 + (void)setEnabledPipSwipeOut:(BOOL)enabled;
@@ -399,8 +649,8 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
 + (void)setEndpoint:(NSString * _Nullable)url;
 + (BOOL)isSuccessCampaignJoin SWIFT_WARN_UNUSED_RESULT;
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIViewController * _Nullable viewController;)
-+ (UIViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewController * _Nullable viewController;)
++ (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)close;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nullable)inputBoxFont sendButtonFont:(UIFont * _Nullable)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme custom:(void (^ _Nullable)(void))custom;

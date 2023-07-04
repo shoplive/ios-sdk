@@ -176,7 +176,191 @@ extension Foundation.NotificationCenter {
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
 }
-public typealias ShopLiveViewController = UIKit.UIViewController
+public typealias ShopLiveViewController = ShopLiveSDK.SLViewController
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLWindow : UIKit.UIWindow {
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(windowScene: UIKit.UIWindowScene)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLNavigationController : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func pushViewController(_ viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
+  @available(iOS 5.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLTabBarController : UIKit.UITabBarController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLSplitViewController : UIKit.UISplitViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @available(iOS 14.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UISplitViewController.Style)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLPageViewController : UIKit.UIPageViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLAlertController : UIKit.UIAlertController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) convenience public init(myTitle: Swift.String?, myMessage: Swift.String?, preferredStyle: UIKit.UIAlertController.Style)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLActivityViewController : UIKit.UIActivityViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(activityItems: [Any], applicationActivities: [UIKit.UIActivity]?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLTextField : UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLImageView : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(image: UIKit.UIImage?)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLTableView : UIKit.UITableView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, style: UIKit.UITableView.Style)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLCollectionView : UIKit.UICollectionView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, collectionViewLayout layout: UIKit.UICollectionViewLayout)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLStackView : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLSegmentedControl : UIKit.UISegmentedControl {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(items: [Any]?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLSlider : UIKit.UISlider {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLProgressView : UIKit.UIProgressView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLActivityIndicatorView : UIKit.UIActivityIndicatorView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UIActivityIndicatorView.Style)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLSwitch : UIKit.UISwitch {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLDatePicker : UIKit.UIDatePicker {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLPickerView : UIKit.UIPickerView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLPageControl : UIKit.UIPageControl {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLSearchBar : UIKit.UISearchBar {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLAVPlayerViewController : AVKit.AVPlayerViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLWKWebView : WebKit.WKWebView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, configuration: WebKit.WKWebViewConfiguration)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class SLPictureInPictureController : AVKit.AVPictureInPictureController {
+  @available(iOS 15.0, *)
+  @objc override dynamic public init(contentSource: AVKit.AVPictureInPictureController.ContentSource)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLScrollView : UIKit.UIScrollView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLTextView : UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, textContainer: UIKit.NSTextContainer?)
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
 }
