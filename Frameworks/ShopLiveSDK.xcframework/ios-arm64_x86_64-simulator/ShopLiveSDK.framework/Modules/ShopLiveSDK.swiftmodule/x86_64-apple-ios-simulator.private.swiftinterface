@@ -5,6 +5,7 @@
 import AVFAudio
 import AVFoundation
 import AVKit
+import SystemConfiguration.CaptiveNetwork
 import CoreMedia
 import ExternalAccessory
 import Foundation
@@ -12,6 +13,7 @@ import MediaPlayer
 import Network
 @_exported import ShopLiveSDK
 import Swift
+import SystemConfiguration
 import UIKit
 import VideoToolbox
 import WebKit
@@ -543,6 +545,34 @@ extension ShopLiveSDK.ShopLiveUser {
     }
   }
 }
+public let ReachabilityStatusChangedNotification: Swift.String
+public enum ReachabilityType : Swift.CustomStringConvertible {
+  case WWAN
+  case WiFi
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: ShopLiveSDK.ReachabilityType, b: ShopLiveSDK.ReachabilityType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ReachabilityStatus : Swift.CustomStringConvertible, Swift.Equatable {
+  case Offline
+  case Online(ShopLiveSDK.ReachabilityType)
+  case Unknown
+  public var description: Swift.String {
+    get
+  }
+  public static func == (lhs: ShopLiveSDK.ReachabilityStatus, rhs: ShopLiveSDK.ReachabilityStatus) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class NetworkReachability {
+  @objc deinit
+}
+extension ShopLiveSDK.ReachabilityStatus {
+  public init(reachabilityFlags flags: SystemConfiguration.SCNetworkReachabilityFlags)
+}
 extension ShopLiveSDK.ResultStatus : Swift.Equatable {}
 extension ShopLiveSDK.ResultStatus : Swift.Hashable {}
 extension ShopLiveSDK.ResultStatus : Swift.RawRepresentable {}
@@ -576,3 +606,5 @@ extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLiveUser.Gender : Swift.Equatable {}
 extension ShopLiveSDK.ShopLiveUser.Gender : Swift.Hashable {}
 extension ShopLiveSDK.ShopLiveUser.Gender : Swift.RawRepresentable {}
+extension ShopLiveSDK.ReachabilityType : Swift.Equatable {}
+extension ShopLiveSDK.ReachabilityType : Swift.Hashable {}
