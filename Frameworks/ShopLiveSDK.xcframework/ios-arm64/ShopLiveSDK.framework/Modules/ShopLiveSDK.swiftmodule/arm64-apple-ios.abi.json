@@ -25931,7 +25931,7 @@
       "kind": "StringLiteral",
       "offset": 223,
       "length": 7,
-      "value": "\"1.4.4\""
+      "value": "\"1.4.5\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
