@@ -623,6 +623,7 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 
 @class UIFont;
 @class NSURL;
+@class ShopliveWindow;
 @class NSNumber;
 @class ShopLiveUser;
 @class UIColor;
@@ -664,8 +665,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PlayerMode playerMode;)
 + (enum PlayerMode)playerMode SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIWindow * _Nullable playerWindow;)
-+ (UIWindow * _Nullable)playerWindow SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopliveWindow * _Nullable playerWindow;)
++ (ShopliveWindow * _Nullable)playerWindow SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NSNumber * _Nullable fixedPipWidth;)
 + (NSNumber * _Nullable)fixedPipWidth SWIFT_WARN_UNUSED_RESULT;
 + (void)setFixedPipWidth:(NSNumber * _Nullable)newValue;
@@ -792,6 +793,15 @@ typedef SWIFT_ENUM(NSInteger, Gender, open) {
   GenderNeutral = 3,
   GenderUnknown = 0,
 };
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
+@interface ShopliveWindow : SLWindow
+- (void)addSubview:(UIView * _Nonnull)view;
+- (nonnull instancetype)initWithWindowScene:(UIWindowScene * _Nonnull)windowScene OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=13.0);
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 

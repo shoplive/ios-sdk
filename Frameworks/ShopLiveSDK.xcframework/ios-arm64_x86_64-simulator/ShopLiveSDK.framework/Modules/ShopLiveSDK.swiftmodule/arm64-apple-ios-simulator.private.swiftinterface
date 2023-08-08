@@ -460,7 +460,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static var playerMode: ShopLiveSDK.ShopLive.PlayerMode {
     @objc get
   }
-  @objc public static var playerWindow: UIKit.UIWindow? {
+  @objc public static var playerWindow: ShopLiveSDK.ShopliveWindow? {
     @objc get
   }
   @objc public static var fixedPipWidth: Foundation.NSNumber? {
@@ -512,6 +512,15 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
   @objc public static func reloadLive()
   @objc public static func setEnabledPictureInPictureMode(isEnabled: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ShopliveWindow : ShopLiveSDK.SLWindow {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func addSubview(_ view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func forceAddSubView(_ view: UIKit.UIView)
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(windowScene: UIKit.UIWindowScene)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class ShopLiveUser : ObjectiveC.NSObject {
   public var name: Swift.String?
