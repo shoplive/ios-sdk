@@ -26188,55 +26188,55 @@
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
       "offset": 223,
-      "length": 28,
-      "value": "\"1.4.5 (binary for musinsa)\""
+      "length": 7,
+      "value": "\"1.4.6\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
-      "offset": 778,
+      "offset": 757,
       "length": 39,
       "value": "\"https:\/\/www.shoplive.show\/v1\/sdk.html\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
-      "offset": 855,
+      "offset": 834,
       "length": 14,
       "value": "\"shoplivedata\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
-      "offset": 909,
+      "offset": 888,
       "length": 22,
       "value": "\"ShopLiveAppInterface\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
       "kind": "IntegerLiteral",
-      "offset": 1047,
+      "offset": 1026,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
       "kind": "IntegerLiteral",
-      "offset": 1058,
+      "offset": 1037,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
-      "offset": 1293,
+      "offset": 1272,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/Common\/ShopLiveDefines.swift",
       "kind": "IntegerLiteral",
-      "offset": 1385,
+      "offset": 1364,
       "length": 1,
       "value": "0"
     },
