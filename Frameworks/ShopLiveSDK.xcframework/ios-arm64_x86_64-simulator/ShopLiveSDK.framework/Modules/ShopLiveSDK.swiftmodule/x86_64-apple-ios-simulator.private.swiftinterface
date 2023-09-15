@@ -512,6 +512,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
   @objc public static func reloadLive()
   @objc public static func setEnabledPictureInPictureMode(isEnabled: Swift.Bool)
+  @objc public static func setInAppPipConfiguration(config: ShopLiveSDK.ShopLiveInAppPipConfiguration)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ShopliveWindow : ShopLiveSDK.SLWindow {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func addSubview(_ view: UIKit.UIView)
@@ -553,6 +554,14 @@ extension ShopLiveSDK.ShopLiveUser {
       get
     }
   }
+}
+@objc public class ShopLiveInAppPipConfiguration : ObjectiveC.NSObject {
+  public var pipMaxSize: CoreFoundation.CGFloat?
+  public var useCloseButton: Swift.Bool?
+  public var pipPosition: ShopLiveSDK.ShopLive.PipPosition?
+  public var enableSwipeOut: Swift.Bool?
+  public init(pipMaxSize: CoreFoundation.CGFloat?, useCloseButton: Swift.Bool?, pipPosition: ShopLiveSDK.ShopLive.PipPosition?, enableSwipeOut: Swift.Bool?)
+  @objc deinit
 }
 public let ReachabilityStatusChangedNotification: Swift.String
 public enum ReachabilityType : Swift.CustomStringConvertible {

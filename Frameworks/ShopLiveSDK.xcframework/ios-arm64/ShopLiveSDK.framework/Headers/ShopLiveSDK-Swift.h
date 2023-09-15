@@ -591,22 +591,6 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 @end
 
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
-};
-
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
   PipPositionTopRight = 1,
@@ -621,6 +605,22 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
+};
+
 @class UIFont;
 @class NSURL;
 @class ShopliveWindow;
@@ -628,6 +628,7 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class ShopLiveUser;
 @class UIColor;
 @protocol ShopLiveSDKDelegate;
+@class ShopLiveInAppPipConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 + (void)setEnabledPipSwipeOut:(BOOL)enabled;
@@ -706,6 +707,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)setLoadingAnimationWithImages:(NSArray<UIImage *> * _Nonnull)images;
 + (void)reloadLive;
 + (void)setEnabledPictureInPictureModeWithIsEnabled:(BOOL)isEnabled;
++ (void)setInAppPipConfigurationWithConfig:(ShopLiveInAppPipConfiguration * _Nonnull)config;
 @end
 
 
@@ -723,6 +725,13 @@ SWIFT_CLASS("_TtC11ShopLiveSDK26ShopLiveCustomActionResult")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK29ShopLiveInAppPipConfiguration")
+@interface ShopLiveInAppPipConfiguration : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK11ShopLiveLog")
