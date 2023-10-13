@@ -33809,35 +33809,35 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/APIService\/LiveUrlFetchAPI.swift",
       "kind": "StringLiteral",
-      "offset": 551,
+      "offset": 542,
       "length": 69,
       "value": "\"https:\/\/config.shoplive.cloud\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/APIService\/LiveUrlFetchAPI.swift",
       "kind": "StringLiteral",
-      "offset": 594,
+      "offset": 585,
       "length": 1,
       "value": "\"\/live\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/APIService\/LiveUrlFetchAPI.swift",
       "kind": "StringLiteral",
-      "offset": 614,
+      "offset": 605,
       "length": 1,
       "value": "\".json\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/APIService\/LiveUrlFetchAPI.swift",
       "kind": "IntegerLiteral",
-      "offset": 1086,
+      "offset": 1077,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/ShopLiveSDK\/APIService\/LiveUrlFetchAPI.swift",
       "kind": "IntegerLiteral",
-      "offset": 1092,
+      "offset": 1083,
       "length": 3,
       "value": "400"
     },
