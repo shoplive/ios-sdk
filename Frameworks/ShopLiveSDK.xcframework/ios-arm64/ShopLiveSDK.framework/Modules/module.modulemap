@@ -1,7 +1,7 @@
 framework module ShopLiveSDK {
   umbrella header "ShopLiveSDK.h"
-  export *
 
+  export *
   module * { export * }
 }
 

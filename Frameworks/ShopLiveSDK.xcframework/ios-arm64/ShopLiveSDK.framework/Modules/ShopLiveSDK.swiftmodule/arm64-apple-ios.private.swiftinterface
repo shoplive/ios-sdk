@@ -1,27 +1,24 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFAudio
 import AVFoundation
 import AVKit
 import SystemConfiguration.CaptiveNetwork
 import CoreMedia
-import DeveloperToolsSupport
 import ExternalAccessory
 import Foundation
 import MediaPlayer
 import Network
 @_exported import ShopLiveSDK
 import Swift
-import SwiftUI
 import SystemConfiguration
 import UIKit
 import VideoToolbox
 import WebKit
 import _Concurrency
 import _StringProcessing
-import _SwiftConcurrencyShims
 import os.log
 import os
 extension UIKit.UIViewController {
