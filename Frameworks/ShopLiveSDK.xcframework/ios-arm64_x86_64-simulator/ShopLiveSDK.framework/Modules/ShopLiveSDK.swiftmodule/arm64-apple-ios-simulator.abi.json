@@ -13001,11 +13001,13 @@
             "mangledName": "$s11ShopLiveSDK0aB0C21setEnabledPipSwipeOutyySbFZ",
             "moduleName": "ShopLiveSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "setEnabledPipSwipeOut:",
             "declAttributes": [
               "Final",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -13108,11 +13110,13 @@
             "mangledName": "$s11ShopLiveSDK0aB0C7setAdId02adF0ySSSg_tFZ",
             "moduleName": "ShopLiveSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "setAdIdWithAdId:",
             "declAttributes": [
               "Final",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -13170,11 +13174,13 @@
             "mangledName": "$s11ShopLiveSDK0aB0C14useCloseButtonyySbFZ",
             "moduleName": "ShopLiveSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "useCloseButton:",
             "declAttributes": [
               "Final",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -14228,11 +14234,13 @@
             "mangledName": "$s11ShopLiveSDK0aB0C13fixedPipWidthSo8NSNumberCSgvpZ",
             "moduleName": "ShopLiveSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "fixedPipWidth",
             "declAttributes": [
               "Final",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "isFromExtension": true,
             "accessors": [
@@ -14323,8 +14331,10 @@
                 "mangledName": "$s11ShopLiveSDK0aB0C13fixedPipWidthSo8NSNumberCSgvMZ",
                 "moduleName": "ShopLiveSDK",
                 "static": true,
+                "deprecated": true,
                 "implicit": true,
                 "declAttributes": [
+                  "Available",
                   "Final"
                 ],
                 "isFromExtension": true,
@@ -14503,11 +14513,13 @@
             "mangledName": "$s11ShopLiveSDK0aB0C11pipPositionAC03PipE0OvpZ",
             "moduleName": "ShopLiveSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "pipPosition",
             "declAttributes": [
               "Final",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "isFromExtension": true,
             "accessors": [
@@ -14582,8 +14594,10 @@
                 "mangledName": "$s11ShopLiveSDK0aB0C11pipPositionAC03PipE0OvMZ",
                 "moduleName": "ShopLiveSDK",
                 "static": true,
+                "deprecated": true,
                 "implicit": true,
                 "declAttributes": [
+                  "Available",
                   "Final"
                 ],
                 "isFromExtension": true,
@@ -14608,11 +14622,13 @@
             "mangledName": "$s11ShopLiveSDK0aB0C8pipScale12CoreGraphics7CGFloatVvpZ",
             "moduleName": "ShopLiveSDK",
             "static": true,
+            "deprecated": true,
             "objc_name": "pipScale",
             "declAttributes": [
               "Final",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "isFromExtension": true,
             "accessors": [
@@ -14687,8 +14703,10 @@
                 "mangledName": "$s11ShopLiveSDK0aB0C8pipScale12CoreGraphics7CGFloatVvMZ",
                 "moduleName": "ShopLiveSDK",
                 "static": true,
+                "deprecated": true,
                 "implicit": true,
                 "declAttributes": [
+                  "Available",
                   "Final"
                 ],
                 "isFromExtension": true,
@@ -31421,119 +31439,119 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 6046,
+      "offset": 6445,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 7061,
+      "offset": 7460,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 7161,
+      "offset": 7560,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 7658,
+      "offset": 8057,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 7752,
+      "offset": 8151,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "Dictionary",
-      "offset": 7962,
+      "offset": 8361,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "StringLiteral",
-      "offset": 7983,
+      "offset": 8382,
       "length": 9,
       "value": "\"command\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "StringLiteral",
-      "offset": 8020,
+      "offset": 8419,
       "length": 9,
       "value": "\"payload\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 8862,
+      "offset": 9261,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 8943,
+      "offset": 9342,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 9213,
+      "offset": 9612,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 9944,
+      "offset": 10343,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 10192,
+      "offset": 10591,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 10484,
+      "offset": 10883,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 11115,
+      "offset": 11659,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 11222,
+      "offset": 11766,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-sdk-ios\/ShopLiveSDK\/ShopLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 12893,
+      "offset": 13740,
       "length": 5,
       "value": "false"
     },

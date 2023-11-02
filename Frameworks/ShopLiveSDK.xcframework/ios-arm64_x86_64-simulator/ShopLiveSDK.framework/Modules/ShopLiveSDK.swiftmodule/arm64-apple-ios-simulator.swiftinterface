@@ -419,11 +419,14 @@ extension ShopLiveSDK.ShopLive {
   }
 }
 extension ShopLiveSDK.ShopLive {
+  @available(iOS, deprecated, message: "Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead")
   @objc public static func setEnabledPipSwipeOut(_ enabled: Swift.Bool)
   @objc public static func removeParameter(key: Swift.String)
   @objc public static func addParameter(key: Swift.String, value: Swift.String)
+  @available(iOS, deprecated, message: "Will be deprecated soon please Enable AppTrackingTransparency instead")
   @objc public static func setAdId(adId: Swift.String?)
   @objc public static func setMixWithOthers(isMixAudio: Swift.Bool)
+  @available(iOS, deprecated, message: "Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead")
   @objc public static func useCloseButton(_ use: Swift.Bool)
   @objc public static func awakePlayer()
   @objc public static func setKeepWindowStyleOnReturnFromOsPip(_ keep: Swift.Bool = false)
@@ -460,6 +463,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static var playerWindow: ShopLiveSDK.ShopliveWindow? {
     @objc get
   }
+  @available(iOS, deprecated, message: "Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead")
   @objc public static var fixedPipWidth: Foundation.NSNumber? {
     @objc get
     @objc set
@@ -472,10 +476,12 @@ extension ShopLiveSDK.ShopLive {
   @objc public static var style: ShopLiveSDK.ShopLive.PresentationStyle {
     @objc get
   }
+  @available(iOS, deprecated, message: "Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead")
   @objc public static var pipPosition: ShopLiveSDK.ShopLive.PipPosition {
     @objc get
     @objc set
   }
+  @available(iOS, deprecated, message: "Will be deprecated soon Use pipMaxSize in setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead")
   @objc public static var pipScale: CoreFoundation.CGFloat {
     @objc get
     @objc set

@@ -631,12 +631,12 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class ShopLiveInAppPipConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-+ (void)setEnabledPipSwipeOut:(BOOL)enabled;
++ (void)setEnabledPipSwipeOut:(BOOL)enabled SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");
 + (void)removeParameterWithKey:(NSString * _Nonnull)key;
 + (void)addParameterWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-+ (void)setAdIdWithAdId:(NSString * _Nullable)adId;
++ (void)setAdIdWithAdId:(NSString * _Nullable)adId SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon please Enable AppTrackingTransparency instead");
 + (void)setMixWithOthersWithIsMixAudio:(BOOL)isMixAudio;
-+ (void)useCloseButton:(BOOL)use;
++ (void)useCloseButton:(BOOL)use SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");
 + (void)awakePlayer;
 + (void)setKeepWindowStyleOnReturnFromOsPip:(BOOL)keep;
 + (BOOL)isKeepWindowStyleOnReturnFromOsPip SWIFT_WARN_UNUSED_RESULT;
@@ -668,7 +668,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PlayerMode play
 + (enum PlayerMode)playerMode SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopliveWindow * _Nullable playerWindow;)
 + (ShopliveWindow * _Nullable)playerWindow SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NSNumber * _Nullable fixedPipWidth;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NSNumber * _Nullable fixedPipWidth SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
 + (NSNumber * _Nullable)fixedPipWidth SWIFT_WARN_UNUSED_RESULT;
 + (void)setFixedPipWidth:(NSNumber * _Nullable)newValue;
 + (void)mute;
@@ -677,10 +677,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum VideoOrientatio
 + (enum VideoOrientation)orientationMode SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PresentationStyle style;)
 + (enum PresentationStyle)style SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
 + (enum PipPosition)pipPosition SWIFT_WARN_UNUSED_RESULT;
 + (void)setPipPosition:(enum PipPosition)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) CGFloat pipScale;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) CGFloat pipScale SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use pipMaxSize in setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
 + (CGFloat)pipScale SWIFT_WARN_UNUSED_RESULT;
 + (void)setPipScale:(CGFloat)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull indicatorColor;)
@@ -1451,12 +1451,12 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
 @class ShopLiveInAppPipConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-+ (void)setEnabledPipSwipeOut:(BOOL)enabled;
++ (void)setEnabledPipSwipeOut:(BOOL)enabled SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");
 + (void)removeParameterWithKey:(NSString * _Nonnull)key;
 + (void)addParameterWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-+ (void)setAdIdWithAdId:(NSString * _Nullable)adId;
++ (void)setAdIdWithAdId:(NSString * _Nullable)adId SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon please Enable AppTrackingTransparency instead");
 + (void)setMixWithOthersWithIsMixAudio:(BOOL)isMixAudio;
-+ (void)useCloseButton:(BOOL)use;
++ (void)useCloseButton:(BOOL)use SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");
 + (void)awakePlayer;
 + (void)setKeepWindowStyleOnReturnFromOsPip:(BOOL)keep;
 + (BOOL)isKeepWindowStyleOnReturnFromOsPip SWIFT_WARN_UNUSED_RESULT;
@@ -1488,7 +1488,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PlayerMode play
 + (enum PlayerMode)playerMode SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopliveWindow * _Nullable playerWindow;)
 + (ShopliveWindow * _Nullable)playerWindow SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NSNumber * _Nullable fixedPipWidth;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NSNumber * _Nullable fixedPipWidth SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
 + (NSNumber * _Nullable)fixedPipWidth SWIFT_WARN_UNUSED_RESULT;
 + (void)setFixedPipWidth:(NSNumber * _Nullable)newValue;
 + (void)mute;
@@ -1497,10 +1497,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum VideoOrientatio
 + (enum VideoOrientation)orientationMode SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PresentationStyle style;)
 + (enum PresentationStyle)style SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
 + (enum PipPosition)pipPosition SWIFT_WARN_UNUSED_RESULT;
 + (void)setPipPosition:(enum PipPosition)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) CGFloat pipScale;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) CGFloat pipScale SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use pipMaxSize in setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
 + (CGFloat)pipScale SWIFT_WARN_UNUSED_RESULT;
 + (void)setPipScale:(CGFloat)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull indicatorColor;)
