@@ -11,7 +11,7 @@ import ExternalAccessory
 import Foundation
 import MediaPlayer
 import Network
-@_exported import ShopLiveSDK
+import ShopliveSDKCommon
 import Swift
 import SystemConfiguration
 import UIKit
@@ -21,9 +21,6 @@ import _Concurrency
 import _StringProcessing
 import os.log
 import os
-extension UIKit.UIViewController {
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func shopliveHideKeyboard()
-}
 extension AVFAudio.AVAudioSession {
   public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String, observeInfo: Swift.UnsafeMutableRawPointer?, completion: @escaping (Swift.Bool) -> Swift.Void)
 }
@@ -433,8 +430,8 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func isKeepWindowStyleOnReturnFromOsPip() -> Swift.Bool
   @objc public static func setAppVersion(_ appVersion: Swift.String)
   @objc public static func setUsingLocalStorage(_ use: Swift.Bool)
-  @objc public static func setPictureInPictureFloatingOffset(offset: UIKit.UIEdgeInsets)
-  @objc public static func setPictureInPicturePadding(padding: UIKit.UIEdgeInsets)
+  @objc public static func setPictureInPictureFloatingOffset(offset: UIKit.UIEdgeInsets) -> Swift.Bool
+  @objc public static func setPictureInPicturePadding(padding: UIKit.UIEdgeInsets) -> Swift.Bool
   @objc public static func sendCommandMessage(command: Swift.String, payload: [Swift.String : Any]?)
   @objc public static func setMuteWhenPlayStart(_ mute: Swift.Bool)
   @objc public static func setNextActionOnHandleNavigation(actionType: ShopLiveSDK.ActionType)
@@ -472,10 +469,6 @@ extension ShopLiveSDK.ShopLive {
   @objc public static var orientationMode: ShopLiveSDK.ShopLive.VideoOrientation {
     @objc get
   }
-  @objc public static var user: ShopLiveSDK.ShopLiveUser? {
-    @objc get
-    @objc set
-  }
   @objc public static var style: ShopLiveSDK.ShopLive.PresentationStyle {
     @objc get
   }
@@ -499,12 +492,7 @@ extension ShopLiveSDK.ShopLive {
     @objc get
     @objc set
   }
-  @objc public static var authToken: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc public static func configure(with accessKey: Swift.String)
-  @objc public static func preview(with campaignKey: Swift.String?, referrer: Swift.String? = nil, completion: @escaping () -> Swift.Void)
+  @objc public static func preview(with campaignKey: Swift.String?, referrer: Swift.String? = nil, completion: (() -> Swift.Void)?)
   @objc public static func play(with campaignKey: Swift.String?, keepWindowStateOnPlayExecuted: Swift.Bool = false, referrer: Swift.String? = nil)
   @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreFoundation.CGFloat)
   @objc public static func startPictureInPicture()
@@ -512,7 +500,24 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
   @objc public static func reloadLive()
   @objc public static func setEnabledPictureInPictureMode(isEnabled: Swift.Bool)
+  @objc public static var authToken: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public static var user: ShopliveSDKCommon.ShopLiveCommonUser? {
+    @objc get
+    @objc set
+  }
+  @objc public static func configure(with accessKey: Swift.String)
   @objc public static func setInAppPipConfiguration(config: ShopLiveSDK.ShopLiveInAppPipConfiguration)
+  @objc public static func setUtmSource(utmSource: Swift.String?)
+  @objc public static func setUtmCampaign(utmCampaign: Swift.String?)
+  @objc public static func setUtmMedium(utmMedium: Swift.String?)
+  @objc public static func setUtmContent(utmContent: Swift.String?)
+  @objc public static func getUtmSource() -> Swift.String?
+  @objc public static func getUtmCampaign() -> Swift.String?
+  @objc public static func getUtmMedium() -> Swift.String?
+  @objc public static func getUtmContent() -> Swift.String?
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ShopliveWindow : ShopLiveSDK.SLWindow {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func addSubview(_ view: UIKit.UIView)
@@ -522,38 +527,6 @@ extension ShopLiveSDK.ShopLive {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class ShopLiveUser : ObjectiveC.NSObject {
-  public var name: Swift.String?
-  public var gender: ShopLiveSDK.ShopLiveUser.Gender?
-  public var id: Swift.String?
-  public var age: Swift.Int?
-  @objc override dynamic public init()
-  @objc public init(id: Swift.String = "", name: Swift.String = "", gender: ShopLiveSDK.ShopLiveUser.Gender = .unknown, age: Swift.Int = -1)
-  public func add(_ params: [Swift.String : Any?])
-  public func remove(key: Swift.String)
-  public func getParams() -> [Swift.String : Swift.String]
-  @objc deinit
-}
-extension ShopLiveSDK.ShopLiveUser {
-  @objc public enum Gender : Swift.Int, Swift.Codable, Swift.CaseIterable {
-    case female = 1
-    case male = 2
-    case neutral = 3
-    case unknown = 0
-    public var description: Swift.String {
-      get
-    }
-    public init?(rawValue: Swift.Int)
-    public typealias AllCases = [ShopLiveSDK.ShopLiveUser.Gender]
-    public typealias RawValue = Swift.Int
-    public static var allCases: [ShopLiveSDK.ShopLiveUser.Gender] {
-      get
-    }
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
 }
 @objc public class ShopLiveInAppPipConfiguration : ObjectiveC.NSObject {
   public var pipMaxSize: CoreFoundation.CGFloat?
@@ -621,8 +594,5 @@ extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.RawRepresentable {}
-extension ShopLiveSDK.ShopLiveUser.Gender : Swift.Equatable {}
-extension ShopLiveSDK.ShopLiveUser.Gender : Swift.Hashable {}
-extension ShopLiveSDK.ShopLiveUser.Gender : Swift.RawRepresentable {}
 extension ShopLiveSDK.ReachabilityType : Swift.Equatable {}
 extension ShopLiveSDK.ReachabilityType : Swift.Hashable {}

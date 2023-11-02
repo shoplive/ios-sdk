@@ -591,6 +591,22 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 @end
 
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
+};
+
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
   PipPositionTopRight = 1,
@@ -605,29 +621,13 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
-};
-
 @class UIFont;
 @class NSURL;
 @class ShopliveWindow;
 @class NSNumber;
-@class ShopLiveUser;
 @class UIColor;
 @protocol ShopLiveSDKDelegate;
+@class ShopLiveCommonUser;
 @class ShopLiveInAppPipConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
@@ -642,8 +642,8 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
 + (BOOL)isKeepWindowStyleOnReturnFromOsPip SWIFT_WARN_UNUSED_RESULT;
 + (void)setAppVersion:(NSString * _Nonnull)appVersion;
 + (void)setUsingLocalStorage:(BOOL)use;
-+ (void)setPictureInPictureFloatingOffsetWithOffset:(UIEdgeInsets)offset;
-+ (void)setPictureInPicturePaddingWithPadding:(UIEdgeInsets)padding;
++ (BOOL)setPictureInPictureFloatingOffsetWithOffset:(UIEdgeInsets)offset SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)setPictureInPicturePaddingWithPadding:(UIEdgeInsets)padding SWIFT_WARN_UNUSED_RESULT;
 + (void)sendCommandMessageWithCommand:(NSString * _Nonnull)command payload:(NSDictionary<NSString *, id> * _Nullable)payload;
 + (void)setMuteWhenPlayStart:(BOOL)mute;
 + (void)setNextActionOnHandleNavigationWithActionType:(enum ActionType)actionType;
@@ -675,9 +675,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NSNumber * _Nullable f
 + (void)unmute;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum VideoOrientation orientationMode;)
 + (enum VideoOrientation)orientationMode SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveUser * _Nullable user;)
-+ (ShopLiveUser * _Nullable)user SWIFT_WARN_UNUSED_RESULT;
-+ (void)setUser:(ShopLiveUser * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PresentationStyle style;)
 + (enum PresentationStyle)style SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
@@ -695,11 +692,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ShopLiveSDKDelegate> _Nullable delegate;)
 + (id <ShopLiveSDKDelegate> _Nullable)delegate SWIFT_WARN_UNUSED_RESULT;
 + (void)setDelegate:(id <ShopLiveSDKDelegate> _Nullable)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
-+ (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAuthToken:(NSString * _Nullable)newValue;
-+ (void)configureWith:(NSString * _Nonnull)accessKey;
-+ (void)previewWith:(NSString * _Nullable)campaignKey referrer:(NSString * _Nullable)referrer completion:(void (^ _Nonnull)(void))completion;
++ (void)previewWith:(NSString * _Nullable)campaignKey referrer:(NSString * _Nullable)referrer completion:(void (^ _Nullable)(void))completion;
 + (void)playWith:(NSString * _Nullable)campaignKey keepWindowStateOnPlayExecuted:(BOOL)keepWindowStateOnPlayExecuted referrer:(NSString * _Nullable)referrer;
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
 + (void)startPictureInPicture;
@@ -707,7 +700,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)setLoadingAnimationWithImages:(NSArray<UIImage *> * _Nonnull)images;
 + (void)reloadLive;
 + (void)setEnabledPictureInPictureModeWithIsEnabled:(BOOL)isEnabled;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
++ (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
++ (void)setAuthToken:(NSString * _Nullable)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _Nullable user;)
++ (ShopLiveCommonUser * _Nullable)user SWIFT_WARN_UNUSED_RESULT;
++ (void)setUser:(ShopLiveCommonUser * _Nullable)newValue;
++ (void)configureWith:(NSString * _Nonnull)accessKey;
 + (void)setInAppPipConfigurationWithConfig:(ShopLiveInAppPipConfiguration * _Nonnull)config;
++ (void)setUtmSourceWithUtmSource:(NSString * _Nullable)utmSource;
++ (void)setUtmCampaignWithUtmCampaign:(NSString * _Nullable)utmCampaign;
++ (void)setUtmMediumWithUtmMedium:(NSString * _Nullable)utmMedium;
++ (void)setUtmContentWithUtmContent:(NSString * _Nullable)utmContent;
++ (NSString * _Nullable)getUtmSource SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmCampaign SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmMedium SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmContent SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -784,25 +792,6 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
 
-enum Gender : NSInteger;
-
-SWIFT_CLASS("_TtC11ShopLiveSDK12ShopLiveUser")
-@interface ShopLiveUser : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name gender:(enum Gender)gender age:(NSInteger)age OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface ShopLiveUser (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, Gender, open) {
-  GenderFemale = 1,
-  GenderMale = 2,
-  GenderNeutral = 3,
-  GenderUnknown = 0,
-};
-
 
 SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
 @interface ShopliveWindow : SLWindow
@@ -819,11 +808,6 @@ SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
 
 
 
-
-
-@interface UIViewController (SWIFT_EXTENSION(ShopLiveSDK))
-- (void)shopliveHideKeyboard;
-@end
 
 
 #endif
@@ -1427,6 +1411,22 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 @end
 
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
+};
+
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
   PipPositionTopRight = 1,
@@ -1441,29 +1441,13 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
-};
-
 @class UIFont;
 @class NSURL;
 @class ShopliveWindow;
 @class NSNumber;
-@class ShopLiveUser;
 @class UIColor;
 @protocol ShopLiveSDKDelegate;
+@class ShopLiveCommonUser;
 @class ShopLiveInAppPipConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
@@ -1478,8 +1462,8 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
 + (BOOL)isKeepWindowStyleOnReturnFromOsPip SWIFT_WARN_UNUSED_RESULT;
 + (void)setAppVersion:(NSString * _Nonnull)appVersion;
 + (void)setUsingLocalStorage:(BOOL)use;
-+ (void)setPictureInPictureFloatingOffsetWithOffset:(UIEdgeInsets)offset;
-+ (void)setPictureInPicturePaddingWithPadding:(UIEdgeInsets)padding;
++ (BOOL)setPictureInPictureFloatingOffsetWithOffset:(UIEdgeInsets)offset SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)setPictureInPicturePaddingWithPadding:(UIEdgeInsets)padding SWIFT_WARN_UNUSED_RESULT;
 + (void)sendCommandMessageWithCommand:(NSString * _Nonnull)command payload:(NSDictionary<NSString *, id> * _Nullable)payload;
 + (void)setMuteWhenPlayStart:(BOOL)mute;
 + (void)setNextActionOnHandleNavigationWithActionType:(enum ActionType)actionType;
@@ -1511,9 +1495,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NSNumber * _Nullable f
 + (void)unmute;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum VideoOrientation orientationMode;)
 + (enum VideoOrientation)orientationMode SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveUser * _Nullable user;)
-+ (ShopLiveUser * _Nullable)user SWIFT_WARN_UNUSED_RESULT;
-+ (void)setUser:(ShopLiveUser * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PresentationStyle style;)
 + (enum PresentationStyle)style SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition;)
@@ -1531,11 +1512,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) WKWebViewConfiguration
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ShopLiveSDKDelegate> _Nullable delegate;)
 + (id <ShopLiveSDKDelegate> _Nullable)delegate SWIFT_WARN_UNUSED_RESULT;
 + (void)setDelegate:(id <ShopLiveSDKDelegate> _Nullable)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
-+ (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
-+ (void)setAuthToken:(NSString * _Nullable)newValue;
-+ (void)configureWith:(NSString * _Nonnull)accessKey;
-+ (void)previewWith:(NSString * _Nullable)campaignKey referrer:(NSString * _Nullable)referrer completion:(void (^ _Nonnull)(void))completion;
++ (void)previewWith:(NSString * _Nullable)campaignKey referrer:(NSString * _Nullable)referrer completion:(void (^ _Nullable)(void))completion;
 + (void)playWith:(NSString * _Nullable)campaignKey keepWindowStateOnPlayExecuted:(BOOL)keepWindowStateOnPlayExecuted referrer:(NSString * _Nullable)referrer;
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
 + (void)startPictureInPicture;
@@ -1543,7 +1520,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable aut
 + (void)setLoadingAnimationWithImages:(NSArray<UIImage *> * _Nonnull)images;
 + (void)reloadLive;
 + (void)setEnabledPictureInPictureModeWithIsEnabled:(BOOL)isEnabled;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
++ (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
++ (void)setAuthToken:(NSString * _Nullable)newValue;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _Nullable user;)
++ (ShopLiveCommonUser * _Nullable)user SWIFT_WARN_UNUSED_RESULT;
++ (void)setUser:(ShopLiveCommonUser * _Nullable)newValue;
++ (void)configureWith:(NSString * _Nonnull)accessKey;
 + (void)setInAppPipConfigurationWithConfig:(ShopLiveInAppPipConfiguration * _Nonnull)config;
++ (void)setUtmSourceWithUtmSource:(NSString * _Nullable)utmSource;
++ (void)setUtmCampaignWithUtmCampaign:(NSString * _Nullable)utmCampaign;
++ (void)setUtmMediumWithUtmMedium:(NSString * _Nullable)utmMedium;
++ (void)setUtmContentWithUtmContent:(NSString * _Nullable)utmContent;
++ (NSString * _Nullable)getUtmSource SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmCampaign SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmMedium SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmContent SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1620,25 +1612,6 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
 
-enum Gender : NSInteger;
-
-SWIFT_CLASS("_TtC11ShopLiveSDK12ShopLiveUser")
-@interface ShopLiveUser : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name gender:(enum Gender)gender age:(NSInteger)age OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface ShopLiveUser (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, Gender, open) {
-  GenderFemale = 1,
-  GenderMale = 2,
-  GenderNeutral = 3,
-  GenderUnknown = 0,
-};
-
 
 SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
 @interface ShopliveWindow : SLWindow
@@ -1655,11 +1628,6 @@ SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
 
 
 
-
-
-@interface UIViewController (SWIFT_EXTENSION(ShopLiveSDK))
-- (void)shopliveHideKeyboard;
-@end
 
 
 #endif
