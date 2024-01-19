@@ -70,10 +70,6 @@ dependencies: [
 ### 2. How to run `Shoplive SDK for iOS` Player
 - Initialize the Shoplive Android SDK using the prepared Access Key.
 
-|Play the video using the campaign key.  |Starts a muted campaign as an in-app PIP.|
-| :-: | :-: |
-|<image src="doc/_images/play.gif" width="200" height="410" style="margin-left: auto; margin-right: auto; display: block;"/>|<image src="https://files.readme.io/a06d2ff-preview.gif" width="200" height="410" style="margin-left: auto; margin-right: auto; display: block;"/>|
-
 ```Swift
 // MainViewController.swift
 class MainViewController: UIViewController {
@@ -81,9 +77,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Initialize the Shoplive Android SDK using the prepared Access Key.
-        ShopLive.configure(with: "{AccessKey}")
+        ShopLiveCommon.setAccessKey(accessKey : "{AccessKey}")
 
-        // Play the video using the campaign key.
+        // Play the video using the campaign key.s
         ShopLive.play(data: .init(campaignKey : "{CampaignKey}"))
 
         // Starts a muted campaign as an in-app PIP.
