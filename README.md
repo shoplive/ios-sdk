@@ -46,9 +46,6 @@ use_frameworks!
 target 'PlayShopLive' do
 #livePlayerSDK
 pod 'ShopLive', '1.5.4'
-pod 'ShopliveSDKCommon' , '1.5.4
-#shortform SDK
-pod 'ShopliveShortformSDK' , '1.5.4'
 pod 'ShopliveSDKCommon' , '1.5.4'
 end
 ```
@@ -60,9 +57,6 @@ Once you have your Swift package set up, adding Shoplive SDK for iOS as a depend
 dependencies: [
 //player
 .package(url: "https://github.com/shoplive/ios-sdk.git", .upToNextMajor(from: "1.5.4"))
-.package(url: "https://github.com/shoplive/common-ios", .upToNextMajor(from: "1.5.4"))
-//shortform
-.package(url: "https://github.com/shoplive/shortform-ios", .upToNextMajor(from: "1.5.4"))
 .package(url: "https://github.com/shoplive/common-ios", .upToNextMajor(from: "1.5.4"))
 ]
 ```
