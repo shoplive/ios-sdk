@@ -30,6 +30,42 @@ extension ObjectiveC.NSObject {
 extension Foundation.NotificationCenter {
   public func safeRemoveObserver(_ observer: Any, name aName: Foundation.NSNotification.Name?, object anObject: Any?)
 }
+@objc public class ShopLivePlayerDataObjc : ShopLiveSDK.ShopLivePlayerData {
+  @objc public var _campaignKey: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public var _keepWindowStateOnPlayExecuted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var _referrer: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public init(campaignKey: Swift.String, keepWindowStateonPlayExecuted: Swift.Bool, referrer: Swift.String)
+  @objc deinit
+}
+@objc public class ShopLiveInAppConfigurationObjc : ShopLiveSDK.ShopLiveInAppPipConfiguration {
+  @objc public var _pipSize: ShopLiveSDK.ShopLiveInAppPipSize? {
+    @objc get
+    @objc set
+  }
+  @objc public var _useCloseButton: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var _pipPosition: ShopLiveSDK.ShopLive.PipPosition {
+    @objc get
+    @objc set
+  }
+  @objc public var _enableSwipeOut: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public init(useCloseButton: Swift.Bool, pipPosition: ShopLiveSDK.ShopLive.PipPosition, enableSwipeOut: Swift.Bool, pipSize: ShopLiveSDK.ShopLiveInAppPipSize)
+  @objc deinit
+}
 @objc public enum ResultStatus : Swift.Int, Swift.CaseIterable {
   case SHOW
   case HIDE
@@ -176,11 +212,46 @@ extension Foundation.NotificationCenter {
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
 }
 public typealias ShopLiveViewController = ShopLiveSDK.SLViewController
-@objc final public class ShopLivePlayerData : ObjectiveC.NSObject {
-  final public var campaignKey: Swift.String
-  final public var keepWindowStateOnPlayExecuted: Swift.Bool
-  final public var referrer: Swift.String?
+@objc public enum ShopLiveViewTrackEvent : Swift.Int, Swift.CaseIterable {
+  case viewWillDisAppear
+  case viewDidDisAppear
+  case pipWillAppear
+  case pipDidAppear
+  case fullScreenWillAppear
+  case fullScreenDidAppear
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ShopLiveSDK.ShopLiveViewTrackEvent]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [ShopLiveSDK.ShopLiveViewTrackEvent] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class ShopLivePlayerData : ObjectiveC.NSObject {
+  public var campaignKey: Swift.String
+  public var keepWindowStateOnPlayExecuted: Swift.Bool
+  public var referrer: Swift.String?
   public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = false, referrer: Swift.String? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class ShopLivePlayerShareCampaign : ObjectiveC.NSObject {
+  @objc final public let campaignKey: Swift.String?
+  @objc final public let title: Swift.String?
+  @objc final public let descriptions: Swift.String?
+  @objc final public let thumbnail: Swift.String?
+  @objc deinit
+}
+@objc public protocol ShopLivePlayerShareDelegate {
+  @objc func handleShare(data: ShopLiveSDK.ShopLivePlayerShareData)
+}
+@_hasMissingDesignatedInitializers @objc public class ShopLivePlayerShareData : ObjectiveC.NSObject {
+  @objc final public let campaign: ShopLiveSDK.ShopLivePlayerShareCampaign?
+  @objc final public let url: Swift.String?
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLWindow : UIKit.UIWindow {
@@ -454,7 +525,7 @@ extension ShopLiveSDK.ShopLive {
   }
   @objc public static func close()
   @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont?, sendButtonFont: UIKit.UIFont?)
-  @objc public static func setShareScheme(_ scheme: Swift.String? = nil, custom: (() -> Swift.Void)?)
+  @objc public static func setShareScheme(_ scheme: Swift.String? = nil, shareDelegate: (any ShopLiveSDK.ShopLivePlayerShareDelegate)?)
   @objc public static func hookNavigation(navigation: @escaping ((Foundation.URL) -> Swift.Void))
   @objc public static func onTerminated()
   @objc public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool, isMute: Swift.Bool = false)
@@ -547,12 +618,27 @@ extension ShopLiveSDK.ShopLive {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
+@objc public class ShopLiveInAppPipSize : ObjectiveC.NSObject {
+  public var pipMaxSize: CoreFoundation.CGFloat? {
+    get
+  }
+  public var pipFixedWidth: CoreFoundation.CGFloat? {
+    get
+  }
+  public var pipFixedheight: CoreFoundation.CGFloat? {
+    get
+  }
+  @objc public init(pipMaxSize: CoreFoundation.CGFloat)
+  @objc public init(pipFixedWidth: CoreFoundation.CGFloat)
+  @objc public init(pipFixedHeight: CoreFoundation.CGFloat)
+  @objc deinit
+}
 @objc public class ShopLiveInAppPipConfiguration : ObjectiveC.NSObject {
-  public var pipMaxSize: CoreFoundation.CGFloat?
   public var useCloseButton: Swift.Bool?
   public var pipPosition: ShopLiveSDK.ShopLive.PipPosition?
   public var enableSwipeOut: Swift.Bool?
-  public init(pipMaxSize: CoreFoundation.CGFloat?, useCloseButton: Swift.Bool?, pipPosition: ShopLiveSDK.ShopLive.PipPosition?, enableSwipeOut: Swift.Bool?)
+  public var pipSize: ShopLiveSDK.ShopLiveInAppPipSize?
+  public init(useCloseButton: Swift.Bool? = nil, pipPosition: ShopLiveSDK.ShopLive.PipPosition? = nil, enableSwipeOut: Swift.Bool? = nil, pipSize: ShopLiveSDK.ShopLiveInAppPipSize? = nil)
   @objc deinit
 }
 public let ReachabilityStatusChangedNotification: Swift.String
@@ -601,6 +687,9 @@ extension ShopLiveSDK.ShopLiveLog.Feature : Swift.RawRepresentable {}
 extension ShopLiveSDK.ActionType : Swift.Equatable {}
 extension ShopLiveSDK.ActionType : Swift.Hashable {}
 extension ShopLiveSDK.ActionType : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLiveViewTrackEvent : Swift.Equatable {}
+extension ShopLiveSDK.ShopLiveViewTrackEvent : Swift.Hashable {}
+extension ShopLiveSDK.ShopLiveViewTrackEvent : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PlayerMode : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PlayerMode : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PlayerMode : Swift.RawRepresentable {}

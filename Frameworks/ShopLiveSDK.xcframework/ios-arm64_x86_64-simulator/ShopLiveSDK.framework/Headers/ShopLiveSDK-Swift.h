@@ -621,6 +621,7 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
 };
 
 @class UIFont;
+@protocol ShopLivePlayerShareDelegate;
 @class NSURL;
 @class ShopliveWindow;
 @class NSNumber;
@@ -655,7 +656,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewContro
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)close;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nullable)inputBoxFont sendButtonFont:(UIFont * _Nullable)sendButtonFont;
-+ (void)setShareScheme:(NSString * _Nullable)scheme custom:(void (^ _Nullable)(void))custom;
++ (void)setShareScheme:(NSString * _Nullable)scheme shareDelegate:(id <ShopLivePlayerShareDelegate> _Nullable)shareDelegate;
 + (void)hookNavigationWithNavigation:(void (^ _Nonnull)(NSURL * _Nonnull))navigation;
 + (void)onTerminated;
 + (void)setKeepPlayVideoOnHeadphoneUnplugged:(BOOL)keepPlay isMute:(BOOL)isMute;
@@ -745,6 +746,28 @@ SWIFT_CLASS("_TtC11ShopLiveSDK29ShopLiveInAppPipConfiguration")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class ShopLiveInAppPipSize;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK30ShopLiveInAppConfigurationObjc")
+@interface ShopLiveInAppConfigurationObjc : ShopLiveInAppPipConfiguration
+@property (nonatomic, strong) ShopLiveInAppPipSize * _Nullable _pipSize;
+@property (nonatomic) BOOL _useCloseButton;
+@property (nonatomic) enum PipPosition _pipPosition;
+@property (nonatomic) BOOL _enableSwipeOut;
+- (nonnull instancetype)initWithUseCloseButton:(BOOL)useCloseButton pipPosition:(enum PipPosition)pipPosition enableSwipeOut:(BOOL)enableSwipeOut pipSize:(ShopLiveInAppPipSize * _Nonnull)pipSize OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK20ShopLiveInAppPipSize")
+@interface ShopLiveInAppPipSize : NSObject
+- (nonnull instancetype)initWithPipMaxSize:(CGFloat)pipMaxSize OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPipFixedWidth:(CGFloat)pipFixedWidth OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPipFixedHeight:(CGFloat)pipFixedHeight OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC11ShopLiveSDK11ShopLiveLog")
 @interface ShopLiveLog : NSObject
@@ -763,6 +786,41 @@ SWIFT_CLASS("_TtC11ShopLiveSDK18ShopLivePlayerData")
 @interface ShopLivePlayerData : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLivePlayerDataObjc")
+@interface ShopLivePlayerDataObjc : ShopLivePlayerData
+@property (nonatomic, copy) NSString * _Nonnull _campaignKey;
+@property (nonatomic) BOOL _keepWindowStateOnPlayExecuted;
+@property (nonatomic, copy) NSString * _Nonnull _referrer;
+- (nonnull instancetype)initWithCampaignKey:(NSString * _Nonnull)campaignKey keepWindowStateonPlayExecuted:(BOOL)keepWindowStateonPlayExecuted referrer:(NSString * _Nonnull)referrer OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK27ShopLivePlayerShareCampaign")
+@interface ShopLivePlayerShareCampaign : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nullable campaignKey;
+@property (nonatomic, readonly, copy) NSString * _Nullable title;
+@property (nonatomic, readonly, copy) NSString * _Nullable descriptions;
+@property (nonatomic, readonly, copy) NSString * _Nullable thumbnail;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK23ShopLivePlayerShareData")
+@interface ShopLivePlayerShareData : NSObject
+@property (nonatomic, readonly, strong) ShopLivePlayerShareCampaign * _Nullable campaign;
+@property (nonatomic, readonly, copy) NSString * _Nullable url;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_PROTOCOL("_TtP11ShopLiveSDK27ShopLivePlayerShareDelegate_")
+@protocol ShopLivePlayerShareDelegate
+- (void)handleShareWithData:(ShopLivePlayerShareData * _Nonnull)data;
 @end
 
 typedef SWIFT_ENUM(NSInteger, ShopLiveResultAlertType, open) {
@@ -798,6 +856,15 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter SWIFT_DEPRECATED_MSG("use log(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
+
+typedef SWIFT_ENUM(NSInteger, ShopLiveViewTrackEvent, open) {
+  ShopLiveViewTrackEventViewWillDisAppear = 0,
+  ShopLiveViewTrackEventViewDidDisAppear = 1,
+  ShopLiveViewTrackEventPipWillAppear = 2,
+  ShopLiveViewTrackEventPipDidAppear = 3,
+  ShopLiveViewTrackEventFullScreenWillAppear = 4,
+  ShopLiveViewTrackEventFullScreenDidAppear = 5,
+};
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
@@ -1448,6 +1515,7 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
 };
 
 @class UIFont;
+@protocol ShopLivePlayerShareDelegate;
 @class NSURL;
 @class ShopliveWindow;
 @class NSNumber;
@@ -1482,7 +1550,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewContro
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)close;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nullable)inputBoxFont sendButtonFont:(UIFont * _Nullable)sendButtonFont;
-+ (void)setShareScheme:(NSString * _Nullable)scheme custom:(void (^ _Nullable)(void))custom;
++ (void)setShareScheme:(NSString * _Nullable)scheme shareDelegate:(id <ShopLivePlayerShareDelegate> _Nullable)shareDelegate;
 + (void)hookNavigationWithNavigation:(void (^ _Nonnull)(NSURL * _Nonnull))navigation;
 + (void)onTerminated;
 + (void)setKeepPlayVideoOnHeadphoneUnplugged:(BOOL)keepPlay isMute:(BOOL)isMute;
@@ -1572,6 +1640,28 @@ SWIFT_CLASS("_TtC11ShopLiveSDK29ShopLiveInAppPipConfiguration")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class ShopLiveInAppPipSize;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK30ShopLiveInAppConfigurationObjc")
+@interface ShopLiveInAppConfigurationObjc : ShopLiveInAppPipConfiguration
+@property (nonatomic, strong) ShopLiveInAppPipSize * _Nullable _pipSize;
+@property (nonatomic) BOOL _useCloseButton;
+@property (nonatomic) enum PipPosition _pipPosition;
+@property (nonatomic) BOOL _enableSwipeOut;
+- (nonnull instancetype)initWithUseCloseButton:(BOOL)useCloseButton pipPosition:(enum PipPosition)pipPosition enableSwipeOut:(BOOL)enableSwipeOut pipSize:(ShopLiveInAppPipSize * _Nonnull)pipSize OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK20ShopLiveInAppPipSize")
+@interface ShopLiveInAppPipSize : NSObject
+- (nonnull instancetype)initWithPipMaxSize:(CGFloat)pipMaxSize OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPipFixedWidth:(CGFloat)pipFixedWidth OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPipFixedHeight:(CGFloat)pipFixedHeight OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC11ShopLiveSDK11ShopLiveLog")
 @interface ShopLiveLog : NSObject
@@ -1590,6 +1680,41 @@ SWIFT_CLASS("_TtC11ShopLiveSDK18ShopLivePlayerData")
 @interface ShopLivePlayerData : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLivePlayerDataObjc")
+@interface ShopLivePlayerDataObjc : ShopLivePlayerData
+@property (nonatomic, copy) NSString * _Nonnull _campaignKey;
+@property (nonatomic) BOOL _keepWindowStateOnPlayExecuted;
+@property (nonatomic, copy) NSString * _Nonnull _referrer;
+- (nonnull instancetype)initWithCampaignKey:(NSString * _Nonnull)campaignKey keepWindowStateonPlayExecuted:(BOOL)keepWindowStateonPlayExecuted referrer:(NSString * _Nonnull)referrer OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK27ShopLivePlayerShareCampaign")
+@interface ShopLivePlayerShareCampaign : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nullable campaignKey;
+@property (nonatomic, readonly, copy) NSString * _Nullable title;
+@property (nonatomic, readonly, copy) NSString * _Nullable descriptions;
+@property (nonatomic, readonly, copy) NSString * _Nullable thumbnail;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK23ShopLivePlayerShareData")
+@interface ShopLivePlayerShareData : NSObject
+@property (nonatomic, readonly, strong) ShopLivePlayerShareCampaign * _Nullable campaign;
+@property (nonatomic, readonly, copy) NSString * _Nullable url;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_PROTOCOL("_TtP11ShopLiveSDK27ShopLivePlayerShareDelegate_")
+@protocol ShopLivePlayerShareDelegate
+- (void)handleShareWithData:(ShopLivePlayerShareData * _Nonnull)data;
 @end
 
 typedef SWIFT_ENUM(NSInteger, ShopLiveResultAlertType, open) {
@@ -1625,6 +1750,15 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter SWIFT_DEPRECATED_MSG("use log(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
+
+typedef SWIFT_ENUM(NSInteger, ShopLiveViewTrackEvent, open) {
+  ShopLiveViewTrackEventViewWillDisAppear = 0,
+  ShopLiveViewTrackEventViewDidDisAppear = 1,
+  ShopLiveViewTrackEventPipWillAppear = 2,
+  ShopLiveViewTrackEventPipDidAppear = 3,
+  ShopLiveViewTrackEventFullScreenWillAppear = 4,
+  ShopLiveViewTrackEventFullScreenDidAppear = 5,
+};
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
