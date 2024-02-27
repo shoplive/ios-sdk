@@ -295,6 +295,7 @@ typedef SWIFT_ENUM(NSInteger, ActionType, open) {
 
 
 
+
 SWIFT_CLASS("_TtC11ShopLiveSDK12CouponResult")
 @interface CouponResult : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -620,6 +621,7 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
   VideoOrientationUnknown = 2,
 };
 
+enum ShopLiveViewHiddenActionType : NSInteger;
 @class UIFont;
 @protocol ShopLivePlayerShareDelegate;
 @class NSURL;
@@ -654,7 +656,7 @@ typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewController * _Nullable viewController;)
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
-+ (void)close;
++ (void)closeWithActionType:(enum ShopLiveViewHiddenActionType)actionType;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nullable)inputBoxFont sendButtonFont:(UIFont * _Nullable)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme shareDelegate:(id <ShopLivePlayerShareDelegate> _Nullable)shareDelegate;
 + (void)hookNavigationWithNavigation:(void (^ _Nonnull)(NSURL * _Nonnull))navigation;
@@ -721,6 +723,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _
 + (NSString * _Nullable)getUtmContent SWIFT_WARN_UNUSED_RESULT;
 + (void)setVisibleStatusBarWithIsVisible:(BOOL)isVisible;
 + (BOOL)isVisibleStatusBar SWIFT_WARN_UNUSED_RESULT;
++ (void)addSubViewToPreviewWithSubView:(UIView * _Nonnull)subView;
++ (CGSize)getPreviewSizeInAppPipConfiguration:(ShopLiveInAppPipConfiguration * _Nonnull)inAppPipConfiguration videoRatio:(CGSize)videoRatio SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -754,7 +758,8 @@ SWIFT_CLASS("_TtC11ShopLiveSDK30ShopLiveInAppConfigurationObjc")
 @property (nonatomic) BOOL _useCloseButton;
 @property (nonatomic) enum PipPosition _pipPosition;
 @property (nonatomic) BOOL _enableSwipeOut;
-- (nonnull instancetype)initWithUseCloseButton:(BOOL)useCloseButton pipPosition:(enum PipPosition)pipPosition enableSwipeOut:(BOOL)enableSwipeOut pipSize:(ShopLiveInAppPipSize * _Nonnull)pipSize OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) CGFloat _pipRadius;
+- (nonnull instancetype)initWithUseCloseButton:(BOOL)useCloseButton pipPosition:(enum PipPosition)pipPosition enableSwipeOut:(BOOL)enableSwipeOut pipSize:(ShopLiveInAppPipSize * _Nonnull)pipSize pipRadius:(CGFloat)pipRadius OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -779,6 +784,34 @@ typedef SWIFT_ENUM(NSInteger, Feature, open) {
   FeatureCLICK = 0,
   FeatureSHOW = 1,
   FeatureACTION = 2,
+};
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK19ShopLivePlayerBrand")
+@interface ShopLivePlayerBrand : NSObject
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic, copy) NSString * _Nullable identifier;
+@property (nonatomic, copy) NSString * _Nullable imageUrl;
+- (nonnull instancetype)initWithName:(NSString * _Nullable)name identifier:(NSString * _Nullable)identifier imageUrl:(NSString * _Nullable)imageUrl OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+enum ShopLivePlayerCampaignStatus : NSInteger;
+
+SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLivePlayerCampaign")
+@interface ShopLivePlayerCampaign : NSObject
+@property (nonatomic, copy) NSString * _Nullable title;
+@property (nonatomic) enum ShopLivePlayerCampaignStatus campaignStatus;
+- (nonnull instancetype)initWithTitle:(NSString * _Nullable)title campaignStatus:(enum ShopLivePlayerCampaignStatus)campaignStatus OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, ShopLivePlayerCampaignStatus, open) {
+  ShopLivePlayerCampaignStatusREADY = 0,
+  ShopLivePlayerCampaignStatusONAIR = 1,
+  ShopLivePlayerCampaignStatusCLOSED = 2,
 };
 
 
@@ -857,6 +890,23 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 @end
 
+
+SWIFT_CLASS("_TtC11ShopLiveSDK20ShopLiveSDKResources")
+@interface ShopLiveSDKResources : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSBundle * _Nonnull bundle;)
++ (NSBundle * _Nonnull)bundle SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM(NSInteger, ShopLiveViewHiddenActionType, open) {
+  ShopLiveViewHiddenActionTypeOnSwipeOut = 0,
+  ShopLiveViewHiddenActionTypeOnBtnTapped = 1,
+  ShopLiveViewHiddenActionTypeOnClose = 2,
+  ShopLiveViewHiddenActionTypeOnError = 3,
+  ShopLiveViewHiddenActionTypeOnRestoringPip = 4,
+  ShopLiveViewHiddenActionTypeOnNavigationHandleClose = 5,
+};
+
 typedef SWIFT_ENUM(NSInteger, ShopLiveViewTrackEvent, open) {
   ShopLiveViewTrackEventViewWillDisAppear = 0,
   ShopLiveViewTrackEventViewDidDisAppear = 1,
@@ -874,6 +924,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
