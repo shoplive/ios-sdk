@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		17zSR7P5i54BSPA/Zv9/Cy43SaM=
+		zH4tDbm7NUwah82tpoENWaUriMk=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		BJtoveCZ8SURguzHOCrlDRnVp/8=
+		JOBNruBHatrDIO1hTS+7DbaTkCU=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		17zSR7P5i54BSPA/Zv9/Cy43SaM=
+		zH4tDbm7NUwah82tpoENWaUriMk=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,11 +54,15 @@
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		AJdDhpjKLUDVGUdDO2i2qJY2SXU=
+		2dmz/ufK4p/nfnvvMuUEjNaYKmY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		OhXyfLT2U6ldXtrgyam4VW5zINw=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		80YCLboXAaP0hn5C+R0CHo626FY=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
@@ -99,7 +103,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			74g5cwmGXsNU+9Ga30KL7WFpK1qbrBA/qN6qCJei1pU=
+			zGgdbmAIQjQ1KQHwujVZiKWixG+e9yRM6HSn2AqN0VI=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -127,14 +131,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Remx2/fVZzZIMAL7XzCDgNfZ0vRPL5DB2zwlKz4Fyek=
+			+EuKOvR479WMIM8HgCWICZ9nDEY1C4A0z3tka0IMBBo=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			74g5cwmGXsNU+9Ga30KL7WFpK1qbrBA/qN6qCJei1pU=
+			zGgdbmAIQjQ1KQHwujVZiKWixG+e9yRM6HSn2AqN0VI=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -162,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O/H0l/ybTkDLmwgN0qW8fLNhKe7WCWVTOTd4aBOACxo=
+			jQcwN2O51L1vSNWzoI/6YnV00feu+jTOS9YlBWoBqCQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -170,6 +174,13 @@
 			<key>hash2</key>
 			<data>
 			l12jJGH/i+XahAdlWyExNAwWf3wuC18uGaRyglBTLMM=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lApz34uIyoHnxi23LDjUN22t0gX5GRn4rkp7UdaVGQI=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
