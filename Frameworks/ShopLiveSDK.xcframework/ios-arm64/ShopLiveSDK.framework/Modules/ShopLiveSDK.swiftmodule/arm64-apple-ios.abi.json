@@ -34857,308 +34857,252 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 2412,
-      "length": 359,
-      "value": "\"======================================================\nerrorDate \""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 2535,
-      "length": 15,
-      "value": "\"\nerrorStatusCode \""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 2586,
-      "length": 11,
-      "value": "\"\nerrorDomain \""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 2629,
-      "length": 12,
-      "value": "\"\nerrorComment \""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 2677,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 2680,
-      "length": 54,
-      "value": "\"\n======================================================\""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 2812,
-      "length": 24,
-      "value": "\"[HASSAN LOG] \n \""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 2835,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 2973,
+      "offset": 2991,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "IntegerLiteral",
-      "offset": 4008,
+      "offset": 4026,
       "length": 6,
       "value": "-12642"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4045,
+      "offset": 4063,
       "length": 22,
       "value": "\"CoreMediaErrorDomain\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4105,
+      "offset": 4123,
       "length": 31,
       "value": "\"#EXT-X-DISCONTINUITY-SEQUENCE\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "IntegerLiteral",
-      "offset": 4222,
+      "offset": 4240,
       "length": 6,
       "value": "-15418"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4264,
+      "offset": 4282,
       "length": 22,
       "value": "\"CoreMediaErrorDomain\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4328,
+      "offset": 4346,
       "length": 26,
       "value": "\"missing Rendition Report\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "IntegerLiteral",
-      "offset": 4444,
+      "offset": 4462,
       "length": 6,
       "value": "-16832"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4486,
+      "offset": 4504,
       "length": 22,
       "value": "\"CoreMediaErrorDomain\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4550,
+      "offset": 4568,
       "length": 14,
       "value": "\"stall danger\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "IntegerLiteral",
-      "offset": 4644,
+      "offset": 4662,
       "length": 6,
       "value": "-12938"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4689,
+      "offset": 4707,
       "length": 22,
       "value": "\"CoreMediaErrorDomain\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4757,
+      "offset": 4775,
       "length": 10,
       "value": "\"HTTP 404\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4845,
+      "offset": 4863,
       "length": 22,
       "value": "\"CoreMediaErrorDomain\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 4913,
+      "offset": 4931,
       "length": 22,
       "value": "\"playlist parse error\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "IntegerLiteral",
-      "offset": 5023,
+      "offset": 5041,
       "length": 6,
       "value": "-12318"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 5068,
+      "offset": 5086,
       "length": 22,
       "value": "\"CoreMediaErrorDomain\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 5136,
+      "offset": 5154,
       "length": 29,
       "value": "\"exceeds specified bandwidth\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "IntegerLiteral",
-      "offset": 5250,
+      "offset": 5268,
       "length": 6,
       "value": "-12888"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 5295,
+      "offset": 5313,
       "length": 22,
       "value": "\"CoreMediaErrorDomain\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 5363,
+      "offset": 5381,
       "length": 18,
       "value": "\"Stale index file\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "IntegerLiteral",
-      "offset": 5463,
+      "offset": 5481,
       "length": 6,
       "value": "-12642"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 5508,
+      "offset": 5526,
       "length": 22,
       "value": "\"CoreMediaErrorDomain\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 5576,
+      "offset": 5594,
       "length": 43,
       "value": "\"No matching mediaFile found from playlist\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "IntegerLiteral",
-      "offset": 5713,
+      "offset": 5731,
       "length": 6,
       "value": "-12318"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 5758,
+      "offset": 5776,
       "length": 22,
       "value": "\"CoreMediaDomainError\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "StringLiteral",
-      "offset": 5826,
+      "offset": 5844,
       "length": 51,
       "value": "\"Unable to get playlist before long download timer\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 6070,
+      "offset": 6088,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 6283,
+      "offset": 6301,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 6467,
+      "offset": 6485,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 6659,
+      "offset": 6677,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 6837,
+      "offset": 6855,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 7014,
+      "offset": 7032,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 7199,
+      "offset": 7217,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 7397,
+      "offset": 7415,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/PlayerErrorObserver\/ShopLivePlayerErrorObserver.swift",
       "kind": "BooleanLiteral",
-      "offset": 7565,
+      "offset": 7583,
       "length": 5,
       "value": "false"
     },
@@ -37153,2009 +37097,2009 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 42250,
+      "offset": 42275,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 42607,
+      "offset": 42632,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 42684,
+      "offset": 42709,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 42852,
+      "offset": 42877,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 42919,
+      "offset": 42944,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 42986,
+      "offset": 43011,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 43059,
+      "offset": 43084,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 43426,
+      "offset": 43451,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 43520,
+      "offset": 43545,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 43610,
+      "offset": 43635,
       "length": 16,
       "value": "\"didShopLiveOff\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 43635,
+      "offset": 43660,
       "length": 7,
       "value": "\"style\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 43764,
+      "offset": 43789,
       "length": 11,
       "value": "\"lastStyle\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 43795,
+      "offset": 43820,
       "length": 14,
       "value": "\"currentStyle\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 43829,
+      "offset": 43854,
       "length": 11,
       "value": "\"isPreview\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 44339,
+      "offset": 44364,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 44661,
+      "offset": 44686,
       "length": 17,
       "value": "\"willShopLiveOff\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 44687,
+      "offset": 44712,
       "length": 7,
       "value": "\"style\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 44817,
+      "offset": 44842,
       "length": 11,
       "value": "\"lastStyle\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 44858,
+      "offset": 44883,
       "length": 14,
       "value": "\"currentStyle\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 44896,
+      "offset": 44921,
       "length": 11,
       "value": "\"isPreview\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 45319,
+      "offset": 45344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 45394,
+      "offset": 45419,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 45512,
+      "offset": 45537,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 45585,
+      "offset": 45610,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 45686,
+      "offset": 45711,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 45764,
+      "offset": 45789,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 45831,
+      "offset": 45856,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 45904,
+      "offset": 45929,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 46008,
+      "offset": 46033,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 46209,
+      "offset": 46234,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 46215,
+      "offset": 46240,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 46494,
+      "offset": 46519,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 46550,
+      "offset": 46575,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 46569,
+      "offset": 46594,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 46782,
+      "offset": 46807,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 47184,
+      "offset": 47209,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 47226,
+      "offset": 47251,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 47279,
+      "offset": 47304,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 47334,
+      "offset": 47359,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 47666,
+      "offset": 47691,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 47721,
+      "offset": 47746,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 47857,
+      "offset": 47882,
       "length": 16,
       "value": "\"didShopLiveOff\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 47882,
+      "offset": 47907,
       "length": 7,
       "value": "\"style\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 48015,
+      "offset": 48040,
       "length": 11,
       "value": "\"lastStyle\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 48046,
+      "offset": 48071,
       "length": 14,
       "value": "\"currentStyle\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 48080,
+      "offset": 48105,
       "length": 11,
       "value": "\"isPreview\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 48374,
+      "offset": 48399,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 48879,
+      "offset": 48904,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 49539,
+      "offset": 49564,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 49607,
+      "offset": 49632,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 49681,
+      "offset": 49706,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 49741,
+      "offset": 49766,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 49941,
+      "offset": 49966,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 50016,
+      "offset": 50041,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 50184,
+      "offset": 50209,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 50585,
+      "offset": 50610,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 50734,
+      "offset": 50759,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 50804,
+      "offset": 50829,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 51570,
+      "offset": 51595,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 51608,
+      "offset": 51633,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 52792,
+      "offset": 52817,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 52937,
+      "offset": 52962,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 53003,
+      "offset": 53028,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 53745,
+      "offset": 53770,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 54364,
+      "offset": 54389,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 54373,
+      "offset": 54398,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 54632,
+      "offset": 54657,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 55379,
+      "offset": 55404,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 55385,
+      "offset": 55410,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 55457,
+      "offset": 55482,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 55515,
+      "offset": 55540,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 55573,
+      "offset": 55598,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 55631,
+      "offset": 55656,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 55725,
+      "offset": 55750,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 55731,
+      "offset": 55756,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 55770,
+      "offset": 55795,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 55829,
+      "offset": 55854,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 55885,
+      "offset": 55910,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 55930,
+      "offset": 55955,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 55993,
+      "offset": 56018,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 56354,
+      "offset": 56379,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 56736,
+      "offset": 56761,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 56910,
+      "offset": 56935,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 56963,
+      "offset": 56988,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 57141,
+      "offset": 57166,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 57267,
+      "offset": 57292,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 57427,
+      "offset": 57452,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 57501,
+      "offset": 57526,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 58119,
+      "offset": 58144,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 58125,
+      "offset": 58150,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 58335,
+      "offset": 58360,
       "length": 18,
       "value": "\"xRange \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 58352,
+      "offset": 58377,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 58391,
+      "offset": 58416,
       "length": 18,
       "value": "\"yRange \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 58408,
+      "offset": 58433,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 58717,
+      "offset": 58742,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 58767,
+      "offset": 58792,
       "length": 3,
       "value": "600"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 59086,
+      "offset": 59111,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 59136,
+      "offset": 59161,
       "length": 3,
       "value": "600"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 59471,
+      "offset": 59496,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 59521,
+      "offset": 59546,
       "length": 3,
       "value": "600"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 59843,
+      "offset": 59868,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 59893,
+      "offset": 59918,
       "length": 3,
       "value": "600"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 60164,
+      "offset": 60189,
       "length": 30,
       "value": "\"checkCenterX \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 60193,
+      "offset": 60218,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 60232,
+      "offset": 60257,
       "length": 30,
       "value": "\"checkCenterY \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 60261,
+      "offset": 60286,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 60353,
+      "offset": 60378,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 60572,
+      "offset": 60597,
       "length": 20,
       "value": "\"CLOSE_FROM_PREVIEW\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 60595,
+      "offset": 60620,
       "length": 17,
       "value": "\"CLOSE_FROM_PLAY\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 60812,
+      "offset": 60837,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 60867,
+      "offset": 60892,
       "length": 3,
       "value": "600"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 61131,
+      "offset": 61156,
       "length": 3,
       "value": "600"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 62133,
+      "offset": 62158,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 62163,
+      "offset": 62188,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 62170,
+      "offset": 62195,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 62440,
+      "offset": 62465,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 62502,
+      "offset": 62527,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 62656,
+      "offset": 62681,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 62854,
+      "offset": 62879,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 63334,
+      "offset": 63359,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 63416,
+      "offset": 63441,
       "length": 16,
       "value": "\"swipe_pip_mode\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "Dictionary",
-      "offset": 63512,
+      "offset": 63537,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 63546,
+      "offset": 63571,
       "length": 16,
       "value": "\"swipe_pip_mode\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "Dictionary",
-      "offset": 63640,
+      "offset": 63665,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 63831,
+      "offset": 63856,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 64272,
+      "offset": 64297,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 64324,
+      "offset": 64349,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 64336,
+      "offset": 64361,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 64457,
+      "offset": 64482,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 65788,
+      "offset": 65813,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 65961,
-      "length": 3,
-      "value": "1.0"
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
-      "kind": "StringLiteral",
-      "offset": 65967,
-      "length": 16,
-      "value": "\"pinch_zoom_out\""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
-      "kind": "StringLiteral",
       "offset": 65986,
-      "length": 15,
-      "value": "\"pinch_zoom_in\""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
-      "kind": "Dictionary",
-      "offset": 66081,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
-      "kind": "FloatLiteral",
-      "offset": 66138,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66144,
+      "offset": 65992,
       "length": 16,
       "value": "\"pinch_zoom_out\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66163,
+      "offset": 66011,
       "length": 15,
       "value": "\"pinch_zoom_in\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "Dictionary",
-      "offset": 66256,
+      "offset": 66106,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
+      "kind": "FloatLiteral",
+      "offset": 66163,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
+      "kind": "StringLiteral",
+      "offset": 66169,
+      "length": 16,
+      "value": "\"pinch_zoom_out\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
+      "kind": "StringLiteral",
+      "offset": 66188,
+      "length": 15,
+      "value": "\"pinch_zoom_in\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
+      "kind": "Dictionary",
+      "offset": 66281,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66711,
+      "offset": 66736,
       "length": 9,
       "value": "\"preview\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66729,
+      "offset": 66754,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66809,
+      "offset": 66834,
       "length": 28,
       "value": "\"keepAspectOnTabletPortrait\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66846,
+      "offset": 66871,
       "length": 75,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66903,
+      "offset": 66928,
       "length": 6,
       "value": "\"true\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66912,
+      "offset": 66937,
       "length": 7,
       "value": "\"false\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 66920,
+      "offset": 66945,
       "length": 3,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 67656,
+      "offset": 67681,
       "length": 3,
       "value": "\"?\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 67889,
+      "offset": 67914,
       "length": 8,
       "value": "\"_style\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 69768,
+      "offset": 69793,
       "length": 8,
       "value": "\"_style\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 71519,
+      "offset": 71544,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 71651,
+      "offset": 71676,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 71965,
+      "offset": 71990,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 72545,
+      "offset": 72570,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 72557,
+      "offset": 72582,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 74835,
+      "offset": 74860,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 75071,
+      "offset": 75096,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 75374,
+      "offset": 75399,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 75727,
+      "offset": 75752,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 75880,
+      "offset": 75905,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 76347,
+      "offset": 76372,
       "length": 8,
       "value": "\"_style\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 77264,
+      "offset": 77289,
       "length": 15,
       "value": "\"CHANGE_TO_PIP\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 77650,
+      "offset": 77675,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 77772,
+      "offset": 77797,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 77814,
+      "offset": 77839,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 77862,
+      "offset": 77887,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 78114,
+      "offset": 78139,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 78200,
+      "offset": 78225,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 78241,
+      "offset": 78266,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 78288,
+      "offset": 78313,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 78624,
+      "offset": 78649,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 79686,
+      "offset": 79711,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 80161,
+      "offset": 80186,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 80515,
+      "offset": 80540,
       "length": 73,
       "value": "\"When `scheme` not used, `custom` must be used, `custom` can not be null\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 82054,
+      "offset": 82079,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 82230,
+      "offset": 82255,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 82402,
+      "offset": 82427,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 84053,
+      "offset": 84078,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 85599,
+      "offset": 85624,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 86061,
+      "offset": 86086,
       "length": 3,
       "value": "800"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 86067,
+      "offset": 86092,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 86261,
+      "offset": 86286,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 86819,
+      "offset": 86844,
       "length": 10,
       "value": "\"referrer\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 86856,
+      "offset": 86881,
       "length": 4,
       "value": "1024"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 86935,
+      "offset": 86960,
       "length": 7,
       "value": "\"_from\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 86946,
+      "offset": 86971,
       "length": 12,
       "value": "\"sdk_direct\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 87047,
+      "offset": 87072,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 87092,
+      "offset": 87117,
       "length": 14,
       "value": "\"player_start\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "Dictionary",
-      "offset": 87186,
+      "offset": 87211,
       "length": 20,
       "value": "[(\"type\", \"preview\")]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 87250,
+      "offset": 87275,
       "length": 14,
       "value": "\"player_start\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 87343,
+      "offset": 87368,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 87352,
+      "offset": 87377,
       "length": 9,
       "value": "\"preview\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 88270,
+      "offset": 88295,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 88455,
+      "offset": 88480,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 88769,
+      "offset": 88794,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89018,
+      "offset": 89043,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89028,
+      "offset": 89053,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89593,
+      "offset": 89618,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89699,
+      "offset": 89724,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89706,
+      "offset": 89731,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89803,
+      "offset": 89828,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89810,
+      "offset": 89835,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89913,
+      "offset": 89938,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89921,
+      "offset": 89946,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 90013,
+      "offset": 90038,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 90021,
+      "offset": 90046,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 90290,
+      "offset": 90315,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 91111,
+      "offset": 91136,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 91244,
+      "offset": 91269,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 91686,
+      "offset": 91711,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 92780,
+      "offset": 92805,
       "length": 3,
       "value": "800"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 92786,
+      "offset": 92811,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 92894,
+      "offset": 92919,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 93078,
+      "offset": 93103,
       "length": 10,
       "value": "\"referrer\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 93115,
+      "offset": 93140,
       "length": 4,
       "value": "1024"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 93228,
+      "offset": 93253,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 93997,
+      "offset": 94022,
       "length": 7,
       "value": "\"_from\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94008,
+      "offset": 94033,
       "length": 13,
       "value": "\"sdk_preview\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94068,
+      "offset": 94093,
       "length": 24,
       "value": "\"preview_to_player_mode\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "Dictionary",
-      "offset": 94172,
+      "offset": 94197,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94223,
+      "offset": 94248,
       "length": 24,
       "value": "\"preview_to_player_mode\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "Dictionary",
-      "offset": 94325,
+      "offset": 94350,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94396,
+      "offset": 94421,
       "length": 7,
       "value": "\"_from\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94407,
+      "offset": 94432,
       "length": 12,
       "value": "\"sdk_direct\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94480,
+      "offset": 94505,
       "length": 14,
       "value": "\"player_start\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "Dictionary",
-      "offset": 94574,
+      "offset": 94599,
       "length": 19,
       "value": "[(\"type\", \"normal\")]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94637,
+      "offset": 94662,
       "length": 14,
       "value": "\"player_start\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94730,
+      "offset": 94755,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 94739,
+      "offset": 94764,
       "length": 8,
       "value": "\"normal\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 94804,
+      "offset": 94829,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 95048,
+      "offset": 95073,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 95322,
+      "offset": 95347,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 95556,
+      "offset": 95581,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 95794,
+      "offset": 95819,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 96075,
+      "offset": 96100,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 96440,
+      "offset": 96465,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 96485,
+      "offset": 96510,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 96651,
+      "offset": 96676,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 96721,
+      "offset": 96746,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 96765,
+      "offset": 96790,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 96942,
+      "offset": 96967,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 96987,
+      "offset": 97012,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 97140,
+      "offset": 97165,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 97184,
+      "offset": 97209,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 98010,
+      "offset": 98035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 98676,
+      "offset": 98701,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 98697,
+      "offset": 98722,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 98731,
+      "offset": 98756,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 98735,
+      "offset": 98760,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 98741,
+      "offset": 98766,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 100051,
+      "offset": 100076,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 100082,
+      "offset": 100107,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 100266,
+      "offset": 100291,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 100320,
+      "offset": 100345,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 100372,
+      "offset": 100397,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 100878,
+      "offset": 100903,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 101082,
+      "offset": 101107,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 101439,
+      "offset": 101464,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 101446,
+      "offset": 101471,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 102037,
+      "offset": 102062,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 102270,
+      "offset": 102295,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 102467,
+      "offset": 102492,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 103422,
+      "offset": 103447,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 104027,
+      "offset": 104052,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 104180,
+      "offset": 104205,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 104204,
+      "offset": 104229,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 104260,
+      "offset": 104285,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 104357,
+      "offset": 104382,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 104397,
+      "offset": 104422,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 104643,
+      "offset": 104668,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 105484,
+      "offset": 105509,
       "length": 13,
       "value": "\"campaignKey\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 105942,
+      "offset": 105967,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 106054,
+      "offset": 106079,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 106175,
+      "offset": 106200,
       "length": 5,
       "value": "\"top\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 106207,
+      "offset": 106232,
       "length": 6,
       "value": "\"left\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 106306,
+      "offset": 106331,
       "length": 7,
       "value": "\"right\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 106342,
+      "offset": 106367,
       "length": 8,
       "value": "\"bottom\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 106380,
+      "offset": 106405,
       "length": 13,
       "value": "\"orientation\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 106515,
+      "offset": 106540,
       "length": 22,
       "value": "\"SET_SAFE_AREA_MARGIN\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 106642,
+      "offset": 106667,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 106833,
+      "offset": 106858,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 107229,
+      "offset": 107254,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 107300,
+      "offset": 107325,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 107413,
+      "offset": 107438,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 107587,
+      "offset": 107612,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 107664,
+      "offset": 107689,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 107737,
+      "offset": 107762,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 112588,
+      "offset": 112613,
       "length": 6,
       "value": "\"9001\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveBase.swift",
       "kind": "StringLiteral",
-      "offset": 112605,
+      "offset": 112630,
       "length": 23,
       "value": "\"share.url.empty.error\""
     },
