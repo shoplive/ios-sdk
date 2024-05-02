@@ -705,6 +705,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ShopLiveSDKDelegat
 + (void)setLoadingAnimationWithImages:(NSArray<UIImage *> * _Nonnull)images;
 + (void)reloadLive;
 + (void)setEnabledPictureInPictureModeWithIsEnabled:(BOOL)isEnabled;
++ (void)setEnabledOSPictureInPictureModeWithIsEnabled:(BOOL)isEnabled;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable authToken;)
 + (NSString * _Nullable)authToken SWIFT_WARN_UNUSED_RESULT;
 + (void)setAuthToken:(NSString * _Nullable)newValue;
@@ -882,9 +883,10 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleChangedPlayerStatusWithStatus:(NSString * _Nonnull)status;
 - (void)handleErrorWithCode:(NSString * _Nonnull)code message:(NSString * _Nonnull)message;
 - (void)handleCampaignInfoWithCampaignInfo:(NSDictionary<NSString *, id> * _Nonnull)campaignInfo;
-- (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
 - (void)onSetUserName:(NSDictionary<NSString *, id> * _Nonnull)payload;
-- (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
+- (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
+- (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload SWIFT_DEPRECATED_MSG("use handleReceivedCommand(_ command : String , data : [String : Any]?) instead");
+- (void)handleReceivedCommand:(NSString * _Nonnull)command data:(NSDictionary<NSString *, id> * _Nullable)data;
 - (void)playerPanGestureWithState:(UIGestureRecognizerState)state position:(CGPoint)position;
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter SWIFT_DEPRECATED_MSG("use log(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;

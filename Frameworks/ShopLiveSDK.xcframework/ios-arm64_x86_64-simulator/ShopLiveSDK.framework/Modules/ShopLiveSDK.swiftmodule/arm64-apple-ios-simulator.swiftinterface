@@ -176,7 +176,8 @@ extension Foundation.NotificationCenter {
   public var referrer: Swift.String?
   public var campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())?
   public var brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())?
-  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
+  public var isMuted: Swift.Bool?
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class ShopLivePlayerShareCampaign : ObjectiveC.NSObject {
@@ -367,9 +368,11 @@ extension Foundation.NotificationCenter {
   @objc optional func handleChangedPlayerStatus(status: Swift.String)
   @objc optional func handleError(code: Swift.String, message: Swift.String)
   @objc optional func handleCampaignInfo(campaignInfo: [Swift.String : Any])
-  @objc optional func handleCommand(_ command: Swift.String, with payload: Any?)
   @objc optional func onSetUserName(_ payload: [Swift.String : Any])
+  @objc optional func handleCommand(_ command: Swift.String, with payload: Any?)
+  @available(*, deprecated, message: "use handleReceivedCommand(_ command : String , data : [String : Any]?) instead")
   @objc optional func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
+  @objc optional func handleReceivedCommand(_ command: Swift.String, data: [Swift.String : Any]?)
   @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
   @available(*, deprecated, message: "use log(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead")
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
@@ -563,6 +566,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
   @objc public static func reloadLive()
   @objc public static func setEnabledPictureInPictureMode(isEnabled: Swift.Bool)
+  @objc public static func setEnabledOSPictureInPictureMode(isEnabled: Swift.Bool)
   @objc public static var authToken: Swift.String? {
     @objc get
     @objc set
