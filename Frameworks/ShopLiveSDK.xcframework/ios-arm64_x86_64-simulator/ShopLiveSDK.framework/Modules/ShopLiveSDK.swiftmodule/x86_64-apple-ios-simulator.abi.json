@@ -30410,519 +30410,491 @@
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
-      "kind": "StringLiteral",
-      "offset": 3365,
-      "length": 63,
-      "value": "\"id \""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
-      "kind": "StringLiteral",
-      "offset": 3374,
-      "length": 4,
-      "value": "\" type \""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
-      "kind": "StringLiteral",
-      "offset": 3387,
-      "length": 7,
-      "value": "\" payload: \""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
-      "kind": "StringLiteral",
-      "offset": 3427,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 3669,
+      "offset": 3572,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 4106,
+      "offset": 4009,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 4745,
+      "offset": 4648,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 6159,
+      "offset": 6062,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 6165,
+      "offset": 6068,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 6468,
+      "offset": 6371,
       "length": 26,
       "value": "\"chatInputPlaceholderText\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 6539,
+      "offset": 6442,
       "length": 19,
       "value": "\"chatInputSendText\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 6613,
+      "offset": 6516,
       "length": 20,
       "value": "\"chatInputMaxLength\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 6679,
+      "offset": 6582,
       "length": 14,
       "value": "\"campaignInfo\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 6922,
+      "offset": 6825,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 6948,
+      "offset": 6851,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 7103,
+      "offset": 7006,
       "length": 18,
       "value": "\"videoAspectRatio\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 7417,
+      "offset": 7320,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 7536,
+      "offset": 7439,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 7660,
+      "offset": 7563,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 7700,
+      "offset": 7603,
       "length": 10,
       "value": "\"isReplay\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 7865,
+      "offset": 7768,
       "length": 18,
       "value": "\"chat.placeholder\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 7969,
+      "offset": 7872,
       "length": 17,
       "value": "\"chat.send.title\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 8081,
+      "offset": 7984,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 8174,
+      "offset": 8077,
       "length": 12,
       "value": "\"configJson\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 8256,
+      "offset": 8159,
       "length": 16,
       "value": "\"streamEdgeType\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 8324,
+      "offset": 8227,
       "length": 14,
       "value": "\"TS_BROADCAST\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 8461,
+      "offset": 8364,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 8534,
+      "offset": 8437,
       "length": 7,
       "value": "\"LLHLS\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 8665,
+      "offset": 8568,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 8821,
+      "offset": 8724,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 8916,
+      "offset": 8819,
       "length": 12,
       "value": "\"campaignId\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 9098,
+      "offset": 9001,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 9167,
+      "offset": 9070,
       "length": 19,
       "value": "\"sdkClientSettings\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 9273,
+      "offset": 9176,
       "length": 27,
       "value": "\"liveKeepUpBufferEndurance\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 9494,
+      "offset": 9397,
       "length": 26,
       "value": "\"liveKeepUpTimerFrequency\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 9715,
+      "offset": 9618,
       "length": 27,
       "value": "\"useLiveKeepUpTimerOnInApp\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 9934,
+      "offset": 9837,
       "length": 27,
       "value": "\"useLiveKeepUpTimerOnOsPip\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 10151,
+      "offset": 10054,
       "length": 22,
       "value": "\"liveKeepUpBufferSize\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 10208,
+      "offset": 10111,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "Dictionary",
-      "offset": 10465,
+      "offset": 10368,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 10875,
+      "offset": 10778,
       "length": 23,
       "value": "\"SET_USE_SCREEN_READER\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 10910,
+      "offset": 10813,
       "length": 17,
       "value": "\"useScreenReader\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 11204,
+      "offset": 11107,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 11258,
+      "offset": 11161,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "Dictionary",
-      "offset": 11471,
+      "offset": 11374,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 11492,
+      "offset": 11395,
       "length": 9,
       "value": "\"command\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 11529,
+      "offset": 11432,
       "length": 9,
       "value": "\"payload\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 11654,
+      "offset": 11557,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 11658,
+      "offset": 11561,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 11887,
+      "offset": 11790,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 11942,
+      "offset": 11845,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 12647,
+      "offset": 12550,
       "length": 12,
       "value": "\"capability\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 13072,
+      "offset": 12975,
       "length": 4,
       "value": "\"OK\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 13462,
+      "offset": 13365,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 13473,
+      "offset": 13376,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "Array",
-      "offset": 13537,
+      "offset": 13440,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 13591,
+      "offset": 13494,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 13700,
+      "offset": 13603,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 14085,
+      "offset": 13988,
       "length": 4,
       "value": "\"OK\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 14161,
+      "offset": 14064,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 14235,
+      "offset": 14138,
       "length": 8,
       "value": "\"Cancel\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 14315,
+      "offset": 14218,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 14634,
+      "offset": 14537,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 14645,
+      "offset": 14548,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "Array",
-      "offset": 14709,
+      "offset": 14612,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 14763,
+      "offset": 14666,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 14872,
+      "offset": 14775,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 15387,
+      "offset": 15290,
       "length": 4,
       "value": "\"OK\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 15691,
+      "offset": 15594,
       "length": 8,
       "value": "\"Cancel\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 16087,
+      "offset": 15990,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 16098,
+      "offset": 16001,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "Array",
-      "offset": 16162,
+      "offset": 16065,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 16216,
+      "offset": 16119,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewController\/LiveStreamViewController + OverLayDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 16325,
+      "offset": 16228,
       "length": 4,
       "value": "true"
     },
@@ -40701,63 +40673,63 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12496,
+      "offset": 12302,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12519,
+      "offset": 12325,
       "length": 5,
       "value": "44100"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12558,
+      "offset": 12364,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12581,
+      "offset": 12387,
       "length": 5,
       "value": "44100"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "BooleanLiteral",
-      "offset": 16296,
+      "offset": 16102,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "BooleanLiteral",
-      "offset": 16499,
+      "offset": 16305,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "BooleanLiteral",
-      "offset": 20697,
+      "offset": 20503,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "IntegerLiteral",
-      "offset": 20786,
+      "offset": 20592,
       "length": 10,
       "value": "1000000000"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/ShopLiveController.swift",
       "kind": "IntegerLiteral",
-      "offset": 20832,
+      "offset": 20638,
       "length": 4,
       "value": "1000"
     },
