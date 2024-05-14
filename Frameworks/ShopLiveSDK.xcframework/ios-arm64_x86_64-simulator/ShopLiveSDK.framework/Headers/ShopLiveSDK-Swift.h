@@ -857,6 +857,11 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK27ShopLivePlayerShareDelegate_")
 - (void)handleShareWithData:(ShopLivePlayerShareData * _Nonnull)data;
 @end
 
+
+SWIFT_CLASS("_TtC11ShopLiveSDK19ShopLivePreviewData")
+@interface ShopLivePreviewData : ShopLivePlayerData
+@end
+
 typedef SWIFT_ENUM(NSInteger, ShopLiveResultAlertType, open) {
   ShopLiveResultAlertTypeALERT = 0,
   ShopLiveResultAlertTypeTOAST = 1,
@@ -1802,6 +1807,11 @@ SWIFT_CLASS("_TtC11ShopLiveSDK23ShopLivePlayerShareData")
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK27ShopLivePlayerShareDelegate_")
 @protocol ShopLivePlayerShareDelegate
 - (void)handleShareWithData:(ShopLivePlayerShareData * _Nonnull)data;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK19ShopLivePreviewData")
+@interface ShopLivePreviewData : ShopLivePlayerData
 @end
 
 typedef SWIFT_ENUM(NSInteger, ShopLiveResultAlertType, open) {

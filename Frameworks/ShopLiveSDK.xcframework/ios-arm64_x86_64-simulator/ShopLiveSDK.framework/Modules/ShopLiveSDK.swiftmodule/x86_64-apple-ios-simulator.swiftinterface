@@ -176,8 +176,7 @@ extension Foundation.NotificationCenter {
   public var referrer: Swift.String?
   public var campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())?
   public var brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())?
-  public var isMuted: Swift.Bool?
-  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class ShopLivePlayerShareCampaign : ObjectiveC.NSObject {
@@ -414,6 +413,11 @@ extension ShopLiveSDK.ReachabilityStatus {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(windowScene: UIKit.UIWindowScene)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public class ShopLivePreviewData : ShopLiveSDK.ShopLivePlayerData {
+  public var isMuted: Swift.Bool?
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
