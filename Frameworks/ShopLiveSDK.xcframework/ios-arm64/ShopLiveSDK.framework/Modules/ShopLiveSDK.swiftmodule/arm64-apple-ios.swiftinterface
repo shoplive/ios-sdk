@@ -194,6 +194,11 @@ extension Foundation.NotificationCenter {
 @objc public protocol ShopLivePlayerShareDelegate {
   @objc func handleShare(data: ShopLiveSDK.ShopLivePlayerShareData)
 }
+@objc public class ShopLivePreviewData : ShopLiveSDK.ShopLivePlayerData {
+  public var isMuted: Swift.Bool?
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
+  @objc deinit
+}
 @objc public enum ShopLiveViewTrackEvent : Swift.Int, Swift.CaseIterable {
   case viewWillDisAppear
   case viewDidDisAppear
@@ -264,11 +269,11 @@ extension Foundation.NotificationCenter {
   }
 }
 @objc public class CouponResult : ObjectiveC.NSObject {
-  public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
+  @objc public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
   @objc deinit
 }
 @objc public class CustomActionResult : ObjectiveC.NSObject {
-  public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
+  @objc public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
   @objc deinit
 }
 @objc public enum ShopLiveResultStatus : Swift.Int, Swift.CaseIterable {
@@ -305,11 +310,11 @@ extension Foundation.NotificationCenter {
   }
 }
 @objc public class ShopLiveCouponResult : ObjectiveC.NSObject {
-  public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
+  @objc public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
   @objc deinit
 }
 @objc public class ShopLiveCustomActionResult : ObjectiveC.NSObject {
-  public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
+  @objc public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
   @objc deinit
 }
 @objc public class ShopLiveLog : ObjectiveC.NSObject {
@@ -413,11 +418,6 @@ extension ShopLiveSDK.ReachabilityStatus {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(windowScene: UIKit.UIWindowScene)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc public class ShopLivePreviewData : ShopLiveSDK.ShopLivePlayerData {
-  public var isMuted: Swift.Bool?
-  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {

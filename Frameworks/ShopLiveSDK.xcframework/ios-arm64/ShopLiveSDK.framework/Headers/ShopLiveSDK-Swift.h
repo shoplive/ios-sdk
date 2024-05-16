@@ -295,9 +295,13 @@ typedef SWIFT_ENUM(NSInteger, ActionType, open) {
 
 
 
+@class NSString;
+enum ResultStatus : NSInteger;
+enum ResultAlertType : NSInteger;
 
 SWIFT_CLASS("_TtC11ShopLiveSDK12CouponResult")
 @interface CouponResult : NSObject
+- (nonnull instancetype)initWithCouponId:(NSString * _Nonnull)couponId success:(BOOL)success message:(NSString * _Nullable)message status:(enum ResultStatus)status alertType:(enum ResultAlertType)alertType OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -306,6 +310,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK12CouponResult")
 
 SWIFT_CLASS("_TtC11ShopLiveSDK18CustomActionResult")
 @interface CustomActionResult : NSObject
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id success:(BOOL)success message:(NSString * _Nullable)message status:(enum ResultStatus)status alertType:(enum ResultAlertType)alertType OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -328,7 +333,6 @@ typedef SWIFT_ENUM(NSInteger, ResultStatus, open) {
 };
 
 @class UIViewController;
-@class NSString;
 @class NSBundle;
 @class NSCoder;
 
@@ -728,9 +732,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _
 + (CGSize)getPreviewSizeInAppPipConfiguration:(ShopLiveInAppPipConfiguration * _Nonnull)inAppPipConfiguration videoRatio:(CGSize)videoRatio SWIFT_WARN_UNUSED_RESULT;
 @end
 
+enum ShopLiveResultStatus : NSInteger;
+enum ShopLiveResultAlertType : NSInteger;
 
 SWIFT_CLASS("_TtC11ShopLiveSDK20ShopLiveCouponResult")
 @interface ShopLiveCouponResult : NSObject
+- (nonnull instancetype)initWithCouponId:(NSString * _Nonnull)couponId success:(BOOL)success message:(NSString * _Nullable)message status:(enum ShopLiveResultStatus)status alertType:(enum ShopLiveResultAlertType)alertType OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -739,6 +746,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK20ShopLiveCouponResult")
 
 SWIFT_CLASS("_TtC11ShopLiveSDK26ShopLiveCustomActionResult")
 @interface ShopLiveCustomActionResult : NSObject
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id success:(BOOL)success message:(NSString * _Nullable)message status:(enum ShopLiveResultStatus)status alertType:(enum ShopLiveResultAlertType)alertType OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
