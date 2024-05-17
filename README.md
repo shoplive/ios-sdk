@@ -45,8 +45,8 @@ use_frameworks!
 # Set Project Target for Shoplive SDK for iOS installation.
 target 'PlayShopLive' do
 #livePlayerSDK
-pod 'ShopLive', '1.5.4'
-pod 'ShopliveSDKCommon' , '1.5.4'
+pod 'ShopLive', '1.5.9'
+pod 'ShopliveSDKCommon' , '1.5.9'
 end
 ```
 - Swift Package Manager
@@ -56,8 +56,8 @@ Once you have your Swift package set up, adding Shoplive SDK for iOS as a depend
 ```Ruby
 dependencies: [
 //player
-.package(url: "https://github.com/shoplive/ios-sdk.git", .upToNextMajor(from: "1.5.4"))
-.package(url: "https://github.com/shoplive/common-ios", .upToNextMajor(from: "1.5.4"))
+.package(url: "https://github.com/shoplive/ios-sdk.git", .upToNextMajor(from: "1.5.9"))
+.package(url: "https://github.com/shoplive/common-ios", .upToNextMajor(from: "1.5.9"))
 ]
 ```
 
@@ -70,14 +70,19 @@ class MainViewController: UIViewController {
 ...
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Initialize the Shoplive Android SDK using the prepared Access Key.
+        // Initialize the Shoplive iOS SDK using the prepared Access Key.
         ShopLiveCommon.setAccessKey(accessKey : "{AccessKey}")
 
-        // Play the video using the campaign key.s
-        ShopLive.play(data: .init(campaignKey : "{CampaignKey}"))
+        // Set User
+        ShopLiveCommon.setUser(user : "{ShopliveCommonUser}")
 
-        // Starts a muted campaign as an in-app PIP.
-        ShopLive.preview(data: .init(campaignKey : "{CampaignKey}"), completion: nil)
+        // Play the video using the campaign key.s
+        let playData = ShopLivePlayerData(campaignkey : "{CampaignKey}")
+        ShopLive.play(data: playData )
+
+        // Starts in-app PIP.
+        let previewData = ShopLivePreviewData(campaignKey : "{CampaignKey}")
+        ShopLive.preview(data: previewData, completion: nil)
     }
 ...
 }
