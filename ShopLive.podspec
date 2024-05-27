@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ShopLive"
-  spec.version      = "1.5.9"
+  spec.version      = "1.5.10"
   spec.summary      = "ShopLive SDK for iOS"
 
   spec.homepage     = "http://shoplive.cloud"

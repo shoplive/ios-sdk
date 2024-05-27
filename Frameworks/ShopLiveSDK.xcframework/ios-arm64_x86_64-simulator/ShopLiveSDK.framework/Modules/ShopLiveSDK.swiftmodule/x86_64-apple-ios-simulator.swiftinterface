@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFAudio
@@ -7,6 +7,7 @@ import AVFoundation
 import AVKit
 import SystemConfiguration.CaptiveNetwork
 import CoreMedia
+import DeveloperToolsSupport
 import ExternalAccessory
 import Foundation
 import MediaPlayer
@@ -20,6 +21,7 @@ import VideoToolbox
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 import os.log
 import os
 public enum ShopLiveSDKAsset {
@@ -176,7 +178,8 @@ extension Foundation.NotificationCenter {
   public var referrer: Swift.String?
   public var campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())?
   public var brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())?
-  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
+  public var isEnabledVolumeKey: Swift.Bool
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isEnabledVolumeKey: Swift.Bool = false, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class ShopLivePlayerShareCampaign : ObjectiveC.NSObject {
@@ -196,7 +199,7 @@ extension Foundation.NotificationCenter {
 }
 @objc public class ShopLivePreviewData : ShopLiveSDK.ShopLivePlayerData {
   public var isMuted: Swift.Bool?
-  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, isEnabledVolumeKey: Swift.Bool = false, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
   @objc deinit
 }
 @objc public enum ShopLiveViewTrackEvent : Swift.Int, Swift.CaseIterable {
@@ -378,9 +381,11 @@ extension Foundation.NotificationCenter {
   @objc optional func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
   @objc optional func handleReceivedCommand(_ command: Swift.String, data: [Swift.String : Any]?)
   @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
-  @available(*, deprecated, message: "use log(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead")
+  @available(*, deprecated, message: "use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead")
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
+  @available(*, deprecated, message: "use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead")
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
+  @objc optional func onEvent(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
 }
 public typealias ShopLiveViewController = ShopLiveSDK.SLViewController
 public let ReachabilityStatusChangedNotification: Swift.String
@@ -593,6 +598,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func isVisibleStatusBar() -> Swift.Bool
   @objc public static func addSubViewToPreview(subView: UIKit.UIView)
   @objc public static func getPreviewSize(inAppPipConfiguration: ShopLiveSDK.ShopLiveInAppPipConfiguration, videoRatio: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @objc public static func setResizeMode(mode: ShopliveSDKCommon.ShopLiveResizeMode)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLWindow : UIKit.UIWindow {
   @available(iOS 13.0, *)
