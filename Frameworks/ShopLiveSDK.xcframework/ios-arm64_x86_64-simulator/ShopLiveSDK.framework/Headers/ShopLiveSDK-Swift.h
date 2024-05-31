@@ -675,7 +675,7 @@ enum ShopLiveViewHiddenActionType : NSInteger;
 + (enum ActionType)getNextActionTypeOnHandleNavigation SWIFT_WARN_UNUSED_RESULT;
 + (void)setEndpoint:(NSString * _Nullable)url;
 + (BOOL)isSuccessCampaignJoin SWIFT_WARN_UNUSED_RESULT;
-+ (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
++ (void)setKeepAspectOnTabletPortrait:(BOOL)keep SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="deprecated on 1.5.10");
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewController * _Nullable viewController;)
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)closeWithActionType:(enum ShopLiveViewHiddenActionType)actionType;
@@ -1657,7 +1657,7 @@ enum ShopLiveViewHiddenActionType : NSInteger;
 + (enum ActionType)getNextActionTypeOnHandleNavigation SWIFT_WARN_UNUSED_RESULT;
 + (void)setEndpoint:(NSString * _Nullable)url;
 + (BOOL)isSuccessCampaignJoin SWIFT_WARN_UNUSED_RESULT;
-+ (void)setKeepAspectOnTabletPortrait:(BOOL)keep;
++ (void)setKeepAspectOnTabletPortrait:(BOOL)keep SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="deprecated on 1.5.10");
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewController * _Nullable viewController;)
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)closeWithActionType:(enum ShopLiveViewHiddenActionType)actionType;
