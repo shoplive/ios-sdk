@@ -33849,1085 +33849,1085 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2411,
+      "offset": 2406,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 2617,
+      "offset": 2612,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3115,
+      "offset": 3110,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3381,
+      "offset": 3376,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3437,
+      "offset": 3432,
       "length": 30,
       "value": "\"liveStreamViewModel deinited\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3871,
+      "offset": 3866,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4649,
+      "offset": 4644,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4717,
+      "offset": 4712,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 4798,
+      "offset": 4793,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5365,
+      "offset": 5360,
       "length": 10,
       "value": "\"CELLULAR\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5482,
+      "offset": 5477,
       "length": 6,
       "value": "\"WIFI\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5610,
+      "offset": 5605,
       "length": 6,
       "value": "\"NONE\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 7478,
+      "offset": 7473,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 7719,
+      "offset": 7714,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 7883,
+      "offset": 7878,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 7970,
+      "offset": 7965,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8863,
+      "offset": 8915,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 9084,
+      "offset": 9136,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 9382,
+      "offset": 9434,
       "length": 3,
       "value": "2.5"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "Array",
-      "offset": 10513,
+      "offset": 10565,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 13368,
+      "offset": 13420,
       "length": 3,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13627,
+      "offset": 13679,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13657,
+      "offset": 13709,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13690,
+      "offset": 13742,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 14435,
+      "offset": 14487,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 14754,
+      "offset": 14806,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 14986,
+      "offset": 15038,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 15069,
+      "offset": 15121,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 15146,
+      "offset": 15198,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15175,
+      "offset": 15227,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15194,
+      "offset": 15246,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 15661,
+      "offset": 15713,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15924,
+      "offset": 15976,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15979,
+      "offset": 16031,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 16147,
+      "offset": 16199,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 16340,
+      "offset": 16392,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 16643,
+      "offset": 16695,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 16773,
+      "offset": 16825,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 19481,
+      "offset": 19533,
       "length": 21,
       "value": "\"LiveStreamViewModel\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 20318,
+      "offset": 20370,
       "length": 31,
       "value": "\"playerItem Status readyToPlay\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 20480,
+      "offset": 20532,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 21033,
+      "offset": 21085,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 21081,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 21370,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 21408,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 21872,
+      "offset": 21295,
       "length": 47,
       "value": "\"playerItem Status failed setting retry = true\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 21964,
+      "offset": 21387,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 21550,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21823,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 21853,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 23192,
+      "offset": 23111,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 25503,
+      "offset": 25422,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 25609,
+      "offset": 25528,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 26954,
+      "offset": 26873,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 27291,
+      "offset": 27210,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 27510,
+      "offset": 27429,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 28377,
+      "offset": 28296,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30270,
+      "offset": 30189,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 30320,
+      "offset": 30239,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30609,
+      "offset": 30528,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30632,
+      "offset": 30551,
       "length": 5,
       "value": "44100"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30671,
+      "offset": 30590,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30694,
+      "offset": 30613,
       "length": 5,
       "value": "44100"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30911,
+      "offset": 30830,
       "length": 3,
       "value": "180"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 31084,
+      "offset": 31003,
       "length": 3,
       "value": "180"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 31116,
+      "offset": 31035,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 31175,
+      "offset": 31094,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 31293,
+      "offset": 31212,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32158,
+      "offset": 32077,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32237,
+      "offset": 32156,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32447,
+      "offset": 32366,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32470,
+      "offset": 32389,
       "length": 5,
       "value": "44100"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32509,
+      "offset": 32428,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32532,
+      "offset": 32451,
       "length": 5,
       "value": "44100"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32764,
+      "offset": 32683,
       "length": 3,
       "value": "180"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32953,
+      "offset": 32872,
       "length": 3,
       "value": "180"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 32985,
+      "offset": 32904,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 33052,
+      "offset": 32971,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 33186,
+      "offset": 33105,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 33271,
+      "offset": 33190,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 33487,
+      "offset": 33406,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 33686,
+      "offset": 33605,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 36081,
+      "offset": 34377,
       "length": 15,
       "value": "\"[timedMeta]\n\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 36290,
+      "offset": 34586,
       "length": 46,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 36297,
+      "offset": 34593,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 36332,
+      "offset": 34628,
       "length": 1,
       "value": "\" \n\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 36480,
+      "offset": 34776,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 37723,
+      "offset": 36019,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 38910,
+      "offset": 37206,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39037,
+      "offset": 37333,
       "length": 4,
       "value": "\"ak\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39127,
+      "offset": 37423,
       "length": 4,
       "value": "\"ck\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39234,
+      "offset": 37530,
       "length": 4,
       "value": "\"tk\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39280,
+      "offset": 37576,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39392,
+      "offset": 37688,
       "length": 8,
       "value": "\"userId\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39533,
+      "offset": 37829,
       "length": 10,
       "value": "\"userName\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39668,
+      "offset": 37964,
       "length": 8,
       "value": "\"gender\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 39758,
+      "offset": 38054,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39815,
+      "offset": 38111,
       "length": 5,
       "value": "\"age\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 39958,
+      "offset": 38254,
       "length": 11,
       "value": "\"userScore\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 40408,
+      "offset": 38704,
       "length": 4,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 40443,
+      "offset": 38739,
       "length": 4,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 40498,
+      "offset": 38794,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 40791,
+      "offset": 39087,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 41103,
+      "offset": 39399,
       "length": 6,
       "value": "\"adId\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 41265,
+      "offset": 39561,
       "length": 14,
       "value": "\"adIdentifier\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 41344,
+      "offset": 39640,
       "length": 6,
       "value": "\"idfa\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 41494,
+      "offset": 39790,
       "length": 19,
       "value": "\"shopliveSessionId\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 41674,
+      "offset": 39970,
       "length": 6,
       "value": "\"ceId\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 41771,
+      "offset": 40067,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 41828,
+      "offset": 40124,
       "length": 6,
       "value": "\"idfv\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 41990,
+      "offset": 40286,
       "length": 8,
       "value": "\"anonId\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 42081,
+      "offset": 40377,
       "length": 8,
       "value": "\"eSlSid\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 42124,
+      "offset": 40420,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 42219,
+      "offset": 40515,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 42276,
+      "offset": 40572,
       "length": 12,
       "value": "\"utm_source\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 42404,
+      "offset": 40700,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 42461,
+      "offset": 40757,
       "length": 13,
       "value": "\"utm_content\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 42594,
+      "offset": 40890,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 42651,
+      "offset": 40947,
       "length": 14,
       "value": "\"utm_campaign\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 42780,
+      "offset": 41076,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 42837,
+      "offset": 41133,
       "length": 12,
       "value": "\"utm_medium\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 42935,
+      "offset": 41231,
       "length": 8,
       "value": "\"osType\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 42952,
+      "offset": 41248,
       "length": 3,
       "value": "\"i\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43003,
+      "offset": 41299,
       "length": 11,
       "value": "\"osVersion\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43096,
+      "offset": 41392,
       "length": 8,
       "value": "\"device\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43193,
+      "offset": 41489,
       "length": 9,
       "value": "\"version\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 43346,
+      "offset": 41642,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43403,
+      "offset": 41699,
       "length": 10,
       "value": "\"shareUrl\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43492,
+      "offset": 41788,
       "length": 12,
       "value": "\"appVersion\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43646,
+      "offset": 41942,
       "length": 16,
       "value": "\"manualRotation\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43671,
+      "offset": 41967,
       "length": 7,
       "value": "\"false\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43842,
+      "offset": 42138,
       "length": 10,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 43851,
+      "offset": 42147,
       "length": 3,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 44122,
+      "offset": 42418,
       "length": 3,
       "value": "\"?\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 46710,
+      "offset": 45006,
       "length": 26,
       "value": "\"onMissingRenditionReport\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 46855,
+      "offset": 45151,
       "length": 24,
       "value": "\"liveStreamDisconnected\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 47042,
+      "offset": 45338,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 47054,
+      "offset": 45350,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 47201,
+      "offset": 45497,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 47267,
+      "offset": 45563,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 47614,
+      "offset": 45910,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 47806,
+      "offset": 46102,
       "length": 20,
       "value": "\"playListParseError\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 48409,
+      "offset": 46705,
       "length": 28,
       "value": "\"onNoMatchingMediaFileFound\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 48554,
+      "offset": 46850,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 48827,
+      "offset": 47123,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 48907,
+      "offset": 47203,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 48969,
+      "offset": 47265,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 49104,
+      "offset": 47400,
       "length": 21,
       "value": "\"unableToGetPlayList\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 49616,
+      "offset": 47912,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 49651,
+      "offset": 47947,
       "length": 9,
       "value": "\"liveUrl\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 49672,
+      "offset": 47968,
       "length": 8,
       "value": "\"reason\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 49703,
+      "offset": 47999,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 49738,
+      "offset": 48034,
       "length": 61,
       "value": "\"[HASSAN LOG] error \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 49779,
+      "offset": 48075,
       "length": 7,
       "value": "\" payload \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 49798,
+      "offset": 48094,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 50081,
+      "offset": 48377,
       "length": 25,
       "value": "\"updatePlayerItemInRetry\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 50445,
+      "offset": 48741,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStreamViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 50893,
+      "offset": 49189,
       "length": 5,
       "value": "false"
     },
@@ -35242,91 +35242,91 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3139,
+      "offset": 3251,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3558,
+      "offset": 3670,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3623,
+      "offset": 3735,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "Array",
-      "offset": 3694,
+      "offset": 3806,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3751,
+      "offset": 3863,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 3931,
+      "offset": 4043,
       "length": 21,
       "value": "\"navigator.userAgent\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 4107,
+      "offset": 4219,
       "length": 46,
       "value": "\" shoplive\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 4152,
+      "offset": 4264,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 4203,
+      "offset": 4315,
       "length": 13,
       "value": "\"userAgent: \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 4236,
+      "offset": 4348,
       "length": 46,
       "value": "\" shoplive\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 4281,
+      "offset": 4393,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 4536,
+      "offset": 4648,
       "length": 40,
       "value": "\"loadOverlay with \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 4575,
+      "offset": 4687,
       "length": 2,
       "value": "\"\""
     },
@@ -35340,805 +35340,805 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5551,
+      "offset": 5663,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5850,
+      "offset": 5962,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5921,
+      "offset": 6033,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 6269,
+      "offset": 6381,
       "length": 13,
       "value": "\"about:blank\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6353,
+      "offset": 6465,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6500,
+      "offset": 6612,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6574,
+      "offset": 6686,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "IntegerLiteral",
-      "offset": 6910,
+      "offset": 7022,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 7156,
+      "offset": 7268,
       "length": 13,
       "value": "\"about:blank\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7305,
+      "offset": 7417,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 7490,
+      "offset": 7602,
       "length": 13,
       "value": "\"about:blank\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8322,
+      "offset": 8434,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 8518,
+      "offset": 8630,
       "length": 75,
       "value": "\"[WEBVIEW_DIDFAIL_PROVISIONAL_NAVIGATION_URLDOMAIN] No internet connection\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 8670,
+      "offset": 8782,
       "length": 70,
       "value": "\"[WEBVIEW_DIDFAIL_PROVISIONAL_NAVIGATION_URLDOMAIN] Cannot find host.\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 8795,
+      "offset": 8907,
       "length": 79,
       "value": "\"[WEBVIEW_DIDFAIL_PROVISIONAL_NAVIGATION_URLDOMAIN] unknownError \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 8872,
+      "offset": 8984,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 9075,
+      "offset": 9187,
       "length": 87,
       "value": "\"[WEBVIEW_DIDFAIL_PROVISIONAL_NAVIGATION_WKERRORDOMAIN] JavaScript exception occurred.\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 9217,
+      "offset": 9329,
       "length": 82,
       "value": "\"[WEBVIEW_DIDFAIL_PROVISIONAL_NAVIGATION_WKERRORDOMAIN] unknownError \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 9298,
+      "offset": 9410,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 9481,
+      "offset": 9593,
       "length": 82,
       "value": "\"[WEBVIEW_DIDFAIL_PROVISIONAL_NAVIGATION_COCOERROR] User cancelled the operation.\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 9618,
+      "offset": 9730,
       "length": 78,
       "value": "\"[WEBVIEW_DIDFAIL_PROVISIONAL_NAVIGATION_COCOERROR] unknownError \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 9695,
+      "offset": 9807,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 9853,
+      "offset": 9965,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10204,
+      "offset": 10316,
       "length": 15,
       "value": "\"shopliveEvent\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10281,
+      "offset": 10393,
       "length": 10,
       "value": "\"metadata\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10347,
+      "offset": 10459,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10392,
+      "offset": 10504,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10460,
+      "offset": 10572,
       "length": 9,
       "value": "\"payload\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10512,
+      "offset": 10624,
       "length": 26,
       "value": "\"USER_IMPLEMENTS_CALLBACK\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10706,
+      "offset": 10818,
       "length": 23,
       "value": "\"ON_CLICK_SHARE_BUTTON\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10826,
+      "offset": 10938,
       "length": 19,
       "value": "\"SHOW_NATIVE_DEBUG\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10894,
+      "offset": 11006,
       "length": 9,
       "value": "\"VIBRATE\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 10956,
+      "offset": 11068,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 11158,
+      "offset": 11270,
       "length": 12,
       "value": "\"SET_SOUNDS\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 11220,
+      "offset": 11332,
       "length": 8,
       "value": "\"sounds\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "Array",
-      "offset": 11307,
+      "offset": 11419,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 11409,
+      "offset": 11521,
       "length": 7,
       "value": "\"alias\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 11435,
+      "offset": 11547,
       "length": 5,
       "value": "\"url\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 11721,
+      "offset": 11833,
       "length": 12,
       "value": "\"PLAY_SOUND\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 11782,
+      "offset": 11894,
       "length": 7,
       "value": "\"alias\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 11936,
+      "offset": 12048,
       "length": 12,
       "value": "\"STOP_SOUND\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 11997,
+      "offset": 12109,
       "length": 7,
       "value": "\"alias\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 12151,
+      "offset": 12263,
       "length": 15,
       "value": "\"OPEN_DEEPLINK\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 12216,
+      "offset": 12328,
       "length": 8,
       "value": "\"scheme\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "Dictionary",
-      "offset": 12490,
+      "offset": 12602,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 12588,
+      "offset": 12700,
       "length": 27,
       "value": "\"ON_CHANGED_VIDEO_EXPANDED\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 12675,
+      "offset": 12787,
       "length": 15,
       "value": "\"videoExpanded\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 13018,
+      "offset": 13130,
       "length": 20,
       "value": "\"SET_VIDEO_POSITION\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 13086,
+      "offset": 13198,
       "length": 3,
       "value": "\"x\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 13124,
+      "offset": 13236,
       "length": 3,
       "value": "\"y\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 13193,
+      "offset": 13305,
       "length": 8,
       "value": "\"height\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 13240,
+      "offset": 13352,
       "length": 7,
       "value": "\"width\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 13317,
+      "offset": 13429,
       "length": 12,
       "value": "\"centerCrop\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 14258,
+      "offset": 14370,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 14681,
+      "offset": 14793,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 15112,
+      "offset": 15224,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 15341,
+      "offset": 15453,
       "length": 24,
       "value": "\"SET_SCREEN_ORIENTATION\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 15537,
+      "offset": 15649,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 15673,
+      "offset": 15785,
       "length": 13,
       "value": "\"orientation\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 15776,
+      "offset": 15888,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 15924,
+      "offset": 16036,
       "length": 11,
       "value": "\"LANDSCAPE\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 16000,
+      "offset": 16112,
       "length": 20,
       "value": "\"SET_PLAYBACK_SPEED\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 16077,
+      "offset": 16189,
       "length": 6,
       "value": "\"rate\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 16224,
+      "offset": 16336,
       "length": 26,
       "value": "\"ON_CHANGED_ACTIVITY_TYPE\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 16335,
+      "offset": 16447,
       "length": 14,
       "value": "\"activityType\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 16365,
+      "offset": 16477,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 16394,
+      "offset": 16506,
       "length": 13,
       "value": "\"campaignKey\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 16423,
+      "offset": 16535,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 16714,
+      "offset": 16826,
       "length": 12,
       "value": "\"systemInit\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16767,
+      "offset": 16879,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17033,
+      "offset": 17145,
       "length": 5,
       "value": "\"top\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17065,
+      "offset": 17177,
       "length": 6,
       "value": "\"left\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17168,
+      "offset": 17280,
       "length": 7,
       "value": "\"right\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17204,
+      "offset": 17316,
       "length": 8,
       "value": "\"bottom\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17242,
+      "offset": 17354,
       "length": 13,
       "value": "\"orientation\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17359,
+      "offset": 17471,
       "length": 22,
       "value": "\"SET_SAFE_AREA_MARGIN\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "IntegerLiteral",
-      "offset": 17566,
+      "offset": 17678,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17750,
+      "offset": 17862,
       "length": 26,
       "value": "\"setVideoMute(\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17774,
+      "offset": 17886,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17920,
+      "offset": 18032,
       "length": 28,
       "value": "\"setPosterUrl(\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 17946,
+      "offset": 18058,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 18093,
+      "offset": 18205,
       "length": 47,
       "value": "\"setLiveStreamUrl(\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 18138,
+      "offset": 18250,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 18478,
+      "offset": 18590,
       "length": 33,
       "value": "\"setIsPlayingVideo(\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 18509,
+      "offset": 18621,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 18629,
+      "offset": 18741,
       "length": 13,
       "value": "\"reloadVideo\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 18758,
+      "offset": 18870,
       "length": 23,
       "value": "\"startPictureInPicture\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 18894,
+      "offset": 19006,
       "length": 24,
       "value": "\"webView back btn close\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 19057,
+      "offset": 19169,
       "length": 15,
       "value": "\"navigationUrl\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 19214,
+      "offset": 19326,
       "length": 8,
       "value": "\"coupon\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 19344,
+      "offset": 19456,
       "length": 12,
       "value": "\"navigation\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19456,
+      "offset": 19568,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 19523,
+      "offset": 19635,
       "length": 12,
       "value": "\"pauseVideo\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19636,
+      "offset": 19748,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 19723,
+      "offset": 19835,
       "length": 8,
       "value": "\"replay\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "IntegerLiteral",
-      "offset": 19948,
+      "offset": 20060,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 20036,
+      "offset": 20148,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 20126,
+      "offset": 20238,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 20602,
+      "offset": 20714,
       "length": 38,
       "value": "\"setparam key: \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 20623,
+      "offset": 20735,
       "length": 5,
       "value": "\" value: \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 20639,
+      "offset": 20751,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "FloatLiteral",
-      "offset": 22012,
+      "offset": 22124,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 22044,
+      "offset": 22156,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "FloatLiteral",
-      "offset": 22108,
+      "offset": 22220,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 22136,
+      "offset": 22248,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 22197,
+      "offset": 22309,
       "length": 16,
       "value": "\"OverlayWebView\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 22569,
+      "offset": 22681,
       "length": 47,
       "value": "\"overlayUrl exist \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 22615,
+      "offset": 22727,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 22679,
+      "offset": 22791,
       "length": 13,
       "value": "\".overlayUrl\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 22920,
+      "offset": 23032,
       "length": 98,
       "value": "\"rect: \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 22946,
+      "offset": 23058,
       "length": 7,
       "value": "\" webview inset: \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "StringLiteral",
-      "offset": 23017,
+      "offset": 23129,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "IntegerLiteral",
-      "offset": 23065,
+      "offset": 23177,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "IntegerLiteral",
-      "offset": 23071,
+      "offset": 23183,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/OverlayWebView\/OverlayWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 23085,
+      "offset": 23197,
       "length": 5,
       "value": "false"
     },
