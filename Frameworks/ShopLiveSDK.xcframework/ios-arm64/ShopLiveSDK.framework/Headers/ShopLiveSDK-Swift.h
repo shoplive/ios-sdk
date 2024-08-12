@@ -615,10 +615,15 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
-  PipPositionTopRight = 1,
-  PipPositionBottomLeft = 2,
-  PipPositionBottomRight = 3,
-  PipPositionDefault = 4,
+  PipPositionTopCenter = 1,
+  PipPositionTopRight = 2,
+  PipPositionMiddleLeft = 3,
+  PipPositionMiddleCenter = 4,
+  PipPositionMiddleRight = 5,
+  PipPositionBottomLeft = 6,
+  PipPositionBottomCenter = 7,
+  PipPositionBottomRight = 8,
+  PipPositionDefault = 9,
 };
 
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
@@ -785,6 +790,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK30ShopLiveInAppConfigurationObjc")
 @property (nonatomic, strong) ShopLiveInAppPipSize * _Nullable _pipSize;
 @property (nonatomic) BOOL _useCloseButton;
 @property (nonatomic) enum PipPosition _pipPosition;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull _pipPinPositions;
 @property (nonatomic) BOOL _enableSwipeOut;
 @property (nonatomic) CGFloat _pipRadius;
 - (nonnull instancetype)initWithUseCloseButton:(BOOL)useCloseButton pipPosition:(enum PipPosition)pipPosition enableSwipeOut:(BOOL)enableSwipeOut pipSize:(ShopLiveInAppPipSize * _Nonnull)pipSize pipRadius:(CGFloat)pipRadius OBJC_DESIGNATED_INITIALIZER;

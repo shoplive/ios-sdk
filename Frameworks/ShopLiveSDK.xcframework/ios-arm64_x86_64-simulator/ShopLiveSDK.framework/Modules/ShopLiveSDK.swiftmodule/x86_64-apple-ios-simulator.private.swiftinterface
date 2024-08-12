@@ -95,6 +95,10 @@ extension Foundation.NotificationCenter {
     @objc get
     @objc set
   }
+  @objc public var _pipPinPositions: Swift.Array<Swift.Int> {
+    @objc get
+    @objc set
+  }
   @objc public var _enableSwipeOut: Swift.Bool {
     @objc get
     @objc set
@@ -140,10 +144,11 @@ extension Foundation.NotificationCenter {
 @objc public class ShopLiveInAppPipConfiguration : ObjectiveC.NSObject {
   public var useCloseButton: Swift.Bool?
   public var pipPosition: ShopLiveSDK.ShopLive.PipPosition?
+  public var pipPinPositions: [ShopLiveSDK.ShopLive.PipPosition]
   public var enableSwipeOut: Swift.Bool?
   public var pipSize: ShopLiveSDK.ShopLiveInAppPipSize?
   public var pipRadius: CoreFoundation.CGFloat
-  public init(useCloseButton: Swift.Bool? = nil, pipPosition: ShopLiveSDK.ShopLive.PipPosition? = nil, enableSwipeOut: Swift.Bool? = nil, pipSize: ShopLiveSDK.ShopLiveInAppPipSize? = nil, pipRadius: CoreFoundation.CGFloat = 10)
+  public init(useCloseButton: Swift.Bool? = nil, pipPosition: ShopLiveSDK.ShopLive.PipPosition? = nil, enableSwipeOut: Swift.Bool? = nil, pipSize: ShopLiveSDK.ShopLiveInAppPipSize? = nil, pipRadius: CoreFoundation.CGFloat = 10, pipPinPositions: [ShopLiveSDK.ShopLive.PipPosition]? = nil)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ShopLivePlayerBrand : ObjectiveC.NSObject {
@@ -459,8 +464,13 @@ extension ShopLiveSDK.ShopLive {
 extension ShopLiveSDK.ShopLive {
   @objc public enum PipPosition : Swift.Int {
     case topLeft
+    case topCenter
     case topRight
+    case middleLeft
+    case middleCenter
+    case middleRight
     case bottomLeft
+    case bottomCenter
     case bottomRight
     case `default`
     public var name: Swift.String {
