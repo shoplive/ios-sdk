@@ -613,6 +613,22 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 @end
 
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
+};
+
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
   PipPositionTopCenter = 1,
@@ -630,22 +646,6 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleUnknown = 0,
   PresentationStyleFullScreen = 1,
   PresentationStylePip = 2,
-};
-
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
 };
 
 enum ShopLiveViewHiddenActionType : NSInteger;
@@ -754,6 +754,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _
 + (void)addSubViewToPreviewWithSubView:(UIView * _Nonnull)subView;
 + (CGSize)getPreviewSizeInAppPipConfiguration:(ShopLiveInAppPipConfiguration * _Nonnull)inAppPipConfiguration videoRatio:(CGSize)videoRatio SWIFT_WARN_UNUSED_RESULT;
 + (void)setResizeModeWithMode:(enum ShopLiveResizeMode)mode;
++ (void)forceStartWithPortraitMode:(BOOL)isForced;
 @end
 
 enum ShopLiveResultStatus : NSInteger;
@@ -863,6 +864,27 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLivePlayerDataObjc")
 @property (nonatomic, copy) NSString * _Nonnull _referrer;
 - (nonnull instancetype)initWithCampaignKey:(NSString * _Nonnull)campaignKey keepWindowStateonPlayExecuted:(BOOL)keepWindowStateonPlayExecuted referrer:(NSString * _Nonnull)referrer OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK21ShopLivePlayerPreview")
+@interface ShopLivePlayerPreview : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+
+@class WKFrameInfo;
+
+@interface ShopLivePlayerPreview (SWIFT_EXTENSION(ShopLiveSDK)) <WKUIDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView runJavaScriptAlertPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(void))completionHandler;
+- (void)webView:(WKWebView * _Nonnull)webView runJavaScriptConfirmPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
+- (void)webView:(WKWebView * _Nonnull)webView runJavaScriptTextInputPanelWithPrompt:(NSString * _Nonnull)prompt defaultText:(NSString * _Nullable)defaultText initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(NSString * _Nullable))completionHandler;
+@end
+
+
+
+
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK27ShopLivePlayerShareCampaign")
@@ -1601,6 +1623,22 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 @end
 
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
+};
+
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
   PipPositionTopCenter = 1,
@@ -1618,22 +1656,6 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleUnknown = 0,
   PresentationStyleFullScreen = 1,
   PresentationStylePip = 2,
-};
-
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
 };
 
 enum ShopLiveViewHiddenActionType : NSInteger;
@@ -1742,6 +1764,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _
 + (void)addSubViewToPreviewWithSubView:(UIView * _Nonnull)subView;
 + (CGSize)getPreviewSizeInAppPipConfiguration:(ShopLiveInAppPipConfiguration * _Nonnull)inAppPipConfiguration videoRatio:(CGSize)videoRatio SWIFT_WARN_UNUSED_RESULT;
 + (void)setResizeModeWithMode:(enum ShopLiveResizeMode)mode;
++ (void)forceStartWithPortraitMode:(BOOL)isForced;
 @end
 
 enum ShopLiveResultStatus : NSInteger;
@@ -1851,6 +1874,27 @@ SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLivePlayerDataObjc")
 @property (nonatomic, copy) NSString * _Nonnull _referrer;
 - (nonnull instancetype)initWithCampaignKey:(NSString * _Nonnull)campaignKey keepWindowStateonPlayExecuted:(BOOL)keepWindowStateonPlayExecuted referrer:(NSString * _Nonnull)referrer OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK21ShopLivePlayerPreview")
+@interface ShopLivePlayerPreview : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+
+@class WKFrameInfo;
+
+@interface ShopLivePlayerPreview (SWIFT_EXTENSION(ShopLiveSDK)) <WKUIDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView runJavaScriptAlertPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(void))completionHandler;
+- (void)webView:(WKWebView * _Nonnull)webView runJavaScriptConfirmPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
+- (void)webView:(WKWebView * _Nonnull)webView runJavaScriptTextInputPanelWithPrompt:(NSString * _Nonnull)prompt defaultText:(NSString * _Nullable)defaultText initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(NSString * _Nullable))completionHandler;
+@end
+
+
+
+
 
 
 SWIFT_CLASS("_TtC11ShopLiveSDK27ShopLivePlayerShareCampaign")

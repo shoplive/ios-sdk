@@ -7,6 +7,7 @@ import AVFoundation
 import AVKit
 import SystemConfiguration.CaptiveNetwork
 import CoreMedia
+import CoreVideo
 import DeveloperToolsSupport
 import ExternalAccessory
 import Foundation
@@ -421,6 +422,71 @@ public enum ReachabilityStatus : Swift.CustomStringConvertible, Swift.Equatable 
 extension ShopLiveSDK.ReachabilityStatus {
   public init(reachabilityFlags flags: SystemConfiguration.SCNetworkReachabilityFlags)
 }
+public enum DedicatedWebViewCommandCompletionType {
+  case isMuted
+  public static func == (a: ShopLiveSDK.DedicatedWebViewCommandCompletionType, b: ShopLiveSDK.DedicatedWebViewCommandCompletionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLivePlayerControlAction {
+  case play
+  case pause
+  case stop
+  case resume
+  public static func == (a: ShopLiveSDK.ShopLivePlayerControlAction, b: ShopLiveSDK.ShopLivePlayerControlAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ShopLivePlayerPreview : UIKit.UIView, ShopliveSDKCommon.SLReactor {
+  public enum Action {
+    case initialize
+    case start(accessKey: Swift.String, campaignKey: Swift.String, referrer: Swift.String?)
+    case setMuted(Swift.Bool)
+    case setReferrer(Swift.String?)
+    case play
+    case pause
+    case stop
+    case close
+    case retry
+    case setCornerRadius(CoreFoundation.CGFloat)
+    case useCloseButton(Swift.Bool)
+    case setEnabledVolumeKey(isEnabledVolumeKey: Swift.Bool)
+    case setResizeMode(ShopliveSDKCommon.ShopLiveResizeMode)
+  }
+  public enum Result {
+    case log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaignKey: Swift.String, payload: [Swift.String : Any]?)
+    case handleReceivedCommand(command: Swift.String, payload: [Swift.String : Any]?)
+    case avPlayerTimeControlStatus(AVFoundation.AVPlayer.TimeControlStatus)
+    case avPlayerItemStatus(AVFoundation.AVPlayerItem.Status)
+    case requestShowAlertController(UIKit.UIAlertController)
+    case didChangeCampaignStatus(ShopLiveSDK.ShopLiveCampaignStatus)
+    case onError(code: Swift.String, message: Swift.String)
+    case handleCommand(command: Swift.String, payload: Any?)
+    case onSetUserName(payload: [Swift.String : Any])
+    case handleShare(data: ShopLiveSDK.ShopLivePlayerShareData)
+    case didChangeCampaignInfo([Swift.String : Any])
+    case didChangeVideoDimension(CoreFoundation.CGSize)
+    case handleShopLivePlayerCampaign(ShopLiveSDK.ShopLivePlayerCampaign)
+    case handleShopLivePlayeBrand(ShopLiveSDK.ShopLivePlayerBrand)
+  }
+  @_Concurrency.MainActor(unsafe) public var resultHandler: ((ShopLiveSDK.ShopLivePlayerPreview.Result) -> ())?
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) public func action(_ action: ShopLiveSDK.ShopLivePlayerPreview.Action)
+}
+extension ShopLiveSDK.ShopLivePlayerPreview {
+  @_Concurrency.MainActor(unsafe) public func isPlaying() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isMuted() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func getPlayerItemStatus() -> AVFoundation.AVPlayerItem.Status?
+}
+extension ShopLiveSDK.ShopLivePlayerPreview : WebKit.WKUIDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ShopliveWindow : ShopLiveSDK.SLWindow {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func addSubview(_ view: UIKit.UIView)
   @_Concurrency.MainActor(unsafe) public func forceAddSubView(_ view: UIKit.UIView)
@@ -429,6 +495,20 @@ extension ShopLiveSDK.ReachabilityStatus {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
+}
+public enum ShopLiveCampaignStatus : Swift.String, Swift.CaseIterable {
+  case ready
+  case onair
+  case close
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ShopLiveSDK.ShopLiveCampaignStatus]
+  public typealias RawValue = Swift.String
+  public static var allCases: [ShopLiveSDK.ShopLiveCampaignStatus] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLive : ObjectiveC.NSObject {
   @objc deinit
@@ -610,6 +690,7 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func addSubViewToPreview(subView: UIKit.UIView)
   @objc public static func getPreviewSize(inAppPipConfiguration: ShopLiveSDK.ShopLiveInAppPipConfiguration, videoRatio: CoreFoundation.CGSize) -> CoreFoundation.CGSize
   @objc public static func setResizeMode(mode: ShopliveSDKCommon.ShopLiveResizeMode)
+  @objc public static func forceStartWithPortraitMode(_ isForced: Swift.Bool)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLWindow : UIKit.UIWindow {
   @available(iOS 13.0, *)
@@ -824,6 +905,13 @@ extension ShopLiveSDK.ActionType : Swift.Hashable {}
 extension ShopLiveSDK.ActionType : Swift.RawRepresentable {}
 extension ShopLiveSDK.ReachabilityType : Swift.Equatable {}
 extension ShopLiveSDK.ReachabilityType : Swift.Hashable {}
+extension ShopLiveSDK.DedicatedWebViewCommandCompletionType : Swift.Equatable {}
+extension ShopLiveSDK.DedicatedWebViewCommandCompletionType : Swift.Hashable {}
+extension ShopLiveSDK.ShopLivePlayerControlAction : Swift.Equatable {}
+extension ShopLiveSDK.ShopLivePlayerControlAction : Swift.Hashable {}
+extension ShopLiveSDK.ShopLiveCampaignStatus : Swift.Equatable {}
+extension ShopLiveSDK.ShopLiveCampaignStatus : Swift.Hashable {}
+extension ShopLiveSDK.ShopLiveCampaignStatus : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PlayerMode : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PlayerMode : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PlayerMode : Swift.RawRepresentable {}
