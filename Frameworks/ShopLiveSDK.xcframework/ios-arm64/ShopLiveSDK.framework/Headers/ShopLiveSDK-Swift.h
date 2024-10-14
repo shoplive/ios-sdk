@@ -886,6 +886,11 @@ SWIFT_CLASS("_TtC11ShopLiveSDK21ShopLivePlayerPreview")
 
 
 
+typedef SWIFT_ENUM(NSInteger, ShopLivePlayerPreviewResolution, open) {
+  ShopLivePlayerPreviewResolutionLIVE = 1,
+  ShopLivePlayerPreviewResolutionPREVIEW = 2,
+};
+
 
 SWIFT_CLASS("_TtC11ShopLiveSDK27ShopLivePlayerShareCampaign")
 @interface ShopLivePlayerShareCampaign : NSObject

@@ -205,7 +205,8 @@ extension Foundation.NotificationCenter {
 }
 @objc public class ShopLivePreviewData : ShopLiveSDK.ShopLivePlayerData {
   public var isMuted: Swift.Bool?
-  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, isEnabledVolumeKey: Swift.Bool = false, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
+  public var previewResolution: ShopLiveSDK.ShopLivePlayerPreviewResolution
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, isEnabledVolumeKey: Swift.Bool = false, resolution: ShopLiveSDK.ShopLivePlayerPreviewResolution?, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
   @objc deinit
 }
 @objc public enum ShopLiveViewTrackEvent : Swift.Int, Swift.CaseIterable {
@@ -422,6 +423,15 @@ public enum ReachabilityStatus : Swift.CustomStringConvertible, Swift.Equatable 
 extension ShopLiveSDK.ReachabilityStatus {
   public init(reachabilityFlags flags: SystemConfiguration.SCNetworkReachabilityFlags)
 }
+@objc public enum ShopLivePlayerPreviewResolution : Swift.Int {
+  case LIVE = 1
+  case PREVIEW = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public enum DedicatedWebViewCommandCompletionType {
   case isMuted
   public static func == (a: ShopLiveSDK.DedicatedWebViewCommandCompletionType, b: ShopLiveSDK.DedicatedWebViewCommandCompletionType) -> Swift.Bool
@@ -447,6 +457,7 @@ public enum ShopLivePlayerControlAction {
     case start(accessKey: Swift.String, campaignKey: Swift.String, referrer: Swift.String?)
     case setMuted(Swift.Bool)
     case setReferrer(Swift.String?)
+    case setResolutionType(ShopLiveSDK.ShopLivePlayerPreviewResolution)
     case play
     case pause
     case stop
@@ -471,7 +482,7 @@ public enum ShopLivePlayerControlAction {
     case didChangeCampaignInfo([Swift.String : Any])
     case didChangeVideoDimension(CoreFoundation.CGSize)
     case handleShopLivePlayerCampaign(ShopLiveSDK.ShopLivePlayerCampaign)
-    case handleShopLivePlayeBrand(ShopLiveSDK.ShopLivePlayerBrand)
+    case handleShopLivePlayerBrand(ShopLiveSDK.ShopLivePlayerBrand)
   }
   @_Concurrency.MainActor(unsafe) public var resultHandler: ((ShopLiveSDK.ShopLivePlayerPreview.Result) -> ())?
   @objc deinit
@@ -905,6 +916,9 @@ extension ShopLiveSDK.ActionType : Swift.Hashable {}
 extension ShopLiveSDK.ActionType : Swift.RawRepresentable {}
 extension ShopLiveSDK.ReachabilityType : Swift.Equatable {}
 extension ShopLiveSDK.ReachabilityType : Swift.Hashable {}
+extension ShopLiveSDK.ShopLivePlayerPreviewResolution : Swift.Equatable {}
+extension ShopLiveSDK.ShopLivePlayerPreviewResolution : Swift.Hashable {}
+extension ShopLiveSDK.ShopLivePlayerPreviewResolution : Swift.RawRepresentable {}
 extension ShopLiveSDK.DedicatedWebViewCommandCompletionType : Swift.Equatable {}
 extension ShopLiveSDK.DedicatedWebViewCommandCompletionType : Swift.Hashable {}
 extension ShopLiveSDK.ShopLivePlayerControlAction : Swift.Equatable {}
