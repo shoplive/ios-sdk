@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFAudio
@@ -25,27 +25,21 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
-public enum ShopLiveSDKAsset {
+public enum ShopLiveSDKAsset : Swift.Sendable {
   public static let closebutton: ShopLiveSDK.ShopLiveSDKImages
 }
-public struct ShopLiveSDKImages {
-  public var name: Swift.String {
-    get
-  }
+public struct ShopLiveSDKImages : Swift.Sendable {
+  public let name: Swift.String
   public typealias Image = UIKit.UIImage
   public var image: ShopLiveSDK.ShopLiveSDKImages.Image {
     get
   }
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, xrOS 1.0, *)
   public var swiftUIImage: SwiftUI.Image {
     get
   }
 }
-extension UIKit.UIImage {
-  @available(macOS, deprecated, message: "This initializer is unsafe on macOS, please use the ShopLiveSDKImages.image property")
-  convenience public init?(asset: ShopLiveSDK.ShopLiveSDKImages)
-}
-@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, xrOS 1.0, *)
 extension SwiftUI.Image {
   public init(asset: ShopLiveSDK.ShopLiveSDKImages)
   public init(asset: ShopLiveSDK.ShopLiveSDKImages, label: SwiftUI.Text)
@@ -58,16 +52,16 @@ extension SwiftUI.Image {
   @objc override dynamic public init()
   @objc deinit
 }
-public enum ShopLiveSDKStrings {
-  public enum Chat {
+public enum ShopLiveSDKStrings : Swift.Sendable {
+  public enum Chat : Swift.Sendable {
     public static let placeholder: Swift.String
-    public enum Send {
+    public enum Send : Swift.Sendable {
       public static let title: Swift.String
     }
   }
-  public enum Share {
-    public enum Url {
-      public enum Empty {
+  public enum Share : Swift.Sendable {
+    public enum Url : Swift.Sendable {
+      public enum Empty : Swift.Sendable {
         public static let error: Swift.String
         public static let message: Swift.String
       }
@@ -592,6 +586,7 @@ extension ShopLiveSDK.ShopLive {
   @available(iOS, deprecated, message: "Will be deprecated soon please Enable AppTrackingTransparency instead")
   @objc public static func setAdId(adId: Swift.String?)
   @objc public static func setMixWithOthers(isMixAudio: Swift.Bool)
+  @objc public static func setAudioSessionCategory(category: AVFAudio.AVAudioSession.Category)
   @available(iOS, deprecated, message: "Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead")
   @objc public static func useCloseButton(_ use: Swift.Bool)
   @objc public static func awakePlayer()
