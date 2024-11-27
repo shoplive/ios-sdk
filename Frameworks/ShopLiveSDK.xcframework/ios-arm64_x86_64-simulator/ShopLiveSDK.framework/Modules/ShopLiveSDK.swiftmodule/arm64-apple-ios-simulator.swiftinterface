@@ -448,6 +448,7 @@ public enum ShopLivePlayerControlAction {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ShopLivePlayerPreview : UIKit.UIView, ShopliveSDKCommon.SLReactor {
   public enum Action {
     case initialize
+    case setIndex(Foundation.IndexPath)
     case start(accessKey: Swift.String, campaignKey: Swift.String, referrer: Swift.String?)
     case setMuted(Swift.Bool)
     case setReferrer(Swift.String?)
