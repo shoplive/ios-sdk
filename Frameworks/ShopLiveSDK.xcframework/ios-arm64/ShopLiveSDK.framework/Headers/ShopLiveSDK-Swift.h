@@ -392,13 +392,6 @@ SWIFT_CLASS("_TtC11ShopLiveSDK17SLAlertController")
 - (void)showDetailViewController:(UIViewController * _Nonnull)vc sender:(id _Nullable)sender;
 @end
 
-
-SWIFT_CLASS("_TtC11ShopLiveSDK8SLButton")
-@interface SLButton : UIButton
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UICollectionViewLayout;
 
 SWIFT_CLASS("_TtC11ShopLiveSDK16SLCollectionView")
@@ -420,13 +413,6 @@ SWIFT_CLASS("_TtC11ShopLiveSDK11SLImageView")
 @interface SLImageView : UIImageView
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC11ShopLiveSDK7SLLabel")
-@interface SLLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
