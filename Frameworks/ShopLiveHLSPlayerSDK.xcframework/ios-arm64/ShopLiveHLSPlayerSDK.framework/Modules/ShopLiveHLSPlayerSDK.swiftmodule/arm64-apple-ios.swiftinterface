@@ -1,0 +1,217 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ShopLiveHLSPlayerSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVKit
+import CoreVideo
+import DeveloperToolsSupport
+import Foundation
+import MediaPlayer
+import ShopLiveCorePlayerSDK
+import ShopliveSDKCommon
+import Swift
+import SwiftUI
+import UIKit
+import VideoToolbox
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ShopLiveHLSPlayerSDKAsset : Swift.Sendable {
+  public static let closebutton: ShopLiveHLSPlayerSDK.ShopLiveHLSPlayerSDKImages
+}
+public struct ShopLiveHLSPlayerSDKImages : Swift.Sendable {
+  public let name: Swift.String
+  public typealias Image = UIKit.UIImage
+  public var image: ShopLiveHLSPlayerSDK.ShopLiveHLSPlayerSDKImages.Image {
+    get
+  }
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+  public var swiftUIImage: SwiftUICore.Image {
+    get
+  }
+}
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+extension SwiftUICore.Image {
+  public init(asset: ShopLiveHLSPlayerSDK.ShopLiveHLSPlayerSDKImages)
+  public init(asset: ShopLiveHLSPlayerSDK.ShopLiveHLSPlayerSDKImages, label: SwiftUICore.Text)
+  public init(decorative asset: ShopLiveHLSPlayerSDK.ShopLiveHLSPlayerSDKImages)
+}
+@_inheritsConvenienceInitializers @objc public class ShopLiveHLSPlayerSDKResources : ObjectiveC.NSObject {
+  @objc public class var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ShopLiveHLSPlayerSDKStrings : Swift.Sendable {
+  public enum Chat : Swift.Sendable {
+    public static let placeholder: Swift.String
+    public enum Send : Swift.Sendable {
+      public static let title: Swift.String
+    }
+  }
+  public enum Share : Swift.Sendable {
+    public enum Url : Swift.Sendable {
+      public enum Empty : Swift.Sendable {
+        public static let error: Swift.String
+        public static let message: Swift.String
+      }
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ShopLiveHLSPlayerView : UIKit.UIView, ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewInterface, ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewInterface {
+  @_Concurrency.MainActor @preconcurrency public var hlsResultHandler: ((ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewResult) -> ())?
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewResult) -> ())?
+  @_Concurrency.MainActor @preconcurrency public func hlsAction(_ action: ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewAction)
+  @_Concurrency.MainActor @preconcurrency public func getAVPlayer() -> AVFoundation.AVPlayer?
+  @_Concurrency.MainActor @preconcurrency public func getPlayerLayer() -> AVFoundation.AVPlayerLayer?
+  @_Concurrency.MainActor @preconcurrency public var rtcResultHanlder: ((ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewResult) -> ())?
+  @_Concurrency.MainActor @preconcurrency public func rtcAction(_ action: ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewAction)
+  @_Concurrency.MainActor @preconcurrency public func getOsDisplayLayer() -> AVFoundation.AVSampleBufferDisplayLayer?
+  @_Concurrency.MainActor @preconcurrency public func getInAppDisplayLayerVideoGravity() -> AVFoundation.AVLayerVideoGravity?
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HLSInternalPlayerViewModel : ShopLiveCorePlayerSDK.ShopLiveBasePlayerViewModel {
+  @objc deinit
+  override public func onRetryOnNetworkDisConnect()
+  override public func onResetCampaignState()
+  override public func onSetCampaignStatus(status: ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus)
+  override public func onSetAVPlayer(player: AVFoundation.AVPlayer?)
+  override public func onSetAVPlayerLayer(layer: AVFoundation.AVPlayerLayer?)
+  override public func onSetIsReplayMode()
+  override public func onSetSoundMuteStateOnWebViewSetConf()
+  override public func onSetSoundMute(isMuted: Swift.Bool, needToSendToWeb: Swift.Bool)
+  override public func onSetIsLLHLS(isLLHLS: Swift.Bool)
+  override public func onSetNeedSeek(needSeek: Swift.Bool)
+  override public func onSetNeedReload(needReload: Swift.Bool)
+  override public func onSetPreviewURL(url: Foundation.URL?)
+  override public func onSetLiveUrl(url: Foundation.URL?)
+  override public func onSetSdkClientSettingsFromWeb(setting: [Swift.String : Any]?)
+  override public func onSetIsActivated(isActivated: Swift.Bool)
+  override public func onCheckIsLoadingAvailable(isHidden: Swift.Bool)
+  override public func onCheckIfSnapShotImageFrameNeedReCalculation()
+  override public func onReloadVideo()
+  override public func onSeekTo(time: CoreMedia.CMTime)
+  override public func onSeekToLatest()
+  override public func onDidUpdateVideoUrl(url: Foundation.URL)
+  override public func onRequestTakeSnapshot()
+  override public func onRequestTakeSnapShotWithCompletion(completion: (() -> ())?)
+  override public func onUpdatePlayBackSpeed(rate: Swift.Float)
+  override public func onResetRetryFromWebview()
+  override public func onResetPlayer()
+  override public func onDidStopOsPip()
+  override public func onInitPlayer(url: Foundation.URL?)
+  override public func onTearDownViewModel()
+  override public func onAudioSessionObserverSetIsMuted(isMuted: Swift.Bool)
+  override public func onPlayControlDidChangePlayControl(playControl: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  override public func getPlayer() -> AVFoundation.AVPlayer?
+  override public func getPlayerItem() -> AVFoundation.AVPlayerItem?
+  override public func getIsReplayMode() -> Swift.Bool
+  override public func getNeedSeek() -> Swift.Bool
+  override public func getTimeControlStatus() -> AVFoundation.AVPlayer.TimeControlStatus
+  override public func getVideoDuration() -> CoreMedia.CMTime?
+  override public func getIsReplayFinished() -> Swift.Bool
+}
+extension ShopLiveHLSPlayerSDK.HLSInternalPlayerViewModel : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
+  @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
+}
+extension ShopLiveHLSPlayerSDK.ShopLivePlayerPreview : WebKit.WKUIDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ShopLivePlayerPreview : UIKit.UIView, ShopliveSDKCommon.SLReactor {
+  public enum Action {
+    case initialize
+    case start(accessKey: Swift.String, campaignKey: Swift.String, referrer: Swift.String?)
+    case setMuted(Swift.Bool)
+    case setReferrer(Swift.String?)
+    case setResolutionType(ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution)
+    case play
+    case pause
+    case stop
+    case close
+    case retry
+    case setCornerRadius(CoreFoundation.CGFloat)
+    case useCloseButton(Swift.Bool)
+    case setEnabledVolumeKey(isEnabledVolumeKey: Swift.Bool)
+    case setResizeMode(ShopliveSDKCommon.ShopLiveResizeMode)
+  }
+  public enum Result {
+    case log(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaignKey: Swift.String, payload: [Swift.String : Any]?)
+    case handleReceivedCommand(command: Swift.String, payload: [Swift.String : Any]?)
+    case avPlayerTimeControlStatus(AVFoundation.AVPlayer.TimeControlStatus)
+    case avPlayerItemStatus(AVFoundation.AVPlayerItem.Status)
+    case requestShowAlertController(UIKit.UIAlertController)
+    case didChangeCampaignStatus(ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus)
+    case onError(code: Swift.String, message: Swift.String)
+    case handleCommand(command: Swift.String, payload: Any?)
+    case onSetUserName(payload: [Swift.String : Any])
+    case handleShare(data: ShopLiveCorePlayerSDK.ShopLivePlayerShareData)
+    case didChangeCampaignInfo([Swift.String : Any])
+    case didChangeVideoDimension(CoreFoundation.CGSize)
+    case handleShopLivePlayerCampaign(ShopLiveCorePlayerSDK.ShopLivePlayerCampaign)
+    case handleShopLivePlayerBrand(ShopLiveCorePlayerSDK.ShopLivePlayerBrand)
+  }
+  @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveHLSPlayerSDK.ShopLivePlayerPreview.Result) -> ())?
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func action(_ action: ShopLiveHLSPlayerSDK.ShopLivePlayerPreview.Action)
+}
+extension ShopLiveHLSPlayerSDK.ShopLivePlayerPreview {
+  @_Concurrency.MainActor @preconcurrency public func isPlaying() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func isMuted() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getPlayerItemStatus() -> AVFoundation.AVPlayerItem.Status?
+}
+@_inheritsConvenienceInitializers @objc public class ShopLiveHLSPlayer : ObjectiveC.NSObject {
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc public static func getHLSPlayerView() -> ShopLiveHLSPlayerSDK.ShopLiveHLSPlayerView
+  @objc public static func getHLSPlayerViewModel(stateContainer: any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer) -> ObjectiveC.NSObject
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HLSPlayerViewModel : ShopLiveCorePlayerSDK.ShopLiveBasePlayerViewModel {
+  @objc deinit
+  override public func onRetryOnNetworkDisConnect()
+  override public func onResetCampaignState()
+  override public func onSetCampaignStatus(status: ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus)
+  override public func onSetAVPlayer(player: AVFoundation.AVPlayer?)
+  override public func onSetAVPlayerLayer(layer: AVFoundation.AVPlayerLayer?)
+  override public func onSetIsReplayMode()
+  override public func onSetSoundMuteStateOnWebViewSetConf()
+  override public func onSetSoundMute(isMuted: Swift.Bool, needToSendToWeb: Swift.Bool)
+  override public func onSetIsLLHLS(isLLHLS: Swift.Bool)
+  override public func onSetNeedSeek(needSeek: Swift.Bool)
+  override public func onSetNeedReload(needReload: Swift.Bool)
+  override public func onSetPreviewURL(url: Foundation.URL?)
+  override public func onSetLiveUrl(url: Foundation.URL?)
+  override public func onSetSdkClientSettingsFromWeb(setting: [Swift.String : Any]?)
+  override public func onCheckIsLoadingAvailable(isHidden: Swift.Bool)
+  override public func onCheckIfSnapShotImageFrameNeedReCalculation()
+  override public func onReloadVideo()
+  override public func onSeekTo(time: CoreMedia.CMTime)
+  override public func onSeekToLatest()
+  override public func onDidUpdateVideoUrl(url: Foundation.URL)
+  override public func onRequestTakeSnapshot()
+  override public func onRequestTakeSnapShotWithCompletion(completion: (() -> ())?)
+  override public func onUpdatePlayBackSpeed(rate: Swift.Float)
+  override public func onResetRetryFromWebview()
+  override public func onResetPlayer()
+  override public func onDidStopOsPip()
+  override public func onInitPlayer(url: Foundation.URL?)
+  override public func onTearDownViewModel()
+  override public func onAudioSessionObserverSetIsMuted(isMuted: Swift.Bool)
+  override public func onPlayControlDidChangePlayControl(playControl: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  override public func getPlayer() -> AVFoundation.AVPlayer?
+  override public func getPlayerItem() -> AVFoundation.AVPlayerItem?
+  override public func getIsReplayMode() -> Swift.Bool
+  override public func getNeedSeek() -> Swift.Bool
+  override public func getTimeControlStatus() -> AVFoundation.AVPlayer.TimeControlStatus
+  override public func getVideoDuration() -> CoreMedia.CMTime?
+  override public func getIsReplayFinished() -> Swift.Bool
+}
+extension ShopLiveHLSPlayerSDK.HLSPlayerViewModel : AVFoundation.AVPlayerItemMetadataOutputPushDelegate {
+  @objc dynamic public func metadataOutput(_ output: AVFoundation.AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVFoundation.AVTimedMetadataGroup], from track: AVFoundation.AVPlayerItemTrack?)
+}

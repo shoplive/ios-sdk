@@ -1,0 +1,4 @@
+framework module ShopLiveWebRTCPlayerSDK {
+  header "ShopLiveWebRTCPlayerSDK-Swift.h"
+  requires objc
+}

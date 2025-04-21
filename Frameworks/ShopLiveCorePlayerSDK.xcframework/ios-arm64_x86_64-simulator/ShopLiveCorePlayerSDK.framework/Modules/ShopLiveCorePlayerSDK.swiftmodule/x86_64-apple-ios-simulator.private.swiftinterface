@@ -1,0 +1,2263 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ShopLiveCorePlayerSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFAudio
+import AVKit
+import DeveloperToolsSupport
+import Foundation
+import MediaPlayer
+import ShopliveSDKCommon
+import Swift
+import SwiftUI
+import UIKit
+import VideoToolbox
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ShopLiveCorePlayerSDKAsset : Swift.Sendable {
+  public static let closebutton: ShopLiveCorePlayerSDK.ShopLiveCorePlayerSDKImages
+}
+public struct ShopLiveCorePlayerSDKImages : Swift.Sendable {
+  public let name: Swift.String
+  public typealias Image = UIKit.UIImage
+  public var image: ShopLiveCorePlayerSDK.ShopLiveCorePlayerSDKImages.Image {
+    get
+  }
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+  public var swiftUIImage: SwiftUICore.Image {
+    get
+  }
+}
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+extension SwiftUICore.Image {
+  public init(asset: ShopLiveCorePlayerSDK.ShopLiveCorePlayerSDKImages)
+  public init(asset: ShopLiveCorePlayerSDK.ShopLiveCorePlayerSDKImages, label: SwiftUICore.Text)
+  public init(decorative asset: ShopLiveCorePlayerSDK.ShopLiveCorePlayerSDKImages)
+}
+@_inheritsConvenienceInitializers @objc public class ShopLiveCorePlayerSDKResources : ObjectiveC.NSObject {
+  @objc public class var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ShopLiveCorePlayerSDKStrings : Swift.Sendable {
+  public enum Chat : Swift.Sendable {
+    public static let placeholder: Swift.String
+    public enum Send : Swift.Sendable {
+      public static let title: Swift.String
+    }
+  }
+  public enum Share : Swift.Sendable {
+    public enum Url : Swift.Sendable {
+      public enum Empty : Swift.Sendable {
+        public static let error: Swift.String
+        public static let message: Swift.String
+      }
+    }
+  }
+}
+public struct RTCDiscoveryModel : ShopliveSDKCommon.ShopLiveBaseResponsable {
+  public var _s: Swift.Int?
+  public var _e: Swift.String?
+  public let `protocol`: Swift.String?
+  public let masterLiveUrl: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct RTCDiscoveryAPI : ShopliveSDKCommon.ShopLiveAPIDefinition {
+  public typealias ResultType = ShopLiveCorePlayerSDK.RTCDiscoveryModel
+  public init(rtcDiscoveryUrl: Swift.String)
+  public var baseUrl: Swift.String {
+    get
+  }
+  public var urlPath: Swift.String {
+    get
+  }
+  public var method: ShopliveSDKCommon.ShopLiveHTTPMethod {
+    get
+  }
+}
+@objc @_Concurrency.MainActor @preconcurrency open class ShopLiveBasePlayerViewController : ShopliveSDKCommon.SLViewController, ShopLiveCorePlayerSDK.ShopLivePlayerViewControllerInterface, ShopLiveCorePlayerSDK.ShopLivePlayerViewModelDelegate {
+  @_Concurrency.MainActor @preconcurrency public var overlayView: ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView?
+  @_Concurrency.MainActor @preconcurrency public var backgroundPosterImageWebView: ShopliveSDKCommon.SLWKWebView?
+  @_Concurrency.MainActor @preconcurrency public var snapShotImageView: ShopliveSDKCommon.SLImageView?
+  @_Concurrency.MainActor @preconcurrency public var playerView: (any ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewInterface & ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewInterface)?
+  @_Concurrency.MainActor @preconcurrency public var playerTopConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor @preconcurrency public var playerLeadingConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor @preconcurrency public var playerRightConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor @preconcurrency public var playerBottomConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor @preconcurrency public var posterTopContraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var posterLeftContraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var posterRightContraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var posterBottomContraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var snapShotWidthAnc: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var snapShotheightAnc: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var inAppPipView: ShopliveSDKCommon.SLView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var pipDimLayer: QuartzCore.CAGradientLayer {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var inAppPipDim: ShopliveSDKCommon.SLLabel {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var closeButton: ShopliveSDKCommon.SLButton {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var indicatorView: ShopliveSDKCommon.SLActivityIndicatorView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var customIndicator: ShopLiveCorePlayerSDK.SLLoadingIndicator {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var chatInputView: ShopLiveCorePlayerSDK.ShopLiveChattingWriteView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var chatInputBG: ShopliveSDKCommon.SLView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var closeButtonTopConstraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var closeButtonLeadingConstraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency weak public var popoverController: UIKit.UIPopoverPresentationController?
+  @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerViewControllerResult) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var webViewConfiguration: WebKit.WKWebViewConfiguration?
+  @_Concurrency.MainActor @preconcurrency public var stateContainer: any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer
+  @_Concurrency.MainActor @preconcurrency open var viewModel: any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface
+  @_Concurrency.MainActor @preconcurrency required public init(playerView: any ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewInterface & ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewInterface, viewModel: any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface, stateContainer: any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLayoutSubviews()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerViewControllerAction)
+  @_Concurrency.MainActor @preconcurrency public func eventTrace(_ event: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction)
+  @_Concurrency.MainActor @preconcurrency public func appLifeCycle(_ event: ShopLiveCorePlayerSDK.ShopLiveAppLifeCycleAction)
+  @_Concurrency.MainActor @preconcurrency public func bindViewModel()
+}
+extension ShopLiveCorePlayerSDK.ShopLiveBasePlayerViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+}
+extension ShopLiveCorePlayerSDK.ShopLiveBasePlayerViewController {
+  @_Concurrency.MainActor @preconcurrency public func getPipSwipeOutEnabled() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getPipPosition() -> ShopLiveCorePlayerSDK.ShopLivePipPosition
+  @_Concurrency.MainActor @preconcurrency public func getAllowedPipPinPositions() -> [ShopLiveCorePlayerSDK.ShopLivePipPosition]
+  @_Concurrency.MainActor @preconcurrency public func getEstimatedPlayerFrameForFullScreenInitialize() -> CoreFoundation.CGRect?
+  @_Concurrency.MainActor @preconcurrency public func getPlayerLayer() -> AVFoundation.AVPlayerLayer?
+  @_Concurrency.MainActor @preconcurrency public func getPlayerSampleBufferLayer() -> AVFoundation.AVSampleBufferDisplayLayer?
+  @_Concurrency.MainActor @preconcurrency public func getPlayerTimeControlStatus() -> AVFoundation.AVPlayer.TimeControlStatus
+  @_Concurrency.MainActor @preconcurrency public func getIsReplayMode() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getCampaignKey() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public func getVideoExpanded() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getVideoFrame() -> (portrait: CoreFoundation.CGRect?, landscape: (expanded: CoreFoundation.CGRect?, standard: CoreFoundation.CGRect?))
+  @_Concurrency.MainActor @preconcurrency public func getNeedForceSetVideoPositionUpdate() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getSupportOrientation() -> ShopLiveCorePlayerSDK.ShopLiveVideoOrientation
+  @_Concurrency.MainActor @preconcurrency public func getIsSuccessCampaignJoin() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getVideoCenterCrop() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getVideoRatio() -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency public func getVideoOrientation() -> ShopLiveCorePlayerSDK.ShopLiveOrientation
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func getCurrentWebViewUrl() -> Foundation.URL?
+  @_Concurrency.MainActor @preconcurrency public func getPreviewResolution() -> ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution
+}
+extension ShopLiveCorePlayerSDK.ShopLiveBasePlayerViewController : ShopLiveCorePlayerSDK.ShopLiveChattingWriteDelegate {
+  @_Concurrency.MainActor @preconcurrency public func didTouchSendButton()
+  @_Concurrency.MainActor @preconcurrency public func updateHeight()
+}
+extension ShopLiveCorePlayerSDK.ShopLiveBasePlayerViewController : WebKit.WKUIDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
+}
+public enum ShopLivePlayerAudioSessionAction {
+  case setSoundMuteStateOnFirstPlay
+  case cleanUpMemory
+  public static func == (a: ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionAction, b: ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShoplivePlayerAudioSessionStateAction {
+  case setStateContainer((any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?)
+}
+public enum ShopLivePlayerAudioSessionResult {
+  case log(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, payload: [Swift.String : Any])
+  case setIsMuted(isMuted: Swift.Bool)
+  case sendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool, dedicatedCompletionType: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType?)
+  case sendCommandToWeb(command: Swift.String, payload: [Swift.String : Any])
+}
+public protocol ShopLivePlayerAudioSessionManger {
+  func stateAction(_ action: ShopLiveCorePlayerSDK.ShoplivePlayerAudioSessionStateAction)
+  func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionAction)
+  var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionResult) -> ())? { get set }
+}
+@objc @_inheritsConvenienceInitializers open class ShopLivePlayerAudioSessionManagerImpl : ObjectiveC.NSObject, ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionManger {
+  weak public var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?
+  public var audioSessionObservationInfo: Swift.UnsafeMutableRawPointer?
+  public var audioLevel: Swift.Float
+  public var voiceOverIsOn: Swift.Bool
+  public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionResult) -> ())?
+  @objc deinit
+  public func stateAction(_ action: ShopLiveCorePlayerSDK.ShoplivePlayerAudioSessionStateAction)
+  public func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionAction)
+  open func onSetSoundMuteStateOnFirtPlay()
+  open func onCleanUpMemory()
+  open func addObserver()
+  open func removeObserver()
+  @objc public func voiceOverStatusChanged()
+  @objc open func handleInterruption(notification: Foundation.Notification)
+  @objc open func audioRouteChangeListener(notification: Foundation.NSNotification)
+  open func updateHeadPhoneStatus(plugged: Swift.Bool)
+  @objc override dynamic public init()
+}
+public enum ShopLivePlayerEventTraceAction {
+  case detailShow
+  case detailDismiss
+  case previewShow
+  case previewDismiss
+  case previewClickDetail
+  case playerToPipMode
+  case pipToPlayerMode
+  public static func == (a: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction, b: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLivePlayerEventTraceStateAction {
+  case setCampaignId(Swift.String?)
+  case setShopLiveSessionId(Swift.String?)
+  case setStreamActivityType(ShopLiveCorePlayerSDK.ShopLiveStreamActivityType)
+  case setStreamEdgeType(Swift.String?)
+}
+public protocol ShopLivePlayerEventTraceManager2 {
+  func eventTraceAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction)
+  func stateAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceStateAction)
+}
+@objc @_inheritsConvenienceInitializers public class ShopLivePlayerEventTraceManagerImpl : ObjectiveC.NSObject, ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManager2 {
+  public enum PipType : Swift.String {
+    case OS
+    case APP
+    case WEB
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum EventName : Swift.String {
+    case previewShow
+    case previewDismiss
+    case previewClickDetail
+    case pipClickDetail
+    case playerToPipMode
+    case pipToPlayerMode
+    case detailOnSdkPlayerShow
+    case detailOnSdkPlayerDismiss
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum EventCategory : Swift.String {
+    case preview
+    case pip
+    case detail
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum EventType : Swift.String {
+    case system
+    case user
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc deinit
+  public func stateAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceStateAction)
+  @objc override dynamic public init()
+}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl {
+  public func eventTraceAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction)
+}
+public enum ShopLivePlayerOverlayWebViewNavigationAction {
+  case didCommit(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation)
+  case didStartProvisionalNavigation(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation)
+  case didFinish(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation)
+  case didFail(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation, error: any Swift.Error)
+  case didFailProvisionalNavigation(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation, error: any Swift.Error)
+  case didTerminate(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?)
+}
+public enum ShopLivePlayerOverlayWebViewNavigationStateAction {
+  case setStateContainer((any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?)
+}
+public enum ShopLivePlayerOverlayWebViewNavigationResult {
+  case retryOnNetworkDisConnect
+  case setWebViewLoadingCompleted(isCompleted: Swift.Bool)
+  case reloadOverlayWebView
+}
+public protocol ShopLivePlayerOverlayWebViewNavigationManager {
+  var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)? { get set }
+  var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationResult) -> ())? { get set }
+  func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationAction)
+  func stateAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationStateAction)
+}
+@objc @_inheritsConvenienceInitializers open class ShopLivePlayerOverlayWebViewNavigationManagerImpl : ObjectiveC.NSObject, ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationManager {
+  weak public var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?
+  public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationResult) -> ())?
+  @objc deinit
+  public func stateAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationStateAction)
+  public func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationAction)
+  open func onDidCommit(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation)
+  open func onDidStartProvisionalNavigation(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation)
+  open func onDidFinish(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation)
+  open func onDidFail(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation, error: any Swift.Error)
+  open func onDidFailProvisionalNavigation(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, navigation: WebKit.WKNavigation, error: any Swift.Error)
+  open func onDidTerminate(webView: ShopLiveCorePlayerSDK.ShopLiveWebView?)
+  @objc override dynamic public init()
+}
+public enum ShopLivePlayerControlAction {
+  case play
+  case pause
+  case stop
+  case resume
+  case none
+  public static func == (a: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction, b: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLivePlayerPlayControlStateAction {
+  case setStateContainer((any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?)
+}
+public enum ShopLivePlayerPlayControlResult {
+  case sendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool = false, dedicatedCompletionType: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType?)
+  case didChangePlayControl(ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+}
+public protocol ShopLivePlayerPlayControlManager {
+  var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)? { get set }
+  var playControl: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction { get set }
+  var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerPlayControlResult) -> ())? { get set }
+  func playerControlAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  func stateAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerPlayControlStateAction)
+  func getPlayControl() -> ShopLiveCorePlayerSDK.ShopLivePlayerControlAction
+}
+@objc @_inheritsConvenienceInitializers open class ShopLivePlayerPlayControlManagerImpl : ObjectiveC.NSObject, ShopLiveCorePlayerSDK.ShopLivePlayerPlayControlManager {
+  weak public var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?
+  public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerPlayControlResult) -> ())?
+  public var playControl: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction
+  @objc deinit
+  public func stateAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerPlayControlStateAction)
+  public func playerControlAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  open func play()
+  open func pause()
+  open func resume()
+  open func stop()
+  open func none()
+  public func getPlayControl() -> ShopLiveCorePlayerSDK.ShopLivePlayerControlAction
+  @objc override dynamic public init()
+}
+public enum ShoplivePlayerAppLifeCycleStateAction {
+  case setStateContainer((any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?)
+  case setIsOsPipFailedHasOccured(Swift.Bool)
+}
+public enum ShopliveAppLifeCycleResult {
+  case requestShowOrHideOSPictureInPicture(needToShow: Swift.Bool)
+  case requestSetShopLivePlayerSessionState(ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  case requestPlayerActionControl(ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  case requestRefreshAvPlayerLayerWhenOSPipFailedAndOnForeground
+  case requestResetOSPictureInPicture
+  case requestSetOsPipFailedHasOccured(hasOccured: Swift.Bool)
+  case sendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool = false, dedicatedCompletionType: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType?)
+}
+public protocol ShoplivePlayerAppLifeCycleManager {
+  var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)? { get set }
+  var isOsPipFailedHasOccured: Swift.Bool { get set }
+  var resultHandler: ((ShopLiveCorePlayerSDK.ShopliveAppLifeCycleResult) -> ())? { get set }
+  func stateAction(_ action: ShopLiveCorePlayerSDK.ShoplivePlayerAppLifeCycleStateAction)
+  func appLifeCyleAction(_ action: ShopLiveCorePlayerSDK.ShopLiveAppLifeCycleAction)
+}
+@objc @_inheritsConvenienceInitializers open class ShoplivePlayerAppLifeCycleManagerImpl : ObjectiveC.NSObject, ShopLiveCorePlayerSDK.ShoplivePlayerAppLifeCycleManager {
+  weak public var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?
+  public var isOsPipFailedHasOccured: Swift.Bool
+  public var resultHandler: ((ShopLiveCorePlayerSDK.ShopliveAppLifeCycleResult) -> ())?
+  @objc deinit
+  public func stateAction(_ action: ShopLiveCorePlayerSDK.ShoplivePlayerAppLifeCycleStateAction)
+  public func appLifeCyleAction(_ action: ShopLiveCorePlayerSDK.ShopLiveAppLifeCycleAction)
+  open func onAppDidBecomeActive()
+  open func onAppWillResignActive()
+  open func onAppDidEnterBackground(state: ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  open func onAppProtectedDataDidBecomeAvailable(state: ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  open func onAppProtectedDataWillBecomeUnavailable(state: ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  open func onAppWillEnterForeground()
+  @objc override dynamic public init()
+}
+@objc open class ShopLiveBasePlayerViewModel : ObjectiveC.NSObject, ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface, ShopLiveCorePlayerSDK.ShopLiveCampaignStateContainer, ShopLiveCorePlayerSDK.ShopLiveInternalPlayerViewCampaignStateContainer {
+  public var overlayUrl: Foundation.URL?
+  public var landingUrl: Foundation.URL?
+  weak public var inAppPipConfiguration: ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration?
+  public var lastPipPosition: ShopLiveCorePlayerSDK.ShopLivePipPosition?
+  public var isWebViewDidCompleteLoading: Swift.Bool
+  public var osPipFailedErrorHasOccured: Swift.Bool
+  public var currentNetworkCapability: Swift.String
+  public var isMuted: Swift.Bool {
+    get
+    set
+  }
+  public var playerConfiguration: ShopLiveCorePlayerSDK.ShopLivePlayerConfiguration
+  public var streamActivityType: ShopLiveCorePlayerSDK.ShopLiveStreamActivityType {
+    get
+    set
+  }
+  public var campaignId: Swift.String
+  public var shopliveSessionId: Swift.String?
+  public var streamEdgeType: Swift.String?
+  public var currentPlayTime: CoreMedia.CMTime?
+  public var currentPreviewResolution: ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution
+  public var customVideoResizeMode: ShopliveSDKCommon.ShopLiveResizeMode?
+  public var lastKeyboardHeight: CoreFoundation.CGFloat
+  public var hasKeyboard: Swift.Bool
+  public var isUpdatePictureInPictureNeedInSetConfInitialized: Swift.Bool
+  public var statusBarVisibility: Swift.Bool
+  public var forceStatusBarLightContent: Swift.Bool
+  public var campaignStatus: ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus
+  public var isLLHLS: Swift.Bool
+  public var currentStreamType: ShopLiveCorePlayerSDK.ShopLiveStreamType?
+  public var videoExpanded: Swift.Bool
+  public var videoFrame: (portrait: CoreFoundation.CGRect?, landscape: (expanded: CoreFoundation.CGRect?, standard: CoreFoundation.CGRect?))
+  public var needForceSetVideoPositionUpdate: Swift.Bool
+  public var supportOrientation: ShopLiveCorePlayerSDK.ShopLiveVideoOrientation
+  public var isSuccessCampaignJoin: Swift.Bool
+  public var campaignKey: Swift.String
+  public var _videoCenterCrop: Swift.Bool
+  public var _videoRatio: CoreFoundation.CGSize?
+  weak public var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?
+  public var isActivated: Swift.Bool
+  public var networkMonitor: ShopliveSDKCommon.NetworkMonitor?
+  open var eventTraceManager: (any ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManager2)?
+  open var playControlManager: (any ShopLiveCorePlayerSDK.ShopLivePlayerPlayControlManager)?
+  open var lifeCycleManager: (any ShopLiveCorePlayerSDK.ShoplivePlayerAppLifeCycleManager)?
+  open var audioSessionManager: (any ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionManger)?
+  open var wkNavigationManager: (any ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationManager)?
+  weak open var delegate: (any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelDelegate)?
+  public var resultHandler: ((ShopLiveCorePlayerSDK.ShoplivePlayerViewModelResult) -> ())?
+  public init(eventTraceManager: any ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManager2, playControlManager: any ShopLiveCorePlayerSDK.ShopLivePlayerPlayControlManager, lifeCycleManager: any ShopLiveCorePlayerSDK.ShoplivePlayerAppLifeCycleManager, audioSessionManager: any ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionManger, wkNavigationManager: any ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationManager, stateContainer: any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)
+  @objc deinit
+  public func action(_ action: ShopLiveCorePlayerSDK.ShoplivePlayerViewModelAction)
+  public func onInitViewModel()
+  public func onCopyAttributes(attributes: any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface)
+  public func onSetDelegate(delegate: (any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelDelegate)?)
+  public func onReloadOverlayWebView()
+  public func onLoadOverlayWebView()
+  open func onRetryOnNetworkDisConnect()
+  open func onDidStopOsPip()
+  open func onResetCampaignState()
+  public func onParseRatioStringAndSetData(ratio: Swift.String?)
+  public func onSetOverlayUrl(url: Foundation.URL?)
+  open func onSetSoundMuteStateOnWebViewSetConf()
+  open func onSetSoundMute(isMuted: Swift.Bool, needToSendToWeb: Swift.Bool)
+  public func onSetIsUpdatePictureInPictureNeedInSetConfInitialized(isNeeded: Swift.Bool)
+  public func onSetStreamEdgeType(type: Swift.String?)
+  public func onSetCampaignId(campaignId: Swift.String)
+  public func onSetCampaignKey(campaignKey: Swift.String)
+  open func onSetCampaignStatus(status: ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus)
+  public func onSetResizeMode(mode: ShopliveSDKCommon.ShopLiveResizeMode?)
+  public func onSetStreamActivityType(type: Swift.String)
+  public func onSetOsPipFailedHasOccured(hasOccured: Swift.Bool)
+  public func onSetPipPosition(pos: ShopLiveCorePlayerSDK.ShopLivePipPosition)
+  public func onSetEnableSwipeDown(isEnabled: Swift.Bool)
+  public func onSetWebViewLoadingCompleted(isCompleted: Swift.Bool)
+  public func onSetLastKeyboardHeight(height: CoreFoundation.CGFloat)
+  public func onSetHasKeyboard(hasKeyBoard: Swift.Bool)
+  public func onSetInAppPipConfiguration(pipConfig: ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration?)
+  public func onSetVideoExpanded(isExpanded: Swift.Bool)
+  public func onSetNeedForceSetVideoPositionUpdate(isForced: Swift.Bool)
+  public func onSetForceStatusBarLightContent(isForced: Swift.Bool)
+  public func onSetStatusBarVisibility(needToShow: Swift.Bool)
+  open func onSetSdkClientSettingsFromWeb(setting: [Swift.String : Any]?)
+  open func onSetIsActivated(isActivated: Swift.Bool)
+  public func onViewWillTransition(size: CoreFoundation.CGSize, coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  open func onCheckAndActivateAudioSessionIfNeeded()
+  open func onSetPlayerConfiguration(configuration: ShopLiveCorePlayerSDK.ShopLivePlayerConfiguration)
+  open func onTearDownViewModel()
+  public func onSetPreviewResolution(resolution: ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution)
+  open func onCheckIsLoadingAvailable(isHidden: Swift.Bool)
+  open func onCheckIfSnapShotImageFrameNeedReCalculation()
+  open func onReloadVideo()
+  open func onSeekTo(time: CoreMedia.CMTime)
+  open func onSeekToLatest()
+  open func onDidUpdateVideoUrl(url: Foundation.URL)
+  open func onRequestTakeSnapshot()
+  open func onRequestTakeSnapShotWithCompletion(completion: (() -> ())?)
+  open func onUpdatePlayBackSpeed(rate: Swift.Float)
+  open func onResetRetryFromWebview()
+  open func onResetPlayer()
+  open func onInitPlayer(url: Foundation.URL?)
+  open func onSetAVPlayer(player: AVFoundation.AVPlayer?)
+  open func onSetAVPlayerLayer(layer: AVFoundation.AVPlayerLayer?)
+  open func onSetIsReplayMode()
+  open func onSetIsLLHLS(isLLHLS: Swift.Bool)
+  open func onSetNeedSeek(needSeek: Swift.Bool)
+  open func onSetNeedReload(needReload: Swift.Bool)
+  open func onSetPreviewURL(url: Foundation.URL?)
+  open func onSetLiveUrl(url: Foundation.URL?)
+  open func onInitRtc(url: Foundation.URL?)
+  open func onSetRtcDiscoveryUrl(url: Foundation.URL?)
+  open func onSetRtcSignallingUrl(url: Foundation.URL?)
+  open func onRefreshRtcConnection()
+  open func onRequestShowOrHideLoadingView(needToShow: Swift.Bool)
+  open func onSetRtcResolution(resolution: Swift.String)
+  public func bindAudioSessionManger()
+  public func onAudioSessionObserverLog(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, payload: [Swift.String : Any]?)
+  public func onAudioSessionObserverSendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool, dedicatedCompletionType: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType?)
+  public func onAudioSessionObserverSendCommandToWeb(command: Swift.String, payload: [Swift.String : Any])
+  open func onAudioSessionObserverSetIsMuted(isMuted: Swift.Bool)
+  public func playerControlAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  public func bindPlayControlManager()
+  public func onPlayControlSendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool = false, dedicatedCompletionType: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType?)
+  open func onPlayControlDidChangePlayControl(playControl: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  public func eventTraceAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction)
+  public func lifeCycleAction(_ action: ShopLiveCorePlayerSDK.ShopLiveAppLifeCycleAction)
+  public func bindLifeCycleManager()
+  public func onLifeCycleManagerRequestPlayerActionControl(action: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  public func onLifeCycleManagerRequestRefreshAVPlayerLayerWhenOsPipFailedAndOnForeground()
+  public func onLifeCycleManagerRequestResetOsPictureInPicture()
+  public func onLifeCycleManagerRequestSetShopLivePlayerSessionState(state: ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  public func onLifeCycleManagerRequestSetOsPipFailedHasOccured(hasOccured: Swift.Bool)
+  public func onLifeCycleManagerRequestShowOrHideOsPictureInPicture(needToShow: Swift.Bool)
+  public func onlifeCycleManagerSendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool = false, dedicatedCompletionType: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType?)
+  public func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didCommit navigation: WebKit.WKNavigation!)
+  public func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  public func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didFinish navigation: WebKit.WKNavigation!)
+  public func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  public func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  public func webViewWebContentProcessDidTerminate(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?)
+  open func onNetworkMonitorCurrentNetworkCapabilityChangedToDisconnected()
+  public func getOverLayUrlWithInfosAttached() -> Foundation.URL?
+  public func getUseCloseBtnIsEnabled() -> Swift.Bool
+  public func getPipPosition() -> ShopLiveCorePlayerSDK.ShopLivePipPosition
+  public func getAllowedPipPinPositions() -> [ShopLiveCorePlayerSDK.ShopLivePipPosition]
+  public func getEnablePipSwipeOut() -> Swift.Bool
+  public func getPipCornerRadius() -> CoreFoundation.CGFloat
+  public func getIsUpdatePictureInPictureNeedInSetConfInitialized() -> Swift.Bool
+  public func getIsOsPipFailedHasOccured() -> Swift.Bool
+  public func getCurrentNetworkType() -> Swift.String
+  public func getStreamActivityType() -> ShopLiveCorePlayerSDK.ShopLiveStreamActivityType
+  public func getCampaignId() -> Swift.String
+  public func getCampaignKey() -> Swift.String
+  public func getResizeMode() -> ShopliveSDKCommon.ShopLiveResizeMode?
+  public func getEstimatedPlayerFrameForFullScreenOnInitialize() -> CoreFoundation.CGRect?
+  public func getShopLiveSessionId() -> Swift.String?
+  public func getSteamEdgeType() -> Swift.String?
+  public func getLastKeyBoardHeight() -> CoreFoundation.CGFloat
+  public func getHasKeyboard() -> Swift.Bool
+  public func getVideoExpanded() -> Swift.Bool
+  public func getVideoFrame() -> (portrait: CoreFoundation.CGRect?, landscape: (expanded: CoreFoundation.CGRect?, standard: CoreFoundation.CGRect?))
+  public func getNeedForceSetVideoPositionUpdate() -> Swift.Bool
+  public func getSupportOrientation() -> ShopLiveCorePlayerSDK.ShopLiveVideoOrientation
+  public func getIsSuccessCampaignJoin() -> Swift.Bool
+  public func getVideoCenterCrop() -> Swift.Bool
+  public func getVideoRatio() -> CoreFoundation.CGSize
+  public func getVideoOrientation() -> ShopLiveCorePlayerSDK.ShopLiveOrientation
+  public func getCurrentWebViewUrl() -> Foundation.URL?
+  public func getStatusBarVisibility() -> Swift.Bool
+  public func getForceStatusBarLightContent() -> Swift.Bool
+  public func getCurrentPreviewResolution() -> ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution
+  open func getPlayerItem() -> AVFoundation.AVPlayerItem?
+  open func getPlayer() -> AVFoundation.AVPlayer?
+  open func getIsReplayMode() -> Swift.Bool
+  open func getNeedSeek() -> Swift.Bool
+  open func getTimeControlStatus() -> AVFoundation.AVPlayer.TimeControlStatus
+  open func getVideoDuration() -> CoreMedia.CMTime?
+  open func getIsReplayFinished() -> Swift.Bool
+}
+public protocol ShopLiveChatViewDelegate : AnyObject {
+  func numberOfLinesChanged(lines: Swift.Int)
+  func textViewDidChange(textView: UIKit.UITextView)
+  func didTouchSendButton()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class ShopLiveChatView : ShopliveSDKCommon.SLScrollView, UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor @preconcurrency final public var chatTextView: ShopLiveCorePlayerSDK.ShopLiveChattingView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency weak final public var chatViewDelegate: (any ShopLiveCorePlayerSDK.ShopLiveChatViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency final public func updateShopLiveChatView()
+  @_Concurrency.MainActor @preconcurrency final public func updateShopLiveChatViewConstraint(isPreview: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public var isExpanded: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency final public var hasText: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc final public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textViewDidEndEditing(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textViewDidChange(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor @preconcurrency final public func clearChatView()
+  @_Concurrency.MainActor @preconcurrency @objc final public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class ShopLiveChattingView : ShopliveSDKCommon.SLTextView {
+  @_Concurrency.MainActor @preconcurrency final public var placeholderLabel: ShopliveSDKCommon.SLLabel {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency final public var placeholderAttributedText: Foundation.NSAttributedString? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override final public var hasText: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency final public func updatePlaceholder()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+}
+public protocol ShopLiveChattingWriteDelegate : AnyObject {
+  func didTouchSendButton()
+  func updateHeight()
+  func getVideoOrientation() -> ShopLiveCorePlayerSDK.ShopLiveOrientation
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class ShopLiveChattingWriteView : ShopliveSDKCommon.SLView {
+  @_Concurrency.MainActor @preconcurrency public static let minimumHeightChatView: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public static let maximumHeightChatView: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any ShopLiveCorePlayerSDK.ShopLiveChattingWriteDelegate)?
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency final public func updateChattingWriteView()
+  @_Concurrency.MainActor @preconcurrency final public func orientationChattingWritrViewConstraint(isPreview: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func updateChattingWriteViewConstraint(windowStyle: ShopLiveCorePlayerSDK.ShopLiveWindowStyle, isPreview: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func focus()
+  @_Concurrency.MainActor @preconcurrency final public func focusOut()
+  @_Concurrency.MainActor @preconcurrency final public func isFocused() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency final public func clearChatText()
+  @objc @_Concurrency.MainActor @preconcurrency final public func didTouchSendButton()
+  @_Concurrency.MainActor @preconcurrency final public var chatText: Swift.String {
+    get
+  }
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency @objc override final public func becomeFirstResponder() -> Swift.Bool
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency @objc override final public func resignFirstResponder() -> Swift.Bool
+}
+extension ShopLiveCorePlayerSDK.ShopLiveChattingWriteView : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+extension ShopLiveCorePlayerSDK.ShopLiveChattingWriteView : ShopLiveCorePlayerSDK.ShopLiveChatViewDelegate {
+  @_Concurrency.MainActor @preconcurrency final public func textViewDidChange(textView: UIKit.UITextView)
+  @_Concurrency.MainActor @preconcurrency final public func numberOfLinesChanged(lines: Swift.Int)
+}
+@objc public class ShopLiveCouponResult : ObjectiveC.NSObject {
+  @objc public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveCorePlayerSDK.ShopLiveResultStatus, alertType: ShopLiveCorePlayerSDK.ShopLiveResultAlertType)
+  @objc deinit
+}
+extension ShopLiveCorePlayerSDK.ShopLiveCouponResult {
+  public func toJson() -> Swift.String?
+}
+@objc public class ShopLiveCustomActionResult : ObjectiveC.NSObject {
+  @objc public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveCorePlayerSDK.ShopLiveResultStatus, alertType: ShopLiveCorePlayerSDK.ShopLiveResultAlertType)
+  @objc deinit
+}
+extension ShopLiveCorePlayerSDK.ShopLiveCustomActionResult {
+  public func toJson() -> Swift.String?
+}
+@objc open class ShopLiveInAppPipConfiguration : ObjectiveC.NSObject {
+  open var useCloseButton: Swift.Bool?
+  open var pipPosition: ShopLiveCorePlayerSDK.ShopLivePipPosition?
+  open var pipPinPositions: [ShopLiveCorePlayerSDK.ShopLivePipPosition]
+  open var enableSwipeOut: Swift.Bool?
+  open var pipSize: ShopLiveCorePlayerSDK.ShopLiveInAppPipSize?
+  open var pipRadius: CoreFoundation.CGFloat
+  public init(useCloseButton: Swift.Bool? = nil, pipPosition: ShopLiveCorePlayerSDK.ShopLivePipPosition? = nil, enableSwipeOut: Swift.Bool? = nil, pipSize: ShopLiveCorePlayerSDK.ShopLiveInAppPipSize? = nil, pipRadius: CoreFoundation.CGFloat = 10, pipPinPositions: [ShopLiveCorePlayerSDK.ShopLivePipPosition]? = nil)
+  @objc deinit
+}
+@objc public class ShopLiveInAppPipSize : ObjectiveC.NSObject {
+  public var pipMaxSize: CoreFoundation.CGFloat? {
+    get
+  }
+  public var pipFixedWidth: CoreFoundation.CGFloat? {
+    get
+  }
+  public var pipFixedheight: CoreFoundation.CGFloat? {
+    get
+  }
+  @objc public init(pipMaxSize: CoreFoundation.CGFloat)
+  @objc public init(pipFixedWidth: CoreFoundation.CGFloat)
+  @objc public init(pipFixedHeight: CoreFoundation.CGFloat)
+  @objc deinit
+}
+public enum ShopLiveAppLifeCycleAction {
+  case didBecomeActive
+  case willResignActive
+  case didEnterBackground(ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  case protectedDataDidBecomeAvailable(ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  case protectedDataWillBecomeUnAvailable(ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  case willEnterForeground
+}
+public enum ShopLiveInternalPlayerStateContainerAction {
+  case resetVideoDatas
+  case releaseData
+  public static func == (a: ShopLiveCorePlayerSDK.ShopLiveInternalPlayerStateContainerAction, b: ShopLiveCorePlayerSDK.ShopLiveInternalPlayerStateContainerAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLivePlayerInternalViewAction {
+  case initViewController
+  case changePlayerView(any ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewInterface & ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewInterface)
+  case changeViewModel(any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface)
+  case reloadOverlayWebView
+  case closeWebSocket
+  case sendCommandMessageToWeb(command: Swift.String, payload: [Swift.String : Any]?)
+  case sendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool = false)
+  case openDefaultShareSheet(url: Foundation.URL?)
+  case awakePlayer
+  case playVideo
+  case pauseVideo
+  case resumeVideo
+  case stopVideo
+  case didStopOsPip
+  case resetCampaignState
+  case parseRatioStringAndSetData(ratio: Swift.String?)
+  case initPlayer(Foundation.URL?)
+  case initRtc(Foundation.URL?)
+  case updateChattingWriteView
+  case updateChattingWriteViewVisibility(isHidden: Swift.Bool)
+  case updateStatusBarToDefault
+  case updateStatusBarToLightContent
+  case updatePlayerViewToPipMode
+  case updateVideoConstraint
+  case updatePlayerViewFrameFromStartFromCampaignFullScreen(needExecuteFullScreen: Swift.Bool)
+  case updatePlayerViewFrameFromStopCustomPictureInPicture
+  case updatePlayerViewFrameFromUpdatePip(targetWindowStyle: ShopLiveCorePlayerSDK.ShopLiveWindowStyle)
+  case updatePlayerViewFrameFromApp(targetFrame: CoreFoundation.CGRect)
+  case updatePlayerViewFrameFromChangeOrientation(targetWindowStyle: ShopLiveCorePlayerSDK.ShopLiveWindowStyle)
+  case updateVideoLayerGravityOnOsPipRestoration
+  case updatePipStyle(ShopLiveCorePlayerSDK.ShopLivePresentationStyle)
+  case updateOrientation(toLandscape: Swift.Bool)
+  case updateSnapShotImageView(image: UIKit.UIImage?)
+  case updateImageFit
+  case setOverlayWebViewUrl(Foundation.URL)
+  case setUpOverlayWebViewIfNotExist
+  case setInitialAVPlayerLayerVideoGravity(isPreview: Swift.Bool)
+  case setPipPosition(ShopLiveCorePlayerSDK.ShopLivePipPosition)
+  case setResizeMode(ShopliveSDKCommon.ShopLiveResizeMode?)
+  case setWebViewConfiguration(WebKit.WKWebViewConfiguration?)
+  case setIsOsPipFailedHasOccured(Swift.Bool)
+  case setOverLayWebViewIsHidden(isHidden: Swift.Bool)
+  case setOverlayWebviewOpacity(CoreFoundation.CGFloat)
+  case setInAppPipConfiguration(ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration?)
+  case setIsMuted(isMuted: Swift.Bool)
+  case setCampaignKey(Swift.String)
+  case setCampaignId(Swift.String)
+  case setNeedReload(needReload: Swift.Bool)
+  case setVideoExpanded(isExpanded: Swift.Bool)
+  case setNeedForceSetVideoPositionUpdate(isForced: Swift.Bool)
+  case setStreamActivityType(Swift.String)
+  case setPreviewUrl(Foundation.URL?)
+  case setLiveUrl(Foundation.URL?)
+  case setIsUpdatePipNeedInSetConfInitialize(Swift.Bool)
+  case setRtcDiscoveryUrl(Foundation.URL?)
+  case setRtcSignallingUrl(Foundation.URL?)
+  case setWebViewSafeAreaMargin(UIKit.UIEdgeInsets)
+  case setLandingUrl(Foundation.URL?)
+  case activate
+  case deActivate
+  case requestTakeSnapShot
+  case requestTakeSnapShotWithCompletion((() -> ())?)
+  case requestShowOrHideSnapShotView(needToShow: Swift.Bool)
+  case requestShowOrHideStatusBar(needToShow: Swift.Bool)
+  case requestShowOrHideCloseBtn(needToShow: Swift.Bool)
+  case requestShowOrHideCloseBtnDimLayer(needToShow: Swift.Bool)
+  case requestShowOrHideBackgroundPosterImageWebView(needToShow: Swift.Bool)
+  case requestSetPlayControl(ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  case didCompleteCustomActionWithId(Swift.String)
+  case didCompleteCustomActionWithShopliveResult(ShopLiveCorePlayerSDK.ShopLiveCustomActionResult)
+  case didCompleteCouponDownloadWithId(Swift.String)
+  case didCompleteCouponDonwloadWithShopliveResult(ShopLiveCorePlayerSDK.ShopLiveCouponResult)
+  case sendCommandMessage(command: Swift.String, payload: [Swift.String : Any]?)
+  case cleanUpMemory
+}
+public enum ShopLivePlayerInternalViewResult {
+  case startShoplivePictureInPicture
+  case didTouchCustomAction(id: Swift.String, type: Swift.String, payload: Any?)
+  case requestHideShopLiveView
+  case requestNavigation(Foundation.URL)
+  case didTouchCoupon(couponId: Swift.String)
+  case handleCommand(command: Swift.String, payload: Any?)
+  case campaignInfo(campaignInfo: [Swift.String : Any])
+  case didChangeCampaignStatus(status: Swift.String)
+  case onError(code: Swift.String, message: Swift.String)
+  case handleReceivedCommand(command: Swift.String, payload: [Swift.String : Any]?)
+  case changeOrientation(to: ShopLiveCorePlayerSDK.ShopLiveOrientation)
+  case updatePictureInPicture
+  case finishRotation
+  case resetPictureInPicture
+  case requestHandleShare(data: ShopLiveCorePlayerSDK.ShopLivePlayerShareData)
+  case handleShopLivePlayerCampaign(campaign: ShopLiveCorePlayerSDK.ShopLivePlayerCampaign)
+  case handleShopLivePlayerBrand(brand: ShopLiveCorePlayerSDK.ShopLivePlayerBrand)
+  case requestChangeShopLivePlayerSessionState(ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  case requestShowOrHideOsPictureInPictureController(needToShow: Swift.Bool)
+  case log(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaignKey: Swift.String, payload: [Swift.String : Any]?)
+  case onSetUserName(payload: [Swift.String : Any])
+  case requestCampaignRedirect(streamType: ShopLiveCorePlayerSDK.ShopLiveStreamType)
+  case requestShowAlertController(UIKit.UIAlertController)
+}
+public protocol ShopLivePlayerInternalViewInterface : ShopliveSDKCommon.SLView {
+  var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerInternalViewResult) -> ())? { get set }
+  var webViewConfiguration: WebKit.WKWebViewConfiguration? { get }
+  var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)? { get set }
+  var viewModel: any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface { get set }
+  func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerInternalViewAction)
+  func eventTrace(_ event: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction)
+  func appLifeCycle(_ event: ShopLiveCorePlayerSDK.ShopLiveAppLifeCycleAction)
+  func stateContainerAction(_ action: ShopLiveCorePlayerSDK.ShopLiveInternalPlayerStateContainerAction)
+  func getPipSwipeOutEnabled() -> Swift.Bool
+  func getPipPosition() -> ShopLiveCorePlayerSDK.ShopLivePipPosition
+  func getAllowedPipPinPositions() -> [ShopLiveCorePlayerSDK.ShopLivePipPosition]
+  func getEstimatedPlayerFrameForFullScreenInitialize() -> CoreFoundation.CGRect?
+  func getPlayerLayer() -> AVFoundation.AVPlayerLayer?
+  func getPlayerSampleBufferLayer() -> AVFoundation.AVSampleBufferDisplayLayer?
+  func getPlayerTimeControlStatus() -> AVFoundation.AVPlayer.TimeControlStatus
+  func getIsReplayMode() -> Swift.Bool
+  func getCampaignKey() -> Swift.String
+  func getVideoExpanded() -> Swift.Bool
+  func getVideoFrame() -> (portrait: CoreFoundation.CGRect?, landscape: (expanded: CoreFoundation.CGRect?, standard: CoreFoundation.CGRect?))
+  func getNeedForceSetVideoPositionUpdate() -> Swift.Bool
+  func getSupportOrientation() -> ShopLiveCorePlayerSDK.ShopLiveVideoOrientation
+  func getIsSuccessCampaignJoin() -> Swift.Bool
+  func getVideoCenterCrop() -> Swift.Bool
+  func getVideoRatio() -> CoreFoundation.CGSize
+  func getVideoOrientation() -> ShopLiveCorePlayerSDK.ShopLiveOrientation
+  func getStateContainer() -> any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer
+}
+public enum ShopLivePlayerViewControllerAction {
+  case initViewController
+  case changePlayerView(any ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewInterface & ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewInterface)
+  case changeViewModel(any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface)
+  case reloadOverlayWebView
+  case closeWebSocket
+  case sendCommandMessageToWeb(command: Swift.String, payload: [Swift.String : Any]?)
+  case sendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool = false)
+  case openDefaultShareSheet(url: Foundation.URL?)
+  case awakePlayer
+  case playVideo
+  case pauseVideo
+  case resumeVideo
+  case stopVideo
+  case didStopOsPip
+  case resetCampaignState
+  case parseRatioStringAndSetData(ratio: Swift.String?)
+  case initPlayer(Foundation.URL?)
+  case initRtc(Foundation.URL?)
+  case updateChattingWriteView
+  case updateChattingWriteViewVisibility(isHidden: Swift.Bool)
+  case updateStatusBarToDefault
+  case updateStatusBarToLightContent
+  case updatePlayerViewToPipMode
+  case updateVideoConstraint
+  case updatePlayerViewFrameFromStartFromCampaignFullScreen(needExecuteFullScreen: Swift.Bool)
+  case updatePlayerViewFrameFromStopCustomPictureInPicture
+  case updatePlayerViewFrameFromUpdatePip(targetWindowStyle: ShopLiveCorePlayerSDK.ShopLiveWindowStyle)
+  case updatePlayerViewFrameFromApp(targetFrame: CoreFoundation.CGRect)
+  case updatePlayerViewFrameFromChangeOrientation(targetWindowStyle: ShopLiveCorePlayerSDK.ShopLiveWindowStyle)
+  case updateVideoLayerGravityOnOsPipRestoration
+  case updatePipStyle(ShopLiveCorePlayerSDK.ShopLivePresentationStyle)
+  case updateOrientation(toLandscape: Swift.Bool)
+  case updateSnapShotImageView(image: UIKit.UIImage?)
+  case updateImageFit
+  case setOverlayWebViewUrl(Foundation.URL)
+  case setUpOverlayWebViewIfNotExist
+  case setInitialAVPlayerLayerVideoGravity(isPreview: Swift.Bool)
+  case setPipPosition(ShopLiveCorePlayerSDK.ShopLivePipPosition)
+  case setResizeMode(ShopliveSDKCommon.ShopLiveResizeMode?)
+  case setWebViewConfiguration(WebKit.WKWebViewConfiguration?)
+  case setIsOsPipFailedHasOccured(Swift.Bool)
+  case setOverLayWebViewIsHidden(isHidden: Swift.Bool)
+  case setOverlayWebviewOpacity(CoreFoundation.CGFloat)
+  case setInAppPipConfiguration(ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration?)
+  case setIsMuted(isMuted: Swift.Bool)
+  case setCampaignKey(Swift.String)
+  case setCampaignId(Swift.String)
+  case setNeedReload(needReload: Swift.Bool)
+  case setVideoExpanded(isExpanded: Swift.Bool)
+  case setNeedForceSetVideoPositionUpdate(isForced: Swift.Bool)
+  case setStreamActivityType(Swift.String)
+  case setPreviewUrl(Foundation.URL?)
+  case setLiveUrl(Foundation.URL?)
+  case setIsUpdatePipNeedInSetConfInitialize(Swift.Bool)
+  case setRtcDiscoveryUrl(Foundation.URL?)
+  case setRtcSignallingUrl(Foundation.URL?)
+  case setPreviewResolution(ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution)
+  case setPlayControlAction(ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  case setCampaignConfiguration(ShopLiveCorePlayerSDK.ShopLivePlayerConfiguration)
+  case requestTakeSnapShot
+  case requestTakeSnapShotWithCompletion((() -> ())?)
+  case requestShowOrHideSnapShotView(needToShow: Swift.Bool)
+  case requestShowOrHideStatusBar(needToShow: Swift.Bool)
+  case requestShowOrHideCloseBtn(needToShow: Swift.Bool)
+  case requestShowOrHideCloseBtnDimLayer(needToShow: Swift.Bool)
+  case requestShowOrHideBackgroundPosterImageWebView(needToShow: Swift.Bool)
+  case didCompleteCustomActionWithId(Swift.String)
+  case didCompleteCustomActionWithShopliveResult(ShopLiveCorePlayerSDK.ShopLiveCustomActionResult)
+  case didCompleteCouponDownloadWithId(Swift.String)
+  case didCompleteCouponDonwloadWithShopliveResult(ShopLiveCorePlayerSDK.ShopLiveCouponResult)
+  case cleanUpMemory
+}
+public enum ShopLivePlayerViewControllerResult {
+  case startShoplivePictureInPicture
+  case didTouchCustomAction(id: Swift.String, type: Swift.String, payload: Any?)
+  case requestHideShopLiveView
+  case requestNavigation(Foundation.URL)
+  case didTouchCoupon(couponId: Swift.String)
+  case handleCommand(command: Swift.String, payload: Any?)
+  case campaignInfo(campaignInfo: [Swift.String : Any])
+  case didChangeCampaignStatus(status: Swift.String)
+  case onError(code: Swift.String, message: Swift.String)
+  case handleReceivedCommand(command: Swift.String, payload: [Swift.String : Any]?)
+  case changeOrientation(to: ShopLiveCorePlayerSDK.ShopLiveOrientation)
+  case updatePictureInPicture
+  case finishRotation
+  case resetPictureInPicture
+  case requestHandleShare(data: ShopLiveCorePlayerSDK.ShopLivePlayerShareData)
+  case handleShopLivePlayerCampaign(campaign: ShopLiveCorePlayerSDK.ShopLivePlayerCampaign)
+  case handleShopLivePlayerBrand(brand: ShopLiveCorePlayerSDK.ShopLivePlayerBrand)
+  case requestChangeShopLivePlayerSessionState(ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  case requestShowOrHideOsPictureInPictureController(needToShow: Swift.Bool)
+  case log(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaignKey: Swift.String, payload: [Swift.String : Any]?)
+  case onSetUserName(payload: [Swift.String : Any])
+  case requestCampaignRedirect(streamType: ShopLiveCorePlayerSDK.ShopLiveStreamType)
+}
+public protocol ShopLivePlayerViewControllerInterface : ShopliveSDKCommon.SLViewController {
+  var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerViewControllerResult) -> ())? { get set }
+  var webViewConfiguration: WebKit.WKWebViewConfiguration? { get }
+  var stateContainer: any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer { get set }
+  var viewModel: any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface { get set }
+  func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerViewControllerAction)
+  func eventTrace(_ event: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction)
+  func appLifeCycle(_ event: ShopLiveCorePlayerSDK.ShopLiveAppLifeCycleAction)
+  func getPipSwipeOutEnabled() -> Swift.Bool
+  func getPipPosition() -> ShopLiveCorePlayerSDK.ShopLivePipPosition
+  func getAllowedPipPinPositions() -> [ShopLiveCorePlayerSDK.ShopLivePipPosition]
+  func getEstimatedPlayerFrameForFullScreenInitialize() -> CoreFoundation.CGRect?
+  func getPlayerLayer() -> AVFoundation.AVPlayerLayer?
+  func getPlayerSampleBufferLayer() -> AVFoundation.AVSampleBufferDisplayLayer?
+  func getPlayerTimeControlStatus() -> AVFoundation.AVPlayer.TimeControlStatus
+  func getIsReplayMode() -> Swift.Bool
+  func getCampaignKey() -> Swift.String
+  func getVideoExpanded() -> Swift.Bool
+  func getVideoFrame() -> (portrait: CoreFoundation.CGRect?, landscape: (expanded: CoreFoundation.CGRect?, standard: CoreFoundation.CGRect?))
+  func getNeedForceSetVideoPositionUpdate() -> Swift.Bool
+  func getSupportOrientation() -> ShopLiveCorePlayerSDK.ShopLiveVideoOrientation
+  func getIsSuccessCampaignJoin() -> Swift.Bool
+  func getVideoCenterCrop() -> Swift.Bool
+  func getVideoRatio() -> CoreFoundation.CGSize
+  func getVideoOrientation() -> ShopLiveCorePlayerSDK.ShopLiveOrientation
+  func getPreviewResolution() -> ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution
+}
+public enum ShopLiveHLSPlayerViewAction {
+  case setVideoGravity(AVFoundation.AVLayerVideoGravity)
+  case refreshLayer(videoGravity: AVFoundation.AVLayerVideoGravity)
+  case tearDown
+}
+public enum ShopLiveHLSPlayerViewResult {
+}
+public protocol ShopLiveHLSPlayerViewInterface : UIKit.UIView {
+  var hlsResultHandler: ((ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewResult) -> ())? { get set }
+  func hlsAction(_ action: ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewAction)
+  func getAVPlayer() -> AVFoundation.AVPlayer?
+  func getPlayerLayer() -> AVFoundation.AVPlayerLayer?
+}
+public enum ShopLiveRTCPlayerViewAction {
+  case setOsSampleDisplayLayerSize(size: CoreFoundation.CGSize)
+  case feedSampleBuffer(CoreMedia.CMSampleBuffer?)
+  case requestShowOrHideOsPipLayer(needToShow: Swift.Bool)
+  case requestShowOrHideInAppDisplayLayer(needToShow: Swift.Bool)
+  case setVideoGravity(AVFoundation.AVLayerVideoGravity)
+  case viewDidRotate
+  case flushBuffer
+  case setVideoOrientation(isLandscape: Swift.Bool)
+  case tearDown
+}
+public enum ShopLiveRTCPlayerViewResult {
+}
+public protocol ShopLiveRTCPlayerViewInterface : UIKit.UIView {
+  var rtcResultHanlder: ((ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewResult) -> ())? { get set }
+  func rtcAction(_ action: ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewAction)
+  func getOsDisplayLayer() -> AVFoundation.AVSampleBufferDisplayLayer?
+  func getInAppDisplayLayerVideoGravity() -> AVFoundation.AVLayerVideoGravity?
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ShopLivePlayerBrand : ObjectiveC.NSObject {
+  @objc public var name: Swift.String?
+  @objc public var identifier: Swift.String?
+  @objc public var imageUrl: Swift.String?
+  @objc public init(name: Swift.String? = nil, identifier: Swift.String? = nil, imageUrl: Swift.String? = nil)
+  public func parse(payload: [Swift.String : Any]?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ShopLivePlayerCampaign : ObjectiveC.NSObject {
+  @objc public var title: Swift.String?
+  @objc public var campaignStatus: ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus
+  @objc public init(title: Swift.String? = nil, campaignStatus: ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus = .READY)
+  public func parse(payload: [Swift.String : Any]?)
+  @objc deinit
+}
+@objc open class ShopLivePlayerData : ObjectiveC.NSObject {
+  public var campaignKey: Swift.String
+  public var keepWindowStateOnPlayExecuted: Swift.Bool
+  public var referrer: Swift.String?
+  public var campaignHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerCampaign) -> ())?
+  public var brandHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerBrand) -> ())?
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, campaignHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerBrand) -> ())? = nil)
+  @objc deinit
+}
+@objc public class ShopLivePlayerShareCampaign : ObjectiveC.NSObject {
+  @objc final public let campaignKey: Swift.String?
+  @objc final public let title: Swift.String?
+  @objc final public let descriptions: Swift.String?
+  @objc final public let thumbnail: Swift.String?
+  public init(payload: [Swift.String : Any])
+  @objc deinit
+}
+@objc public class ShopLivePlayerShareData : ObjectiveC.NSObject {
+  @objc final public let campaign: ShopLiveCorePlayerSDK.ShopLivePlayerShareCampaign?
+  @objc final public let url: Swift.String?
+  public init(campaign: ShopLiveCorePlayerSDK.ShopLivePlayerShareCampaign?, url: Swift.String?)
+  @objc deinit
+}
+@objc open class ShopLivePreviewData : ShopLiveCorePlayerSDK.ShopLivePlayerData {
+  public var isMuted: Swift.Bool?
+  public var isEnabledVolumeKey: Swift.Bool
+  public var previewResolution: ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution
+  public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, isEnabledVolumeKey: Swift.Bool = false, resolution: ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution? = nil, campaignHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerBrand) -> ())? = nil)
+  @objc deinit
+}
+@objc public enum ShopLiveViewTrackEvent : Swift.Int, Swift.CaseIterable {
+  case viewWillDisAppear
+  case viewDidDisAppear
+  case pipWillAppear
+  case pipDidAppear
+  case fullScreenWillAppear
+  case fullScreenDidAppear
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ShopLiveCorePlayerSDK.ShopLiveViewTrackEvent]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [ShopLiveCorePlayerSDK.ShopLiveViewTrackEvent] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLiveViewHiddenActionType : Swift.Int {
+  case onSwipeOut
+  case onBtnTapped
+  case onClose
+  case onError
+  case onRestoringPip
+  case onNavigationHandleClose
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class ShopLiveInAppConfigurationObjc : ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration {
+  @objc public var _pipSize: ShopLiveCorePlayerSDK.ShopLiveInAppPipSize? {
+    @objc get
+    @objc set
+  }
+  @objc public var _useCloseButton: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var _pipPosition: ShopLiveCorePlayerSDK.ShopLivePipPosition {
+    @objc get
+    @objc set
+  }
+  @objc public var _pipPinPositions: Swift.Array<Swift.Int> {
+    @objc get
+    @objc set
+  }
+  @objc public var _enableSwipeOut: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var _pipRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc public init(useCloseButton: Swift.Bool, pipPosition: ShopLiveCorePlayerSDK.ShopLivePipPosition, pipPinPosition: Swift.Array<Swift.Int>, enableSwipeOut: Swift.Bool, pipSize: ShopLiveCorePlayerSDK.ShopLiveInAppPipSize, pipRadius: CoreFoundation.CGFloat = 10)
+  @objc deinit
+}
+@objc public class ShopLivePlayerDataObjc : ShopLiveCorePlayerSDK.ShopLivePlayerData {
+  @objc public var _campaignKey: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public var _keepWindowStateOnPlayExecuted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var _referrer: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public init(campaignKey: Swift.String, keepWindowStateonPlayExecuted: Swift.Bool, referrer: Swift.String)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLLoadingIndicator : ShopliveSDKCommon.SLView {
+  @_Concurrency.MainActor @preconcurrency public var isAnimating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func startAnimating()
+  @_Concurrency.MainActor @preconcurrency public func stopAnimating()
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  @_Concurrency.MainActor @preconcurrency public init(images: UIKit.UIImage...)
+  @_Concurrency.MainActor @preconcurrency public init(images: [UIKit.UIImage])
+  @_Concurrency.MainActor @preconcurrency public func configure(images: [UIKit.UIImage])
+  @_Concurrency.MainActor @preconcurrency public func configure(images: UIKit.UIImage...)
+  @_Concurrency.MainActor @preconcurrency public func reloadImages()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ShopLiveBackgroundPosterImageWebView : ShopliveSDKCommon.SLView, ShopliveSDKCommon.SLReactor {
+  public enum Action {
+    case setBackgroundUrl(url: Foundation.URL?)
+    case reload
+  }
+  public enum Result {
+  }
+  @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLiveBackgroundPosterImageWebView.Result) -> ())?
+  @_Concurrency.MainActor @preconcurrency weak public var webView: ShopliveSDKCommon.SLWKWebView?
+  @_Concurrency.MainActor @preconcurrency public func action(_ action: ShopLiveCorePlayerSDK.ShopLiveBackgroundPosterImageWebView.Action)
+  @objc deinit
+}
+extension ShopLiveCorePlayerSDK.ShopLiveBackgroundPosterImageWebView : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+}
+public typealias ShopLiveViewController = ShopliveSDKCommon.SLViewController
+@_hasMissingDesignatedInitializers final public class ShopLiveConfiguration {
+  @_hasMissingDesignatedInitializers public class AppPreference {
+    public static var endpoint: Swift.String?
+    public static var landingUrl: Swift.String {
+      get
+    }
+    public static var appVersion: Swift.String?
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class SoundPolicy {
+    public static var autoResumeVideoOnCallEnded: Swift.Bool
+    public static var isMutedWhenStart: Swift.Bool
+    public static var useMixWithOthers: Swift.Bool
+    public static var previewSoundEnabled: Swift.Bool
+    public static var isEnabledVolumeKeyInPreview: Swift.Bool
+    public static var audioSessionCategory: AVFAudio.AVAudioSession.Category
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class Data {
+    public static var useLocalStorage: Swift.Bool
+    public static var customParameters: [Swift.String : Swift.String]
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class UI {
+    public static var pipPadding: UIKit.UIEdgeInsets
+    public static var pipFloatingOffset: UIKit.UIEdgeInsets
+    public static var inputBoxFont: UIKit.UIFont?
+    public static var sendButtonFont: UIKit.UIFont?
+    public static var color: UIKit.UIColor
+    public static var isCustomIndicator: Swift.Bool {
+      get
+    }
+    public static var customIndicatorImages: [UIKit.UIImage]
+    public static func setLoadingAnimation(images: [UIKit.UIImage])
+    public static var nextActionTypeOnHandleNavigation: ShopLiveCorePlayerSDK.ShopLiveNavigationActionType
+    public static var chatInputPlaceholderString: Swift.String
+    public static var chatInputSendString: Swift.String
+    public static var chatInputMaxLength: Swift.Int
+    public static var keepWindowStateOnPlayExecuted: Swift.Bool
+    public static var keepWindowStyleOnReturnFromOsPip: Swift.Bool
+    public static var manualRoatation: Swift.Bool
+    @objc deinit
+  }
+  @objc deinit
+}
+public struct ShopLivePlayerConfiguration {
+  public var iosEnableDscp: Swift.Bool
+  public var iosIceTransportsType: Swift.String
+  public var iosBundlePolicy: Swift.String
+  public var iosDisableLinkLocalNetworks: Swift.Bool
+  public var iosAudioJitterBufferMaxPackets: Swift.Int
+  public var iosAudioJitterBufferFastAccelerate: Swift.Bool
+  public var iosIceConnectionReceivingTimeout: Swift.Int
+  public var iosPresumeWritableWhenFullyRelayed: Swift.Bool
+  public var iosIceCheckMinInterval: Swift.Int?
+  public var iosRtcpAudioReportIntervalMs: Swift.Int
+  public var iosRtcpVideoReportIntervalMs: Swift.Int
+  public var iosIceCheckIntervalStrongConnectivityMs: Swift.Int?
+  public var iosIceCheckIntervalWeakConnectivityMs: Swift.Int?
+  public var iosIceUnwritableTimeMs: Swift.Int?
+  public var iosIceUnwritableMinChecks: Swift.Int?
+  public var iosIceInactiveTimeout: Swift.Int?
+  public var iosSignalingMaxRetryCount: Swift.Int
+  public var iosSignalingRetryTimeInterval: Swift.Int
+  public var iosSignalingBackOffTimeInterval: Swift.Int
+  public init(iosEnableDscp: Swift.Bool? = nil, iosIceTransportsType: Swift.String? = nil, iosBundlePolicy: Swift.String? = nil, iosDisableLinkLocalNetworks: Swift.Bool? = nil, iosAudioJitterBufferMaxPackets: Swift.Int? = nil, iosAudioJitterBufferFastAccelerate: Swift.Bool? = nil, iosIceConnectionReceivingTimeout: Swift.Int? = nil, iosPresumeWritableWhenFullyRelayed: Swift.Bool? = nil, iosIceCheckMinInterval: Swift.Int? = nil, iosRtcpAudioReportIntervalMs: Swift.Int? = nil, iosRtcpVideoReportIntervalMs: Swift.Int? = nil, iosIceCheckIntervalStrongConnectivityMs: Swift.Int? = nil, iosIceCheckIntervalWeakConnectivityMs: Swift.Int? = nil, iosIceUnwritableTimeMs: Swift.Int? = nil, iosIceUnwritableMinChecks: Swift.Int? = nil, iosIceInactiveTimeout: Swift.Int? = nil, iosSignalingMaxRetryCount: Swift.Int? = nil, iosSignalingRetryTimeInterval: Swift.Int? = nil, iosSignalingBackOffTimeInterval: Swift.Int? = nil)
+}
+@objc public class ShopLiveLog : ObjectiveC.NSObject {
+  @objc public enum Feature : Swift.Int, Swift.CaseIterable {
+    case CLICK, SHOW, ACTION
+    public var name: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias AllCases = [ShopLiveCorePlayerSDK.ShopLiveLog.Feature]
+    public typealias RawValue = Swift.Int
+    nonisolated public static var allCases: [ShopLiveCorePlayerSDK.ShopLiveLog.Feature] {
+      get
+    }
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public var name: Swift.String
+  public var campaign: Swift.String
+  public var feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature
+  @available(*, deprecated, message: "use payload: [String : Any] instead")
+  public var parameter: [Swift.String : Swift.String]
+  public var payload: [Swift.String : Any]
+  public init(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
+  public init(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShopLivePlayer : ObjectiveC.NSObject {
+  @objc deinit
+}
+extension ShopLiveCorePlayerSDK.ShopLivePlayer {
+  @objc public static func removeParameter(key: Swift.String)
+  @objc public static func addParameter(key: Swift.String, value: Swift.String)
+  @objc public static func setMixWithOthers(isMixAudio: Swift.Bool)
+  @objc public static func setAudioSessionCategory(category: AVFAudio.AVAudioSession.Category)
+  @objc public static func awakePlayer()
+  @objc public static func setKeepWindowStyleOnReturnFromOsPip(_ keep: Swift.Bool = false)
+  @objc public static func isKeepWindowStyleOnReturnFromOsPip() -> Swift.Bool
+  @objc public static func setAppVersion(_ appVersion: Swift.String)
+  @objc public static func setUsingLocalStorage(_ use: Swift.Bool)
+  @objc public static func setPictureInPictureFloatingOffset(offset: UIKit.UIEdgeInsets) -> Swift.Bool
+  @objc public static func setPictureInPicturePadding(padding: UIKit.UIEdgeInsets) -> Swift.Bool
+  @objc public static func sendCommandMessage(command: Swift.String, payload: [Swift.String : Any]?)
+  @objc public static func setMuteWhenPlayStart(_ mute: Swift.Bool)
+  @objc public static func setNextActionOnHandleNavigation(actionType: ShopLiveCorePlayerSDK.ShopLiveNavigationActionType)
+  @objc public static func getNextActionTypeOnHandleNavigation() -> ShopLiveCorePlayerSDK.ShopLiveNavigationActionType
+  @objc public static func setEndpoint(_ url: Swift.String?)
+  @objc public static func isSuccessCampaignJoin() -> Swift.Bool
+  public static var viewController: ShopLiveCorePlayerSDK.ShopLiveViewController? {
+    get
+  }
+  @objc public static func close(actionType: ShopLiveCorePlayerSDK.ShopLiveViewHiddenActionType = .onClose)
+  @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont?, sendButtonFont: UIKit.UIFont?)
+  @objc public static func setShareScheme(_ scheme: Swift.String? = nil, shareDelegate: (any ShopLiveCorePlayerSDK.ShopLivePlayerShareDelegate)?)
+  @objc public static func hookNavigation(navigation: @escaping ((Foundation.URL) -> Swift.Void))
+  @objc public static func onTerminated()
+  @objc public static func setAutoResumeVideoOnCallEnded(_ autoResume: Swift.Bool)
+  @objc public static func isAutoResumeVideoOnCallEnded() -> Swift.Bool
+  public static var sdkVersion: Swift.String {
+    get
+  }
+  public static var playerMode: ShopLiveCorePlayerSDK.ShopLivePlayerMode {
+    get
+  }
+  public static var playerWindow: ShopLiveCorePlayerSDK.ShopliveWindow? {
+    get
+  }
+  @objc public static func mute()
+  @objc public static func unmute()
+  public static var orientationMode: ShopLiveCorePlayerSDK.ShopLiveVideoOrientation {
+    get
+  }
+  public static var style: ShopLiveCorePlayerSDK.ShopLivePresentationStyle {
+    get
+  }
+  public static var indicatorColor: UIKit.UIColor {
+    get
+    set
+  }
+  public static var webViewConfiguration: WebKit.WKWebViewConfiguration? {
+    get
+    set
+  }
+  public static var delegate: (any ShopLiveCorePlayerSDK.ShopLivePlayerDelegate)? {
+    get
+    set
+  }
+  @objc public static func preview(data: ShopLiveCorePlayerSDK.ShopLivePreviewData, completion: (() -> Swift.Void)? = nil)
+  @objc public static func play(data: ShopLiveCorePlayerSDK.ShopLivePlayerData)
+  @objc public static func startPictureInPicture(with position: ShopLiveCorePlayerSDK.ShopLivePipPosition, scale: CoreFoundation.CGFloat)
+  @objc public static func startPictureInPicture()
+  @objc public static func stopPictureInPicture()
+  @objc public static func setLoadingAnimation(images: [UIKit.UIImage])
+  @objc public static func reloadLive()
+  @objc public static func setEnabledPictureInPictureMode(isEnabled: Swift.Bool)
+  @objc public static func setEnabledOSPictureInPictureMode(isEnabled: Swift.Bool)
+  @objc public static func setInAppPipConfiguration(config: ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration)
+  @objc public static func setUtmSource(utmSource: Swift.String?)
+  @objc public static func setUtmCampaign(utmCampaign: Swift.String?)
+  @objc public static func setUtmMedium(utmMedium: Swift.String?)
+  @objc public static func setUtmContent(utmContent: Swift.String?)
+  @objc public static func getUtmSource() -> Swift.String?
+  @objc public static func getUtmCampaign() -> Swift.String?
+  @objc public static func getUtmMedium() -> Swift.String?
+  @objc public static func getUtmContent() -> Swift.String?
+  @objc public static func setVisibleStatusBar(isVisible: Swift.Bool)
+  public static func isVisibleStatusBar() -> Swift.Bool
+  @objc public static func addSubViewToPreview(subView: UIKit.UIView)
+  @objc public static func getPreviewSize(inAppPipConfiguration: ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration, videoRatio: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @objc public static func setResizeMode(mode: ShopliveSDKCommon.ShopLiveResizeMode)
+  @objc public static func attachHLSPlayerView(completion: @escaping (() -> (UIKit.UIView)))
+  @objc public static func attachRTCPlayerView(completion: @escaping (() -> (UIKit.UIView)))
+  @objc public static func attachHLSPlayerViewModel(completion: @escaping ((any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer) -> (ObjectiveC.NSObject)))
+  @objc public static func attachRTCPlayerViewModel(completion: @escaping ((any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer) -> (ObjectiveC.NSObject)))
+  @objc public static func forceStartWithPortraitMode(_ isForced: Swift.Bool)
+}
+public protocol ShopLivePlayerOverlayWebViewNavigationDelegate : ObjectiveC.NSObjectProtocol {
+  func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didCommit navigation: WebKit.WKNavigation!)
+  func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didFinish navigation: WebKit.WKNavigation!)
+  func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  func webView(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  func webViewWebContentProcessDidTerminate(_ webView: ShopLiveCorePlayerSDK.ShopLiveWebView?)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ShopLivePlayerOverlayWebView : ShopliveSDKCommon.SLView, ShopliveSDKCommon.SLReactor {
+  public enum Action {
+    case setisPipMode(isPipMode: Swift.Bool)
+    case setWKUIDelegate((any WebKit.WKUIDelegate)?)
+    case setIsHidden(isHidden: Swift.Bool)
+    case setOverlayUrl(url: Foundation.URL?)
+    case setShopLiveWKNavigationDelegate((any ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationDelegate)?)
+    case setCampaignStateContainer((any ShopLiveCorePlayerSDK.ShopLiveCampaignStateContainer)?)
+    case setSafeAreaMargin(UIKit.UIEdgeInsets)
+    case tearDown
+    case reloadWithUrl(Foundation.URL)
+    case reload
+    case updatePipStyle(ShopLiveCorePlayerSDK.ShopLivePresentationStyle)
+    case closeWebSocket
+    case sendCommandMessageToWeb(command: Swift.String, payload: [Swift.String : Any]?)
+    case sendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, payload: Any?, wrapping: Swift.Bool, completion: ((Swift.Bool) -> ())?)
+    case didCompleteCustomActionWithId(id: Swift.String)
+    case didCompleteCustomActionWithShopliveResult(result: ShopLiveCorePlayerSDK.ShopLiveCustomActionResult)
+    case didCompleteCouponDownloadWithId(id: Swift.String)
+    case didCompleteCouponDownloadWithShopliveResult(result: ShopLiveCorePlayerSDK.ShopLiveCouponResult)
+  }
+  public enum Result {
+    case handleReceivedCommand(name: Swift.String, payload: [Swift.String : Any]?)
+    case log(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaignKey: Swift.String, payload: [Swift.String : Any])
+    case handleShareData(data: ShopLiveCorePlayerSDK.ShopLivePlayerShareData)
+    case updatePlayerView(targetFrame: CoreFoundation.CGRect)
+    case updateScreenOrientation(toLandscape: Swift.Bool)
+    case didUpdatePlayBackSpped(speed: Swift.Float)
+    case didChangeAcitivityType(activityType: Swift.String, campaignKey: Swift.String)
+    case requestChangePlayerSessionState(ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+    case requestNetworkCapabilityOnSystemInit
+    case didTapWebViewMutedBtn(isMuted: Swift.Bool)
+    case didUpdatePosterUrl(url: Foundation.URL)
+    case didUpdateVideoUrl(url: Foundation.URL?)
+    case didUpdateRtcDiscoveryUrl(url: Foundation.URL?)
+    case didUpdateRtcSignalingUrl(url: Foundation.URL?)
+    case didUpdateEgressProtocol(ShopLiveCorePlayerSDK.ShopLiveStreamType)
+    case didRequestResolutionChange(resolution: Swift.String)
+    case didReceiveSetIsPlayingVideo(isPlaying: Swift.Bool)
+    case requestVideoPlay
+    case requestVideoPause
+    case requestReloadVideo
+    case requestPip
+    case requestClose
+    case requestNavigation(Foundation.URL)
+    case didTapCoupon(id: Swift.String)
+    case seekTo(CoreMedia.CMTime)
+    case setEnableSwipDown(enabled: Swift.Bool)
+    case didTapCustomAction(id: Swift.String, type: Swift.String, payload: Any?)
+    case didChangeCampaignStatus(Swift.String)
+    case setUserName(payload: [Swift.String : Any])
+    case error(code: Swift.String, message: Swift.String)
+    case handleCommand(command: Swift.String, payload: Any?)
+  }
+  @_Concurrency.MainActor @preconcurrency weak public var webView: ShopLiveCorePlayerSDK.ShopLiveWebView?
+  @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView.Result) -> ())?
+  @_Concurrency.MainActor @preconcurrency public init(wkConfiguration: WebKit.WKWebViewConfiguration?, playerStateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?, campaignStateContainer: any ShopLiveCorePlayerSDK.ShopLiveCampaignStateContainer)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView.Action)
+}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView {
+  @_Concurrency.MainActor @preconcurrency public func getCurrentOverlayUrl() -> Foundation.URL?
+}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView : WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ShopLiveQuizSoundManager : ObjectiveC.NSObject {
+  public static let shared: ShopLiveCorePlayerSDK.ShopLiveQuizSoundManager
+  @objc deinit
+}
+@objc @_Concurrency.MainActor @preconcurrency open class ShopLiveInternalPlayerView : ShopliveSDKCommon.SLView, ShopLiveCorePlayerSDK.ShopLivePlayerInternalViewInterface, ShopLiveCorePlayerSDK.ShopLivePlayerViewModelDelegate {
+  @_Concurrency.MainActor @preconcurrency public var overlayView: ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView?
+  @_Concurrency.MainActor @preconcurrency public var backgroundPosterImageWebView: ShopLiveCorePlayerSDK.ShopLiveBackgroundPosterImageWebView?
+  @_Concurrency.MainActor @preconcurrency public var snapShotImageView: ShopliveSDKCommon.SLImageView?
+  @_Concurrency.MainActor @preconcurrency public var playerView: (any ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewInterface & ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewInterface)?
+  @_Concurrency.MainActor @preconcurrency public var playerTopConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor @preconcurrency public var playerLeadingConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor @preconcurrency public var playerRightConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor @preconcurrency public var playerBottomConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor @preconcurrency public var posterTopContraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var posterLeftContraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var posterRightContraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var posterBottomContraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var snapShotWidthAnc: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var snapShotheightAnc: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var inAppPipView: ShopliveSDKCommon.SLView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var pipDimLayer: QuartzCore.CAGradientLayer {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var inAppPipDim: ShopliveSDKCommon.SLLabel {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var closeButton: ShopliveSDKCommon.SLButton {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var indicatorView: ShopliveSDKCommon.SLActivityIndicatorView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var customIndicator: ShopLiveCorePlayerSDK.SLLoadingIndicator {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var chatInputView: ShopLiveCorePlayerSDK.ShopLiveChattingWriteView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var chatInputBG: ShopliveSDKCommon.SLView {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var closeButtonTopConstraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency public var closeButtonLeadingConstraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor @preconcurrency weak public var popoverController: UIKit.UIPopoverPresentationController?
+  @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerInternalViewResult) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var webViewConfiguration: WebKit.WKWebViewConfiguration?
+  @_Concurrency.MainActor @preconcurrency public var stateContainer: (any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)?
+  @_Concurrency.MainActor @preconcurrency open var viewModel: any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface
+  @_Concurrency.MainActor @preconcurrency required public init(playerView: any ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewInterface & ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewInterface, viewModel: any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface, stateContainer: any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerInternalViewAction)
+}
+extension ShopLiveCorePlayerSDK.ShopLiveInternalPlayerView {
+  @_Concurrency.MainActor @preconcurrency public func eventTrace(_ event: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction)
+  @_Concurrency.MainActor @preconcurrency public func appLifeCycle(_ event: ShopLiveCorePlayerSDK.ShopLiveAppLifeCycleAction)
+  @_Concurrency.MainActor @preconcurrency public func stateContainerAction(_ action: ShopLiveCorePlayerSDK.ShopLiveInternalPlayerStateContainerAction)
+  @_Concurrency.MainActor @preconcurrency public func bindViewModel()
+}
+extension ShopLiveCorePlayerSDK.ShopLiveInternalPlayerView {
+  @_Concurrency.MainActor @preconcurrency public func getPipSwipeOutEnabled() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getPipPosition() -> ShopLiveCorePlayerSDK.ShopLivePipPosition
+  @_Concurrency.MainActor @preconcurrency public func getAllowedPipPinPositions() -> [ShopLiveCorePlayerSDK.ShopLivePipPosition]
+  @_Concurrency.MainActor @preconcurrency public func getEstimatedPlayerFrameForFullScreenInitialize() -> CoreFoundation.CGRect?
+  @_Concurrency.MainActor @preconcurrency public func getPlayerLayer() -> AVFoundation.AVPlayerLayer?
+  @_Concurrency.MainActor @preconcurrency public func getPlayerSampleBufferLayer() -> AVFoundation.AVSampleBufferDisplayLayer?
+  @_Concurrency.MainActor @preconcurrency public func getPlayerTimeControlStatus() -> AVFoundation.AVPlayer.TimeControlStatus
+  @_Concurrency.MainActor @preconcurrency public func getIsReplayMode() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getCampaignKey() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public func getVideoExpanded() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getVideoFrame() -> (portrait: CoreFoundation.CGRect?, landscape: (expanded: CoreFoundation.CGRect?, standard: CoreFoundation.CGRect?))
+  @_Concurrency.MainActor @preconcurrency public func getNeedForceSetVideoPositionUpdate() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getSupportOrientation() -> ShopLiveCorePlayerSDK.ShopLiveVideoOrientation
+  @_Concurrency.MainActor @preconcurrency public func getIsSuccessCampaignJoin() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getVideoCenterCrop() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func getVideoRatio() -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency public func getVideoOrientation() -> ShopLiveCorePlayerSDK.ShopLiveOrientation
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func getCurrentWebViewUrl() -> Foundation.URL?
+  @_Concurrency.MainActor @preconcurrency public func getStateContainer() -> any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer
+}
+extension ShopLiveCorePlayerSDK.ShopLiveInternalPlayerView : ShopLiveCorePlayerSDK.ShopLiveChattingWriteDelegate {
+  @_Concurrency.MainActor @preconcurrency public func didTouchSendButton()
+  @_Concurrency.MainActor @preconcurrency public func updateHeight()
+}
+extension ShopLiveCorePlayerSDK.ShopLiveInternalPlayerView : WebKit.WKUIDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers final public class ShopLivePlayerView : ObjectiveC.NSObject {
+  final public var hlsViewFeeder: (() -> (UIKit.UIView))?
+  final public var rtcViewFeeder: (() -> (UIKit.UIView))?
+  final public var hlsViewModelFeeder: ((any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer) -> (ObjectiveC.NSObject))?
+  final public var rtcViewModelFeeder: ((any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer) -> (ObjectiveC.NSObject))?
+  final public var resultHandler: ((ShopLiveCorePlayerSDK.ShopLivePlayerViewResult) -> ())?
+  @objc override dynamic public init()
+  @objc deinit
+  final public func build() -> UIKit.UIView?
+}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerView {
+  final public func action(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerViewAction)
+}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerView : ShopLiveCorePlayerSDK.ShopLivePlayerShareDelegate {
+  @objc final public func handleShare(data: ShopLiveCorePlayerSDK.ShopLivePlayerShareData)
+}
+public enum ShopLivePlayerViewAction {
+  case setCampaignKey(Swift.String)
+  case play
+  case pause
+  case release
+  case activate
+  case deActivate
+  case prepareForReuse
+  case startPictureInPicture
+  case stopPictureInPicture
+  case setShareUrl(Foundation.URL)
+  case setEndPoint(Foundation.URL?)
+  case reloadWebView
+  case setUIMargin(UIKit.UIEdgeInsets)
+  case setMuted(Swift.Bool)
+}
+public enum ShopLivePlayerViewResult {
+  case handleNavigation(url: Foundation.URL)
+  case handleDownloadCoupon(couponId: Swift.String, result: ((ShopLiveCorePlayerSDK.ShopLiveCouponResult) -> ()))
+  case handleCustomAction(id: Swift.String, type: Swift.String, payload: Any?, result: (ShopLiveCorePlayerSDK.ShopLiveCustomActionResult) -> ())
+  case handleChangeCampaignStatus(status: Swift.String)
+  case handleChangedPlayerStatus(status: Swift.String)
+  case handleError(code: Swift.String, message: Swift.String)
+  case handleCampaignInfo(campaignInfo: [Swift.String : Any])
+  case onSetUserName(payload: [Swift.String : Any])
+  case handleCommand(command: Swift.String, payload: Any?)
+  case handleReceivedCommand(command: Swift.String, data: [Swift.String : Any]?)
+  case handleShareData(ShopLiveCorePlayerSDK.ShopLivePlayerShareData)
+  case playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
+  case onEvent(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
+  case requestCloseShopLivePlayerView
+  case requestShowAlertController(UIKit.UIAlertController)
+}
+public protocol ShopLiveCampaignStateContainer : ObjectiveC.NSObjectProtocol {
+  var videoExpanded: Swift.Bool { get set }
+  var videoFrame: (portrait: CoreFoundation.CGRect?, landscape: (expanded: CoreFoundation.CGRect?, standard: CoreFoundation.CGRect?)) { get set }
+  var needForceSetVideoPositionUpdate: Swift.Bool { get set }
+  var supportOrientation: ShopLiveCorePlayerSDK.ShopLiveVideoOrientation { get set }
+  var isSuccessCampaignJoin: Swift.Bool { get set }
+  var campaignKey: Swift.String { get set }
+  var isLLHLS: Swift.Bool { get set }
+  var campaignStatus: ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus { get set }
+  var campaignId: Swift.String { get set }
+  var currentStreamType: ShopLiveCorePlayerSDK.ShopLiveStreamType? { get set }
+  var _videoCenterCrop: Swift.Bool { get set }
+  var _videoRatio: CoreFoundation.CGSize? { get set }
+}
+extension ShopLiveCorePlayerSDK.ShopLiveCampaignStateContainer {
+  public var videoOrientation: ShopLiveCorePlayerSDK.ShopLiveOrientation {
+    get
+  }
+  public var videoRatio: CoreFoundation.CGSize {
+    get
+    set
+  }
+  public var videoCenterCrop: Swift.Bool {
+    get
+    set
+  }
+}
+public protocol ShopLiveInternalPlayerViewCampaignStateContainer : ObjectiveC.NSObject {
+  var isActivated: Swift.Bool { get set }
+}
+@objc public protocol ShopLivePlayerStateContainer : ObjectiveC.NSObjectProtocol {
+  @objc var windowStyle: ShopLiveCorePlayerSDK.ShopLiveWindowStyle { get set }
+  @objc var isPreview: Swift.Bool { get set }
+  @objc var keepOrientationWhenPlayStart: Swift.Bool { get set }
+  @objc var shareScheme: Swift.String? { get set }
+  @objc var lastOrientation: ShopLiveCorePlayerSDK.ShopLiveLastOrientation? { get set }
+  @objc var prevLandscapeOrientation: UIKit.UIDeviceOrientation { get set }
+  @objc var lastPipPlaying: Swift.Bool { get set }
+  @objc var inRotating: Swift.Bool { get set }
+  @objc var screenLock: Swift.Bool { get set }
+  @objc var playerMode: ShopLiveCorePlayerSDK.ShopLivePlayerMode { get set }
+  @objc var viewProvideType: ShopLiveCorePlayerSDK.ShopLivePlayerViewProvideType { get set }
+}
+@objc public class ShopLiveLastOrientation : ObjectiveC.NSObject {
+  public var direction: ShopLiveCorePlayerSDK.ShopLiveOrientation
+  public var orientation: UIKit.UIDeviceOrientation
+  public init(direction: ShopLiveCorePlayerSDK.ShopLiveOrientation, orientation: UIKit.UIDeviceOrientation)
+  @objc deinit
+}
+public enum WebInterface {
+  case systemInit
+  case setPosterUrl(url: Foundation.URL)
+  case setLiveStreamUrl(url: Foundation.URL?)
+  case setRtcDiscoveryUrl
+  case setRtcSignalingUrl
+  case setResolution
+  case setVideoMute(isMuted: Swift.Bool)
+  case setIsPlayingVideo(isPlaying: Swift.Bool)
+  case reloadVideo
+  case startPictureInPicture
+  case close
+  case navigation(url: Foundation.URL)
+  case coupon(id: Swift.String)
+  case playVideo
+  case pauseVideo
+  case downKeyboard
+  case onPipModeChanged
+  case completeDownloadCoupon
+  case completeCustomAction
+  case videoInitialized
+  case showChatInput
+  case hiddenChatInput
+  case setConf
+  case write
+  case written
+  case setChatListMarginBottom
+  case setVideoCurrentTime(to: Swift.Double)
+  case onVideoDurationChanged
+  case onVideoTimeUpdated
+  case reloadBtn
+  case onTerminated
+  case onBackground
+  case onForeground
+  case customAction(id: Swift.String, type: Swift.String, payload: Any?)
+  case onCampaignStatusChanged(status: Swift.String)
+  case disableSwipeDown
+  case enableSwipeDown
+  case setParam(key: Swift.String, value: Swift.String)
+  case delParam(key: Swift.String)
+  case showNativeDebug
+  case debuglog(log: Swift.String)
+  case onVideoMetadataUpdated
+  case onRtcMetadataUpdated
+  case downloadCouponResult
+  case customActionResult
+  case setUserName(payload: [Swift.String : Any?])
+  case error(code: Swift.String, message: Swift.String)
+  case command(command: Swift.String, payload: Any?)
+  case sendCommandMessage
+  case setSafeAreaMargin
+  case onNetworkChangeCapability
+  case onVideoError
+  case onChangedActivityType(campaignKey: Swift.String, activityType: Swift.String)
+  case setEgressProtocolsUrl
+  case playerActivate
+  case playerDeActivate
+  public var functionString: Swift.String {
+    get
+  }
+  public enum WebFunction : Swift.String, Swift.CustomStringConvertible, Swift.CaseIterable {
+    public var description: Swift.String {
+      get
+    }
+    case systemInit
+    case setPosterUrl
+    case setLiveStreamUrl
+    case setRtcDiscoveryUrl
+    case setRtcSignalingUrl
+    case setResolution
+    case setVideoMute
+    case setIsPlayingVideo
+    case reloadVideo
+    case startPictureInPicture
+    case close
+    case navigation
+    case coupon
+    case playVideo
+    case pauseVideo
+    case downKeyboard
+    case onPipModeChanged
+    case completeDownloadCoupon
+    case completeCustomAction
+    case videoInitialized
+    case command
+    case showChatInput
+    case hiddenChatInput
+    case setConf
+    case write
+    case written
+    case setChatListMarginBottom
+    case setVideoCurrentTime
+    case onVideoDurationChanged
+    case onVideoTimeUpdated
+    case reloadBtn
+    case onTerminated
+    case onBackground
+    case onForeground
+    case customAction
+    case onCampaignStatusChanged
+    case disableSwipeDown
+    case enableSwipeDown
+    case setParam
+    case delParam
+    case showNativeDebug
+    case debuglog
+    case onVideoMetadataUpdated
+    case onRtcMetadataUpdate
+    case downloadCouponResult
+    case customActionResult
+    case setUserName
+    case error
+    case sendCommandMessage
+    case setSafeAreaMargin
+    case onNetworkChangeCapability
+    case onVideoError
+    case onChangedActivityType
+    case setEgressProtocolsUrl
+    case playerActivate
+    case playerDeActivate
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [ShopLiveCorePlayerSDK.WebInterface.WebFunction]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [ShopLiveCorePlayerSDK.WebInterface.WebFunction] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension ShopLiveCorePlayerSDK.WebInterface {
+  public init?(message: WebKit.WKScriptMessage)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency final public class ShopLiveWebView : ShopliveSDKCommon.SLWKWebView {
+  @_Concurrency.MainActor @preconcurrency @objc override final public var inputAccessoryView: ShopliveSDKCommon.SLView? {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, configuration: WebKit.WKWebViewConfiguration)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency final public func setIsLoaded(isLoaded: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func removeQueuedRequest()
+  @_Concurrency.MainActor @preconcurrency final public func invokeQueuedRequest()
+  @_Concurrency.MainActor @preconcurrency final public func sendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, _ param: Any? = nil, _ wrapping: Swift.Bool = false, completion: ((Swift.Bool) -> ())? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ShopliveWindow : ShopliveSDKCommon.SLWindow {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func addSubview(_ view: UIKit.UIView)
+  @_Concurrency.MainActor @preconcurrency public func forceAddSubView(_ view: UIKit.UIView)
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(windowScene: UIKit.UIWindowScene)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public enum ShopLiveNavigationActionType : Swift.Int {
+  case PIP
+  case KEEP
+  case CLOSE
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLiveOrientation : Swift.Int {
+  case portrait
+  case landscape
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLivePipPosition : Swift.Int {
+  case topLeft
+  case topCenter
+  case topRight
+  case middleLeft
+  case middleCenter
+  case middleRight
+  case bottomLeft
+  case bottomCenter
+  case bottomRight
+  case `default`
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLivePlayerCampaignStatus : Swift.Int {
+  case READY
+  case ONAIR
+  case CLOSED
+  public init(status: Swift.String)
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLivePlayerMode : Swift.Int {
+  case play
+  case preview
+  case none
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLivePlayerPreviewResolution : Swift.Int {
+  case LIVE = 1
+  case PREVIEW = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLivePlayerSessionState {
+  case terminated
+  case foreground
+  case background
+  public static func == (a: ShopLiveCorePlayerSDK.ShopLivePlayerSessionState, b: ShopLiveCorePlayerSDK.ShopLivePlayerSessionState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLivePlayerType {
+  case hls
+  case rtc
+  public static func == (a: ShopLiveCorePlayerSDK.ShopLivePlayerType, b: ShopLiveCorePlayerSDK.ShopLivePlayerType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLivePlayerViewProvideType : Swift.Int {
+  case window
+  case uiview
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLivePresentationStyle : Swift.Int {
+  case unknown
+  case fullScreen
+  case pip
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLiveResultAlertType : Swift.Int, Swift.CaseIterable {
+  case ALERT
+  case TOAST
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ShopLiveCorePlayerSDK.ShopLiveResultAlertType]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [ShopLiveCorePlayerSDK.ShopLiveResultAlertType] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLiveResultStatus : Swift.Int, Swift.CaseIterable {
+  case SHOW
+  case HIDE
+  case KEEP
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ShopLiveCorePlayerSDK.ShopLiveResultStatus]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [ShopLiveCorePlayerSDK.ShopLiveResultStatus] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLiveStreamActivityType : Swift.String, Swift.CaseIterable {
+  case ready
+  case rehearsal
+  case live
+  case replay
+  case closed
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ShopLiveCorePlayerSDK.ShopLiveStreamActivityType]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [ShopLiveCorePlayerSDK.ShopLiveStreamActivityType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public enum ShopLiveStreamType : Swift.Int {
+  case HLS
+  case WEBRTC
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLiveVideoOrientation : Swift.Int {
+  case portrait
+  case landscape
+  case unknown
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ShopLiveWindowStyle : Swift.Int {
+  case none
+  case inAppPip
+  case osPip
+  case normal
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum DedicatedWebViewCommandCompletionType {
+  case isMuted
+  public static func == (a: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType, b: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShoplivePlayerViewModelAction {
+  case initViewModel
+  case copyAttributes(attributes: any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelInterface)
+  case reloadOverlayWebView
+  case loadOverlayWebView
+  case retryOnNetworkDisConnect
+  case didStopOsPip
+  case resetCampaignState
+  case setPlayerConfiguration(configuration: ShopLiveCorePlayerSDK.ShopLivePlayerConfiguration)
+  case parseRatioStringAndSetData(ratio: Swift.String?)
+  case setDelegate((any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelDelegate)?)
+  case setOverlayUrl(Foundation.URL?)
+  case setSoundMuteStateOnWebViewSetConf
+  case setSoundMute(isMuted: Swift.Bool, needToSendToWeb: Swift.Bool)
+  case setIsUpdatePictureInPictureNeedInSetConfInitialized(isNeeded: Swift.Bool)
+  case setStreamEdgeType(Swift.String?)
+  case setStreamType(ShopLiveCorePlayerSDK.ShopLiveStreamType)
+  case setCampaignId(Swift.String)
+  case setCampaignKey(Swift.String)
+  case setCampaignStatus(ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus)
+  case setResizeMode(mode: ShopliveSDKCommon.ShopLiveResizeMode?)
+  case setStreamActivityType(type: Swift.String)
+  case setOsPipFailedHasOccured(hasOccured: Swift.Bool)
+  case setPipPosition(pos: ShopLiveCorePlayerSDK.ShopLivePipPosition)
+  case setEnableSwipeDown(isEnabled: Swift.Bool)
+  case setWebViewLoadingCompleted(isCompleted: Swift.Bool)
+  case setLastKeyboardHeight(height: CoreFoundation.CGFloat)
+  case setHasKeyboard(hasKeyBoard: Swift.Bool)
+  case setInAppPipConfiguration(ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration?)
+  case setVideoExpanded(isExpanded: Swift.Bool)
+  case setNeedForceSetVideoPositionUpdate(isForced: Swift.Bool)
+  case setForceStatusBarLightContent(isForced: Swift.Bool)
+  case setStatusBarVisibility(needToShow: Swift.Bool)
+  case setSdkClientSettingsFromWeb(settings: [Swift.String : Any]?)
+  case setPreviewResolution(ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution)
+  case setIsActivated(Swift.Bool)
+  case viewWillTransition(size: CoreFoundation.CGSize, coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  case checkAndActivateAudioSessionIfNeeded
+  case setLandingUrl(Foundation.URL?)
+  case tearDownViewModel
+  case setAVPlayerLayer(AVFoundation.AVPlayerLayer?)
+  case checkIsLoadingAvailable(isHidden: Swift.Bool)
+  case checkIfSnapShotImageNeedReCalculation
+  case reloadVideo
+  case seekTo(CoreMedia.CMTime)
+  case seekToLatest
+  case didUpdateVideoUrl(Foundation.URL)
+  case requestTakeSnapshot
+  case requestTakeSnapShotWithCompletion((() -> ())?)
+  case updatePlayBackSpeed(Swift.Float)
+  case resetRetryFromWebview
+  case resetPlayer
+  case initPlayer(Foundation.URL?)
+  case setAVPlayer(AVFoundation.AVPlayer?)
+  case setIsLLHLS(Swift.Bool)
+  case setNeedSeek(Swift.Bool)
+  case setNeedReload(needReload: Swift.Bool)
+  case setPreviewURl(Foundation.URL?)
+  case setLiveUrl(Foundation.URL?)
+  case initRtc(signallingUrl: Foundation.URL?)
+  case setRtcDiscoveryUrl(Foundation.URL?)
+  case setRtcSignallingUrl(Foundation.URL?)
+  case refreshRtcConnection
+  case setRtcResolution(resolution: Swift.String)
+  case requestShowOrHideLoadingView(needToShow: Swift.Bool)
+}
+public enum ShoplivePlayerViewModelResult {
+  case requestShowOrHideLoading(needToShow: Swift.Bool)
+  case requestShowOrHideSnapShotImageView(needToShow: Swift.Bool)
+  case requestShowOrHideBackgroundPosterImageView(needToSHow: Swift.Bool)
+  case requestShowOrHideOSPictureInPicture(needToShow: Swift.Bool)
+  case requestSetShopLivePlayerSessionState(ShopLiveCorePlayerSDK.ShopLivePlayerSessionState)
+  case requestSetAlphaToWebView(alpha: CoreFoundation.CGFloat)
+  case requestHideKeyBoard
+  case requestSetPopOverController(size: CoreFoundation.CGSize)
+  case requestChatInputViewOrientationChange(isPreview: Swift.Bool)
+  case requestCampaignRedirect(streamType: ShopLiveCorePlayerSDK.ShopLiveStreamType)
+  case reloadWebView(url: Foundation.URL)
+  case sendNetworkCapabilityOnChanged(networkCapability: Swift.String)
+  case updateSnapShotImageViewFrameWithRatio(ratio: CoreFoundation.CGSize)
+  case log(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaignKey: Swift.String, payload: [Swift.String : Any]?)
+  case sendEventToWeb(event: ShopLiveCorePlayerSDK.WebInterface, param: Any?, wrapping: Swift.Bool = false, dedicatedCompletionType: ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType?)
+  case sendCommandMessageToWeb(command: Swift.String, payload: [Swift.String : Any]?)
+  case setSnapShotImage(UIKit.UIImage?)
+  case refreshAvPlayerLayerWhenOSPipFailedAndOnForeground
+  case resetOSPictureInPicture
+  case sendChangeOrientationEvent(orientation: ShopLiveCorePlayerSDK.ShopLiveOrientation)
+  case sendRotationFinishedEvent
+  case webRtcDidGenerateSampleBuffer(CoreMedia.CMSampleBuffer)
+  case webRtcDidChangeVideoSize(CoreFoundation.CGSize)
+  case webRtcFlushBuffer
+}
+@objc public protocol ShopLivePlayerViewModelDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func getCurrentWebViewUrl() -> Foundation.URL?
+}
+public protocol ShopLivePlayerViewModelInterface : ShopLiveCorePlayerSDK.ShopLiveCampaignStateContainer, ShopLiveCorePlayerSDK.ShopLiveInternalPlayerViewCampaignStateContainer, ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebViewNavigationDelegate {
+  var overlayUrl: Foundation.URL? { get set }
+  var inAppPipConfiguration: ShopLiveCorePlayerSDK.ShopLiveInAppPipConfiguration? { get set }
+  var lastPipPosition: ShopLiveCorePlayerSDK.ShopLivePipPosition? { get set }
+  var isWebViewDidCompleteLoading: Swift.Bool { get set }
+  var osPipFailedErrorHasOccured: Swift.Bool { get set }
+  var currentNetworkCapability: Swift.String { get set }
+  var isMuted: Swift.Bool { get set }
+  var playerConfiguration: ShopLiveCorePlayerSDK.ShopLivePlayerConfiguration { get set }
+  var streamActivityType: ShopLiveCorePlayerSDK.ShopLiveStreamActivityType { get set }
+  var campaignId: Swift.String { get set }
+  var shopliveSessionId: Swift.String? { get set }
+  var streamEdgeType: Swift.String? { get set }
+  var currentPlayTime: CoreMedia.CMTime? { get set }
+  var customVideoResizeMode: ShopliveSDKCommon.ShopLiveResizeMode? { get set }
+  var lastKeyboardHeight: CoreFoundation.CGFloat { get set }
+  var hasKeyboard: Swift.Bool { get set }
+  var isUpdatePictureInPictureNeedInSetConfInitialized: Swift.Bool { get set }
+  var statusBarVisibility: Swift.Bool { get set }
+  var forceStatusBarLightContent: Swift.Bool { get set }
+  var delegate: (any ShopLiveCorePlayerSDK.ShopLivePlayerViewModelDelegate)? { get set }
+  var resultHandler: ((ShopLiveCorePlayerSDK.ShoplivePlayerViewModelResult) -> ())? { get set }
+  func action(_ action: ShopLiveCorePlayerSDK.ShoplivePlayerViewModelAction)
+  func playerControlAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerControlAction)
+  func lifeCycleAction(_ action: ShopLiveCorePlayerSDK.ShopLiveAppLifeCycleAction)
+  func eventTraceAction(_ action: ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction)
+  func getUseCloseBtnIsEnabled() -> Swift.Bool
+  func getPipPosition() -> ShopLiveCorePlayerSDK.ShopLivePipPosition
+  func getAllowedPipPinPositions() -> [ShopLiveCorePlayerSDK.ShopLivePipPosition]
+  func getEnablePipSwipeOut() -> Swift.Bool
+  func getPipCornerRadius() -> CoreFoundation.CGFloat
+  func getIsUpdatePictureInPictureNeedInSetConfInitialized() -> Swift.Bool
+  func getIsOsPipFailedHasOccured() -> Swift.Bool
+  func getCurrentNetworkType() -> Swift.String
+  func getStreamActivityType() -> ShopLiveCorePlayerSDK.ShopLiveStreamActivityType
+  func getCampaignId() -> Swift.String
+  func getCampaignKey() -> Swift.String
+  func getResizeMode() -> ShopliveSDKCommon.ShopLiveResizeMode?
+  func getEstimatedPlayerFrameForFullScreenOnInitialize() -> CoreFoundation.CGRect?
+  func getShopLiveSessionId() -> Swift.String?
+  func getSteamEdgeType() -> Swift.String?
+  func getLastKeyBoardHeight() -> CoreFoundation.CGFloat
+  func getHasKeyboard() -> Swift.Bool
+  func getVideoExpanded() -> Swift.Bool
+  func getVideoFrame() -> (portrait: CoreFoundation.CGRect?, landscape: (expanded: CoreFoundation.CGRect?, standard: CoreFoundation.CGRect?))
+  func getNeedForceSetVideoPositionUpdate() -> Swift.Bool
+  func getSupportOrientation() -> ShopLiveCorePlayerSDK.ShopLiveVideoOrientation
+  func getIsSuccessCampaignJoin() -> Swift.Bool
+  func getVideoCenterCrop() -> Swift.Bool
+  func getVideoRatio() -> CoreFoundation.CGSize
+  func getVideoOrientation() -> ShopLiveCorePlayerSDK.ShopLiveOrientation
+  func getCurrentWebViewUrl() -> Foundation.URL?
+  func getCurrentPreviewResolution() -> ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution
+  func getPlayerItem() -> AVFoundation.AVPlayerItem?
+  func getPlayer() -> AVFoundation.AVPlayer?
+  func getIsReplayMode() -> Swift.Bool
+  func getNeedSeek() -> Swift.Bool
+  func getTimeControlStatus() -> AVFoundation.AVPlayer.TimeControlStatus
+  func getVideoDuration() -> CoreMedia.CMTime?
+  func getIsReplayFinished() -> Swift.Bool
+  func getStatusBarVisibility() -> Swift.Bool
+  func getForceStatusBarLightContent() -> Swift.Bool
+}
+@objc public protocol ShopLivePlayerDelegate {
+  @objc func handleNavigation(with url: Foundation.URL)
+  @objc optional func handleDownloadCoupon(with couponId: Swift.String, result: @escaping (ShopLiveCorePlayerSDK.ShopLiveCouponResult) -> Swift.Void)
+  @objc optional func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, result: @escaping (ShopLiveCorePlayerSDK.ShopLiveCustomActionResult) -> Swift.Void)
+  @objc optional func handleChangeCampaignStatus(status: Swift.String)
+  @objc optional func handleChangedPlayerStatus(status: Swift.String)
+  @objc optional func handleError(code: Swift.String, message: Swift.String)
+  @objc optional func handleCampaignInfo(campaignInfo: [Swift.String : Any])
+  @objc optional func onSetUserName(_ payload: [Swift.String : Any])
+  @objc optional func handleCommand(_ command: Swift.String, with payload: Any?)
+  @objc optional func handleReceivedCommand(_ command: Swift.String, data: [Swift.String : Any]?)
+  @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
+  @objc optional func onEvent(name: Swift.String, feature: ShopLiveCorePlayerSDK.ShopLiveLog.Feature, campaign: Swift.String, payload: [Swift.String : Any])
+}
+@objc public protocol ShopLivePlayerShareDelegate {
+  @objc func handleShare(data: ShopLiveCorePlayerSDK.ShopLivePlayerShareData)
+}
+extension ShopLiveCorePlayerSDK.ShopLiveBasePlayerViewController : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionAction : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerAudioSessionAction : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceAction : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.PipType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.PipType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.PipType : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventName : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventName : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventName : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventCategory : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventCategory : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventCategory : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerEventTraceManagerImpl.EventType : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerControlAction : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerControlAction : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveChatView : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopLiveChattingView : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopLiveChattingWriteView : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopLiveInternalPlayerStateContainerAction : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveInternalPlayerStateContainerAction : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveViewTrackEvent : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveViewTrackEvent : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveViewTrackEvent : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveViewHiddenActionType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveViewHiddenActionType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveViewHiddenActionType : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.SLLoadingIndicator : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopLiveBackgroundPosterImageWebView : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopLiveLog.Feature : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveLog.Feature : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveLog.Feature : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerOverlayWebView : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopLiveInternalPlayerView : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.WebInterface.WebFunction : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.WebInterface.WebFunction : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.WebInterface.WebFunction : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveWebView : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopliveWindow : Swift.Sendable {}
+extension ShopLiveCorePlayerSDK.ShopLiveNavigationActionType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveNavigationActionType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveNavigationActionType : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveOrientation : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveOrientation : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveOrientation : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePipPosition : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePipPosition : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePipPosition : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerCampaignStatus : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerMode : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerMode : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerMode : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerPreviewResolution : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerSessionState : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerSessionState : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerViewProvideType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerViewProvideType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePlayerViewProvideType : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLivePresentationStyle : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLivePresentationStyle : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLivePresentationStyle : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveResultAlertType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveResultAlertType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveResultAlertType : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveResultStatus : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveResultStatus : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveResultStatus : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveStreamActivityType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveStreamActivityType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveStreamActivityType : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveStreamType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveStreamType : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveStreamType : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveVideoOrientation : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveVideoOrientation : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveVideoOrientation : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.ShopLiveWindowStyle : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.ShopLiveWindowStyle : Swift.Hashable {}
+extension ShopLiveCorePlayerSDK.ShopLiveWindowStyle : Swift.RawRepresentable {}
+extension ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType : Swift.Equatable {}
+extension ShopLiveCorePlayerSDK.DedicatedWebViewCommandCompletionType : Swift.Hashable {}
