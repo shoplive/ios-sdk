@@ -1,4 +1,0 @@
-framework module ShopLiveHLSPlayerSDK {
-  header "ShopLiveHLSPlayerSDK-Swift.h"
-  requires objc
-}
