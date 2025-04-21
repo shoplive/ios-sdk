@@ -1,0 +1,4 @@
+framework module ShopLiveCorePlayerSDK {
+  header "ShopLiveCorePlayerSDK-Swift.h"
+  requires objc
+}

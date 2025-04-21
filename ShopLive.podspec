@@ -1,6 +1,10 @@
 Pod::Spec.new do |spec|
   spec.name         = "ShopLive"
-  spec.version      = "1.6.8"
+<<<<<<< HEAD
+  spec.version      = "0.0.1"
+=======
+  spec.version      = "1.6.9"
+>>>>>>> cbc54dee99a98d7937b58885f99b6f3e35cb027f
   spec.summary      = "ShopLive SDK for iOS"
 
   spec.homepage     = "http://shoplive.cloud"
@@ -13,8 +17,14 @@ Pod::Spec.new do |spec|
 
   spec.author             = { "Shoplive" => "shoplive-eng@shoplive.cloud" }
   spec.platform     = :ios
-  spec.ios.deployment_target = '11.0'
+  spec.ios.deployment_target = '15.0'
   spec.swift_version = "5"
   spec.ios.frameworks = 'VideoToolbox'
-  spec.vendored_frameworks = 'Frameworks/ShopLiveSDK.xcframework'
+  spec.vendored_frameworks = [
+  'Frameworks/ShopLiveCorePlayerSDK.xcframework',
+  'Frameworks/ShopLiveHLSPlayerSDK.xcframework',
+  'Frameworks/ShopLiveWebRTCHelperSDK.xcframework',
+  'Frameworks/ShopLiveWebRTCPlayerSDK.xcframework',
+  'Frameworks/WebRTC.xcframework'
+]
 end
