@@ -1,0 +1,4 @@
+framework module ShopLiveStreamerSDK {
+  header "ShopLiveStreamerSDK-Swift.h"
+  requires objc
+}

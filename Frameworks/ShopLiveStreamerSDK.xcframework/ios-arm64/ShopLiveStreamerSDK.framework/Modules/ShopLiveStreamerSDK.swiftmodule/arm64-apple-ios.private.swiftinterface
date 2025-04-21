@@ -1,0 +1,675 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ShopLiveStreamerSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFoundation
+import AVKit
+import Accelerate
+import Combine
+import CoreMedia
+import CoreTelephony
+import DeveloperToolsSupport
+import Foundation
+import MessageUI
+import QuartzCore
+import ShopLiveWebRTCHelperSDK
+import ShopliveSDKCommon
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import WebRTC
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ShopLiveStreamerSDKAsset : Swift.Sendable {
+  public static let backButton: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let baseZoom: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let cameraSettings: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let cameraSwitchButton: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let clearall: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let close: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let connectionStatusGreen: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let connectionStatusRed: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let connectionStatusYellow: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let defaultBitrate: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let defaultList: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let defaultMute: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let defaultSwitch: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let defaultUnbitrate: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let defaultUnmute: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let icSettingsDisabledSL: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let sliderMax: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let sliderMin: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let sliderThumb: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let soundOffButton: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let soundOnButton: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+  public static let vectorShape: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages
+}
+public struct ShopLiveStreamerSDKImages : Swift.Sendable {
+  public let name: Swift.String
+  public typealias Image = UIKit.UIImage
+  public var image: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages.Image {
+    get
+  }
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+  public var swiftUIImage: SwiftUICore.Image {
+    get
+  }
+}
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+extension SwiftUICore.Image {
+  public init(asset: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages)
+  public init(asset: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages, label: SwiftUICore.Text)
+  public init(decorative asset: ShopLiveStreamerSDK.ShopLiveStreamerSDKImages)
+}
+@_inheritsConvenienceInitializers @objc public class ShopLiveStreamerSDKResources : ObjectiveC.NSObject {
+  @objc public class var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ShopLiveStreamerSDKStrings : Swift.Sendable {
+  public enum Bottomsheet : Swift.Sendable {
+    public enum Stream : Swift.Sendable {
+      public enum Option : Swift.Sendable {
+        public enum Live : Swift.Sendable {
+          public static let description: Swift.String
+          public static let indicator: Swift.String
+          public static let title: Swift.String
+        }
+        public enum Rehearsal : Swift.Sendable {
+          public static let description: Swift.String
+          public static let indicator: Swift.String
+          public static let title: Swift.String
+        }
+        public enum Streaming : Swift.Sendable {
+          public enum Only : Swift.Sendable {
+            public static let description: Swift.String
+            public static let indicator: Swift.String
+            public static let title: Swift.String
+          }
+        }
+      }
+    }
+  }
+  public enum Broadcast : Swift.Sendable {
+    public enum Admin : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Console : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Datainsite : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Detail : Swift.Sendable {
+      public enum Base : Swift.Sendable {
+        public static let title: Swift.String
+        public enum Campaignkey : Swift.Sendable {
+          public static let title: Swift.String
+        }
+        public enum Id : Swift.Sendable {
+          public static let title: Swift.String
+        }
+        public enum ScheduledAt : Swift.Sendable {
+          public static let title: Swift.String
+        }
+        public enum Status : Swift.Sendable {
+          public static let title: Swift.String
+        }
+      }
+      public enum Button : Swift.Sendable {
+        public static let closed: Swift.String
+        public enum Stream : Swift.Sendable {
+          public static let ofoff: Swift.String
+        }
+      }
+      public enum Detail : Swift.Sendable {
+        public static let title: Swift.String
+        public enum Passcode : Swift.Sendable {
+          public static let title: Swift.String
+        }
+        public enum Previewurl : Swift.Sendable {
+          public static let title: Swift.String
+        }
+        public enum Streamkey : Swift.Sendable {
+          public static let title: Swift.String
+        }
+        public enum Streamurl : Swift.Sendable {
+          public static let title: Swift.String
+        }
+      }
+    }
+    public enum List : Swift.Sendable {
+      public enum Broadcastlist : Swift.Sendable {
+        public enum Createddate : Swift.Sendable {
+          public static let dateformat: Swift.String
+        }
+        public enum Network : Swift.Sendable {
+          public enum Error : Swift.Sendable {
+            public static let description: Swift.String
+            public static let loading: Swift.String
+            public static let retry: Swift.String
+            public static let title: Swift.String
+          }
+        }
+      }
+      public enum Emptymsg : Swift.Sendable {
+        public static let subtitle: Swift.String
+        public static let title: Swift.String
+      }
+    }
+    public enum Preview : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Prompter : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Replay : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Shortcut : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Showlive : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum St : Swift.Sendable {
+      public static let bitrate: Swift.String
+      public static let logout: Swift.String
+      public static let title: Swift.String
+      public static let version: Swift.String
+    }
+  }
+  public enum Broadcaster : Swift.Sendable {
+    public enum Camera : Swift.Sendable {
+      public enum Flipfailed : Swift.Sendable {
+        public static let msg: Swift.String
+      }
+    }
+    public enum Confirm : Swift.Sendable {
+      public enum Retry : Swift.Sendable {
+        public static let msg: Swift.String
+      }
+    }
+    public enum Exit : Swift.Sendable {
+      public static let title: Swift.String
+      public enum Alert : Swift.Sendable {
+        public static let title: Swift.String
+        public enum Ok : Swift.Sendable {
+          public static let title: Swift.String
+        }
+      }
+    }
+    public enum Modal : Swift.Sendable {
+      public enum Apologize : Swift.Sendable {
+        public static let description: Swift.String
+      }
+      public enum Retry : Swift.Sendable {
+        public static let button: Swift.String
+      }
+      public enum Unavailable : Swift.Sendable {
+        public static let title: Swift.String
+      }
+    }
+    public enum Network : Swift.Sendable {
+      public enum Disconnected : Swift.Sendable {
+        public static let msg: Swift.String
+      }
+      public enum Unstable : Swift.Sendable {
+        public static let msg: Swift.String
+      }
+    }
+    public enum Pager : Swift.Sendable {
+      public enum Guide : Swift.Sendable {
+        public static let description: Swift.String
+      }
+    }
+    public enum Perm : Swift.Sendable {
+      public enum Alert : Swift.Sendable {
+        public static let title: Swift.String
+      }
+      public enum Camera : Swift.Sendable {
+        public static let name: Swift.String
+      }
+      public enum Microphone : Swift.Sendable {
+        public static let name: Swift.String
+      }
+    }
+    public enum Progress : Swift.Sendable {
+      public static let cancel: Swift.String
+    }
+    public enum Snackbar : Swift.Sendable {
+      public enum Retry : Swift.Sendable {
+        public static let button: Swift.String
+      }
+    }
+    public enum State : Swift.Sendable {
+      public static let finish: Swift.String
+      public static let play: Swift.String
+      public static let ready: Swift.String
+      public static let rehearsal: Swift.String
+    }
+    public enum Stop : Swift.Sendable {
+      public static let failed: Swift.String
+    }
+  }
+  public enum Clipboard : Swift.Sendable {
+    public enum Copy : Swift.Sendable {
+      public static let title: Swift.String
+    }
+  }
+  public enum Error : Swift.Sendable {
+    public enum Msg : Swift.Sendable {
+      public static let base: Swift.String
+      public static let empty: Swift.String
+      public static let login: Swift.String
+      public static let noInternet: Swift.String
+      public enum Failure : Swift.Sendable {
+        public enum Start : Swift.Sendable {
+          public static let campaign: Swift.String
+        }
+      }
+      public enum Server : Swift.Sendable {
+        public static let invalidToken: Swift.String
+        public static let timeout: Swift.String
+        public static let unknown: Swift.String
+      }
+    }
+  }
+  public enum Msg : Swift.Sendable {
+    public enum Cancel : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Close : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Exit : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Leave : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Ok : Swift.Sendable {
+      public static let title: Swift.String
+    }
+    public enum Update : Swift.Sendable {
+      public static let title: Swift.String
+    }
+  }
+  public enum Stream : Swift.Sendable {
+    public enum Start : Swift.Sendable {
+      public static func title(_ p1: Any) -> Swift.String
+    }
+  }
+}
+public struct RTCDemoConfigurationManager {
+  public static var enableDscp: Swift.Bool
+  public static var iceTransportsType: WebRTC.RTCIceTransportPolicy
+  public static var bundlePolicy: WebRTC.RTCBundlePolicy
+  public static var rtcpMuxPolicy: WebRTC.RTCRtcpMuxPolicy
+  public static var tcpCandidatePolicy: WebRTC.RTCTcpCandidatePolicy
+  public static var candidateNetworkPolicy: WebRTC.RTCCandidateNetworkPolicy
+  public static var continualGatheringPolicy: WebRTC.RTCContinualGatheringPolicy
+  public static var disableIPV6OnWiFi: Swift.Bool
+  public static var maxIPv6Networks: Swift.Int32
+  public static var disableLinkLocalNetworks: Swift.Bool?
+  public static var audioJitterBufferMaxPackets: Swift.Int32
+  public static var audioJitterBufferFastAccelerate: Swift.Bool
+  public static var iceConnectionReceivingTimeout: Swift.Int32
+  public static var iceBackupCandidatePairPingInterval: Swift.Int32
+  public static var iceCandidatePoolSize: Swift.Int32
+  public static var pruneTurnPorts: Swift.Bool
+  public static var presumeWritableWhenFullyRelayed: Swift.Bool
+  public static var surfaceIceCandidatesOnIceTransportTypeChanged: Swift.Bool
+  public static var iceCheckMinInterval: Swift.Int?
+  public static var activeResetSrtpParams: Swift.Bool
+  public static var turnLoggingId: Swift.String?
+  public static var rtcpAudioReportIntervalMs: Swift.Int32?
+  public static var rtcpVideoReportIntervalMs: Swift.Int32?
+  public static var enableImplicitRollback: Swift.Bool
+  public static var offerExtmapAllowMixed: Swift.Bool
+  public static var iceCheckIntervalStrongConnectivityMs: Swift.Int?
+  public static var iceCheckIntervalWeakConnectivityMs: Swift.Int?
+  public static var iceUnwritableTimeMs: Swift.Int?
+  public static var iceUnwritableMinChecks: Swift.Int?
+  public static var iceInactiveTimeout: Swift.Int?
+  public static var suspendBelowMinBitrate: Swift.Bool
+  public static var screencastMinBitrate: Swift.Int?
+  public static func resetToDefaults()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ShopLiveRtcWebView : WebKit.WKWebView {
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func invokeQueuedRequest()
+  @_Concurrency.MainActor @preconcurrency public func sendEventToWeb(event: ShopLiveStreamerSDK.SLWebViewInterface, _ param: Any? = nil, _ wrapping: Swift.Bool = false, completion: ((Swift.Bool) -> ())? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, configuration: WebKit.WKWebViewConfiguration)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public enum SLWebViewInterface {
+  case systemInit
+  case setPosterUrl(url: Foundation.URL)
+  case setLiveStreamUrl(url: Foundation.URL?)
+  case setRtcDiscoveryUrl
+  case setRtcSignalingUrl
+  case setResolution
+  case setVideoMute(isMuted: Swift.Bool)
+  case setIsPlayingVideo(isPlaying: Swift.Bool)
+  case reloadVideo
+  case startPictureInPicture
+  case close
+  case navigation(url: Foundation.URL)
+  case coupon(id: Swift.String)
+  case playVideo
+  case pauseVideo
+  case downKeyboard
+  case onPipModeChanged
+  case completeDownloadCoupon
+  case completeCustomAction
+  case videoInitialized
+  case showChatInput
+  case hiddenChatInput
+  case setConf
+  case write
+  case written
+  case setChatListMarginBottom
+  case setVideoCurrentTime(to: Swift.Double)
+  case onVideoDurationChanged
+  case onVideoTimeUpdated
+  case reloadBtn
+  case onTerminated
+  case onBackground
+  case onForeground
+  case customAction(id: Swift.String, type: Swift.String, payload: Any?)
+  case onCampaignStatusChanged(status: Swift.String)
+  case disableSwipeDown
+  case enableSwipeDown
+  case setParam(key: Swift.String, value: Swift.String)
+  case delParam(key: Swift.String)
+  case showNativeDebug
+  case debuglog(log: Swift.String)
+  case onVideoMetadataUpdated
+  case onRtcMetadataUpdated
+  case downloadCouponResult
+  case customActionResult
+  case setUserName(payload: [Swift.String : Any?])
+  case error(code: Swift.String, message: Swift.String)
+  case command(command: Swift.String, payload: Any?)
+  case sendCommandMessage
+  case setSafeAreaMargin
+  case onNetworkChangeCapability
+  case onVideoError
+  case onChangedActivityType(campaignKey: Swift.String, activityType: Swift.String)
+  case setEgressProtocolsUrl
+  case onChangedStreamingStatus
+  case onClickCampaignProductManage
+  case setChattingBottomMargin
+  case onHandleWebInterfaceChangedProductCount(count: Swift.Int)
+  case onHandleWebInterfaceClickBackButton
+  case onHandleWebInterfaceDismissCampaignProductManage
+  case onHandleWebInterfaceCampaignProductManageShown
+  case onStartedStreaming
+  case closePlayer
+  public var functionString: Swift.String {
+    get
+  }
+  public enum WebFunction : Swift.String, Swift.CustomStringConvertible, Swift.CaseIterable {
+    public var description: Swift.String {
+      get
+    }
+    case systemInit
+    case setPosterUrl
+    case setLiveStreamUrl
+    case setRtcDiscoveryUrl
+    case setRtcSignalingUrl
+    case setResolution
+    case setVideoMute
+    case setIsPlayingVideo
+    case reloadVideo
+    case startPictureInPicture
+    case close
+    case navigation
+    case coupon
+    case playVideo
+    case pauseVideo
+    case downKeyboard
+    case onPipModeChanged
+    case clickBackButton
+    case completeDownloadCoupon
+    case completeCustomAction
+    case videoInitialized
+    case command
+    case showChatInput
+    case hiddenChatInput
+    case setConf
+    case write
+    case written
+    case setChatListMarginBottom
+    case setVideoCurrentTime
+    case onVideoDurationChanged
+    case onVideoTimeUpdated
+    case reloadBtn
+    case onTerminated
+    case onBackground
+    case onForeground
+    case customAction
+    case onCampaignStatusChanged
+    case disableSwipeDown
+    case enableSwipeDown
+    case setParam
+    case delParam
+    case showNativeDebug
+    case debuglog
+    case onVideoMetadataUpdated
+    case onRtcMetadataUpdate
+    case downloadCouponResult
+    case customActionResult
+    case setUserName
+    case error
+    case sendCommandMessage
+    case setSafeAreaMargin
+    case onNetworkChangeCapability
+    case onVideoError
+    case onChangedActivityType
+    case setEgressProtocolsUrl
+    case onChangedStreamingStatus
+    case onClickCampaignProductManage
+    case setChattingBottomMargin
+    case dismissCampaignProductManage
+    case onChangedProductCount
+    case onCampaignProductManageShown
+    case onStartedStreaming
+    case closePlayer
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [ShopLiveStreamerSDK.SLWebViewInterface.WebFunction]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [ShopLiveStreamerSDK.SLWebViewInterface.WebFunction] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension ShopLiveStreamerSDK.SLWebViewInterface {
+  public init?(message: WebKit.WKScriptMessage)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLBaseViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency public func layout()
+  @_Concurrency.MainActor @preconcurrency public func attributes()
+  @_Concurrency.MainActor @preconcurrency public func bindView()
+  @_Concurrency.MainActor @preconcurrency public func bindData()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLStreamBaseViewController : UIKit.UIViewController {
+  public enum Result {
+    case needToLockOrientation(orientation: UIKit.UIInterfaceOrientationMask, rotateOrientation: UIKit.UIInterfaceOrientation)
+  }
+  @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveStreamerSDK.SLStreamBaseViewController.Result) -> ())?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency public func layout()
+  @_Concurrency.MainActor @preconcurrency public func attributes()
+  @_Concurrency.MainActor @preconcurrency public func bindView()
+  @_Concurrency.MainActor @preconcurrency public func bindData()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension Swift.Array {
+  public func chunked(into size: Swift.Int) -> [[Element]]
+  public func chunks(size chunksize: Swift.Int) -> Swift.Array<Swift.Array<Element>>
+}
+extension Swift.Array where Element == Swift.String {
+  public func reducedWithComma() -> Swift.String
+}
+extension Swift.Collection {
+  public subscript(safe index: Self.Index) -> Self.Element? {
+    get
+  }
+  public var isNotEmpty: Swift.Bool {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class ShopLiveStreamer {
+  public enum FontType {
+    case thin
+    case regular
+    case medium
+    case semiBold
+    case bold
+    public static func == (a: ShopLiveStreamerSDK.ShopLiveStreamer.FontType, b: ShopLiveStreamerSDK.ShopLiveStreamer.FontType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Stage {
+    case dev
+    case qa
+    case prod
+    public static func == (a: ShopLiveStreamerSDK.ShopLiveStreamer.Stage, b: ShopLiveStreamerSDK.ShopLiveStreamer.Stage) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum SLStudioRequest {
+    case setEnvironmentStage(ShopLiveStreamerSDK.ShopLiveStreamer.Stage)
+    case initialize
+    case setFont(type: ShopLiveStreamerSDK.ShopLiveStreamer.FontType, descriptor: UIKit.UIFontDescriptor)
+  }
+  public static func request(_ request: ShopLiveStreamerSDK.ShopLiveStreamer.SLStudioRequest)
+  @objc deinit
+}
+extension ShopLiveStreamerSDK.ShopLiveStreamer {
+  public struct Builder {
+    public init(data: ShopLiveStreamerSDK.ShopLiveStreamerData, delegate: (any ShopLiveStreamerSDK.ShopLiveStreamerDelegate)?)
+    public func build() -> ShopLiveStreamerSDK.SLStreamBaseViewController
+  }
+}
+extension ShopLiveStreamerSDK.ShopLiveStreamer {
+  public static var sdkVersion: Swift.String {
+    get
+  }
+}
+public struct ShopLiveCampaignEndOption {
+  public init(endAfterMillis: Swift.Int = 0, allowJoinWhileEnding: Swift.Bool = true, showViewersWhileEnding: Swift.Bool = true)
+}
+public enum ShopLiveStreamerLiveStartButtonAction {
+  case startStreamOnly
+  case startStreamAndCampaign
+  public static func == (a: ShopLiveStreamerSDK.ShopLiveStreamerLiveStartButtonAction, b: ShopLiveStreamerSDK.ShopLiveStreamerLiveStartButtonAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLiveStreamerLiveStopButtonAction {
+  case stopStreamOnly
+  case stopStreamAndCampaign(ShopLiveStreamerSDK.ShopLiveCampaignEndOption)
+}
+public enum ShopLiveStreamerCloseButtonAction {
+  case stopStreamOnly
+  case stopStreamAndCampaign(ShopLiveStreamerSDK.ShopLiveCampaignEndOption)
+  case stopStreamAndCampaignAndLeave(ShopLiveStreamerSDK.ShopLiveCampaignEndOption)
+}
+public class ShopLiveStreamerData {
+  public var type: ShopLiveStreamerSDK.ShopLiveStreamerDataType
+  public var campaignKey: Swift.String
+  public var isRehearsal: Swift.Bool
+  public var videoAspectRatio: Swift.String?
+  public var useLiveStartButtonCallback: Swift.Bool
+  public var useLiveStopButtonCallback: Swift.Bool
+  public var useCloseButtonCallback: Swift.Bool
+  public init(campaignKey: Swift.String, type: ShopLiveStreamerSDK.ShopLiveStreamerDataType = .type2, isRehearsal: Swift.Bool, videoAspectRatio: Swift.String? = "9:16", useLiveStartButtonCallback: Swift.Bool = false, useLiveStopButtonCallback: Swift.Bool = false, useCloseButtonCallback: Swift.Bool = false)
+  @objc deinit
+}
+public enum ShopLiveStreamerDataType {
+  case type1
+  case type2
+  public static func == (a: ShopLiveStreamerSDK.ShopLiveStreamerDataType, b: ShopLiveStreamerSDK.ShopLiveStreamerDataType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ShopLiveStreamerDelegate : ObjectiveC.NSObjectProtocol {
+  func onLiveStreamStartButtonTapped(view ShopLiveStreamerViewController: UIKit.UIViewController?, campaignStatus: Swift.String, completion: @escaping (ShopLiveStreamerSDK.ShopLiveStreamerLiveStartButtonAction) -> ())
+  func onLiveStreamStopButtonTapped(view ShopLiveStreameViewController: UIKit.UIViewController?, completion: @escaping (ShopLiveStreamerSDK.ShopLiveStreamerLiveStopButtonAction) -> ())
+  func onCloseButtonTapped(view ShopLiveSteamerViewController: UIKit.UIViewController?, completion: @escaping (ShopLiveStreamerSDK.ShopLiveStreamerCloseButtonAction) -> ())
+  func onError(error: any Swift.Error)
+}
+extension ShopLiveStreamerSDK.Type1WebRtcStreamViewController : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class Type1WebRtcStreamViewController : ShopLiveStreamerSDK.SLStreamBaseViewController, ShopliveSDKCommon.SLResultObservable {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override final public func bindView()
+}
+extension ShopLiveStreamerSDK.Type1WebRtcStreamViewController : WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency @objc final public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class Type2WebRtcStreamViewController : ShopLiveStreamerSDK.SLStreamBaseViewController, ShopliveSDKCommon.SLResultObservable {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override final public func bindView()
+}
+extension ShopLiveStreamerSDK.Type2WebRtcStreamViewController : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+extension ShopLiveStreamerSDK.Type2WebRtcStreamViewController : WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency @objc final public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension ShopLiveStreamerSDK.SLWebViewInterface.WebFunction : Swift.Equatable {}
+extension ShopLiveStreamerSDK.SLWebViewInterface.WebFunction : Swift.Hashable {}
+extension ShopLiveStreamerSDK.SLWebViewInterface.WebFunction : Swift.RawRepresentable {}
+extension ShopLiveStreamerSDK.ShopLiveStreamer.FontType : Swift.Equatable {}
+extension ShopLiveStreamerSDK.ShopLiveStreamer.FontType : Swift.Hashable {}
+extension ShopLiveStreamerSDK.ShopLiveStreamer.Stage : Swift.Equatable {}
+extension ShopLiveStreamerSDK.ShopLiveStreamer.Stage : Swift.Hashable {}
+extension ShopLiveStreamerSDK.ShopLiveStreamerLiveStartButtonAction : Swift.Equatable {}
+extension ShopLiveStreamerSDK.ShopLiveStreamerLiveStartButtonAction : Swift.Hashable {}
+extension ShopLiveStreamerSDK.ShopLiveStreamerDataType : Swift.Equatable {}
+extension ShopLiveStreamerSDK.ShopLiveStreamerDataType : Swift.Hashable {}
