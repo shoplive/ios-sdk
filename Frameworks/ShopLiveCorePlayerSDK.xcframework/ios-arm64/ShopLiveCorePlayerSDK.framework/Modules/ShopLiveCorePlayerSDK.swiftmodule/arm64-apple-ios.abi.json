@@ -876,6 +876,16 @@
       },
       {
         "kind": "Import",
+        "name": "ShopliveSDKCommon",
+        "printedName": "ShopliveSDKCommon",
+        "declKind": "Import",
+        "moduleName": "ShopLiveCorePlayerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -47875,16 +47885,6 @@
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "ShopliveSDKCommon",
-        "printedName": "ShopliveSDKCommon",
-        "declKind": "Import",
-        "moduleName": "ShopLiveCorePlayerSDK",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
