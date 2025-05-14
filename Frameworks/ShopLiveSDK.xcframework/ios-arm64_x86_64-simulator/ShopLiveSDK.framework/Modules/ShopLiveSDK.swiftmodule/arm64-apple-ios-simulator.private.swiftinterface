@@ -239,6 +239,21 @@ extension Foundation.NotificationCenter {
     get
   }
 }
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ShopLiveBackgroundPosterImageWebView : ShopLiveSDK.SLView, ShopliveSDKCommon.SLReactor {
+  public enum Action {
+    case setBackgroundUrl(url: Foundation.URL?)
+    case reload
+  }
+  public enum Result {
+  }
+  @_Concurrency.MainActor(unsafe) public var resultHandler: ((ShopLiveSDK.ShopLiveBackgroundPosterImageWebView.Result) -> ())?
+  @_Concurrency.MainActor(unsafe) weak public var webView: ShopLiveSDK.SLWKWebView?
+  @_Concurrency.MainActor(unsafe) public func action(_ action: ShopLiveSDK.ShopLiveBackgroundPosterImageWebView.Action)
+  @objc deinit
+}
+extension ShopLiveSDK.ShopLiveBackgroundPosterImageWebView : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+}
 @objc public enum ResultStatus : Swift.Int, Swift.CaseIterable {
   case SHOW
   case HIDE

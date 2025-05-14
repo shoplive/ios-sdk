@@ -600,22 +600,6 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 @end
 
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
-};
-
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
   PipPositionTopCenter = 1,
@@ -633,6 +617,22 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleUnknown = 0,
   PresentationStyleFullScreen = 1,
   PresentationStylePip = 2,
+};
+
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
 };
 
 enum ShopLiveViewHiddenActionType : NSInteger;
@@ -743,6 +743,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _
 + (CGSize)getPreviewSizeInAppPipConfiguration:(ShopLiveInAppPipConfiguration * _Nonnull)inAppPipConfiguration videoRatio:(CGSize)videoRatio SWIFT_WARN_UNUSED_RESULT;
 + (void)setResizeModeWithMode:(enum ShopLiveResizeMode)mode;
 + (void)forceStartWithPortraitMode:(BOOL)isForced;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK36ShopLiveBackgroundPosterImageWebView")
+@interface ShopLiveBackgroundPosterImageWebView : SLView
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+@class WKNavigation;
+
+@interface ShopLiveBackgroundPosterImageWebView (SWIFT_EXTENSION(ShopLiveSDK)) <WKNavigationDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)navigation;
 @end
 
 enum ShopLiveResultStatus : NSInteger;
@@ -1602,22 +1618,6 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 @end
 
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
-};
-
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
   PipPositionTopCenter = 1,
@@ -1635,6 +1635,22 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleUnknown = 0,
   PresentationStyleFullScreen = 1,
   PresentationStylePip = 2,
+};
+
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
 };
 
 enum ShopLiveViewHiddenActionType : NSInteger;
@@ -1745,6 +1761,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _
 + (CGSize)getPreviewSizeInAppPipConfiguration:(ShopLiveInAppPipConfiguration * _Nonnull)inAppPipConfiguration videoRatio:(CGSize)videoRatio SWIFT_WARN_UNUSED_RESULT;
 + (void)setResizeModeWithMode:(enum ShopLiveResizeMode)mode;
 + (void)forceStartWithPortraitMode:(BOOL)isForced;
+@end
+
+
+SWIFT_CLASS("_TtC11ShopLiveSDK36ShopLiveBackgroundPosterImageWebView")
+@interface ShopLiveBackgroundPosterImageWebView : SLView
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+@class WKNavigation;
+
+@interface ShopLiveBackgroundPosterImageWebView (SWIFT_EXTENSION(ShopLiveSDK)) <WKNavigationDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)navigation;
 @end
 
 enum ShopLiveResultStatus : NSInteger;
