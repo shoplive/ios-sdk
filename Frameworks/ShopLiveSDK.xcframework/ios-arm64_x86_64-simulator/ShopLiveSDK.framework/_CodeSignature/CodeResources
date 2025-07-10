@@ -6,55 +6,55 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		iew7SCEolJFmqdN7vnl4LKHuNhs=
+		9Ws3g7FO5ReAQ1ZHO2jOL5f874w=
 		</data>
 		<key>Headers/ShopLiveSDK-Swift.h</key>
 		<data>
-		fnvOaK5aDZ66EqpLHblTrHTBhH4=
+		OG1gfCiUZBMlUj8W/Nmj8Ip8IdI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lzb7TCWQv4xr0shsZrcDQh313IY=
+		YvaL5KtgCWqkxwEe5KOEEcqTlgE=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		nh75R99m7q5KNP/7MuJ8PORf/U4=
+		/pUN3U6cnWWKzSyF1GpQTmzukx0=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		U+v27icrv8gCMmWdniRKtv6fcHQ=
+		xq7SVuOayRL0U/a5TPrDEND7FwA=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		OS762Tp3x2FJQb6lBbJ3IOCY5f8=
+		A5fnFq6v1eBLMlNFk3uvpaC/pYQ=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		U+v27icrv8gCMmWdniRKtv6fcHQ=
+		xq7SVuOayRL0U/a5TPrDEND7FwA=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LfMeg+ysdl8vICH/LQr9JOT9Dn0=
+		zEO2NYSVKFJTCk0Su6hWtQKOq44=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		nh75R99m7q5KNP/7MuJ8PORf/U4=
+		/pUN3U6cnWWKzSyF1GpQTmzukx0=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		4zlaftRQ3b8la5UarBQ/G3gwLEM=
+		BrMI09/QqlbEVqSmegilQjUBD44=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		zOzRGrwyjP0iKAXuj3NAzhH69w8=
+		m8Bf4EBb30rPZGpM4u7g8BUa9Hs=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		4zlaftRQ3b8la5UarBQ/G3gwLEM=
+		BrMI09/QqlbEVqSmegilQjUBD44=
 		</data>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ctAZDNUpGyHg8j/DrrSdtxkenxI=
+		X2NiIHgV0xLsLkFxrNIBKK6fEe0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,84 +89,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IGp/8Pe4rxblf+iSMPJfUGUryk5vbsykhB+yak7riz8=
+			U8tW43dNY+n4XBpj3OqUrSCeZz/x2LwYYo/EL0I84YM=
 			</data>
 		</dict>
 		<key>Headers/ShopLiveSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Z3vZeG2nd2LvSqr3XH2JrN9nDEJFwCs1BxLudxuEfo=
+			STP3G1mAr298t9EcZ+b0EpPDfF0J0Er+wpBaPTLshC4=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U8lmU6KVHg+yhOl5Vxr/Iva0pMfF/N3EXhhqodg9RO4=
+			oQCEejlb9dcgaOrsPFoYNjQCcNL1CpLAjE7saHEiQYk=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kpXBoS5IJVYInlpvP5/fsh46zI5owVxm/H94KrOvzfc=
+			iD8IywF3kfgJwCALcrfQN0G+b8y2IPdpLfv3fHrj5po=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P+yNNUU1JG2KSbpCBR01dl9cp54nSlOUB3l8rx1ZomE=
+			N6yqPySvYZMDcagntDFl9h/vNhV8SFdARxvPMCkfqrk=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kpXBoS5IJVYInlpvP5/fsh46zI5owVxm/H94KrOvzfc=
+			iD8IywF3kfgJwCALcrfQN0G+b8y2IPdpLfv3fHrj5po=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WzEDDjRqP2csouEHTVedAE5IyCZ/6ajY3d7JftsjGgU=
+			vbOVMgXMekxmE0WXHthecgFzg8xT47v8Sp3W1TIyiVM=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U8lmU6KVHg+yhOl5Vxr/Iva0pMfF/N3EXhhqodg9RO4=
+			oQCEejlb9dcgaOrsPFoYNjQCcNL1CpLAjE7saHEiQYk=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			54bAn2S2W1/tyxRb4ExiElr3oGE0v2mgL/GDFdPX/EU=
+			sDaxPsc4MjvSrE9cvSuALskDwcrL/A3TeMTQdSQ/eks=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iC03uMGfrRSLxCgGlch76zQOS3M71b1KpWEVmdb7PqE=
+			C1OVQt9qrGn8S/rEgwYUewPfn40ABwEp/EXEXKLMICw=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			54bAn2S2W1/tyxRb4ExiElr3oGE0v2mgL/GDFdPX/EU=
+			sDaxPsc4MjvSrE9cvSuALskDwcrL/A3TeMTQdSQ/eks=
 			</data>
 		</dict>
 		<key>Modules/ShopLiveSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RaEdt5o8EvR2ITsSy/xK10n+hP6aheyLT/b7haYgbY8=
+			zUIhVjA141WUGlD3Mf+E8d3E1x8ewa+ylED9K9EEMNQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
