@@ -583,6 +583,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK16SLViewController")
 SWIFT_CLASS("_TtC11ShopLiveSDK11SLWKWebView")
 @interface SLWKWebView : WKWebView
 - (nonnull instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration * _Nonnull)configuration OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) SLView * _Nullable inputAccessoryView;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
@@ -601,6 +602,22 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
+};
 
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
@@ -625,28 +642,11 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
-
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
-};
-
 enum ShopLiveViewHiddenActionType : NSInteger;
 @class UIFont;
 @protocol ShopLivePlayerShareDelegate;
 @class NSURL;
 @class ShopliveWindow;
-@class NSNumber;
 @class UIColor;
 @protocol ShopLiveSDKDelegate;
 @class ShopLivePlayerData;
@@ -654,13 +654,13 @@ enum ShopLiveViewHiddenActionType : NSInteger;
 @class ShopLiveInAppPipConfiguration;
 
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-+ (void)setEnabledPipSwipeOut:(BOOL)enabled SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");
++ (void)setEnabledPipSwipeOut:(BOOL)enabled SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config: ShopLiveInAppPipConfiguration) instead");
 + (void)removeParameterWithKey:(NSString * _Nonnull)key;
 + (void)addParameterWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 + (void)setAdIdWithAdId:(NSString * _Nullable)adId SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon please Enable AppTrackingTransparency instead");
 + (void)setMixWithOthersWithIsMixAudio:(BOOL)isMixAudio;
 + (void)setAudioSessionCategoryWithCategory:(AVAudioSessionCategory _Nonnull)category;
-+ (void)useCloseButton:(BOOL)use SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");
++ (void)useCloseButton:(BOOL)use SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon Use setInAppPipConfiguration(config: ShopLiveInAppPipConfiguration) instead");
 + (void)awakePlayer;
 + (void)setKeepWindowStyleOnReturnFromOsPip:(BOOL)keep;
 + (BOOL)isKeepWindowStyleOnReturnFromOsPip SWIFT_WARN_UNUSED_RESULT;
@@ -692,21 +692,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PlayerMode play
 + (enum PlayerMode)playerMode SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ShopliveWindow * _Nullable playerWindow;)
 + (ShopliveWindow * _Nullable)playerWindow SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NSNumber * _Nullable fixedPipWidth SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
-+ (NSNumber * _Nullable)fixedPipWidth SWIFT_WARN_UNUSED_RESULT;
-+ (void)setFixedPipWidth:(NSNumber * _Nullable)newValue;
 + (void)mute;
 + (void)unmute;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum VideoOrientation orientationMode;)
 + (enum VideoOrientation)orientationMode SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PresentationStyle style;)
 + (enum PresentationStyle)style SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PipPosition pipPosition SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon use setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
-+ (enum PipPosition)pipPosition SWIFT_WARN_UNUSED_RESULT;
-+ (void)setPipPosition:(enum PipPosition)newValue;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) CGFloat pipScale SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Will be deprecated soon use pipMaxSize in setInAppPipConfiguration(config : ShopLiveInAppPipConfiguration) instead");)
-+ (CGFloat)pipScale SWIFT_WARN_UNUSED_RESULT;
-+ (void)setPipScale:(CGFloat)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) UIColor * _Nonnull indicatorColor;)
 + (UIColor * _Nonnull)indicatorColor SWIFT_WARN_UNUSED_RESULT;
 + (void)setIndicatorColor:(UIColor * _Nonnull)newValue;
@@ -717,9 +708,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <ShopLiveSDKDelegat
 + (id <ShopLiveSDKDelegate> _Nullable)delegate SWIFT_WARN_UNUSED_RESULT;
 + (void)setDelegate:(id <ShopLiveSDKDelegate> _Nullable)newValue;
 + (void)previewWithData:(ShopLivePlayerData * _Nonnull)data completion:(void (^ _Nullable)(void))completion;
-+ (void)previewWith:(NSString * _Nullable)campaignKey referrer:(NSString * _Nullable)referrer completion:(void (^ _Nullable)(void))completion SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Use preview(data : ShopLivePlayerData) instead");
++ (void)previewWith:(NSString * _Nullable)campaignKey referrer:(NSString * _Nullable)referrer completion:(void (^ _Nullable)(void))completion SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Use preview(data: ShopLivePlayerData) instead");
 + (void)playWithData:(ShopLivePlayerData * _Nonnull)data;
-+ (void)playWith:(NSString * _Nullable)campaignKey keepWindowStateOnPlayExecuted:(BOOL)keepWindowStateOnPlayExecuted referrer:(NSString * _Nullable)referrer SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Use play(data : ShopLivePlayerData) instead");
++ (void)playWith:(NSString * _Nullable)campaignKey keepWindowStateOnPlayExecuted:(BOOL)keepWindowStateOnPlayExecuted referrer:(NSString * _Nullable)referrer SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Use play(data: ShopLivePlayerData) instead");
 + (void)startPictureInPictureWith:(enum PipPosition)position scale:(CGFloat)scale;
 + (void)startPictureInPicture;
 + (void)stopPictureInPicture;
@@ -752,6 +743,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _
 @end
 
 
+/// 백그라운드 썸네일을 위한 웹뷰
 SWIFT_CLASS("_TtC11ShopLiveSDK36ShopLiveBackgroundPosterImageWebView")
 @interface ShopLiveBackgroundPosterImageWebView : SLView
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -788,6 +780,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK26ShopLiveCustomActionResult")
 
 
 
+
 SWIFT_CLASS("_TtC11ShopLiveSDK29ShopLiveInAppPipConfiguration")
 @interface ShopLiveInAppPipConfiguration : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -798,11 +791,11 @@ SWIFT_CLASS("_TtC11ShopLiveSDK29ShopLiveInAppPipConfiguration")
 
 SWIFT_CLASS("_TtC11ShopLiveSDK30ShopLiveInAppConfigurationObjc")
 @interface ShopLiveInAppConfigurationObjc : ShopLiveInAppPipConfiguration
-@property (nonatomic, strong) ShopLiveInAppPipSize * _Nullable _pipSize;
 @property (nonatomic) BOOL _useCloseButton;
 @property (nonatomic) enum PipPosition _pipPosition;
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull _pipPinPositions;
 @property (nonatomic) BOOL _enableSwipeOut;
+@property (nonatomic, strong) ShopLiveInAppPipSize * _Nullable _pipSize;
 @property (nonatomic) CGFloat _pipRadius;
 - (nonnull instancetype)initWithUseCloseButton:(BOOL)useCloseButton pipPosition:(enum PipPosition)pipPosition enableSwipeOut:(BOOL)enableSwipeOut pipSize:(ShopLiveInAppPipSize * _Nonnull)pipSize pipRadius:(CGFloat)pipRadius OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -832,6 +825,7 @@ typedef SWIFT_ENUM(NSInteger, Feature, open) {
 };
 
 
+/// playerBrandHandler를 통해서 받는 방송 브랜드 정보
 SWIFT_CLASS("_TtC11ShopLiveSDK19ShopLivePlayerBrand")
 @interface ShopLivePlayerBrand : NSObject
 @property (nonatomic, copy) NSString * _Nullable name;
@@ -844,6 +838,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK19ShopLivePlayerBrand")
 
 enum ShopLivePlayerCampaignStatus : NSInteger;
 
+/// campaignHandler를 통해서 받는 캠페인 정보
 SWIFT_CLASS("_TtC11ShopLiveSDK22ShopLivePlayerCampaign")
 @interface ShopLivePlayerCampaign : NSObject
 @property (nonatomic, copy) NSString * _Nullable title;
@@ -860,6 +855,7 @@ typedef SWIFT_ENUM(NSInteger, ShopLivePlayerCampaignStatus, open) {
 };
 
 
+/// 영상재생을 위한 데이터
 SWIFT_CLASS("_TtC11ShopLiveSDK18ShopLivePlayerData")
 @interface ShopLivePlayerData : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -884,6 +880,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK21ShopLivePlayerPreview")
 
 
 
+
 @class WKFrameInfo;
 
 @interface ShopLivePlayerPreview (SWIFT_EXTENSION(ShopLiveSDK)) <WKUIDelegate>
@@ -895,13 +892,13 @@ SWIFT_CLASS("_TtC11ShopLiveSDK21ShopLivePlayerPreview")
 
 
 
-
 typedef SWIFT_ENUM(NSInteger, ShopLivePlayerPreviewResolution, open) {
   ShopLivePlayerPreviewResolutionLIVE = 1,
   ShopLivePlayerPreviewResolutionPREVIEW = 2,
 };
 
 
+/// 공유하기 시, shareDelegate를 통해 커스텀 공유팝업을 위한 캠페인 정보
 SWIFT_CLASS("_TtC11ShopLiveSDK27ShopLivePlayerShareCampaign")
 @interface ShopLivePlayerShareCampaign : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nullable campaignKey;
@@ -913,6 +910,7 @@ SWIFT_CLASS("_TtC11ShopLiveSDK27ShopLivePlayerShareCampaign")
 @end
 
 
+/// 공유하기 시, shareDelegate를 통해 커스텀 공유팝업을 위한 데이터
 SWIFT_CLASS("_TtC11ShopLiveSDK23ShopLivePlayerShareData")
 @interface ShopLivePlayerShareData : NSObject
 @property (nonatomic, readonly, strong) ShopLivePlayerShareCampaign * _Nullable campaign;
@@ -922,12 +920,14 @@ SWIFT_CLASS("_TtC11ShopLiveSDK23ShopLivePlayerShareData")
 @end
 
 
+/// 공유하기 버튼, 커스텀 팝업을 만들기 위한 데이터를 받는 델리게이트
 SWIFT_PROTOCOL("_TtP11ShopLiveSDK27ShopLivePlayerShareDelegate_")
 @protocol ShopLivePlayerShareDelegate
 - (void)handleShareWithData:(ShopLivePlayerShareData * _Nonnull)data;
 @end
 
 
+/// 방송 미리보기 프리뷰 세팅을 위한 데이터
 SWIFT_CLASS("_TtC11ShopLiveSDK19ShopLivePreviewData")
 @interface ShopLivePreviewData : ShopLivePlayerData
 @end
@@ -960,7 +960,7 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleCampaignInfoWithCampaignInfo:(NSDictionary<NSString *, id> * _Nonnull)campaignInfo;
 - (void)onSetUserName:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)handleCommand:(NSString * _Nonnull)command with:(id _Nullable)payload;
-- (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload SWIFT_DEPRECATED_MSG("use handleReceivedCommand(_ command : String , data : [String : Any]?) instead");
+- (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload SWIFT_DEPRECATED_MSG("use handleReceivedCommand(_ command: String , data: [String: Any]?) instead");
 - (void)handleReceivedCommand:(NSString * _Nonnull)command data:(NSDictionary<NSString *, id> * _Nullable)data;
 - (void)playerPanGestureWithState:(enum UIGestureRecognizerState)state position:(CGPoint)position;
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter SWIFT_DEPRECATED_MSG("use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
@@ -985,6 +985,7 @@ typedef SWIFT_ENUM(NSInteger, ShopLiveViewHiddenActionType, open) {
   ShopLiveViewHiddenActionTypeOnNavigationHandleClose = 5,
 };
 
+/// player상태 변경될때 이벤트 전달케이스
 typedef SWIFT_ENUM(NSInteger, ShopLiveViewTrackEvent, open) {
   ShopLiveViewTrackEventViewWillDisAppear = 0,
   ShopLiveViewTrackEventViewDidDisAppear = 1,
@@ -1002,7 +1003,6 @@ SWIFT_CLASS("_TtC11ShopLiveSDK14ShopliveWindow")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
-
 
 
 
