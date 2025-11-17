@@ -32649,63 +32649,63 @@
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 12257,
+      "offset": 12695,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 20663,
+      "offset": 21990,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 20665,
+      "offset": 21992,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 25356,
+      "offset": 26683,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "IntegerLiteral",
-      "offset": 25358,
+      "offset": 26685,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 30335,
+      "offset": 31662,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 30367,
+      "offset": 31694,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 38906,
+      "offset": 40233,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 87959,
+      "offset": 89286,
       "length": 5,
       "value": "false"
     },
