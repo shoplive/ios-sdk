@@ -567,6 +567,21 @@ SWIFT_CLASS("_TtC11ShopLiveSDK8ShopLive")
 @interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
 @end
 
+typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
+  PlayerModePlay = 0,
+  PlayerModePreview = 1,
+  PlayerModeNone = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
+  VideoOrientationPortrait = 0,
+  VideoOrientationLandscape = 1,
+  VideoOrientationUnknown = 2,
+};
+
+@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
+@end
+
 typedef SWIFT_ENUM(NSInteger, PipPosition, open) {
   PipPositionTopLeft = 0,
   PipPositionTopCenter = 1,
@@ -586,19 +601,9 @@ typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStylePip = 2,
 };
 
-@interface ShopLive (SWIFT_EXTENSION(ShopLiveSDK))
-@end
-
-typedef SWIFT_ENUM(NSInteger, PlayerMode, open) {
-  PlayerModePlay = 0,
-  PlayerModePreview = 1,
-  PlayerModeNone = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, VideoOrientation, open) {
-  VideoOrientationPortrait = 0,
-  VideoOrientationLandscape = 1,
-  VideoOrientationUnknown = 2,
+typedef SWIFT_ENUM(NSInteger, PreviewCloseButtonPositionConfig, open) {
+  PreviewCloseButtonPositionConfigTopLeft = 0,
+  PreviewCloseButtonPositionConfigTopRight = 1,
 };
 
 enum ShopLiveViewHiddenActionType : NSInteger;
@@ -712,6 +717,25 @@ SWIFT_CLASS("_TtC11ShopLiveSDK36ShopLiveBackgroundPosterImageWebView")
 @class WKNavigation;
 @interface ShopLiveBackgroundPosterImageWebView (SWIFT_EXTENSION(ShopLiveSDK)) <WKNavigationDelegate>
 - (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)navigation;
+@end
+
+/// 블러 마스크 스타일을 정의하는 열거형
+typedef SWIFT_ENUM(NSInteger, ShopLiveBlurMaskStyle, open) {
+/// 일반 블러 효과
+  ShopLiveBlurMaskStyleNormal = 0,
+/// 솔리드 블러 효과
+  ShopLiveBlurMaskStyleSolid = 1,
+/// 내부 블러 효과
+  ShopLiveBlurMaskStyleInner = 2,
+/// 외부 블러 효과
+  ShopLiveBlurMaskStyleOuter = 3,
+};
+
+/// Close 버튼의 외형과 위치를 커스터마이징하기 위한 설정 클래스 - Preview 모드의 Close 버튼의 위치, 크기, 색상, 그림자 효과 등을 설정할 수 있습니다.
+SWIFT_CLASS("_TtC11ShopLiveSDK25ShopLiveCloseButtonConfig")
+@interface ShopLiveCloseButtonConfig : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 enum ShopLiveResultStatus : NSInteger;

@@ -718,6 +718,50 @@ extension ShopLiveSDK.ShopLiveBackgroundPosterImageWebView : WebKit.WKNavigation
     get
   }
 }
+@objc public enum ShopLiveBlurMaskStyle : Swift.Int {
+  case normal = 0
+  case solid = 1
+  case inner = 2
+  case outer = 3
+  public var stringValue: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(string: Swift.String) -> ShopLiveSDK.ShopLiveBlurMaskStyle?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class ShopLiveCloseButtonConfig : ObjectiveC.NSObject {
+  public var position: ShopLiveSDK.ShopLive.PreviewCloseButtonPositionConfig?
+  public var width: CoreFoundation.CGFloat?
+  public var height: CoreFoundation.CGFloat?
+  public var offsetX: CoreFoundation.CGFloat?
+  public var offsetY: CoreFoundation.CGFloat?
+  public var color: UIKit.UIColor?
+  public var shadowOffsetX: CoreFoundation.CGFloat?
+  public var shadowOffsetY: CoreFoundation.CGFloat?
+  public var shadowBlur: CoreFoundation.CGFloat?
+  public var shadowBlurStyle: ShopLiveSDK.ShopLiveBlurMaskStyle?
+  public var shadowColor: UIKit.UIColor?
+  public var imageStr: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(position: ShopLiveSDK.ShopLive.PreviewCloseButtonPositionConfig? = .topLeft, width: CoreFoundation.CGFloat? = 30, height: CoreFoundation.CGFloat? = 30, offsetX: CoreFoundation.CGFloat? = 3, offsetY: CoreFoundation.CGFloat? = 3, color: UIKit.UIColor? = .white, shadowOffsetX: CoreFoundation.CGFloat? = nil, shadowOffsetY: CoreFoundation.CGFloat? = nil, shadowBlur: CoreFoundation.CGFloat? = nil, shadowBlurStyle: ShopLiveSDK.ShopLiveBlurMaskStyle? = nil, shadowColor: UIKit.UIColor? = nil, imageStr: Swift.String? = nil)
+  #endif
+  public func toJSON() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func fromJSON(_ jsonString: Swift.String) -> ShopLiveSDK.ShopLiveCloseButtonConfig?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func validateJSON(_ jsonString: Swift.String) -> (isValid: Swift.Bool, errorMessage: Swift.String?)
+  #endif
+  @objc deinit
+}
 @objc public class ShopLiveInAppConfigurationObjc : ShopLiveSDK.ShopLiveInAppPipConfiguration {
   @objc public var _useCloseButton: Swift.Bool {
     @objc get
@@ -770,8 +814,9 @@ extension ShopLiveSDK.ShopLiveBackgroundPosterImageWebView : WebKit.WKNavigation
   public var enableSwipeOut: Swift.Bool?
   public var pipSize: ShopLiveSDK.ShopLiveInAppPipSize?
   public var pipRadius: CoreFoundation.CGFloat
+  public var closeButtonConfig: ShopLiveSDK.ShopLiveCloseButtonConfig?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(useCloseButton: Swift.Bool? = nil, pipPosition: ShopLiveSDK.ShopLive.PipPosition? = nil, enableSwipeOut: Swift.Bool? = nil, pipSize: ShopLiveSDK.ShopLiveInAppPipSize? = nil, pipRadius: CoreFoundation.CGFloat = 10, pipPinPositions: [ShopLiveSDK.ShopLive.PipPosition]? = nil)
+  public init(useCloseButton: Swift.Bool? = nil, pipPosition: ShopLiveSDK.ShopLive.PipPosition? = nil, enableSwipeOut: Swift.Bool? = nil, pipSize: ShopLiveSDK.ShopLiveInAppPipSize? = nil, pipRadius: CoreFoundation.CGFloat = 10, pipPinPositions: [ShopLiveSDK.ShopLive.PipPosition]? = nil, closeButtonConfig: ShopLiveSDK.ShopLiveCloseButtonConfig? = nil)
   #endif
   @objc deinit
 }
@@ -936,6 +981,20 @@ extension ShopLiveSDK.ShopLive {
     case unknown
     case fullScreen
     case pip
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum PreviewCloseButtonPositionConfig : Swift.Int {
+    case topLeft
+    case topRight
+    public var name: Swift.String {
+      get
+    }
     #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
     #endif
@@ -1140,6 +1199,9 @@ extension ShopLiveSDK.ShopLiveViewTrackEvent : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLiveViewHiddenActionType : Swift.Equatable {}
 extension ShopLiveSDK.ShopLiveViewHiddenActionType : Swift.Hashable {}
 extension ShopLiveSDK.ShopLiveViewHiddenActionType : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLiveBlurMaskStyle : Swift.Equatable {}
+extension ShopLiveSDK.ShopLiveBlurMaskStyle : Swift.Hashable {}
+extension ShopLiveSDK.ShopLiveBlurMaskStyle : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLivePlayerCampaignStatus : Swift.Equatable {}
 extension ShopLiveSDK.ShopLivePlayerCampaignStatus : Swift.Hashable {}
 extension ShopLiveSDK.ShopLivePlayerCampaignStatus : Swift.RawRepresentable {}
@@ -1158,3 +1220,6 @@ extension ShopLiveSDK.ShopLive.PipPosition : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Equatable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.Hashable {}
 extension ShopLiveSDK.ShopLive.PresentationStyle : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLive.PreviewCloseButtonPositionConfig : Swift.Equatable {}
+extension ShopLiveSDK.ShopLive.PreviewCloseButtonPositionConfig : Swift.Hashable {}
+extension ShopLiveSDK.ShopLive.PreviewCloseButtonPositionConfig : Swift.RawRepresentable {}
