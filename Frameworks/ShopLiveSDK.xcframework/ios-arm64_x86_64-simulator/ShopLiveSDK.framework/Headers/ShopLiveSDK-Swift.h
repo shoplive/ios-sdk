@@ -915,6 +915,7 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload SWIFT_DEPRECATED_MSG("use handleReceivedCommand(_ command: String , data: [String: Any]?) instead");
 - (void)handleReceivedCommand:(NSString * _Nonnull)command data:(NSDictionary<NSString *, id> * _Nullable)data;
 - (void)playerPanGestureWithState:(enum UIGestureRecognizerState)state position:(CGPoint)position;
+- (void)handlePreviewTouchGesture;
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter SWIFT_DEPRECATED_MSG("use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload SWIFT_DEPRECATED_MSG("use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
 - (void)onEventWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
@@ -1879,6 +1880,7 @@ SWIFT_PROTOCOL("_TtP11ShopLiveSDK19ShopLiveSDKDelegate_")
 - (void)handleReceivedCommand:(NSString * _Nonnull)command with:(id _Nullable)payload SWIFT_DEPRECATED_MSG("use handleReceivedCommand(_ command: String , data: [String: Any]?) instead");
 - (void)handleReceivedCommand:(NSString * _Nonnull)command data:(NSDictionary<NSString *, id> * _Nullable)data;
 - (void)playerPanGestureWithState:(enum UIGestureRecognizerState)state position:(CGPoint)position;
+- (void)handlePreviewTouchGesture;
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign parameter:(NSDictionary<NSString *, NSString *> * _Nonnull)parameter SWIFT_DEPRECATED_MSG("use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
 - (void)logWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload SWIFT_DEPRECATED_MSG("use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead");
 - (void)onEventWithName:(NSString * _Nonnull)name feature:(enum Feature)feature campaign:(NSString * _Nonnull)campaign payload:(NSDictionary<NSString *, id> * _Nonnull)payload;

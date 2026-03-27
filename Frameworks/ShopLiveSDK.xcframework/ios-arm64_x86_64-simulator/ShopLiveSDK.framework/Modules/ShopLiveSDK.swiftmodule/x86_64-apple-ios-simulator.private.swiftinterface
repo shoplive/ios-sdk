@@ -672,6 +672,7 @@ extension ShopLiveSDK.ShopLiveBackgroundPosterImageWebView : WebKit.WKNavigation
   @objc optional func handleReceivedCommand(_ command: Swift.String, data: [Swift.String : Any]?)
   #endif
   @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
+  @objc optional func handlePreviewTouchGesture()
   @available(*, deprecated, message: "use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead")
   @objc optional func log(name: Swift.String, feature: ShopLiveSDK.ShopLiveLog.Feature, campaign: Swift.String, parameter: [Swift.String : Swift.String])
   @available(*, deprecated, message: "use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead")
