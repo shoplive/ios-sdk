@@ -621,23 +621,6 @@ extension ShopLiveSDK.ShopLivePlayerPreview : WebKit.WKUIDelegate {
   #endif
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ShopLiveBackgroundPosterImageWebView : ShopLiveSDK.SLView, ShopliveSDKCommon.SLReactor {
-  public enum Action {
-    case setBackgroundUrl(url: Foundation.URL?)
-    case reload
-  }
-  public enum Result {
-  }
-  @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveSDK.ShopLiveBackgroundPosterImageWebView.Result) -> ())?
-  @_Concurrency.MainActor @preconcurrency weak public var webView: ShopLiveSDK.SLWKWebView?
-  @_Concurrency.MainActor @preconcurrency public func action(_ action: ShopLiveSDK.ShopLiveBackgroundPosterImageWebView.Action)
-  @objc deinit
-}
-extension ShopLiveSDK.ShopLiveBackgroundPosterImageWebView : WebKit.WKNavigationDelegate {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
-  #endif
-}
 @objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
   @available(*, deprecated, message: "use handleDownloadCoupon(with couponId: String, result: @escaping (ShopLiveCouponResult) -> Void) instead")

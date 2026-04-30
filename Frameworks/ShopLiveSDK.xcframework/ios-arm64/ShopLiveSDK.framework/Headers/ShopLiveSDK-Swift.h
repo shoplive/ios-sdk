@@ -705,20 +705,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ShopLiveCommonUser * _
 + (void)forceStartWithPortraitMode:(BOOL)isForced;
 @end
 
-/// 백그라운드 썸네일을 위한 웹뷰
-SWIFT_CLASS("_TtC11ShopLiveSDK36ShopLiveBackgroundPosterImageWebView")
-@interface ShopLiveBackgroundPosterImageWebView : SLView
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-@class WKNavigation;
-@interface ShopLiveBackgroundPosterImageWebView (SWIFT_EXTENSION(ShopLiveSDK)) <WKNavigationDelegate>
-- (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)navigation;
-@end
-
 /// 블러 마스크 스타일을 정의하는 열거형
 typedef SWIFT_ENUM(NSInteger, ShopLiveBlurMaskStyle, open) {
 /// 일반 블러 효과
