@@ -45,8 +45,8 @@ extension SwiftUICore.Image {
   public init(asset: ShopLiveSDK.ShopLiveSDKImages, label: SwiftUICore.Text)
   public init(decorative asset: ShopLiveSDK.ShopLiveSDKImages)
 }
-@_inheritsConvenienceInitializers @objc public class ShopLiveSDKResources : ObjectiveC.NSObject {
-  @objc public class var bundle: Foundation.Bundle {
+@_inheritsConvenienceInitializers @objc final public class ShopLiveSDKResources : ObjectiveC.NSObject {
+  @objc final public class var bundle: Foundation.Bundle {
     @objc get
   }
   @objc override dynamic public init()
@@ -560,7 +560,6 @@ public typealias ShopLiveViewController = ShopLiveSDK.SLViewController
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ShopLivePlayerPreview : UIKit.UIView, ShopliveSDKCommon.SLReactor {
   public enum Action {
     case initialize
-    case setIndex(Foundation.IndexPath)
     case start(accessKey: Swift.String, campaignKey: Swift.String, referrer: Swift.String?)
     case setMuted(Swift.Bool)
     case setReferrer(Swift.String?)
@@ -601,6 +600,7 @@ extension ShopLiveSDK.ShopLivePlayerPreview {
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func getPlayerItemStatus() -> AVFoundation.AVPlayerItem.Status?
   #endif
+  @_Concurrency.MainActor @preconcurrency public func getPlaybackInfo() -> ShopLiveSDK.ShopLivePreviewPlaybackInfo
 }
 extension ShopLiveSDK.ShopLivePlayerPreview : WebKit.WKUIDelegate {
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
@@ -883,6 +883,14 @@ extension ShopLiveSDK.ShopLivePlayerPreview : WebKit.WKUIDelegate {
   public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, isEnabledVolumeKey: Swift.Bool = false, resolution: ShopLiveSDK.ShopLivePlayerPreviewResolution?, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
   #endif
   @objc deinit
+}
+public struct ShopLivePreviewPlaybackInfo {
+  public let campaignKey: Swift.String
+  public let isPlaying: Swift.Bool
+  public let isMuted: Swift.Bool
+  public let durationMs: Swift.Int64
+  public let campaign: ShopLiveSDK.ShopLivePlayerCampaign?
+  public let brand: ShopLiveSDK.ShopLivePlayerBrand?
 }
 @objc public protocol ShopLivePlayerShareDelegate {
   @objc func handleShare(data: ShopLiveSDK.ShopLivePlayerShareData)
