@@ -23,6 +23,7 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import os.lock
 import os.log
 import os
 public enum ShopLiveSDKAsset : Swift.Sendable {
@@ -45,8 +46,8 @@ extension SwiftUICore.Image {
   public init(asset: ShopLiveSDK.ShopLiveSDKImages, label: SwiftUICore.Text)
   public init(decorative asset: ShopLiveSDK.ShopLiveSDKImages)
 }
-@_inheritsConvenienceInitializers @objc public class ShopLiveSDKResources : ObjectiveC.NSObject {
-  @objc public class var bundle: Foundation.Bundle {
+@_inheritsConvenienceInitializers @objc final public class ShopLiveSDKResources : ObjectiveC.NSObject {
+  @objc final public class var bundle: Foundation.Bundle {
     @objc get
   }
   @objc override dynamic public init()
