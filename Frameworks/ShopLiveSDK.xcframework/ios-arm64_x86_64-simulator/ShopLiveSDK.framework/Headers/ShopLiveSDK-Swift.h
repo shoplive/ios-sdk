@@ -640,6 +640,7 @@ enum ShopLiveViewHiddenActionType : NSInteger;
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="deprecated on 1.5.10");
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewController * _Nullable viewController;)
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
++ (void)setCloseHandler:(void (^ _Nonnull)(enum ShopLiveViewHiddenActionType))handler;
 + (void)closeWithActionType:(enum ShopLiveViewHiddenActionType)actionType;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nullable)inputBoxFont sendButtonFont:(UIFont * _Nullable)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme shareDelegate:(id <ShopLivePlayerShareDelegate> _Nullable)shareDelegate;
@@ -921,6 +922,7 @@ typedef SWIFT_ENUM(NSInteger, ShopLiveViewHiddenActionType, open) {
   ShopLiveViewHiddenActionTypeOnError = 3,
   ShopLiveViewHiddenActionTypeOnRestoringPip = 4,
   ShopLiveViewHiddenActionTypeOnNavigationHandleClose = 5,
+  ShopLiveViewHiddenActionTypeOnBroadcastEnded = 6,
 };
 
 /// player상태 변경될때 이벤트 전달케이스
@@ -1591,6 +1593,7 @@ enum ShopLiveViewHiddenActionType : NSInteger;
 + (void)setKeepAspectOnTabletPortrait:(BOOL)keep SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="deprecated on 1.5.10");
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewController * _Nullable viewController;)
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
++ (void)setCloseHandler:(void (^ _Nonnull)(enum ShopLiveViewHiddenActionType))handler;
 + (void)closeWithActionType:(enum ShopLiveViewHiddenActionType)actionType;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nullable)inputBoxFont sendButtonFont:(UIFont * _Nullable)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme shareDelegate:(id <ShopLivePlayerShareDelegate> _Nullable)shareDelegate;
@@ -1872,6 +1875,7 @@ typedef SWIFT_ENUM(NSInteger, ShopLiveViewHiddenActionType, open) {
   ShopLiveViewHiddenActionTypeOnError = 3,
   ShopLiveViewHiddenActionTypeOnRestoringPip = 4,
   ShopLiveViewHiddenActionTypeOnNavigationHandleClose = 5,
+  ShopLiveViewHiddenActionTypeOnBroadcastEnded = 6,
 };
 
 /// player상태 변경될때 이벤트 전달케이스
