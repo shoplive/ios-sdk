@@ -900,7 +900,8 @@ public struct ShopLivePreviewPlaybackInfo {
 public enum ShopLiveCampaignStatus : Swift.String, Swift.CaseIterable {
   case ready
   case onair
-  case close
+  case closing
+  case closed
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
