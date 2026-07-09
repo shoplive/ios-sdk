@@ -35028,28 +35028,28 @@
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "FloatLiteral",
-      "offset": 31795,
+      "offset": 32358,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 31827,
+      "offset": 32390,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 40431,
+      "offset": 41098,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/Base\/ShopLiveBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 89888,
+      "offset": 91064,
       "length": 5,
       "value": "false"
     },
@@ -35462,539 +35462,532 @@
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1663,
+      "offset": 1725,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1765,
+      "offset": 1827,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1809,
+      "offset": 1871,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2142,
+      "offset": 2951,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2381,
+      "offset": 3190,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2416,
+      "offset": 3225,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2553,
+      "offset": 3362,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2592,
+      "offset": 3401,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2913,
+      "offset": 3722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2943,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2972,
+      "offset": 3752,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3051,
+      "offset": 3831,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3085,
+      "offset": 3865,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3262,
+      "offset": 4042,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3357,
+      "offset": 4137,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3396,
+      "offset": 4176,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3473,
+      "offset": 4253,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3985,
+      "offset": 4765,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4053,
+      "offset": 4833,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4235,
+      "offset": 5015,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4245,
+      "offset": 5025,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4254,
+      "offset": 5034,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 4264,
+      "offset": 5044,
       "length": 3,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4301,
+      "offset": 5081,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4311,
+      "offset": 5091,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4320,
+      "offset": 5100,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4330,
+      "offset": 5110,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 4391,
+      "offset": 5171,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4399,
+      "offset": 5179,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 4439,
+      "offset": 5219,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 4447,
+      "offset": 5227,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4614,
+      "offset": 5394,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4823,
+      "offset": 5603,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5000,
+      "offset": 5780,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5207,
+      "offset": 5987,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5421,
+      "offset": 6201,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "Array",
-      "offset": 5574,
+      "offset": 6354,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "Array",
-      "offset": 5640,
+      "offset": 6420,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "Array",
-      "offset": 5714,
+      "offset": 6494,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 5766,
+      "offset": 6546,
       "length": 4,
       "value": "0.15"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5813,
+      "offset": 6593,
       "length": 2,
       "value": "26"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5865,
+      "offset": 6645,
       "length": 2,
       "value": "26"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6061,
+      "offset": 6841,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6111,
+      "offset": 6891,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6117,
+      "offset": 6897,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6127,
+      "offset": 6907,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6139,
+      "offset": 6919,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6240,
+      "offset": 7020,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6633,
+      "offset": 7413,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6843,
+      "offset": 7623,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6909,
+      "offset": 7689,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7111,
+      "offset": 7891,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7183,
+      "offset": 7963,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7274,
+      "offset": 8054,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewController\/LiveStreamViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7541,
+      "offset": 8321,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1315,
+      "offset": 1484,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "Array",
-      "offset": 1437,
+      "offset": 2718,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1610,
+      "offset": 2891,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1712,
+      "offset": 2993,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1764,
+      "offset": 3045,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1819,
+      "offset": 3100,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "Array",
-      "offset": 1874,
+      "offset": 3155,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1921,
+      "offset": 3202,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1974,
+      "offset": 3255,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2031,
+      "offset": 3312,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2139,
+      "offset": 3420,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2342,
+      "offset": 3623,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2384,
+      "offset": 3665,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2441,
+      "offset": 3722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 2498,
+      "offset": 3779,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2550,
+      "offset": 3831,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 2753,
+      "offset": 4034,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3362,
+      "offset": 4643,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3626,
+      "offset": 4907,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3874,
+      "offset": 5155,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3942,
+      "offset": 5223,
       "length": 39,
       "value": "\"com.shoplive.player.notificationQueue\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Player\/Sources\/Component\/LiveStream\/ViewModel\/LiveStreamViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 51853,
+      "offset": 52993,
       "length": 5,
       "value": "false"
     },
