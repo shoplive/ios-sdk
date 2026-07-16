@@ -592,6 +592,10 @@ public typealias ShopLiveViewController = ShopLiveSDK.SLViewController
     case handleShopLivePlayerBrand(ShopLiveSDK.ShopLivePlayerBrand)
   }
   @_Concurrency.MainActor @preconcurrency public var resultHandler: ((ShopLiveSDK.ShopLivePlayerPreview.Result) -> ())?
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any ShopLiveSDK.ShopLivePlayerPreviewDelegate)? {
+    get
+    set
+  }
   @objc deinit
   @_Concurrency.MainActor @preconcurrency public func action(_ action: ShopLiveSDK.ShopLivePlayerPreview.Action)
 }
@@ -621,6 +625,16 @@ extension ShopLiveSDK.ShopLivePlayerPreview : WebKit.WKUIDelegate {
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   #endif
   @objc deinit
+}
+public enum ShopLivePreviewPlaybackEvent {
+  case ready(ShopLiveSDK.ShopLivePreviewPlaybackInfo)
+  case playing(ShopLiveSDK.ShopLivePreviewPlaybackInfo)
+  case paused(ShopLiveSDK.ShopLivePreviewPlaybackInfo)
+  case buffering(ShopLiveSDK.ShopLivePreviewPlaybackInfo)
+  case failed(ShopLiveSDK.ShopLivePreviewPlaybackInfo)
+}
+public protocol ShopLivePlayerPreviewDelegate : AnyObject {
+  func handlePlaybackEvent(_ event: ShopLiveSDK.ShopLivePreviewPlaybackEvent)
 }
 @objc public protocol ShopLiveSDKDelegate {
   @objc func handleNavigation(with url: Foundation.URL)
