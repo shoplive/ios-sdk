@@ -1051,6 +1051,7 @@ extension ShopLiveSDK.ShopLive {
   }
   #endif
   @objc public static func setCloseHandler(_ handler: @escaping (ShopLiveSDK.ShopLiveViewHiddenActionType) -> Swift.Void)
+  @objc public static func setPreviewCloseHandler(_ handler: @escaping (ShopLiveSDK.ShopLiveViewHiddenActionType) -> Swift.Void)
   @objc public static func close(actionType: ShopLiveSDK.ShopLiveViewHiddenActionType = .onClose)
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont?, sendButtonFont: UIKit.UIFont?)
