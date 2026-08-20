@@ -641,6 +641,9 @@ enum ShopLiveViewHiddenActionType : NSInteger;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewController * _Nullable viewController;)
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)setCloseHandler:(void (^ _Nonnull)(enum ShopLiveViewHiddenActionType))handler;
+/// Called when a preview session closes, with the action that closed it.
+/// Not called when the preview is promoted to full playback by <code>play()</code>.
++ (void)setPreviewCloseHandler:(void (^ _Nonnull)(enum ShopLiveViewHiddenActionType))handler;
 + (void)closeWithActionType:(enum ShopLiveViewHiddenActionType)actionType;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nullable)inputBoxFont sendButtonFont:(UIFont * _Nullable)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme shareDelegate:(id <ShopLivePlayerShareDelegate> _Nullable)shareDelegate;
@@ -1594,6 +1597,9 @@ enum ShopLiveViewHiddenActionType : NSInteger;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SLViewController * _Nullable viewController;)
 + (SLViewController * _Nullable)viewController SWIFT_WARN_UNUSED_RESULT;
 + (void)setCloseHandler:(void (^ _Nonnull)(enum ShopLiveViewHiddenActionType))handler;
+/// Called when a preview session closes, with the action that closed it.
+/// Not called when the preview is promoted to full playback by <code>play()</code>.
++ (void)setPreviewCloseHandler:(void (^ _Nonnull)(enum ShopLiveViewHiddenActionType))handler;
 + (void)closeWithActionType:(enum ShopLiveViewHiddenActionType)actionType;
 + (void)setChatViewFontWithInputBoxFont:(UIFont * _Nullable)inputBoxFont sendButtonFont:(UIFont * _Nullable)sendButtonFont;
 + (void)setShareScheme:(NSString * _Nullable)scheme shareDelegate:(id <ShopLivePlayerShareDelegate> _Nullable)shareDelegate;
