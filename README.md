@@ -35,6 +35,7 @@ Shoplive SDK for iOS installation must be done using either ‘CocoaPods’ or �
 Add the following line to the Podfile.
 
 ```Ruby
+source 'https://cdn.cocoapods.org/'
 source 'https://github.com/shoplive/pod-specs.git'
 
 # Set it as the same minimum supported version of the project.  
