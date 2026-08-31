@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
-// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ShopLiveSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ShopLiveSDK -package-name ShopLiveSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import AVFAudio
 import AVFoundation
 import AVKit
@@ -13,6 +13,7 @@ import ExternalAccessory
 import Foundation
 import MediaPlayer
 import Network
+import ShopliveAPI
 import ShopliveSDKCommon
 import Swift
 import SwiftUI
@@ -70,17 +71,13 @@ public enum ShopLiveSDKStrings : Swift.Sendable {
   }
 }
 extension AVFAudio.AVAudioSession {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String, observeInfo: Swift.UnsafeMutableRawPointer?, completion: @escaping (Swift.Bool) -> Swift.Void)
-  #endif
 }
 extension ObjectiveC.NSObject {
   public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String)
 }
 extension Foundation.NotificationCenter {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func safeRemoveObserver(_ observer: Any, name aName: Foundation.NSNotification.Name?, object anObject: Any?)
-  #endif
 }
 public let ReachabilityStatusChangedNotification: Swift.String
 public enum ReachabilityType : Swift.CustomStringConvertible {
@@ -117,9 +114,7 @@ extension ShopLiveSDK.ReachabilityStatus {
   public var name: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [ShopLiveSDK.ResultStatus]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [ShopLiveSDK.ResultStatus] {
@@ -135,9 +130,7 @@ extension ShopLiveSDK.ReachabilityStatus {
   public var name: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [ShopLiveSDK.ResultAlertType]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [ShopLiveSDK.ResultAlertType] {
@@ -148,15 +141,11 @@ extension ShopLiveSDK.ReachabilityStatus {
   }
 }
 @objc public class CouponResult : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
-  #endif
   @objc deinit
 }
 @objc public class CustomActionResult : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ResultStatus, alertType: ShopLiveSDK.ResultAlertType)
-  #endif
   @objc deinit
 }
 @objc public enum ShopLiveResultStatus : Swift.Int, Swift.CaseIterable {
@@ -166,9 +155,7 @@ extension ShopLiveSDK.ReachabilityStatus {
   public var name: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [ShopLiveSDK.ShopLiveResultStatus]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [ShopLiveSDK.ShopLiveResultStatus] {
@@ -184,9 +171,7 @@ extension ShopLiveSDK.ReachabilityStatus {
   public var name: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [ShopLiveSDK.ShopLiveResultAlertType]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [ShopLiveSDK.ShopLiveResultAlertType] {
@@ -197,15 +182,11 @@ extension ShopLiveSDK.ReachabilityStatus {
   }
 }
 @objc public class ShopLiveCouponResult : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(couponId: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
-  #endif
   @objc deinit
 }
 @objc public class ShopLiveCustomActionResult : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(id: Swift.String, success: Swift.Bool, message: Swift.String?, status: ShopLiveSDK.ShopLiveResultStatus, alertType: ShopLiveSDK.ShopLiveResultAlertType)
-  #endif
   @objc deinit
 }
 @objc public class ShopLiveLog : ObjectiveC.NSObject {
@@ -214,9 +195,7 @@ extension ShopLiveSDK.ReachabilityStatus {
     public var name: Swift.String {
       get
     }
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias AllCases = [ShopLiveSDK.ShopLiveLog.Feature]
     public typealias RawValue = Swift.Int
     nonisolated public static var allCases: [ShopLiveSDK.ShopLiveLog.Feature] {
@@ -240,9 +219,7 @@ extension ShopLiveSDK.ReachabilityStatus {
   public var name: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -253,164 +230,84 @@ extension ShopLiveSDK.ReachabilityStatus {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(windowScene: UIKit.UIWindowScene)
   @available(iOS, introduced: 2.0, deprecated: 26.0, message: "Use init(windowScene:) instead.")
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLAlertController : UIKit.UIAlertController {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(myTitle: Swift.String?, myMessage: Swift.String?, preferredStyle: UIKit.UIAlertController.Style)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLActivityViewController : UIKit.UIActivityViewController {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(activityItems: [Any], applicationActivities: [UIKit.UIActivity]?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLNavigationController : UIKit.UINavigationController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func pushViewController(_ viewController: UIKit.UIViewController, animated: Swift.Bool)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 5.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
-  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(rootViewController: UIKit.UIViewController)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLTabBarController : UIKit.UITabBarController {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
   @available(iOS 18.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(tabs: [UIKit.UITab])
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLSplitViewController : UIKit.UISplitViewController {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
   @available(iOS 14.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UISplitViewController.Style)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLPageViewController : UIKit.UIPageViewController {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLImageView : UIKit.UIImageView {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(image: UIKit.UIImage?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 3.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
-  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLActivityIndicatorView : UIKit.UIActivityIndicatorView {
@@ -421,23 +318,17 @@ extension ShopLiveSDK.ReachabilityStatus {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLTextField : UIKit.UITextField {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLTableView : UIKit.UITableView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, style: UIKit.UITableView.Style)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLCollectionView : UIKit.UICollectionView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, collectionViewLayout layout: UIKit.UICollectionViewLayout)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLStackView : UIKit.UIStackView {
@@ -447,88 +338,58 @@ extension ShopLiveSDK.ReachabilityStatus {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLSegmentedControl : UIKit.UISegmentedControl {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(items: [Any]?)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLSlider : UIKit.UISlider {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLProgressView : UIKit.UIProgressView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLSwitch : UIKit.UISwitch {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLDatePicker : UIKit.UIDatePicker {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLPickerView : UIKit.UIPickerView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLPageControl : UIKit.UIPageControl {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLSearchBar : UIKit.UISearchBar {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLAVPlayerViewController : AVKit.AVPlayerViewController {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func present(_ viewControllerToPresent: UIKit.UIViewController, animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func show(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func showDetailViewController(_ vc: UIKit.UIViewController, sender: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLWKWebView : WebKit.WKWebView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, configuration: WebKit.WKWebViewConfiguration)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var inputAccessoryView: ShopLiveSDK.SLView? {
     @objc get
   }
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLScrollView : UIKit.UIScrollView {
@@ -536,9 +397,7 @@ extension ShopLiveSDK.ReachabilityStatus {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLTextView : UIKit.UITextView {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, textContainer: UIKit.NSTextContainer?)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class SLPictureInPictureController : AVKit.AVPictureInPictureController {
@@ -550,9 +409,7 @@ public typealias ShopLiveViewController = ShopLiveSDK.SLViewController
 @objc public enum ShopLivePlayerPreviewResolution : Swift.Int {
   case LIVE = 1
   case PREVIEW = 2
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -602,17 +459,13 @@ public typealias ShopLiveViewController = ShopLiveSDK.SLViewController
 extension ShopLiveSDK.ShopLivePlayerPreview {
   @_Concurrency.MainActor @preconcurrency public func isPlaying() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency public func isMuted() -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func getPlayerItemStatus() -> AVFoundation.AVPlayerItem.Status?
-  #endif
   @_Concurrency.MainActor @preconcurrency public func getPlaybackInfo() -> ShopLiveSDK.ShopLivePreviewPlaybackInfo
 }
 extension ShopLiveSDK.ShopLivePlayerPreview : WebKit.WKUIDelegate {
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
-  #endif
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ShopliveWindow : ShopLiveSDK.SLWindow {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func addSubview(_ view: UIKit.UIView)
@@ -621,10 +474,18 @@ extension ShopLiveSDK.ShopLivePlayerPreview : WebKit.WKUIDelegate {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(windowScene: UIKit.UIWindowScene)
   @available(iOS, introduced: 2.0, deprecated: 26.0, message: "Use init(windowScene:) instead.")
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
+}
+extension ShopLiveSDK.ShopLive.API {
+  @discardableResult
+  public static func getCampaigns(_ request: ShopliveAPI.ShopLiveCampaignListRequest = ShopLiveCampaignListRequest(), completion: @escaping (Swift.Result<ShopliveAPI.ShopLiveCampaignListResponse, ShopliveAPI.ShopLiveCommonError>) -> Swift.Void) -> any ShopliveAPI.ShopLiveCancellable
+  @available(iOS 13.0, *)
+  public static func getCampaigns(_ request: ShopliveAPI.ShopLiveCampaignListRequest = ShopLiveCampaignListRequest()) async throws -> ShopliveAPI.ShopLiveCampaignListResponse
+}
+extension ShopLiveSDK.ShopLive {
+  public enum API {
+  }
 }
 public enum ShopLivePreviewPlaybackEvent {
   case ready(ShopLiveSDK.ShopLivePreviewPlaybackInfo)
@@ -643,32 +504,20 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   @objc optional func handleDownloadCoupon(with couponId: Swift.String, result: @escaping (ShopLiveSDK.ShopLiveCouponResult) -> Swift.Void)
   @available(*, deprecated, message: "use handleDownloadCoupon(with couponId: String, result: @escaping (ShopLiveCouponResult) -> Void) instead")
   @objc optional func handleDownloadCoupon(with couponId: Swift.String, completion: @escaping () -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "use handleCustomAction(with id: String, type: String, payload: Any?, result: @escaping (ShopLiveCustomActionResult) -> Void) instead")
   @objc optional func handleCustomActionResult(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping (ShopLiveSDK.CustomActionResult) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "use handleCustomAction(with id: String, type: String, payload: Any?, result: @escaping (ShopLiveCustomActionResult) -> Void) instead")
   @objc optional func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, completion: @escaping () -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func handleCustomAction(with id: Swift.String, type: Swift.String, payload: Any?, result: @escaping (ShopLiveSDK.ShopLiveCustomActionResult) -> Swift.Void)
-  #endif
   @objc optional func handleChangeCampaignStatus(status: Swift.String)
   @objc optional func handleChangedPlayerStatus(status: Swift.String)
   @objc optional func handleError(code: Swift.String, message: Swift.String)
   @objc optional func handleCampaignInfo(campaignInfo: [Swift.String : Any])
   @objc optional func onSetUserName(_ payload: [Swift.String : Any])
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func handleCommand(_ command: Swift.String, with payload: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "use handleReceivedCommand(_ command: String , data: [String: Any]?) instead")
   @objc optional func handleReceivedCommand(_ command: Swift.String, with payload: Any?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc optional func handleReceivedCommand(_ command: Swift.String, data: [Swift.String : Any]?)
-  #endif
   @objc optional func playerPanGesture(state: UIKit.UIGestureRecognizer.State, position: CoreFoundation.CGPoint)
   @objc optional func handlePreviewTouchGesture()
   @available(*, deprecated, message: "use onEvent(name: String, feature: ShopLiveLog.Feature, campaign: String, payload: [String: Any]) instead")
@@ -687,9 +536,7 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   public var name: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [ShopLiveSDK.ShopLiveViewTrackEvent]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [ShopLiveSDK.ShopLiveViewTrackEvent] {
@@ -707,14 +554,27 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   case onRestoringPip
   case onNavigationHandleClose
   case onBroadcastEnded
+  case onReplace
   public var name: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
+  public var presentType: ShopLiveSDK.ShopLivePresentType {
+    get
+  }
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ShopLivePresentType : Swift.String {
+  case unknown
+  case fullScreen
+  case inAppPip
+  case osPip
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -726,12 +586,8 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   public var stringValue: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func from(string: Swift.String) -> ShopLiveSDK.ShopLiveBlurMaskStyle?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -750,16 +606,10 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   public var shadowBlurStyle: ShopLiveSDK.ShopLiveBlurMaskStyle?
   public var shadowColor: UIKit.UIColor?
   public var imageStr: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(position: ShopLiveSDK.ShopLive.PreviewCloseButtonPositionConfig? = .topLeft, width: CoreFoundation.CGFloat? = 30, height: CoreFoundation.CGFloat? = 30, offsetX: CoreFoundation.CGFloat? = 3, offsetY: CoreFoundation.CGFloat? = 3, color: UIKit.UIColor? = .white, shadowOffsetX: CoreFoundation.CGFloat? = nil, shadowOffsetY: CoreFoundation.CGFloat? = nil, shadowBlur: CoreFoundation.CGFloat? = nil, shadowBlurStyle: ShopLiveSDK.ShopLiveBlurMaskStyle? = nil, shadowColor: UIKit.UIColor? = nil, imageStr: Swift.String? = nil)
-  #endif
   public func toJSON() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func fromJSON(_ jsonString: Swift.String) -> ShopLiveSDK.ShopLiveCloseButtonConfig?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func validateJSON(_ jsonString: Swift.String) -> (isValid: Swift.Bool, errorMessage: Swift.String?)
-  #endif
   @objc deinit
 }
 @objc public class ShopLiveInAppConfigurationObjc : ShopLiveSDK.ShopLiveInAppPipConfiguration {
@@ -779,12 +629,10 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
     @objc get
     @objc set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var _pipSize: ShopLiveSDK.ShopLiveInAppPipSize? {
     @objc get
     @objc set
   }
-  #endif
   @objc public var _pipRadius: CoreFoundation.CGFloat {
     @objc get
     @objc set
@@ -815,9 +663,7 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   public var pipSize: ShopLiveSDK.ShopLiveInAppPipSize?
   public var pipRadius: CoreFoundation.CGFloat
   public var closeButtonConfig: ShopLiveSDK.ShopLiveCloseButtonConfig?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(useCloseButton: Swift.Bool? = nil, pipPosition: ShopLiveSDK.ShopLive.PipPosition? = nil, enableSwipeOut: Swift.Bool? = nil, pipSize: ShopLiveSDK.ShopLiveInAppPipSize? = nil, pipRadius: CoreFoundation.CGFloat = 10, pipPinPositions: [ShopLiveSDK.ShopLive.PipPosition]? = nil, closeButtonConfig: ShopLiveSDK.ShopLiveCloseButtonConfig? = nil)
-  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class ShopLivePlayerShareData : ObjectiveC.NSObject {
@@ -839,9 +685,7 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   public var campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())?
   public var brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())?
   public var isEnabledVolumeKey: Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isEnabledVolumeKey: Swift.Bool = false, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
-  #endif
   @objc deinit
 }
 @objc public class ShopLivePlayerDataObjc : ShopLiveSDK.ShopLivePlayerData {
@@ -864,17 +708,13 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   @objc public var name: Swift.String?
   @objc public var identifier: Swift.String?
   @objc public var imageUrl: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(name: Swift.String? = nil, identifier: Swift.String? = nil, imageUrl: Swift.String? = nil)
-  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ShopLivePlayerCampaign : ObjectiveC.NSObject {
   @objc public var title: Swift.String?
   @objc public var campaignStatus: ShopLiveSDK.ShopLivePlayerCampaignStatus
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(title: Swift.String? = nil, campaignStatus: ShopLiveSDK.ShopLivePlayerCampaignStatus = .READY)
-  #endif
   @objc deinit
 }
 @objc public enum ShopLivePlayerCampaignStatus : Swift.Int {
@@ -884,9 +724,7 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
   public var name: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -895,9 +733,7 @@ public protocol ShopLivePlayerPreviewDelegate : AnyObject {
 @objc public class ShopLivePreviewData : ShopLiveSDK.ShopLivePlayerData {
   public var isMuted: Swift.Bool?
   public var previewResolution: ShopLiveSDK.ShopLivePlayerPreviewResolution
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(campaignKey: Swift.String, keepWindowStateOnPlayExecuted: Swift.Bool = true, referrer: Swift.String? = nil, isMuted: Swift.Bool? = nil, isEnabledVolumeKey: Swift.Bool = false, resolution: ShopLiveSDK.ShopLivePlayerPreviewResolution?, campaignHandler: ((ShopLiveSDK.ShopLivePlayerCampaign) -> ())? = nil, brandHandler: ((ShopLiveSDK.ShopLivePlayerBrand) -> ())? = nil)
-  #endif
   @objc deinit
 }
 public struct ShopLivePreviewPlaybackInfo {
@@ -916,9 +752,7 @@ public enum ShopLiveCampaignStatus : Swift.String, Swift.CaseIterable {
   case onair
   case closing
   case closed
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [ShopLiveSDK.ShopLiveCampaignStatus]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [ShopLiveSDK.ShopLiveCampaignStatus] {
@@ -939,9 +773,7 @@ extension ShopLiveSDK.ShopLive {
     public var name: Swift.String {
       get
     }
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -954,9 +786,7 @@ extension ShopLiveSDK.ShopLive {
     public var name: Swift.String {
       get
     }
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -978,9 +808,7 @@ extension ShopLiveSDK.ShopLive {
     public var name: Swift.String {
       get
     }
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -990,9 +818,7 @@ extension ShopLiveSDK.ShopLive {
     case unknown
     case fullScreen
     case pip
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -1004,9 +830,7 @@ extension ShopLiveSDK.ShopLive {
     public var name: Swift.String {
       get
     }
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -1018,10 +842,8 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func setEnabledPipSwipeOut(_ enabled: Swift.Bool)
   @objc public static func removeParameter(key: Swift.String)
   @objc public static func addParameter(key: Swift.String, value: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS, deprecated, message: "Will be deprecated soon please Enable AppTrackingTransparency instead")
   @objc public static func setAdId(adId: Swift.String?)
-  #endif
   @objc public static func setMixWithOthers(isMixAudio: Swift.Bool)
   @objc public static func setAudioSessionCategory(category: AVFAudio.AVAudioSession.Category)
   @available(iOS, deprecated, message: "Will be deprecated soon Use setInAppPipConfiguration(config: ShopLiveInAppPipConfiguration) instead")
@@ -1033,32 +855,22 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func setUsingLocalStorage(_ use: Swift.Bool)
   @objc public static func setPictureInPictureFloatingOffset(offset: UIKit.UIEdgeInsets) -> Swift.Bool
   @objc public static func setPictureInPicturePadding(padding: UIKit.UIEdgeInsets) -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func sendCommandMessage(command: Swift.String, payload: [Swift.String : Any]?)
-  #endif
   @objc public static func setMuteWhenPlayStart(_ mute: Swift.Bool)
   @objc public static func setNextActionOnHandleNavigation(actionType: ShopLiveSDK.ActionType)
   @objc public static func getNextActionTypeOnHandleNavigation() -> ShopLiveSDK.ActionType
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setEndpoint(_ url: Swift.String?)
-  #endif
   @objc public static func isSuccessCampaignJoin() -> Swift.Bool
   @available(iOS, deprecated, message: "deprecated on 1.5.10")
   @objc public static func setKeepAspectOnTabletPortrait(_ keep: Swift.Bool = true)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static var viewController: ShopLiveSDK.ShopLiveViewController? {
     @objc get
   }
-  #endif
   @objc public static func setCloseHandler(_ handler: @escaping (ShopLiveSDK.ShopLiveViewHiddenActionType) -> Swift.Void)
   @objc public static func setPreviewCloseHandler(_ handler: @escaping (ShopLiveSDK.ShopLiveViewHiddenActionType) -> Swift.Void)
   @objc public static func close(actionType: ShopLiveSDK.ShopLiveViewHiddenActionType = .onClose)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setChatViewFont(inputBoxFont: UIKit.UIFont?, sendButtonFont: UIKit.UIFont?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setShareScheme(_ scheme: Swift.String? = nil, shareDelegate: (any ShopLiveSDK.ShopLivePlayerShareDelegate)?)
-  #endif
   @objc public static func hookNavigation(navigation: @escaping (Foundation.URL) -> Swift.Void)
   @objc public static func onTerminated()
   @objc public static func setKeepPlayVideoOnHeadphoneUnplugged(_ keepPlay: Swift.Bool, isMute: Swift.Bool = false)
@@ -1071,18 +883,14 @@ extension ShopLiveSDK.ShopLive {
   @objc public static var playerMode: ShopLiveSDK.ShopLive.PlayerMode {
     @objc get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static var playerWindow: ShopLiveSDK.ShopliveWindow? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS, deprecated, message: "Will be deprecated soon use setInAppPipConfiguration(config: ShopLiveInAppPipConfiguration) instead")
   public static var fixedPipWidth: Foundation.NSNumber? {
     get
     set
   }
-  #endif
   @objc public static func mute()
   @objc public static func unmute()
   @objc public static var orientationMode: ShopLiveSDK.ShopLive.VideoOrientation {
@@ -1105,30 +913,20 @@ extension ShopLiveSDK.ShopLive {
     @objc get
     @objc set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static var webViewConfiguration: WebKit.WKWebViewConfiguration? {
     @objc get
     @objc set
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static var delegate: (any ShopLiveSDK.ShopLiveSDKDelegate)? {
     @objc get
     @objc set
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func preview(data: ShopLiveSDK.ShopLivePlayerData, completion: (() -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS, deprecated, message: "Use preview(data: ShopLivePlayerData) instead")
   @objc public static func preview(with campaignKey: Swift.String?, referrer: Swift.String? = nil, completion: (() -> Swift.Void)? = nil)
-  #endif
   @objc public static func play(data: ShopLiveSDK.ShopLivePlayerData)
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS, deprecated, message: "Use play(data: ShopLivePlayerData) instead")
   @objc public static func play(with campaignKey: Swift.String?, keepWindowStateOnPlayExecuted: Swift.Bool = false, referrer: Swift.String? = nil)
-  #endif
   @objc public static func startPictureInPicture(with position: ShopLiveSDK.ShopLive.PipPosition, scale: CoreFoundation.CGFloat)
   @objc public static func startPictureInPicture()
   @objc public static func stopPictureInPicture()
@@ -1136,44 +934,24 @@ extension ShopLiveSDK.ShopLive {
   @objc public static func reloadLive()
   @objc public static func setEnabledPictureInPictureMode(isEnabled: Swift.Bool)
   @objc public static func setEnabledOSPictureInPictureMode(isEnabled: Swift.Bool)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static var authToken: Swift.String? {
     @objc get
     @objc set
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static var user: ShopliveSDKCommon.ShopLiveCommonUser? {
     @objc get
     @objc set
   }
-  #endif
   @objc public static func configure(with accessKey: Swift.String)
   @objc public static func setInAppPipConfiguration(config: ShopLiveSDK.ShopLiveInAppPipConfiguration)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setUtmSource(utmSource: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setUtmCampaign(utmCampaign: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setUtmMedium(utmMedium: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setUtmContent(utmContent: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getUtmSource() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getUtmCampaign() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getUtmMedium() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getUtmContent() -> Swift.String?
-  #endif
   @objc public static func setVisibleStatusBar(isVisible: Swift.Bool)
   @objc public static func isVisibleStatusBar() -> Swift.Bool
   @objc public static func addSubViewToPreview(subView: UIKit.UIView)
@@ -1210,6 +988,9 @@ extension ShopLiveSDK.ShopLiveViewTrackEvent : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLiveViewHiddenActionType : Swift.Equatable {}
 extension ShopLiveSDK.ShopLiveViewHiddenActionType : Swift.Hashable {}
 extension ShopLiveSDK.ShopLiveViewHiddenActionType : Swift.RawRepresentable {}
+extension ShopLiveSDK.ShopLivePresentType : Swift.Equatable {}
+extension ShopLiveSDK.ShopLivePresentType : Swift.Hashable {}
+extension ShopLiveSDK.ShopLivePresentType : Swift.RawRepresentable {}
 extension ShopLiveSDK.ShopLiveBlurMaskStyle : Swift.Equatable {}
 extension ShopLiveSDK.ShopLiveBlurMaskStyle : Swift.Hashable {}
 extension ShopLiveSDK.ShopLiveBlurMaskStyle : Swift.RawRepresentable {}
